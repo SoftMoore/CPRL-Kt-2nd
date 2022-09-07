@@ -78,7 +78,6 @@ In addition to the standard license and readme files, the top level of the GitHu
 
 **Warning:** Several of the source files in the Project directory for latter projects are replacements or enhancements for the same files in earlier projects.  For example, there are three versions of class `Parser` and two versions of class `IdTable`.  Don’t try to download the source files and import all of them at the same time into the IDE for your compiler project.  Follow the project instructions for each project in the order presented.
 
-
 ### Project 0: Getting Started
 
 * This is not a real project but more of an initialization of your working environment for the remaining compiler projects.  Expand the green &ldquo;Code&rdquo; button on the GitHub Repository page, download the repository as a zip file, and unzip it into a directory on your computer.  Under the Project directory you will see 9 subdirectories as follows.
@@ -94,7 +93,6 @@ In addition to the standard license and readme files, the top level of the GitHu
     – src-ParserV3
     – src-Scanner
 ```
-
   Directories with names beginning &ldquo;`src…`&rdquo; contain Kotlin source files for the compiler project.
 
 * Directory `bin` contains sample Bash shell scripts and Windows command scripts for running and testing various stages of the compiler.  There are two subdirectories named `bash` and `windows` that contain the Bash and Windows script files, respectively.  For each Windows `.cmd` script file there is a corresponding Bash script file without the `.cmd` suffix; e.g., `cprlc.cmd` and `cprlc`.  Pick the collection of script files for your operating system and programming environment.
@@ -132,7 +130,7 @@ In addition to the standard license and readme files, the top level of the GitHu
 
   - `ScannerTests` contains both correct and incorrect files that can be used for testing your scanner as described in Project 1 below. These are not necessarily complete CPRL programs. For example, one of the files contains every valid symbol in CPRL including all reserved words, operators, and numerous user-defined identifiers and literals.
 
- You are strongly encouraged to develop additional test programs as you work though the remaining projects described below.
+   You are strongly encouraged to develop additional test programs as you work though the remaining projects described below.
 
 * Directory `src-Compiler` contains the source code for the Compiler module as described above.  These classes are used by the other two modules, and they are potentially reusable on other compiler projects.  All classes in this directory are complete and require no additional work for use on the compiler project.  **Import the Kotlin source code for this module into your preferred IDE for Kotlin (e.g., IntelliJ IDEA).**  All code should compile without any errors.
 
