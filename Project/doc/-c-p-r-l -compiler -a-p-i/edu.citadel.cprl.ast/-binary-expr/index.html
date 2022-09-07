@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BinaryExpr</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>CPRL Compiler API</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl.ast/BinaryExpr///PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../index.html">edu.citadel.cprl.ast</a><span class="delimiter">/</span><a href="index.html">BinaryExpr</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Binary</span><wbr></wbr><span><span>Expr</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">BinaryExpr</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="../-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="../-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="../-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Base class for all binary expressions.  A binary expression is an expression of the form &quot;expression operator expression&quot;.  The first expression is called the left operand, and the second expression is called the right operand.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-507688684%2FConstructors%2F769193423" anchor-label="BinaryExpr" id="-507688684%2FConstructors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-binary-expr.html"><span>Binary</span><wbr></wbr><span><span>Expr</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-507688684%2FConstructors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-binary-expr.html"><span class="token function">BinaryExpr</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;leftOperand<span class="token operator">: </span><a href="../-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;operator<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;rightOperand<span class="token operator">: </span><a href="../-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Construct a binary expression with its left operand, operator,     and right operand.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1779745404%2FFunctions%2F769193423" anchor-label="checkConstraints" id="1779745404%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-a-s-t/check-constraints.html"><span>check</span><wbr></wbr><span><span>Constraints</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1779745404%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-a-s-t/check-constraints.html"><span class="token function">checkConstraints</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Check semantic/contextual constraints.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="66349527%2FFunctions%2F769193423" anchor-label="emit" id="66349527%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-a-s-t/emit.html"><span><span>emit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="66349527%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-a-s-t/emit.html"><span class="token function">emit</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Emit object code.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-6602271%2FFunctions%2F769193423" anchor-label="emitBranch" id="-6602271%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-expression/emit-branch.html"><span>emit</span><wbr></wbr><span><span>Branch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-6602271%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-expression/emit-branch.html"><span class="token function">emitBranch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">label<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">For Boolean expressions, this method emits the appropriate branch opcode based on the condition.  For example, if the expression is a &quot;<&quot; relational expression and the condition is false, then the opcode &quot;BGE&quot; is emitted.  The method defined in this class works correctly for most Boolean expressions, but it should be overridden for relational expressions.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="128513006%2FProperties%2F769193423" anchor-label="leftOperand" id="128513006%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="left-operand.html"><span>left</span><wbr></wbr><span><span>Operand</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="128513006%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="128513006%2FProperties%2F769193423" anchor-label="leftOperand" id="128513006%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="left-operand.html">leftOperand</a><span class="token operator">: </span><a href="../-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-265624634%2FProperties%2F769193423" anchor-label="operator" id="-265624634%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="operator.html"><span><span>operator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-265624634%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-265624634%2FProperties%2F769193423" anchor-label="operator" id="-265624634%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="operator.html">operator</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-169467037%2FProperties%2F769193423" anchor-label="position" id="-169467037%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-expression/position.html"><span><span>position</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-169467037%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-169467037%2FProperties%2F769193423" anchor-label="position" id="-169467037%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-expression/position.html">position</a><span class="token operator">: </span><a href="../../edu.citadel.compiler/-position/index.html">Position</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1063878397%2FProperties%2F769193423" anchor-label="rightOperand" id="1063878397%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="right-operand.html"><span>right</span><wbr></wbr><span><span>Operand</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1063878397%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="1063878397%2FProperties%2F769193423" anchor-label="rightOperand" id="1063878397%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="right-operand.html">rightOperand</a><span class="token operator">: </span><a href="../-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="927408626%2FProperties%2F769193423" anchor-label="type" id="927408626%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-expression/type.html"><span><span>type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="927408626%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="927408626%2FProperties%2F769193423" anchor-label="type" id="927408626%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-expression/type.html">type</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-type/index.html">Type</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="433951893%2FInheritors%2F769193423" anchor-label="AddingExpr" id="433951893%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-adding-expr/index.html">AddingExpr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="433951893%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-665901383%2FInheritors%2F769193423" anchor-label="LogicalExpr" id="-665901383%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-logical-expr/index.html">LogicalExpr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-665901383%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1535965348%2FInheritors%2F769193423" anchor-label="MultiplyingExpr" id="1535965348%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-multiplying-expr/index.html">MultiplyingExpr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1535965348%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-249518641%2FInheritors%2F769193423" anchor-label="RelationalExpr" id="-249518641%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-relational-expr/index.html">RelationalExpr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-249518641%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

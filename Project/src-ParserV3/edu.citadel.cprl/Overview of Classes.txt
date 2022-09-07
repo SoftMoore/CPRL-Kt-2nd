@@ -1,0 +1,71 @@
+Complete implementations are provided for all classes not marked with an
+asterisk (*).  Only partial implementations are provide for classes marked
+with an asterisk.  Look for comments that start in the first column and
+have the following form.
+// ...
+
+Most of the incomplete classes have valid constructors except as commented.
+Import statements are left in as hints.
+
+
+Classes in package edu.citadel.cprl
+
+*ArrayType.kt
+Compiler.kt
+IdTable.kt
+LoopContext.kt
+* Parser.kt
+* RecordType.kt
+Scope.kt
+ScopeLevel.kt
+* StringType.kt
+SubprogramContext.kt
+Type.kt
+
+
+Classes in package edu.citadel.cprl.ast
+
+AddingExpr.kt
+* ArrayTypeDecl.kt
+* AssignmentStmt.kt
+AST.kt
+BinaryExpr.kt
+* CompoundStmt.kt
+* ConstDecl.kt
+ConstValue.kt
+Declaration.kt
+EmptyExpression.kt
+EmptyInitialDecl.kt
+EmptyStatement.kt
+EmptySubprogramDecl.kt
+* ExitStmt.kt
+Expression.kt
+FieldDecl.kt
+* FieldExpr.kt
+FunctionCallExpr.kt
+* FunctionDecl.kt
+IfStmt.kt
+InitialDecl.kt
+LogicalExpr.kt
+* LoopStmt.kt
+* MultiplyingExpr.kt
+* NegationExpr.kt
+* NotExpr.kt
+OutputStmt.kt
+ParameterDecl.kt
+* ProcedureCallStmt.kt
+* ProcedureDecl.kt
+Program.kt
+* ReadStmt.kt
+* RecordTypeDecl.kt
+* RelationalExpr.kt
+* ReturnStmt.kt
+SingleVarDecl.kt
+Statement.kt
+* StringTypeDecl.kt
+SubprogramDecl.kt
+UnaryExpr.kt
+VarDecl.kt
+* Variable.kt
+VariableDecl.kt
+VariableExpr.kt

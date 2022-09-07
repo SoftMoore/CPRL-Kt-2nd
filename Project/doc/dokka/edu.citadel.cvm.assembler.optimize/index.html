@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>edu.citadel.cvm.assembler.optimize</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../index.html">
+                    <span>dokka</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="dokka::edu.citadel.cvm.assembler.optimize////PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../index.html">dokka</a><span class="delimiter">/</span><a href="index.html">edu.citadel.cvm.assembler.optimize</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package</span></span> <span>edu.</span><wbr></wbr><span>citadel.</span><wbr></wbr><span>cvm.</span><wbr></wbr><span>assembler.</span><wbr></wbr><span>optimize</span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1234795982%2FClasslikes%2F769193423" anchor-label="Allocate" id="-1234795982%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-allocate/index.html"><span><span>Allocate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1234795982%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-allocate/index.html">Allocate</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Using function composition in CPRL can generate 2 or more consecutive ALLOC instructions.  This optimization replaces an instruction sequence of the form ALLOC n, ALLOC m with ALLOC (n + m).</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1998336676%2FClasslikes%2F769193423" anchor-label="BranchingReduction" id="-1998336676%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-branching-reduction/index.html"><span>Branching</span><wbr></wbr><span><span>Reduction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1998336676%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-branching-reduction/index.html">BranchingReduction</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Improves branching instructions where a nonconditional branch is used to branch over a conditional branch (which can occur when an exit statement appears at the end of a loop).  For example, the following code <code class="lang-kotlin">BZ L1 BR L0 L1: ...</code> can be improved as follows: <code class="lang-kotlin">BNZ L0 L1: ...</code></p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1386418639%2FClasslikes%2F769193423" anchor-label="ConstFolding" id="-1386418639%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-const-folding/index.html"><span>Const</span><wbr></wbr><span><span>Folding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1386418639%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-const-folding/index.html">ConstFolding</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Replaces runtime arithmetic on constants with compile-time arithmetic.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-35109822%2FClasslikes%2F769193423" anchor-label="ConstNeg" id="-35109822%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-const-neg/index.html"><span>Const</span><wbr></wbr><span><span>Neg</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-35109822%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-const-neg/index.html">ConstNeg</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Performs a special type of constant folding by replacing an instruction sequence of the form LDCINT x, NEG with LDCINT -x.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="553936895%2FClasslikes%2F769193423" anchor-label="DeadCodeElimination" id="553936895%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-dead-code-elimination/index.html"><span>Dead</span><wbr></wbr><span>Code</span><wbr></wbr><span><span>Elimination</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="553936895%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-dead-code-elimination/index.html">DeadCodeElimination</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">If an instruction without labels follows a return or an unconditional branch, then that instruction is unreachable (dead) and can be removed. This optimization should be performed after all other optimizations except ReturnSpecialConstants since this optimization looks specifically for a &quot;RET&quot; symbol.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1901881227%2FClasslikes%2F769193423" anchor-label="IncDec" id="1901881227%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-inc-dec/index.html"><span>Inc</span><wbr></wbr><span><span>Dec</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1901881227%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inc-dec/index.html">IncDec</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Replaces addition of 1 with increment and subtraction of 1 with decrement. Basically, this class looks for patterns of the form &quot;LDCINT 1, ADD&quot; and replaces it with &quot;INC&quot;, and similarly for SUB.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1026337829%2FClasslikes%2F769193423" anchor-label="IncDec2" id="1026337829%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-inc-dec2/index.html"><span>Inc</span><wbr></wbr><span><span>Dec2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1026337829%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-inc-dec2/index.html">IncDec2</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Replaces addition of 1 to a variable with increment and subtraction of 1 from a variable with decrement.  Basically, this class looks for patterns of the form &quot;LDCINT 1, LDLADDR x, LOADW, ADD&quot; and replaces it with &quot;LDLADDR x, LOADW, INC&quot;, and similarly for SUB.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="246054835%2FClasslikes%2F769193423" anchor-label="LoadSpecialConstants" id="246054835%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-load-special-constants/index.html"><span>Load</span><wbr></wbr><span>Special</span><wbr></wbr><span><span>Constants</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="246054835%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-load-special-constants/index.html">LoadSpecialConstants</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Replaces LDCB 0 with LDCB0, LDCB 1 with LDCB1, LDCINT 0 with LDCINT0, and LDCINT 1 with LDCINT1.  Implementation Note: This optimization must be applied after the other optimizations or else they will need to be rewritten. For example, the inc/dec instructions look for LDCINT 1 and not LDCINT1.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-86419710%2FClasslikes%2F769193423" anchor-label="Optimization" id="-86419710%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-optimization/index.html"><span><span>Optimization</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-86419710%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Perform peephole optimization on the list of instructions starting with the instruction at the specified position in the list and looking at that instruction plus the next several instructions.  Any class that implements this interface can remove/replace instructions in the list.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1534838381%2FClasslikes%2F769193423" anchor-label="Optimizations" id="1534838381%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-optimizations/index.html"><span><span>Optimizations</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1534838381%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-optimizations/index.html">Optimizations</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This object is used to retrieve the list of all optimizations.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-252579031%2FClasslikes%2F769193423" anchor-label="ReturnSpecialConstants" id="-252579031%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-return-special-constants/index.html"><span>Return</span><wbr></wbr><span>Special</span><wbr></wbr><span><span>Constants</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-252579031%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-return-special-constants/index.html">ReturnSpecialConstants</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Replaces RET 0 with RET0 and RET 4 with RET4. IMPORTANT: This optimization should not be performed until after the optimization for dead code elimination.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-662327862%2FClasslikes%2F769193423" anchor-label="ShiftLeft" id="-662327862%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-shift-left/index.html"><span>Shift</span><wbr></wbr><span><span>Left</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-662327862%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-shift-left/index.html">ShiftLeft</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Replaces multiplication by a power of 2 times a variable with left shift.  Basically, this class looks for patterns of the form &quot;LDCINT 2**n, LDLADDR x, LOADW, MUL&quot; and replaces it with &quot;LDLADDR x, LOADW, SHL n&quot;.  Note that the analogous replacement for division will not work since division is not commutative.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="460912572%2FClasslikes%2F769193423" anchor-label="ShiftLeftRight" id="460912572%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-shift-left-right/index.html"><span>Shift</span><wbr></wbr><span>Left</span><wbr></wbr><span><span>Right</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="460912572%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-shift-left-right/index.html">ShiftLeftRight</a> : <a href="-optimization/index.html">Optimization</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Replaces multiplication by a power of 2 with left shift and division by a power of two with right shift where possible.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-1345401078%2FFunctions%2F769193423" anchor-label="getShiftAmount" id="-1345401078%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-shift-amount.html"><span>get</span><wbr></wbr><span>Shift</span><wbr></wbr><span><span>Amount</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1345401078%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-shift-amount.html"><span class="token function">getShiftAmount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">n<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">If n is a power of 2, returns log2(n) (i.e., returns the exponent); otherwise returns 0.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

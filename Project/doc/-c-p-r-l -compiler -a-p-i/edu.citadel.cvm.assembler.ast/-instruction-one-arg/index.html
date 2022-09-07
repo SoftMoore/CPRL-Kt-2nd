@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>InstructionOneArg</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>CPRL Compiler API</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cvm.assembler.ast/InstructionOneArg///PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../index.html">edu.citadel.cvm.assembler.ast</a><span class="delimiter">/</span><a href="index.html">InstructionOneArg</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Instruction</span><wbr></wbr><span>One</span><wbr></wbr><span><span>Arg</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">InstructionOneArg</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="../-instruction/index.html">Instruction</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This class serves as a base class for the abstract syntax tree for an assembly language instruction with one argument.  Note that property arg can't be null for subclasses of this class.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="1155114808%2FConstructors%2F769193423" anchor-label="InstructionOneArg" id="1155114808%2FConstructors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-one-arg.html"><span>Instruction</span><wbr></wbr><span>One</span><wbr></wbr><span><span>Arg</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1155114808%2FConstructors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-instruction-one-arg.html"><span class="token function">InstructionOneArg</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;opCode<span class="token operator">: </span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;arg<span class="token operator">: </span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Construct a one-argument instruction with a list of labels,     an opcode, and an argument.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1795867186%2FFunctions%2F769193423" anchor-label="argToByte" id="1795867186%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="arg-to-byte.html"><span>arg</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Byte</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1795867186%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="arg-to-byte.html"><span class="token function">argToByte</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns the argument as converted to a byte.  Valid only for instructions with arguments of type intLiteral.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1117160303%2FFunctions%2F769193423" anchor-label="argToInt" id="-1117160303%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="arg-to-int.html"><span>arg</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Int</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1117160303%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="arg-to-int.html"><span class="token function">argToInt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns the argument as converted to an integer.  Valid only for instructions with arguments of type intLiteral.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-294287551%2FFunctions%2F769193423" anchor-label="checkConstraints" id="-294287551%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="check-constraints.html"><span>check</span><wbr></wbr><span><span>Constraints</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-294287551%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="check-constraints.html"><span class="token function">checkConstraints</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">check semantic/contextual constraints</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1407646783%2FFunctions%2F769193423" anchor-label="defineIdAddress" id="-1407646783%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction/define-id-address.html"><span>define</span><wbr></wbr><span>Id</span><wbr></wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1407646783%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-instruction/define-id-address.html"><span class="token function">defineIdAddress</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">identifier<span class="token operator">: </span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Map the text of the identifier token to an address on the stack.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2105468576%2FFunctions%2F769193423" anchor-label="emit" id="2105468576%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-a-s-t/emit.html"><span><span>emit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2105468576%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-a-s-t/emit.html"><span class="token function">emit</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">emit the object code for the AST</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1833492643%2FFunctions%2F769193423" anchor-label="toString" id="1833492643%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-string.html"><span>to</span><wbr></wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1833492643%2FFunctions%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="238557607%2FProperties%2F769193423" anchor-label="address" id="238557607%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction/address.html"><span><span>address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="238557607%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="238557607%2FProperties%2F769193423" anchor-label="address" id="238557607%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-instruction/address.html">address</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="238557607%2FProperties%2F769193423" anchor-label="address" id="238557607%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><p class="paragraph">The address of this instruction.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1428275947%2FProperties%2F769193423" anchor-label="arg" id="-1428275947%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="arg.html"><span><span>arg</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1428275947%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-1428275947%2FProperties%2F769193423" anchor-label="arg" id="-1428275947%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="arg.html">arg</a><span class="token operator">: </span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1077810560%2FProperties%2F769193423" anchor-label="labels" id="1077810560%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction/labels.html"><span><span>labels</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1077810560%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="1077810560%2FProperties%2F769193423" anchor-label="labels" id="1077810560%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-instruction/labels.html">labels</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="204015857%2FProperties%2F769193423" anchor-label="opCode" id="204015857%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction/op-code.html"><span>op</span><wbr></wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="204015857%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="204015857%2FProperties%2F769193423" anchor-label="opCode" id="204015857%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-instruction/op-code.html">opCode</a><span class="token operator">: </span><a href="../../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1981608898%2FProperties%2F769193423" anchor-label="size" id="-1981608898%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction/size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1981608898%2FProperties%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-1981608898%2FProperties%2F769193423" anchor-label="size" id="-1981608898%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-instruction/size.html">size</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1981608898%2FProperties%2F769193423" anchor-label="size" id="-1981608898%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><p class="paragraph">Returns the number of bytes in memory occupied by the instruction, computed as 1 (for the opcode) plus the sizes of the operands.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-205172755%2FInheritors%2F769193423" anchor-label="InstructionALLOC" id="-205172755%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-a-l-l-o-c/index.html">InstructionALLOC</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-205172755%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="472830397%2FInheritors%2F769193423" anchor-label="InstructionBE" id="472830397%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-b-e/index.html">InstructionBE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="472830397%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="534870011%2FInheritors%2F769193423" anchor-label="InstructionBG" id="534870011%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-b-g/index.html">InstructionBG</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="534870011%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-2106927870%2FInheritors%2F769193423" anchor-label="InstructionBGE" id="-2106927870%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-b-g-e/index.html">InstructionBGE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2106927870%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="689969046%2FInheritors%2F769193423" anchor-label="InstructionBL" id="689969046%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-b-l/index.html">InstructionBL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="689969046%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1593825081%2FInheritors%2F769193423" anchor-label="InstructionBLE" id="-1593825081%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-b-l-e/index.html">InstructionBLE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1593825081%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="329402953%2FInheritors%2F769193423" anchor-label="InstructionBNE" id="329402953%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-b-n-e/index.html">InstructionBNE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="329402953%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="980818900%2FInheritors%2F769193423" anchor-label="InstructionBNZ" id="980818900%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-b-n-z/index.html">InstructionBNZ</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="980818900%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="876087888%2FInheritors%2F769193423" anchor-label="InstructionBR" id="876087888%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-b-r/index.html">InstructionBR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="876087888%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1124246344%2FInheritors%2F769193423" anchor-label="InstructionBZ" id="1124246344%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-b-z/index.html">InstructionBZ</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1124246344%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1818260414%2FInheritors%2F769193423" anchor-label="InstructionCALL" id="-1818260414%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-c-a-l-l/index.html">InstructionCALL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1818260414%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1746103707%2FInheritors%2F769193423" anchor-label="InstructionGETSTR" id="-1746103707%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-g-e-t-s-t-r/index.html">InstructionGETSTR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1746103707%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1014311703%2FInheritors%2F769193423" anchor-label="InstructionLDCB" id="-1014311703%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-l-d-c-b/index.html">InstructionLDCB</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1014311703%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1832247310%2FInheritors%2F769193423" anchor-label="InstructionLDCCH" id="-1832247310%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-l-d-c-c-h/index.html">InstructionLDCCH</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1832247310%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-2061526148%2FInheritors%2F769193423" anchor-label="InstructionLDCINT" id="-2061526148%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-l-d-c-i-n-t/index.html">InstructionLDCINT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2061526148%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1098752890%2FInheritors%2F769193423" anchor-label="InstructionLDCSTR" id="1098752890%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-l-d-c-s-t-r/index.html">InstructionLDCSTR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1098752890%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1745711390%2FInheritors%2F769193423" anchor-label="InstructionLDGADDR" id="-1745711390%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-l-d-g-a-d-d-r/index.html">InstructionLDGADDR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1745711390%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1689130755%2FInheritors%2F769193423" anchor-label="InstructionLDLADDR" id="-1689130755%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-l-d-l-a-d-d-r/index.html">InstructionLDLADDR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1689130755%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1382634822%2FInheritors%2F769193423" anchor-label="InstructionLOAD" id="-1382634822%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-l-o-a-d/index.html">InstructionLOAD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1382634822%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1172236874%2FInheritors%2F769193423" anchor-label="InstructionPROC" id="1172236874%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-p-r-o-c/index.html">InstructionPROC</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1172236874%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1357893438%2FInheritors%2F769193423" anchor-label="InstructionPROGRAM" id="1357893438%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-p-r-o-g-r-a-m/index.html">InstructionPROGRAM</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1357893438%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1592153758%2FInheritors%2F769193423" anchor-label="InstructionPUTSTR" id="1592153758%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-p-u-t-s-t-r/index.html">InstructionPUTSTR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1592153758%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="949291073%2FInheritors%2F769193423" anchor-label="InstructionRET" id="949291073%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-r-e-t/index.html">InstructionRET</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="949291073%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-963729173%2FInheritors%2F769193423" anchor-label="InstructionSHL" id="-963729173%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-s-h-l/index.html">InstructionSHL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-963729173%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-777610331%2FInheritors%2F769193423" anchor-label="InstructionSHR" id="-777610331%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-s-h-r/index.html">InstructionSHR</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-777610331%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-863931455%2FInheritors%2F769193423" anchor-label="InstructionSTORE" id="-863931455%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-instruction-s-t-o-r-e/index.html">InstructionSTORE</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-863931455%2FInheritors%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

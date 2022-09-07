@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>edu.citadel.cvm.assembler.ast</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../index.html">
+                    <span>CPRL Compiler API</span>
+            </a>
+    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cvm.assembler.ast////PointingToDeclaration//769193423">
+  <div class="breadcrumbs"><a href="../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="index.html">edu.citadel.cvm.assembler.ast</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package</span></span> <span>edu.</span><wbr></wbr><span>citadel.</span><wbr></wbr><span>cvm.</span><wbr></wbr><span>assembler.</span><wbr></wbr><span>ast</span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-945486356%2FClasslikes%2F769193423" anchor-label="AST" id="-945486356%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-a-s-t/index.html"><span><span>AST</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-945486356%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-a-s-t/index.html">AST</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base class for all abstract syntax trees</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="84994144%2FClasslikes%2F769193423" anchor-label="Instruction" id="84994144%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction/index.html"><span><span>Instruction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="84994144%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-instruction/index.html">Instruction</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-a-s-t/index.html">AST</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This abstract class implements common methods for the abstract syntax tree of a single assembly language instruction.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-473085887%2FClasslikes%2F769193423" anchor-label="InstructionADD" id="-473085887%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-a-d-d/index.html"><span>Instruction</span><wbr></wbr><span><span>ADD</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-473085887%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-a-d-d/index.html">InstructionADD</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction ADD.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-205172755%2FClasslikes%2F769193423" anchor-label="InstructionALLOC" id="-205172755%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-a-l-l-o-c/index.html"><span>Instruction</span><wbr></wbr><span><span>ALLOC</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-205172755%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-a-l-l-o-c/index.html">InstructionALLOC</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction ALLOC.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="472830397%2FClasslikes%2F769193423" anchor-label="InstructionBE" id="472830397%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-b-e/index.html"><span>Instruction</span><wbr></wbr><span><span>BE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="472830397%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-b-e/index.html">InstructionBE</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction BE.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="534870011%2FClasslikes%2F769193423" anchor-label="InstructionBG" id="534870011%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-b-g/index.html"><span>Instruction</span><wbr></wbr><span><span>BG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="534870011%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-b-g/index.html">InstructionBG</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction BG.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2106927870%2FClasslikes%2F769193423" anchor-label="InstructionBGE" id="-2106927870%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-b-g-e/index.html"><span>Instruction</span><wbr></wbr><span><span>BGE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2106927870%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-b-g-e/index.html">InstructionBGE</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction BGE.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="689969046%2FClasslikes%2F769193423" anchor-label="InstructionBL" id="689969046%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-b-l/index.html"><span>Instruction</span><wbr></wbr><span><span>BL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="689969046%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-b-l/index.html">InstructionBL</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction BL.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1593825081%2FClasslikes%2F769193423" anchor-label="InstructionBLE" id="-1593825081%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-b-l-e/index.html"><span>Instruction</span><wbr></wbr><span><span>BLE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1593825081%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-b-l-e/index.html">InstructionBLE</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction BLE.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="329402953%2FClasslikes%2F769193423" anchor-label="InstructionBNE" id="329402953%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-b-n-e/index.html"><span>Instruction</span><wbr></wbr><span><span>BNE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="329402953%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-b-n-e/index.html">InstructionBNE</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction BNE.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="980818900%2FClasslikes%2F769193423" anchor-label="InstructionBNZ" id="980818900%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-b-n-z/index.html"><span>Instruction</span><wbr></wbr><span><span>BNZ</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="980818900%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-b-n-z/index.html">InstructionBNZ</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction BNZ.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="876087888%2FClasslikes%2F769193423" anchor-label="InstructionBR" id="876087888%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-b-r/index.html"><span>Instruction</span><wbr></wbr><span><span>BR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="876087888%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-b-r/index.html">InstructionBR</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction BR.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1124246344%2FClasslikes%2F769193423" anchor-label="InstructionBZ" id="1124246344%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-b-z/index.html"><span>Instruction</span><wbr></wbr><span><span>BZ</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1124246344%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-b-z/index.html">InstructionBZ</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction BZ.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1818260414%2FClasslikes%2F769193423" anchor-label="InstructionCALL" id="-1818260414%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-c-a-l-l/index.html"><span>Instruction</span><wbr></wbr><span><span>CALL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1818260414%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-c-a-l-l/index.html">InstructionCALL</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction CALL.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-306701312%2FClasslikes%2F769193423" anchor-label="InstructionDEC" id="-306701312%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-d-e-c/index.html"><span>Instruction</span><wbr></wbr><span><span>DEC</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-306701312%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-d-e-c/index.html">InstructionDEC</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction DEC.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-165836207%2FClasslikes%2F769193423" anchor-label="InstructionDIV" id="-165836207%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-d-i-v/index.html"><span>Instruction</span><wbr></wbr><span><span>DIV</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-165836207%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-d-i-v/index.html">InstructionDIV</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction DIV.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1231280217%2FClasslikes%2F769193423" anchor-label="InstructionGETCH" id="-1231280217%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-g-e-t-c-h/index.html"><span>Instruction</span><wbr></wbr><span><span>GETCH</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1231280217%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-g-e-t-c-h/index.html">InstructionGETCH</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction GETCH.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-611415449%2FClasslikes%2F769193423" anchor-label="InstructionGETINT" id="-611415449%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-g-e-t-i-n-t/index.html"><span>Instruction</span><wbr></wbr><span><span>GETINT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-611415449%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-g-e-t-i-n-t/index.html">InstructionGETINT</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction GETINT.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1746103707%2FClasslikes%2F769193423" anchor-label="InstructionGETSTR" id="-1746103707%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-g-e-t-s-t-r/index.html"><span>Instruction</span><wbr></wbr><span><span>GETSTR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1746103707%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-g-e-t-s-t-r/index.html">InstructionGETSTR</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction GETSTR.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1895406527%2FClasslikes%2F769193423" anchor-label="InstructionHALT" id="1895406527%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-h-a-l-t/index.html"><span>Instruction</span><wbr></wbr><span><span>HALT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1895406527%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-h-a-l-t/index.html">InstructionHALT</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction HALT.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1515792476%2FClasslikes%2F769193423" anchor-label="InstructionINC" id="-1515792476%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-i-n-c/index.html"><span>Instruction</span><wbr></wbr><span><span>INC</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1515792476%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-i-n-c/index.html">InstructionINC</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction INC.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1014311703%2FClasslikes%2F769193423" anchor-label="InstructionLDCB" id="-1014311703%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-c-b/index.html"><span>Instruction</span><wbr></wbr><span><span>LDCB</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1014311703%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-c-b/index.html">InstructionLDCB</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDCB.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="756630601%2FClasslikes%2F769193423" anchor-label="InstructionLDCB0" id="756630601%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-c-b0/index.html"><span>Instruction</span><wbr></wbr><span><span>LDCB0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="756630601%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-c-b0/index.html">InstructionLDCB0</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDCB0.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="787650408%2FClasslikes%2F769193423" anchor-label="InstructionLDCB1" id="787650408%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-c-b1/index.html"><span>Instruction</span><wbr></wbr><span><span>LDCB1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="787650408%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-c-b1/index.html">InstructionLDCB1</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDCB1.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1832247310%2FClasslikes%2F769193423" anchor-label="InstructionLDCCH" id="-1832247310%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-c-c-h/index.html"><span>Instruction</span><wbr></wbr><span><span>LDCCH</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1832247310%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-c-c-h/index.html">InstructionLDCCH</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDCCH.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2061526148%2FClasslikes%2F769193423" anchor-label="InstructionLDCINT" id="-2061526148%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-c-i-n-t/index.html"><span>Instruction</span><wbr></wbr><span><span>LDCINT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2061526148%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-c-i-n-t/index.html">InstructionLDCINT</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDCINT.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1642246122%2FClasslikes%2F769193423" anchor-label="InstructionLDCINT0" id="-1642246122%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-c-i-n-t0/index.html"><span>Instruction</span><wbr></wbr><span><span>LDCINT0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1642246122%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-c-i-n-t0/index.html">InstructionLDCINT0</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDCINT0.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1611226315%2FClasslikes%2F769193423" anchor-label="InstructionLDCINT1" id="-1611226315%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-c-i-n-t1/index.html"><span>Instruction</span><wbr></wbr><span><span>LDCINT1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1611226315%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-c-i-n-t1/index.html">InstructionLDCINT1</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDCINT1.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1098752890%2FClasslikes%2F769193423" anchor-label="InstructionLDCSTR" id="1098752890%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-c-s-t-r/index.html"><span>Instruction</span><wbr></wbr><span><span>LDCSTR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1098752890%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-c-s-t-r/index.html">InstructionLDCSTR</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDCSTR.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1745711390%2FClasslikes%2F769193423" anchor-label="InstructionLDGADDR" id="-1745711390%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-g-a-d-d-r/index.html"><span>Instruction</span><wbr></wbr><span><span>LDGADDR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1745711390%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-g-a-d-d-r/index.html">InstructionLDGADDR</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDGADDR.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1689130755%2FClasslikes%2F769193423" anchor-label="InstructionLDLADDR" id="-1689130755%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-d-l-a-d-d-r/index.html"><span>Instruction</span><wbr></wbr><span><span>LDLADDR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1689130755%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-d-l-a-d-d-r/index.html">InstructionLDLADDR</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LDLADDR.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1382634822%2FClasslikes%2F769193423" anchor-label="InstructionLOAD" id="-1382634822%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-o-a-d/index.html"><span>Instruction</span><wbr></wbr><span><span>LOAD</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1382634822%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-o-a-d/index.html">InstructionLOAD</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LOAD.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="531652650%2FClasslikes%2F769193423" anchor-label="InstructionLOAD2B" id="531652650%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-o-a-d2-b/index.html"><span>Instruction</span><wbr></wbr><span><span>LOAD2B</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="531652650%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-o-a-d2-b/index.html">InstructionLOAD2B</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LOAD2B.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1513094970%2FClasslikes%2F769193423" anchor-label="InstructionLOADB" id="-1513094970%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-o-a-d-b/index.html"><span>Instruction</span><wbr></wbr><span><span>LOADB</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1513094970%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-o-a-d-b/index.html">InstructionLOADB</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LOADB.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1490596841%2FClasslikes%2F769193423" anchor-label="InstructionLOADSTR" id="-1490596841%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-o-a-d-s-t-r/index.html"><span>Instruction</span><wbr></wbr><span><span>LOADSTR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1490596841%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-o-a-d-s-t-r/index.html">InstructionLOADSTR</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LOADSTR.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-861679023%2FClasslikes%2F769193423" anchor-label="InstructionLOADW" id="-861679023%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-l-o-a-d-w/index.html"><span>Instruction</span><wbr></wbr><span><span>LOADW</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-861679023%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-l-o-a-d-w/index.html">InstructionLOADW</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction LOADW.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1542104832%2FClasslikes%2F769193423" anchor-label="InstructionMOD" id="-1542104832%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-m-o-d/index.html"><span>Instruction</span><wbr></wbr><span><span>MOD</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1542104832%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-m-o-d/index.html">InstructionMOD</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction MOD.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="180770430%2FClasslikes%2F769193423" anchor-label="InstructionMUL" id="180770430%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-m-u-l/index.html"><span>Instruction</span><wbr></wbr><span><span>MUL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="180770430%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-m-u-l/index.html">InstructionMUL</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction MUL.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1564979762%2FClasslikes%2F769193423" anchor-label="InstructionNEG" id="1564979762%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-n-e-g/index.html"><span>Instruction</span><wbr></wbr><span><span>NEG</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1564979762%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-n-e-g/index.html">InstructionNEG</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction NEG.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-586671998%2FClasslikes%2F769193423" anchor-label="InstructionNoArgs" id="-586671998%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-no-args/index.html"><span>Instruction</span><wbr></wbr><span>No</span><wbr></wbr><span><span>Args</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-586671998%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction/index.html">Instruction</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class serves as a base class for the abstract syntax tree for an assembly language instruction with no arguments.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1300524465%2FClasslikes%2F769193423" anchor-label="InstructionNOT" id="-1300524465%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-n-o-t/index.html"><span>Instruction</span><wbr></wbr><span><span>NOT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1300524465%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-n-o-t/index.html">InstructionNOT</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction NOT.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="147439856%2FClasslikes%2F769193423" anchor-label="InstructionOneArg" id="147439856%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-one-arg/index.html"><span>Instruction</span><wbr></wbr><span>One</span><wbr></wbr><span><span>Arg</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="147439856%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction/index.html">Instruction</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class serves as a base class for the abstract syntax tree for an assembly language instruction with one argument.  Note that property arg can't be null for subclasses of this class.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1172236874%2FClasslikes%2F769193423" anchor-label="InstructionPROC" id="1172236874%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-p-r-o-c/index.html"><span>Instruction</span><wbr></wbr><span><span>PROC</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1172236874%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-p-r-o-c/index.html">InstructionPROC</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction PROC.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1357893438%2FClasslikes%2F769193423" anchor-label="InstructionPROGRAM" id="1357893438%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-p-r-o-g-r-a-m/index.html"><span>Instruction</span><wbr></wbr><span><span>PROGRAM</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1357893438%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-p-r-o-g-r-a-m/index.html">InstructionPROGRAM</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction PROGRAM.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1939151733%2FClasslikes%2F769193423" anchor-label="InstructionPUTBYTE" id="-1939151733%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-p-u-t-b-y-t-e/index.html"><span>Instruction</span><wbr></wbr><span><span>PUTBYTE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1939151733%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-p-u-t-b-y-t-e/index.html">InstructionPUTBYTE</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction PUTBYTE.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1370257486%2FClasslikes%2F769193423" anchor-label="InstructionPUTCH" id="1370257486%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-p-u-t-c-h/index.html"><span>Instruction</span><wbr></wbr><span><span>PUTCH</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1370257486%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-p-u-t-c-h/index.html">InstructionPUTCH</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction PUTCH.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="164276461%2FClasslikes%2F769193423" anchor-label="InstructionPUTEOL" id="164276461%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-p-u-t-e-o-l/index.html"><span>Instruction</span><wbr></wbr><span><span>PUTEOL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="164276461%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-p-u-t-e-o-l/index.html">InstructionPUTEOL</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction PUTEOL.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1568125280%2FClasslikes%2F769193423" anchor-label="InstructionPUTINT" id="-1568125280%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-p-u-t-i-n-t/index.html"><span>Instruction</span><wbr></wbr><span><span>PUTINT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1568125280%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-p-u-t-i-n-t/index.html">InstructionPUTINT</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction PUTINT.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1592153758%2FClasslikes%2F769193423" anchor-label="InstructionPUTSTR" id="1592153758%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-p-u-t-s-t-r/index.html"><span>Instruction</span><wbr></wbr><span><span>PUTSTR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1592153758%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-p-u-t-s-t-r/index.html">InstructionPUTSTR</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction PUTSTR.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="949291073%2FClasslikes%2F769193423" anchor-label="InstructionRET" id="949291073%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-r-e-t/index.html"><span>Instruction</span><wbr></wbr><span><span>RET</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="949291073%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-r-e-t/index.html">InstructionRET</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction RET.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1498774513%2FClasslikes%2F769193423" anchor-label="InstructionRET0" id="1498774513%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-r-e-t0/index.html"><span>Instruction</span><wbr></wbr><span><span>RET0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1498774513%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-r-e-t0/index.html">InstructionRET0</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction RET0.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1622853741%2FClasslikes%2F769193423" anchor-label="InstructionRET4" id="1622853741%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-r-e-t4/index.html"><span>Instruction</span><wbr></wbr><span><span>RET4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1622853741%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-r-e-t4/index.html">InstructionRET4</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction RET4.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-963729173%2FClasslikes%2F769193423" anchor-label="InstructionSHL" id="-963729173%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-s-h-l/index.html"><span>Instruction</span><wbr></wbr><span><span>SHL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-963729173%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-s-h-l/index.html">InstructionSHL</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction SHL.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-777610331%2FClasslikes%2F769193423" anchor-label="InstructionSHR" id="-777610331%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-s-h-r/index.html"><span>Instruction</span><wbr></wbr><span><span>SHR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-777610331%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-s-h-r/index.html">InstructionSHR</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction SHR.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-863931455%2FClasslikes%2F769193423" anchor-label="InstructionSTORE" id="-863931455%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-s-t-o-r-e/index.html"><span>Instruction</span><wbr></wbr><span><span>STORE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-863931455%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-s-t-o-r-e/index.html">InstructionSTORE</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>arg<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-one-arg/index.html">InstructionOneArg</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction STORE.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="789382001%2FClasslikes%2F769193423" anchor-label="InstructionSTORE2B" id="789382001%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-s-t-o-r-e2-b/index.html"><span>Instruction</span><wbr></wbr><span><span>STORE2B</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="789382001%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-s-t-o-r-e2-b/index.html">InstructionSTORE2B</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction STORE2B.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1681807519%2FClasslikes%2F769193423" anchor-label="InstructionSTOREB" id="1681807519%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-s-t-o-r-e-b/index.html"><span>Instruction</span><wbr></wbr><span><span>STOREB</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1681807519%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-s-t-o-r-e-b/index.html">InstructionSTOREB</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction STOREB.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1278737280%2FClasslikes%2F769193423" anchor-label="InstructionSTOREST" id="-1278737280%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-s-t-o-r-e-s-t/index.html"><span>Instruction</span><wbr></wbr><span><span>STOREST</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1278737280%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-s-t-o-r-e-s-t/index.html">InstructionSTOREST</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction STOREST.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1961743830%2FClasslikes%2F769193423" anchor-label="InstructionSTOREW" id="-1961743830%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-s-t-o-r-e-w/index.html"><span>Instruction</span><wbr></wbr><span><span>STOREW</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1961743830%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-s-t-o-r-e-w/index.html">InstructionSTOREW</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction STOREW.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1657846910%2FClasslikes%2F769193423" anchor-label="InstructionSUB" id="-1657846910%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-instruction-s-u-b/index.html"><span>Instruction</span><wbr></wbr><span><span>SUB</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1657846910%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-instruction-s-u-b/index.html">InstructionSUB</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>labels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>opCode<span class="token operator">: </span><a href="../edu.citadel.cvm.assembler/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-instruction-no-args/index.html">InstructionNoArgs</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for the assembly language instruction SUB.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-105595478%2FClasslikes%2F769193423" anchor-label="Program" id="-105595478%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-program/index.html"><span><span>Program</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-105595478%2FClasslikes%2F769193423"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-program/index.html">Program</a> : <a href="-a-s-t/index.html">AST</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements the abstract syntax tree for an assembly language program.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
