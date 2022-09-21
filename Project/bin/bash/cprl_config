@@ -12,7 +12,7 @@
 #     - edu.citadel.cvm
 
 # set PROJECT_HOME to the directory for your IntelliJ projects
-PROJECT_HOME=/mnt/c/JMooreMACS/Teaching/Compiler/Project
+PROJECT_HOME=/mnt/c/Compilers/Project
 
 # set CLASSES_HOME to the directory name used for compiled Java classes
 CLASSES_HOME=$PROJECT_HOME/out/production

@@ -12,7 +12,7 @@ rem     - edu.citadel.cprl
 rem     - edu.citadel.cvm
 
 rem set PROJECT_HOME to the directory for your IntelliJ projects
-set PROJECT_HOME=C:\JMooreMACS\Teaching\Compiler\Project
+set PROJECT_HOME=C:\Compilers\Project
 
 rem set CLASSES_HOME to the directory name used for compiled Java classes
 set CLASSES_HOME=%PROJECT_HOME%\out\production
