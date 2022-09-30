@@ -40,12 +40,9 @@ object ByteUtil
     fun bytesToHex(bytes : ByteArray) : String
       {
         val builder = StringBuilder(bytes.size*3)
-        val hexChars = CharArray(bytes.size*2)
         for (i in bytes.indices)
         {
           val v : Int = bytes[i].toInt() and 0xFF
-          hexChars[i*2] = HEX_ARRAY[v ushr 4]
-          hexChars[i*2 + 1] = HEX_ARRAY[v and 0x0F]
           builder.append(HEX_ARRAY[v ushr 4])
           builder.append(HEX_ARRAY[v and 0x0F])
           builder.append(' ')
