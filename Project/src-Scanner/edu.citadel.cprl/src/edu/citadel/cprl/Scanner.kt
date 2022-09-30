@@ -220,10 +220,7 @@ class Scanner(private val source : Source, k : Int,
     /**
      * Clear the scan buffer (makes it empty).
      */
-    private fun clearScanBuffer()
-      {
-        scanBuffer.delete(0, scanBuffer.length)
-      }
+    private fun clearScanBuffer() = scanBuffer.delete(0, scanBuffer.length)
 
 
     /**
@@ -399,7 +396,7 @@ class Scanner(private val source : Source, k : Int,
             '\'' -> return "\\\'"   // single quote
             '\\' -> return "\\\\"   // backslash
             else -> {
-                      // report error but return the invalid string
+                      // report error but return the invalid character
                       val ex = error(backslashPosition, "Illegal escape character.")
                       errorHandler.reportError(ex)
                       return "\\$c"
