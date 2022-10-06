@@ -1,12 +1,10 @@
 package edu.citadel.cvm.assembler.ast
 
-
 import edu.citadel.compiler.ConstraintException
 
 import edu.citadel.cvm.Constants
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.Token
-
 
 /**
  * This abstract class implements common methods for the abstract
@@ -41,12 +39,10 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
               }
           }
 
-
     /**
      * Returns the number of bytes in memory occupied by the argument.
      */
     protected abstract val argSize : Int
-
 
     /**
      * Returns the number of bytes in memory occupied by the instruction,
@@ -55,28 +51,6 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
     open val size : Int
         get() = Constants.BYTES_PER_OPCODE + argSize
 
-
-    /**
-     * Map the text of the identifier token to an address on the stack.
-     */
-    fun defineIdAddress(identifier : Token, size : Int)
-      {
-        assert(identifier.symbol == Symbol.identifier)
-            { "Expecting an identifier but found ${identifier.symbol}." }
-
-        if (idMap.containsKey(identifier.text))
-          {
-            val errorMessage = "This identifier has already been defined."
-            throw error(identifier.position, errorMessage)
-          }
-        else
-          {
-            idMap[identifier.text] = Integer.valueOf(idAddress)
-            idAddress = idAddress + size
-          }
-      }
-
-
     /**
      * Returns the stack address associated with an identifier.
      */
@@ -84,7 +58,6 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
       {
         return idMap[identifier.text] as Int
       }
-
 
     /**
      * Checks that each label has a value defined in the label map.  This method
@@ -105,7 +78,6 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
           }
       }
 
-
     /**
      * Calculates the displacement between the program counter and
      * a label (computed as label's address - (address + size)).
@@ -123,7 +95,6 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
         return labelAddress - (address + size)
       }
 
-
     /**
      * Asserts that the opCode token of the instruction has
      * the correct Symbol.  Implemented in each instruction
@@ -131,12 +102,10 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
      */
     protected abstract fun assertOpCode()
 
-
     protected fun assertOpCode(opCode : Symbol)
       {
         assert(this.opCode.symbol == opCode) { "Wrong opCode." }
       }
-
 
     override fun toString() : String
       {
@@ -151,7 +120,6 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
         return buffer.toString()
       }
 
-
     companion object
       {
         /**
@@ -164,10 +132,6 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
          * Maps identifier text (type String) to a stack address (type Integer).
          */
         var idMap = HashMap<String, Int>()
-
-        // Initialize address for identifiers (e.g., used in DEFINT).
-        private var idAddress = Constants.BYTES_PER_CONTEXT
-
 
         /**
          * Initialize maps.  These maps are shared with all instructions,but they

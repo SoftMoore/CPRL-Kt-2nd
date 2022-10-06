@@ -1,6 +1,5 @@
 package edu.citadel.cvm.assembler
 
-
 /**
  * This class encapsulates the symbols (also known as token types)
  * for the CVM assembly language.  The default constructor creates
@@ -97,10 +96,8 @@ enum class Symbol(private val label : String, val numArgs : Int = 0)
     // special scanning symbols
     EOF("EOF");
 
-
     open val isOpCode : Boolean
         get() = this >= HALT && this < UNKNOWN
-
 
     /**
      * Returns the label for this Symbol.
