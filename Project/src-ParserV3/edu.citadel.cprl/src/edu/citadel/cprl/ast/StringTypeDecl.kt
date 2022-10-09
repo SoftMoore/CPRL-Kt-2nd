@@ -22,4 +22,5 @@ class StringTypeDecl(typeId : Token, val capacity : ConstValue)
     override fun checkConstraints()
       {
 // ...
+      }
   }

@@ -725,7 +725,7 @@ class CVM (numOfBytes : Int)
           {
             var destAddr : Int = popInt()
             val capacity : Int = fetchInt()
-            val data     : String = readLine()!!
+            val data     : String = readLine() ?: ""
             val length   : Int = if (data.length < capacity) data.length else capacity
 
             putIntToAddr(length, destAddr)
