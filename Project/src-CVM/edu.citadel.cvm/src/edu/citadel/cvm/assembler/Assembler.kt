@@ -151,6 +151,7 @@ class Assembler(private val sourceFile : File)
         val source  = Source(reader)
         val scanner = Scanner(source, errorHandler)
         val parser  = Parser(scanner, errorHandler)
+        AST.errorHandler = errorHandler
 
         printProgressMessage("Starting assembly for ${sourceFile.name}")
 
