@@ -87,9 +87,11 @@ class Parser(private val scanner : Scanner, private val errorHandler: ErrorHandl
                 matchCurrentSymbol()
               }
 
-            // return null when a label is followed by EOF
             if (scanner.symbol == Symbol.EOF)
-                return null
+              {
+                // return HALT when a label is followed by EOF
+                return makeInstruction(labels, Token(Symbol.HALT), null)
+              }
             else
               {
                 checkOpCode()

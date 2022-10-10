@@ -15,8 +15,6 @@ import kotlin.system.exitProcess
 private const val SUFFIX  = ".asm"
 private const val FAILURE = -1
 
-private var optimize = true
-
 
 /**
  * Translates the assembly source files named in args to CVM machine
@@ -30,7 +28,7 @@ fun main(args : Array<String>)
 
     var startIndex = 0
 
-    if (args[0].startsWith("\"-opt:"))
+    if (args[0].startsWith("-opt:"))
       {
         processOption(args[0])
         startIndex = 1
@@ -115,9 +113,9 @@ private fun printUsageAndExit()
 private fun processOption(option: String)
   {
     if (option == "-opt:off")
-        optimize = false
+        Assembler.optimize = false
     else if (option == "-opt:on")
-        optimize = true
+        Assembler.optimize = true
     else
         printUsageAndExit()
   }
@@ -236,7 +234,6 @@ class Assembler(private val sourceFile : File)
             exitProcess(FAILURE)
           }
       }
-
 
     companion object
       {
