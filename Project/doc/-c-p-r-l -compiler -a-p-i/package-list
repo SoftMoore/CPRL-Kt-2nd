@@ -105,7 +105,7 @@ $dokka.location:edu.citadel.cprl.ast/ConstValue/ConstValue/#edu.citadel.cprl.Tok
 $dokka.location:edu.citadel.cprl.ast/ConstValue/ConstValue/#edu.citadel.cprl.Token/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cprl.ast/-const-value/-const-value.html
 $dokka.location:edu.citadel.cprl.ast/ConstValue/checkConstraints/#/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cprl.ast/-const-value/check-constraints.html
 $dokka.location:edu.citadel.cprl.ast/ConstValue/emit/#/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cprl.ast/-const-value/emit.html
-$dokka.location:edu.citadel.cprl.ast/ConstValue/getLiteralIntValue/#/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cprl.ast/-const-value/get-literal-int-value.html
+$dokka.location:edu.citadel.cprl.ast/ConstValue/literalIntValue/#/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cprl.ast/-const-value/literal-int-value.html
 $dokka.location:edu.citadel.cprl.ast/ConstValue/toString/#/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cprl.ast/-const-value/to-string.html
 $dokka.location:edu.citadel.cprl.ast/Declaration///PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cprl.ast/-declaration/index.html
 $dokka.location:edu.citadel.cprl.ast/Declaration/Declaration/#edu.citadel.cprl.Token#edu.citadel.cprl.Type/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cprl.ast/-declaration/-declaration.html
@@ -442,7 +442,6 @@ $dokka.location:edu.citadel.cvm.assembler.ast/Instruction.Companion/labelMap/#/P
 $dokka.location:edu.citadel.cvm.assembler.ast/Instruction///PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cvm.assembler.ast/-instruction/index.html
 $dokka.location:edu.citadel.cvm.assembler.ast/Instruction/Instruction/#kotlin.collections.MutableList[edu.citadel.cvm.assembler.Token]#edu.citadel.cvm.assembler.Token/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cvm.assembler.ast/-instruction/-instruction.html
 $dokka.location:edu.citadel.cvm.assembler.ast/Instruction/address/#/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cvm.assembler.ast/-instruction/address.html
-$dokka.location:edu.citadel.cvm.assembler.ast/Instruction/defineIdAddress/#edu.citadel.cvm.assembler.Token#kotlin.Int/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cvm.assembler.ast/-instruction/define-id-address.html
 $dokka.location:edu.citadel.cvm.assembler.ast/Instruction/labels/#/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cvm.assembler.ast/-instruction/labels.html
 $dokka.location:edu.citadel.cvm.assembler.ast/Instruction/opCode/#/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cvm.assembler.ast/-instruction/op-code.html
 $dokka.location:edu.citadel.cvm.assembler.ast/Instruction/size/#/PointingToDeclaration/-c-p-r-l -compiler -a-p-i/edu.citadel.cvm.assembler.ast/-instruction/size.html

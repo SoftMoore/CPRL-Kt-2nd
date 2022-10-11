@@ -44,8 +44,8 @@ class Parser (private val scanner : Scanner,
 
     /** Symbols that can follow an initial declaration (computed property).
      *  Set is computed dynamically based on the scope level of IdTable. */
-    private val initialDeclFollowers
-        get() : Set<Symbol>
+    private val initialDeclFollowers : Set<Symbol>
+        get()
           {
             // An initial declaration can always be followed by another initial
             // declaration, regardless of the scope level of IdTable.

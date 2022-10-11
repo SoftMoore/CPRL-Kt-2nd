@@ -50,26 +50,27 @@ class ConstValue : Expression
 
 
     /**
-     * Returns an integer value for the declaration literal.  For an integer
-     * literal, this method simply returns its integer value.  For a char
-     * literal, this method returns the underlying integer value for the
-     * character.  For a boolean literal, this method returns 0 for false
-     * and 1 for true.  For any other literal, the method returns 0.
+     * An integer value for the declaration literal.  For an integer literal,
+     * this method simply returns its integer value.  For a char literal,
+     * this method returns the underlying integer value for the character.
+     * For a boolean literal, this method returns 0 for false and 1 for true.
+     * For any other literal, the method returns 0.
      */
-    fun getLiteralIntValue() : Int
-      {
-        if (literal.symbol == Symbol.intLiteral)
-            return Integer.parseInt(literal.text)
-        else if (literal.symbol == Symbol.trueRW)
-            return 1
-        else if (literal.symbol == Symbol.charLiteral)
+    val literalIntValue : Int
+        get()
           {
-            val ch = literal.text[1]
-            return ch.code
+            if (literal.symbol == Symbol.intLiteral)
+                return Integer.parseInt(literal.text)
+            else if (literal.symbol == Symbol.trueRW)
+                return 1
+            else if (literal.symbol == Symbol.charLiteral)
+              {
+                val ch = literal.text[1]
+                return ch.code
+              }
+            else
+                return 0
           }
-        else
-            return 0
-      }
 
 
     override fun toString() : String = literal.text
