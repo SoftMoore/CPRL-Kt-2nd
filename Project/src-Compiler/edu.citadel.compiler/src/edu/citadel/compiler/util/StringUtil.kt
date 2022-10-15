@@ -1,6 +1,5 @@
 package edu.citadel.compiler.util
 
-
 /**
  * Formats an integer as right-justified within the specified field
  * width by prepending a sufficient number of blank spaces.

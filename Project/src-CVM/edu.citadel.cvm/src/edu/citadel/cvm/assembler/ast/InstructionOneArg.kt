@@ -1,11 +1,9 @@
 package edu.citadel.cvm.assembler.ast
 
-
 import edu.citadel.compiler.ConstraintException
 
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.Token
-
 
 /**
  * This class serves as a base class for the abstract syntax tree for an
@@ -35,7 +33,6 @@ abstract class InstructionOneArg(labels : MutableList<Token>, opCode : Token, va
           }
       }
 
-
     /**
      * This method is called by instructions that have an argument that
      * references a label.  It verifies that the referenced label exists.
@@ -56,7 +53,6 @@ abstract class InstructionOneArg(labels : MutableList<Token>, opCode : Token, va
           }
       }
 
-
     /**
      * This method is called by instructions to verify the type of its argument.
      */
@@ -70,7 +66,6 @@ abstract class InstructionOneArg(labels : MutableList<Token>, opCode : Token, va
           }
       }
 
-
     /**
      * Returns the argument as converted to an integer.  Valid
      * only for instructions with arguments of type intLiteral.
@@ -80,7 +75,6 @@ abstract class InstructionOneArg(labels : MutableList<Token>, opCode : Token, va
         assert(arg.symbol == Symbol.intLiteral) { "Can't convert argument $arg to an integer." }
         return Integer.parseInt(arg.text)
       }
-
 
     /**
      * Returns the argument as converted to a byte.  Valid
@@ -92,9 +86,7 @@ abstract class InstructionOneArg(labels : MutableList<Token>, opCode : Token, va
         return java.lang.Byte.parseByte(arg.text)
       }
 
-
     override fun toString() = "${super.toString()} ${arg.text}"
-
 
     /**
      * Checks that the argument of the instruction has

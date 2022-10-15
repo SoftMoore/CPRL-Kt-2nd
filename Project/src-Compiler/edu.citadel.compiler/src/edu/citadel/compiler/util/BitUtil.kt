@@ -1,6 +1,5 @@
 package edu.citadel.compiler.util
 
-
 /**
  * This class encapsulates several bit manipulation utility methods.
  */
@@ -32,7 +31,6 @@ object BitUtil
         return result.toShort()
       }
 
-
     /**
      * Returns a binary string representation of the least significant
      * (right most) bits for the specified int.
@@ -52,7 +50,6 @@ object BitUtil
         return builder.toString()
       }
 
-
     /**
      * Returns a binary string representation of the least significant
      * (right mode) bits for the specified short.
@@ -71,7 +68,6 @@ object BitUtil
 
         return builder.toString()
       }
-
 
     /**
      * Returns a binary string representation of the least significant
@@ -93,7 +89,6 @@ object BitUtil
         return builder.toString()
       }
 
-
     /**
      * Returns a hexadecimal string representation of the specified integer.
      */
@@ -107,7 +102,6 @@ object BitUtil
 
         return sb.toString()
       }
-
 
     /**
      * Returns a hexadecimal string representation of the specified short.
@@ -123,7 +117,6 @@ object BitUtil
         return sb.toString()
       }
 
-
     /**
      * Returns a hex string representation of the specified byte.
      */
@@ -131,7 +124,6 @@ object BitUtil
       {
         return String.format("%02X", n)
       }
-
 
     /**
      * Returns the n least significant (rightmost) bits in the
@@ -159,7 +151,6 @@ object BitUtil
 
         return result
       }
-
 
     /**
      * Returns the n least significant (rightmost) bits in the specified

@@ -1,6 +1,5 @@
 package edu.citadel.cprl
 
-
 import edu.citadel.compiler.CodeGenException
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.FatalException
@@ -14,7 +13,6 @@ import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
 
 private const val SUFFIX = ".cprl"
-
 
 /**
  * This function drives the compilation process.
@@ -67,12 +65,10 @@ fun main(args : Array<String>)
       }
   }
 
-
 private fun printProgressMessage(message : String)
   {
     println(message)
   }
-
 
 private fun printUsageAndExit()
   {
@@ -80,7 +76,6 @@ private fun printUsageAndExit()
     println()
     exitProcess(0)
   }
-
 
 /**
  * Compiler for the CPRL programming language.
@@ -144,7 +139,6 @@ class Compiler
         else
             printProgressMessage("Compilation complete.")
       }
-
 
     /**
      * Returns a print writer used for writing the assembly code.  The target

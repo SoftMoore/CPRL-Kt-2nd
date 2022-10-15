@@ -1,12 +1,10 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 
 import edu.citadel.cprl.ArrayType
 import edu.citadel.cprl.StringType
 import edu.citadel.cprl.Token
-
 
 /**
  * The abstract syntax tree node for a function call expression.
@@ -25,7 +23,6 @@ class FunctionCallExpr(private val funId : Token,
 
     // declaration of the function being called
     private lateinit var funDecl : FunctionDecl   // nonstructural reference
-
 
     override fun checkConstraints()
       {
@@ -90,7 +87,6 @@ class FunctionCallExpr(private val funId : Token,
           errorHandler.reportError(e)
           }
       }
-
 
     override fun emit()
       {

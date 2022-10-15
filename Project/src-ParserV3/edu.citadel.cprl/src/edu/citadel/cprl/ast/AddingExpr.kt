@@ -1,12 +1,10 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 
 import edu.citadel.cprl.Symbol
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for an adding expression.  An adding expression
@@ -25,7 +23,6 @@ class AddingExpr(leftOperand : Expression, operator : Token, rightOperand : Expr
         // Initialize the type of the expression to Integer.
         type = Type.Integer
       }
-
 
     override fun checkConstraints()
       {
@@ -52,7 +49,6 @@ class AddingExpr(leftOperand : Expression, operator : Token, rightOperand : Expr
             errorHandler.reportError(e)
           }
     }
-
 
     override fun emit()
       {

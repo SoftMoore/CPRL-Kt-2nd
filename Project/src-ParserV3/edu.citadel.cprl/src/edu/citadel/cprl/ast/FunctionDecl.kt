@@ -1,11 +1,8 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
-
 import edu.citadel.cprl.ArrayType
 import edu.citadel.cprl.Token
-
 
 /**
  * The abstract syntax tree node for a function declaration.
@@ -33,7 +30,6 @@ class FunctionDecl(funcId : Token) : SubprogramDecl(funcId)
            return firstParamAddr - type.size
           }
 
-
     override fun checkConstraints()
       {
         try
@@ -46,7 +42,6 @@ class FunctionDecl(funcId : Token) : SubprogramDecl(funcId)
             errorHandler.reportError(e)
           }
       }
-
 
     /**
      * Returns true if the specified list of statements contains at least one
@@ -69,7 +64,6 @@ class FunctionDecl(funcId : Token) : SubprogramDecl(funcId)
         return false
       }
 
-
     /**
      * Returns true if the specified statement is a return statement or contains
      * at least one return statement.
@@ -83,7 +77,6 @@ class FunctionDecl(funcId : Token) : SubprogramDecl(funcId)
     {
 // ...
     }
-
 
     override fun emit()
       {

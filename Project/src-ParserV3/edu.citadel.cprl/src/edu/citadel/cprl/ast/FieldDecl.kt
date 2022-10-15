@@ -1,9 +1,7 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for a field declaration.
@@ -20,7 +18,6 @@ class FieldDecl(fieldId : Token, type : Type) : Declaration(fieldId, type)
     /** The size (number of bytes) associated with this field declaration,
      *  which is simply the number of bytes associated with its type. */
     val size: Int = type.size
-
 
     override fun checkConstraints()
       {

@@ -1,6 +1,5 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 /**
  * This object is used to retrieve the list of all optimizations.
  */

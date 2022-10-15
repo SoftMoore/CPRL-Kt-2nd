@@ -1,6 +1,5 @@
 package test.cprl
 
-
 import edu.citadel.compiler.Source
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.FatalException
@@ -15,9 +14,7 @@ import java.io.FileReader
 import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
 
-
 private const val SUFFIX = ".cprl"
-
 
 fun main(args : Array<String>)
   {
@@ -77,9 +74,7 @@ fun main(args : Array<String>)
       }
   }
 
-
 private fun printProgressMessage(message : String) = println(message)
-
 
 private fun printUsageAndExit()
   {

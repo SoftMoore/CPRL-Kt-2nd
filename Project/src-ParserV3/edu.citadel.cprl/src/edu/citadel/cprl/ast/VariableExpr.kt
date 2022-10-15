@@ -1,6 +1,5 @@
 package edu.citadel.cprl.ast
 
-
 /**
  * The abstract syntax tree node for a variable expression.  A variable expression
  * is similar to a variable except that it generates different code.  For example,

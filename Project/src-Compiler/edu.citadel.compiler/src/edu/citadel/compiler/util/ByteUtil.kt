@@ -1,6 +1,5 @@
 package edu.citadel.compiler.util
 
-
 /**
  * Methods to convert integers and characters to byte representations, and vice versa.
  */
@@ -19,7 +18,6 @@ object ByteUtil
         return builder.toString()
       }
 
-
     /**
      * Convert a 2-byte char to a string of 4 hexadecimal digits.
      */
@@ -32,7 +30,6 @@ object ByteUtil
         builder.append(HEX_ARRAY[c.code and 0x000F])
         return builder.toString()
       }
-
 
     /**
      * Convert an array of bytes to a string of hexadecimal digits separated by spaces.
@@ -51,7 +48,6 @@ object ByteUtil
         return builder.toString()
       }
 
-
     /**
      * Converts 2 bytes to a currentChar.  The bytes passed as arguments are
      * ordered with b0 as the high order byte and b1 as the low order byte.
@@ -60,7 +56,6 @@ object ByteUtil
       {
         return (b0.toInt() shl 8 and 0x0000FF00 or (b1.toInt() and 0x000000FF)).toChar()
       }
-
 
     /**
      * Converts 4 bytes to an int.  The bytes passed as arguments are
@@ -73,7 +68,6 @@ object ByteUtil
                 or (b2.toInt() shl 8 and 0x0000FF00)
                 or (b3.toInt() and 0x000000FF))
       }
-
 
     /**
      * Converts a currentChar to an array of 2 bytes.  The bytes in the return
@@ -90,7 +84,6 @@ object ByteUtil
         return result
       }
 
-
     /**
      * Converts a short to an array of 2 bytes.  The bytes in the return
      * array are ordered with the one at index 0 as the high order byte
@@ -105,7 +98,6 @@ object ByteUtil
 
         return result
       }
-
 
     /**
      * Converts an int to an array of 4 bytes.  The bytes in the return

@@ -1,12 +1,10 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 
 import edu.citadel.cprl.Symbol
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for a multiplying expression.  A multiplying
@@ -29,12 +27,10 @@ class MultiplyingExpr(leftOperand : Expression, operator : Token, rightOperand :
         type = Type.Integer
       }
 
-
     override fun checkConstraints()
       {
 // ...
       }
-
 
     override fun emit()
       {

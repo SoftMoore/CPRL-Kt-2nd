@@ -1,6 +1,5 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.Token
 
@@ -8,7 +7,6 @@ import edu.citadel.cvm.assembler.ast.Instruction
 import edu.citadel.cvm.assembler.ast.InstructionDEC
 import edu.citadel.cvm.assembler.ast.InstructionINC
 import edu.citadel.cvm.assembler.ast.InstructionOneArg
-
 
 /**
  * Replaces addition of 1 with increment and subtraction of 1 with decrement.

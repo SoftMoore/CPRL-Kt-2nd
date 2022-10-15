@@ -1,8 +1,6 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
-
 
 /**
  * The abstract syntax tree node for a CPRL program.
@@ -15,7 +13,6 @@ class Program(private val initialDecls    : List<InitialDecl>    = emptyList(),
     : AST()
   {
     private var varLength = 0      // # bytes of all declared variables
-
 
     override fun checkConstraints()
       {
@@ -42,7 +39,6 @@ class Program(private val initialDecls    : List<InitialDecl>    = emptyList(),
           }
       }
 
-
     /**
      * Set the relative address (offset) for each variable
      * and compute the length of all variables.
@@ -68,7 +64,6 @@ class Program(private val initialDecls    : List<InitialDecl>    = emptyList(),
         // compute length of all variables
         varLength = currentAddr
       }
-
 
     override fun emit()
       {

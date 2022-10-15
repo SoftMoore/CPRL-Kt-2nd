@@ -1,13 +1,10 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.Position
 import edu.citadel.cprl.Type
 
-
 const val FALSE = "0"
 const val TRUE  = "1"
-
 
 /**
  * Base class for all CPRL expressions.
@@ -21,7 +18,6 @@ abstract class Expression(var type : Type, val position : Position) : AST()
      * the type of the expression to UNKNOWN.
      */
     constructor(position : Position) : this(Type.UNKNOWN, position)
-
 
     /**
      * For Boolean expressions, this method emits the appropriate branch opcode

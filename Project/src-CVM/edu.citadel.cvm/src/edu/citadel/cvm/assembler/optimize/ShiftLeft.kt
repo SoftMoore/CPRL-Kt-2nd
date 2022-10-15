@@ -1,13 +1,11 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.Token
 
 import edu.citadel.cvm.assembler.ast.Instruction
 import edu.citadel.cvm.assembler.ast.InstructionOneArg
 import edu.citadel.cvm.assembler.ast.InstructionSHL
-
 
 /**
  * Replaces multiplication by a power of 2 times a variable with left

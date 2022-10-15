@@ -1,11 +1,9 @@
 package edu.citadel.cprl
 
-
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.Position
 import edu.citadel.compiler.ScannerException
 import edu.citadel.compiler.Source
-
 
 /**
  * Performs lexical analysis for the CPRL programming language.
@@ -23,7 +21,6 @@ class Scanner(private val source : Source, k : Int,
     // buffer to hold identifiers and literals
     private val scanBuffer = StringBuilder(100)
 
-
     /**
      * Initialize scanner and advance to the first token.
      */
@@ -33,7 +30,6 @@ class Scanner(private val source : Source, k : Int,
         for (i in 0 until k)
             advance()
       }
-
 
     /**
      * The current token; equivalent to lookahead(1).
@@ -59,7 +55,6 @@ class Scanner(private val source : Source, k : Int,
     val position : Position
         get() = lookahead(1).position
 
-
     /**
      * Returns the ith lookahead token.  Valid parameter values are in the
      * range 1..k; i.e., the first (current) lookahead token is lookahead(1).
@@ -70,12 +65,10 @@ class Scanner(private val source : Source, k : Int,
         return buffer[i - 1]
       }
 
-
     /**
      * Advance the scanner one token.
      */
     fun advance() = buffer.add(nextToken())
-
 
     /**
      * Advance until the current symbol matches the symbol specified
@@ -87,7 +80,6 @@ class Scanner(private val source : Source, k : Int,
             advance()
       }
 
-
     /**
      * Advance until the current symbol matches one of the symbols
      * in the given set or until end of file is encountered.
@@ -97,7 +89,6 @@ class Scanner(private val source : Source, k : Int,
         while (!symbols.contains(symbol) && symbol != Symbol.EOF)
             advance()
       }
-
 
     /**
      * Returns the next token in the source file.
@@ -193,7 +184,6 @@ class Scanner(private val source : Source, k : Int,
         return Token(symbol, position, text)
       }
 
-
     /**
      * Returns the symbol associated with an identifier
      * (Symbol.arrayRW, Symbol.ifRW, Symbol.identifier, etc.)
@@ -202,7 +192,6 @@ class Scanner(private val source : Source, k : Int,
       {
 // ...  Hint: Need an efficient search based on the text of the identifier (parameter idString)
       }
-
 
     /**
      * Skip over a comment.
@@ -216,12 +205,10 @@ class Scanner(private val source : Source, k : Int,
 // ...
       }
 
-
     /**
      * Clear the scan buffer (makes it empty).
      */
     private fun clearScanBuffer() = scanBuffer.delete(0, scanBuffer.length)
-
 
     /**
      * Scans characters in the source file for a valid identifier using the
@@ -237,7 +224,6 @@ class Scanner(private val source : Source, k : Int,
 
 // ...
       }
-
 
     /**
      * Scans characters in the source file for a valid integer literal.
@@ -263,7 +249,6 @@ class Scanner(private val source : Source, k : Int,
         return scanBuffer.toString()
       }
 
-
     /**
      * Scan characters in the source file for a String literal.  Escaped
      * characters are not converted; e.g., '\t' is not converted to the tab
@@ -281,7 +266,6 @@ class Scanner(private val source : Source, k : Int,
 
 // ...
       }
-
 
     /**
      * Scan characters in the source file for a Char literal.  Escaped
@@ -358,7 +342,6 @@ class Scanner(private val source : Source, k : Int,
         return scanBuffer.toString()
       }
 
-
     /**
      * Scans characters in the source file for an escaped character; i.e.,
      * a character preceded by a backslash.  This method checks escape
@@ -404,7 +387,6 @@ class Scanner(private val source : Source, k : Int,
           }
       }
 
-
     /**
      * Fast skip over white space.
      */
@@ -413,7 +395,6 @@ class Scanner(private val source : Source, k : Int,
         while (Character.isWhitespace(source.currentChar.toChar()))
             source.advance()
       }
-
 
     /**
      * Advances over source characters to the end of the current line.
@@ -426,7 +407,6 @@ class Scanner(private val source : Source, k : Int,
             checkEOF()
           }
       }
-
 
     /**
      * Checks that the integer represents a graphic character in the Unicode
@@ -451,7 +431,6 @@ class Scanner(private val source : Source, k : Int,
           }
       }
 
-
     /**
      * Returns true only if the specified character is a letter.<br>
      * <code>'A'..'Z' + 'a'..'z' (r.e. char class: [A-Za-z])</code>
@@ -459,20 +438,17 @@ class Scanner(private val source : Source, k : Int,
     private fun isLetter(ch : Char) : Boolean
         = (ch in 'a'..'z') || (ch in 'A' .. 'Z')
 
-
     /**
      * Returns true only if the specified character is a digit.<br>
      * <code>'0'..'9' (r.e. char class: [0-9])</code>
      */
     private fun isDigit(ch : Char) : Boolean = ch in '0'..'9'
 
-
     /**
      * Returns true only if the specified character is a letter or a digit.<br>
      * <code>'A'..'Z' + 'a'..'z + '0'..'9' (r.e. char class: [A-Za-z0-9])</code>
      */
     private fun isLetterOrDigit(ch : Char) : Boolean = isLetter(ch) || isDigit(ch)
-
 
     /**
      * Returns a ScannerException with the specified error message
@@ -481,14 +457,12 @@ class Scanner(private val source : Source, k : Int,
     private fun error(message : String) : ScannerException
         = error(source.charPosition, message)
 
-
     /**
      * Returns a ScannerException with the specified error message
      * and token position.
      */
     private fun error(position : Position, message : String)
         = ScannerException(position, message)
-
 
     /**
      * Used to check for EOF in the middle of scanning tokens that

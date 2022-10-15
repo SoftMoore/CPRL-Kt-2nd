@@ -1,13 +1,11 @@
 package edu.citadel.cvm
 
-
 import edu.citadel.compiler.util.ByteUtil
 import edu.citadel.compiler.util.format
 
 import java.io.*
 import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
-
 
 private const val DEBUG = false
 
@@ -64,7 +62,6 @@ fun main(args : Array<String>)
     vm.run()
   }
 
-
 /**
  * This class implements a virtual machine for the programming language CPRL.
  * It interprets instructions for a hypothetical CPRL computer.
@@ -97,7 +94,6 @@ class CVM (numOfBytes : Int)
     /** true if the virtual computer is currently running */
     private var running = false
 
-
     /**
      * Loads the program into memory.
      *
@@ -128,12 +124,10 @@ class CVM (numOfBytes : Int)
           }
       }
 
-
     /**
      * Prints values of internal registers to standard output.
      */
     private fun printRegisters() = out.println("PC=$pc, BP=$bp, SB=$sb, SP=$sp")
-
 
     /**
      * Prints a view of memory to standard output.
@@ -259,7 +253,6 @@ class CVM (numOfBytes : Int)
         out.println()
     }
 
-
     /**
      * Prompt user and wait for user to press the enter key.
      */
@@ -268,7 +261,6 @@ class CVM (numOfBytes : Int)
         out.println("Press enter to continue...")
         readLine()
     }
-
 
     /**
      * Runs the program currently in memory.
@@ -354,7 +346,6 @@ class CVM (numOfBytes : Int)
           }
       }
 
-
     /**
      * Print an error message and exit with nonzero status code.
      */
@@ -364,7 +355,6 @@ class CVM (numOfBytes : Int)
         exitProcess(1)
       }
 
-
     /**
      * Pop the top byte off the stack and return its value.
      */
@@ -372,7 +362,6 @@ class CVM (numOfBytes : Int)
       {
         return memory[sp--]
       }
-
 
     /**
      * Pop the top character off the stack and return its value.
@@ -384,7 +373,6 @@ class CVM (numOfBytes : Int)
 
         return ByteUtil.bytesToChar(b0, b1)
       }
-
 
     /**
      * Pop the top integer off the stack and return its value.
@@ -399,7 +387,6 @@ class CVM (numOfBytes : Int)
         return ByteUtil.bytesToInt(b0, b1, b2, b3)
       }
 
-
     /**
      * Push a byte onto the stack.
      */
@@ -407,7 +394,6 @@ class CVM (numOfBytes : Int)
       {
         memory[++sp] = b
       }
-
 
     /**
      * Push a character onto the stack.
@@ -418,7 +404,6 @@ class CVM (numOfBytes : Int)
         pushByte(bytes[0])
         pushByte(bytes[1])
       }
-
 
     /**
      * Push an integer onto the stack.
@@ -432,12 +417,10 @@ class CVM (numOfBytes : Int)
         pushByte(bytes[3])
       }
 
-
     /**
      * Fetch the next instruction/byte from memory.
      */
     private fun fetchByte() : Byte = memory[pc++]
-
 
     /**
      * Fetch the next instruction currentChar operand from memory.
@@ -449,7 +432,6 @@ class CVM (numOfBytes : Int)
 
         return ByteUtil.bytesToChar(b0, b1)
       }
-
 
     /**
      * Fetch the next instruction int operand from memory.
@@ -464,7 +446,6 @@ class CVM (numOfBytes : Int)
         return ByteUtil.bytesToInt(b0, b1, b2, b3)
       }
 
-
     /**
      * Returns the character at the specified memory address.
      * Does not alter pc, sp, or bp.
@@ -476,7 +457,6 @@ class CVM (numOfBytes : Int)
 
         return ByteUtil.bytesToChar(b0, b1)
       }
-
 
     /**
      * Returns the integer at the specified memory address.
@@ -492,13 +472,11 @@ class CVM (numOfBytes : Int)
         return ByteUtil.bytesToInt(b0, b1, b2, b3)
       }
 
-
     /**
      * Returns the word at the specified memory address.
      * Does not alter pc, sp, or bp.
      */
     private fun getWordAtAddr(address: Int) : Int = getIntAtAddr(address)
-
 
     /**
      * Writes the char value to the specified memory address.
@@ -510,7 +488,6 @@ class CVM (numOfBytes : Int)
         memory[address + 0] = bytes[0]
         memory[address + 1] = bytes[1]
       }
-
 
     /**
      * Writes the integer value to the specified memory address.
@@ -525,7 +502,6 @@ class CVM (numOfBytes : Int)
         memory[address + 3] = bytes[3]
       }
 
-
     /**
      * Writes the word value to the specified memory address.
      * Does not alter pc, sp, or bp.
@@ -534,7 +510,6 @@ class CVM (numOfBytes : Int)
 
     //----------------------------------------------------------------------
     // End:  internal machine instructions that do NOT correspond to OpCodes
-
 
     // Start:  machine instructions corresponding to OpCodes
     //------------------------------------------------------
@@ -546,13 +521,11 @@ class CVM (numOfBytes : Int)
         pushInt(operand1 + operand2)
       }
 
-
     private fun allocate()
       {
         val numBytes = fetchInt()
         sp = sp + numBytes
       }
-
 
     /**
      * Unconditional branch.
@@ -562,7 +535,6 @@ class CVM (numOfBytes : Int)
         val displacement = fetchInt()
         pc = pc + displacement
       }
-
 
     private fun branchEqual()
       {
@@ -574,7 +546,6 @@ class CVM (numOfBytes : Int)
             pc = pc + displacement
       }
 
-
     private fun branchNotEqual()
       {
         val displacement = fetchInt()
@@ -584,7 +555,6 @@ class CVM (numOfBytes : Int)
         if (operand1 != operand2)
             pc = pc + displacement
       }
-
 
     private fun branchGreater()
       {
@@ -596,7 +566,6 @@ class CVM (numOfBytes : Int)
             pc = pc + displacement
       }
 
-
     private fun branchGreaterOrEqual()
       {
         val displacement = fetchInt()
@@ -606,7 +575,6 @@ class CVM (numOfBytes : Int)
         if (operand1 >= operand2)
             pc = pc + displacement
       }
-
 
     private fun branchLess()
       {
@@ -618,7 +586,6 @@ class CVM (numOfBytes : Int)
             pc = pc + displacement
       }
 
-
     private fun branchLessOrEqual()
       {
         val displacement = fetchInt()
@@ -629,7 +596,6 @@ class CVM (numOfBytes : Int)
             pc = pc + displacement
       }
 
-
     private fun branchZero()
       {
         val displacement = fetchInt()
@@ -639,7 +605,6 @@ class CVM (numOfBytes : Int)
             pc = pc + displacement
       }
 
-
     private fun branchNonZero()
       {
         val displacement = fetchInt()
@@ -648,7 +613,6 @@ class CVM (numOfBytes : Int)
         if (value.toInt() != 0)
             pc = pc + displacement
       }
-
 
     private fun call()
       {
@@ -664,13 +628,11 @@ class CVM (numOfBytes : Int)
         pc = pc + displacement
       }
 
-
     private fun decrement()
       {
         val operand = popInt()
         pushInt(operand - 1)
       }
-
 
     private fun divide()
       {
@@ -682,7 +644,6 @@ class CVM (numOfBytes : Int)
         else
           error("*** FAULT:  Divide by zero ***")
       }
-
 
     private fun getCh()
       {
@@ -703,7 +664,6 @@ class CVM (numOfBytes : Int)
           }
       }
 
-
     private fun getInt()
       {
         try
@@ -717,7 +677,6 @@ class CVM (numOfBytes : Int)
             error("Invalid input")
           }
       }
-
 
     private fun getString()
       {
@@ -742,19 +701,16 @@ class CVM (numOfBytes : Int)
           }
       }
 
-
     private fun halt()
       {
         running = false
       }
-
 
     private fun increment()
       {
         val operand = popInt()
         pushInt(operand + 1)
       }
-
 
     /**
      * Loads a multibyte variable onto the stack.  The number of bytes
@@ -770,19 +726,15 @@ class CVM (numOfBytes : Int)
           pushByte(memory[address + i])
       }
 
-
     private fun loadConstByte()
       {
         val b = fetchByte()
         pushByte(b)
       }
 
-
     private fun loadConstByteZero() = pushByte(0.toByte())
 
-
     private fun loadConstByteOne() = pushByte(1.toByte())
-
 
     private fun loadConstCh()
       {
@@ -790,19 +742,15 @@ class CVM (numOfBytes : Int)
         pushChar(ch)
       }
 
-
     private fun loadConstInt()
       {
         val value = fetchInt()
         pushInt(value)
       }
 
-
     private fun loadConstIntZero() = pushInt(0)
 
-
     private fun loadConstIntOne() = pushInt(1)
-
 
     private fun loadConstStr()
       {
@@ -814,20 +762,17 @@ class CVM (numOfBytes : Int)
             pushChar(fetchChar())
       }
 
-
     private fun loadLocalAddress()
       {
         val displacement = fetchInt()
         pushInt(bp + displacement)
       }
 
-
     private fun loadGlobalAddress()
       {
         val displacement = fetchInt()
         pushInt(sb + displacement)
       }
-
 
     /**
      * Loads a single byte onto the stack.  The address of the
@@ -839,7 +784,6 @@ class CVM (numOfBytes : Int)
         val b = memory[address]
         pushByte(b)
       }
-
 
     /**
      * Loads two bytes onto the stack.  The address of the first
@@ -855,7 +799,6 @@ class CVM (numOfBytes : Int)
         pushByte(b0)
         pushByte(b1)
       }
-
 
     private fun loadString()
       {
@@ -881,7 +824,6 @@ class CVM (numOfBytes : Int)
         pushInt(strLength)
       }
 
-
     /**
      * Loads a single word-size variable (four bytes) onto the stack.  The address
      * of the variable is obtained by popping it off the top of the stack.
@@ -893,14 +835,12 @@ class CVM (numOfBytes : Int)
         pushInt(word)
       }
 
-
     private fun modulo()
       {
         val operand2 = popInt()
         val operand1 = popInt()
         pushInt(operand1%operand2)
       }
-
 
     private fun multiply()
       {
@@ -909,13 +849,11 @@ class CVM (numOfBytes : Int)
         pushInt(operand1*operand2)
       }
 
-
     private fun negate()
       {
         val operand1 = popInt()
         pushInt(-operand1)
       }
-
 
     private operator fun not()
       {
@@ -927,9 +865,7 @@ class CVM (numOfBytes : Int)
             pushByte(FALSE)
       }
 
-
     private fun procedure() = allocate()
-
 
     private fun program()
       {
@@ -942,18 +878,13 @@ class CVM (numOfBytes : Int)
             error("*** Out of memory ***")
       }
 
-
     private fun putChar() = out.print(popChar())
-
 
     private fun putByte() = out.print(popByte())
 
-
     private fun putInt() = out.print(popInt())
 
-
     private fun putEOL() = out.println()
-
 
     private fun putString()
       {
@@ -978,7 +909,6 @@ class CVM (numOfBytes : Int)
         sp = sp - capacity
       }
 
-
     private fun returnInst()
       {
         val bpSave = bp
@@ -989,7 +919,6 @@ class CVM (numOfBytes : Int)
         pc = getIntAtAddr(bpSave + Constants.BYTES_PER_INTEGER)
       }
 
-
     private fun returnZero()
       {
         val bpSave = bp
@@ -998,7 +927,6 @@ class CVM (numOfBytes : Int)
         pc = getIntAtAddr(bpSave + Constants.BYTES_PER_INTEGER)
       }
 
-
     private fun returnFour()
       {
         val bpSave = bp
@@ -1006,7 +934,6 @@ class CVM (numOfBytes : Int)
         bp = getIntAtAddr(bpSave)
         pc = getIntAtAddr(bpSave + Constants.BYTES_PER_INTEGER)
       }
-
 
     private fun shiftLeft()
       {
@@ -1019,7 +946,6 @@ class CVM (numOfBytes : Int)
         pushInt(operand shl shiftAmount)
       }
 
-
     private fun shiftRight()
       {
         val operand = popInt()
@@ -1030,7 +956,6 @@ class CVM (numOfBytes : Int)
 
         pushInt(operand shr shiftAmount)
       }
-
 
     private fun store()
       {
@@ -1047,7 +972,6 @@ class CVM (numOfBytes : Int)
             memory[destAddr + i] = data[i]
       }
 
-
     private fun storeByte()
       {
         val value    = popByte()
@@ -1055,7 +979,6 @@ class CVM (numOfBytes : Int)
 
         memory[destAddr] = value
       }
-
 
     private fun store2Bytes()
       {
@@ -1066,7 +989,6 @@ class CVM (numOfBytes : Int)
         memory[destAddr + 0] = byte0
         memory[destAddr + 1] = byte1
       }
-
 
     private fun storeString()
       {
@@ -1089,7 +1011,6 @@ class CVM (numOfBytes : Int)
           }
       }
 
-
     private fun storeWord()
       {
         val value    = popInt()
@@ -1097,7 +1018,6 @@ class CVM (numOfBytes : Int)
 
         putWordToAddr(value, destAddr)
       }
-
 
     private fun subtract()
       {

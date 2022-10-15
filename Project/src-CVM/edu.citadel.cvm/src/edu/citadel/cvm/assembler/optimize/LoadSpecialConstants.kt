@@ -1,10 +1,8 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.Token
 import edu.citadel.cvm.assembler.ast.*
-
 
 /**
  * Replaces LDCB 0 with LDCB0, LDCB 1 with LDCB1, LDCINT 0 with LDCINT0, and

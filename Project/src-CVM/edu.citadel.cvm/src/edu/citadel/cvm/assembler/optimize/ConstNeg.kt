@@ -1,10 +1,8 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.ast.Instruction
 import edu.citadel.cvm.assembler.ast.InstructionOneArg
-
 
 /**
  * Performs a special type of constant folding by replacing an instruction

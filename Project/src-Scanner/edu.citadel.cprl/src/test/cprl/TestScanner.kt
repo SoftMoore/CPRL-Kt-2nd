@@ -1,6 +1,5 @@
 package test.cprl
 
-
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.Source
 import edu.citadel.cprl.Scanner
@@ -12,9 +11,7 @@ import java.io.PrintStream
 import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
 
-
 val out = PrintStream(java.lang.System.out, true, StandardCharsets.UTF_8)
-
 
 fun main(args : Array<String>)
   {
@@ -68,7 +65,6 @@ fun printToken(token : Token)
 
     out.println(token.text)
   }
-
 
 private fun printUsageAndExit()
   {

@@ -1,6 +1,5 @@
 package edu.citadel.cprl
 
-
 /**
  * This class encapsulates a scope in CPRL.
  */

@@ -1,12 +1,10 @@
 package edu.citadel.cvm.assembler
 
-
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.ParserException
 import edu.citadel.cvm.assembler.ast.*
 
 import java.util.EnumSet
-
 
 /**
  * This class uses recursive descent to perform syntax analysis of the source language.
@@ -17,7 +15,6 @@ class Parser(private val scanner : Scanner, private val errorHandler: ErrorHandl
   {
     /** Symbols that can follow an assembly language instruction. */
     private val instructionFollowers : Set<Symbol> = makeInstructionFollowers()
-
 
     /**
      * Returns a set of symbols that can follow an instruction.
@@ -73,7 +70,6 @@ class Parser(private val scanner : Scanner, private val errorHandler: ErrorHandl
         return program
       }
 
-
     // instruction = { labelId } opCodeMnemonic [ arg ] .
     private fun parseInstruction() : Instruction?
       {
@@ -116,7 +112,6 @@ class Parser(private val scanner : Scanner, private val errorHandler: ErrorHandl
             return null
           }
       }
-
 
     private fun makeInstruction(labels: MutableList<Token>, opCode: Token, arg: Token?)
         : Instruction
@@ -188,7 +183,6 @@ class Parser(private val scanner : Scanner, private val errorHandler: ErrorHandl
           }
       }
 
-
     // utility parsing methods
 
     private fun checkOpCode()
@@ -199,7 +193,6 @@ class Parser(private val scanner : Scanner, private val errorHandler: ErrorHandl
             throw error(errorMessage)
           }
       }
-
 
     private fun checkArgs(opCode : Token, arg : Token?)
       {
@@ -230,7 +223,6 @@ class Parser(private val scanner : Scanner, private val errorHandler: ErrorHandl
           }
       }
 
-
     private fun matchEOF()
       {
         if (scanner.symbol != Symbol.EOF)
@@ -240,12 +232,10 @@ class Parser(private val scanner : Scanner, private val errorHandler: ErrorHandl
           }
       }
 
-
     private fun matchCurrentSymbol()
       {
         scanner.advance()
       }
-
 
     private fun error(message : String) : ParserException
       {

@@ -1,9 +1,7 @@
 package edu.citadel.cprl
 
-
 import edu.citadel.cprl.ast.LoopStmt
 import java.util.Stack
-
 
 /**
  * This class provides access to an enclosing loop context required
@@ -26,7 +24,6 @@ class LoopContext
       {
         loopStack.push(stmt)
       }
-
 
     /**
      * Called when finished parsing a loop statement.

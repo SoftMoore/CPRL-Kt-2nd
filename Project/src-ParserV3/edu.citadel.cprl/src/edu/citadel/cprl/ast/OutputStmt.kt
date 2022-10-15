@@ -1,11 +1,8 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
-
 import edu.citadel.cprl.StringType
 import edu.citadel.cprl.Type
-
 
 /**
  * This class implements both write and writeln statements.
@@ -39,7 +36,6 @@ class OutputStmt(private val expressions : List<Expression>,
             errorHandler.reportError(e)
           }
       }
-
 
     override fun emit()
       {

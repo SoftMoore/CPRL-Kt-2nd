@@ -1,6 +1,5 @@
 package edu.citadel.cprl.ast
 
-
 /**
  * An empty statement passes constraint checks and emits no code.
  * It is returned from parsing statements as an alternative to
@@ -12,7 +11,6 @@ object EmptyStatement : Statement()
       {
         // nothing to check
       }
-
 
     override fun emit()
       {

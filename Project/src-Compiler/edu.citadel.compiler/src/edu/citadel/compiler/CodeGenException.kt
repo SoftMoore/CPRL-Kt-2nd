@@ -1,6 +1,5 @@
 package edu.citadel.compiler
 
-
 /**
  * Class for exceptions encountered during code generation.
  *

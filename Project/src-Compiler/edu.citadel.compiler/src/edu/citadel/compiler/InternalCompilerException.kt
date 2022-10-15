@@ -1,6 +1,5 @@
 package edu.citadel.compiler
 
-
 /**
  * Class for exceptions encountered within the compiler.  These
  * exceptions represent problems with the implementation of the compiler

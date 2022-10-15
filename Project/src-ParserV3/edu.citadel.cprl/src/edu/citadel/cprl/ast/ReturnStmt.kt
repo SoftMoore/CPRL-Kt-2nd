@@ -1,9 +1,7 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 import edu.citadel.compiler.Position
-
 
 /**
  * The abstract syntax tree node for a return statement.  A return
@@ -23,7 +21,6 @@ class ReturnStmt(private val subprogramDecl : SubprogramDecl,   // nonstructural
       {
 // ...
       }
-
 
     override fun emit()
       {

@@ -1,9 +1,7 @@
 package edu.citadel.cvm.assembler.ast
 
-
 import edu.citadel.compiler.ConstraintException
 import edu.citadel.cvm.assembler.optimize.Optimizations
-
 
 /**
  * This class implements the abstract syntax tree for an assembly language program.
@@ -12,25 +10,21 @@ class Program : AST()
   {
     private val instructions : ArrayList<Instruction> = ArrayList()
 
-
     fun addInstruction(inst : Instruction)
       {
         instructions.add(inst)
       }
-
 
     fun getInstructions() : List<Instruction>
       {
         return instructions
       }
 
-
     override fun checkConstraints()
       {
         for (inst in instructions)
             inst.checkConstraints()
       }
-
 
     /**
      * Perform code transformations that improve performance.  This method
@@ -48,7 +42,6 @@ class Program : AST()
             ++n
           }
       }
-
 
     /**
      * Sets the starting memory address for each instruction and defines label
@@ -74,13 +67,11 @@ class Program : AST()
           }
       }
 
-
     override fun emit()
       {
         for (inst in instructions)
             inst.emit()
       }
-
 
     override fun toString() : String
       {

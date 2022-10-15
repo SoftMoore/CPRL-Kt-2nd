@@ -1,9 +1,7 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.cprl.Token
 import edu.citadel.cvm.Constants
-
 
 /**
  * Base class for CPRL procedures and functions.
@@ -39,7 +37,6 @@ abstract class SubprogramDecl(subprogramId : Token) : Declaration(subprogramId)
             return paramLength
           }
 
-
     override fun checkConstraints()
       {
         for (paramDecl in formalParams)
@@ -51,7 +48,6 @@ abstract class SubprogramDecl(subprogramId : Token) : Declaration(subprogramId)
         for (statement in statements)
             statement.checkConstraints()
       }
-
 
     /**
      * Set the relative address (offset) for each variable and

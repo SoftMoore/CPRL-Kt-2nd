@@ -1,8 +1,6 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.Position
-
 
 /**
  * An empty expression passes constraint checks and emits no code.
@@ -11,14 +9,13 @@ import edu.citadel.compiler.Position
  */
 object EmptyExpression : Expression(Position())
   {
-      override fun checkConstraints()
-        {
-          // nothing to check
-        }
+    override fun checkConstraints()
+      {
+        // nothing to check
+      }
 
-
-      override fun emit()
-        {
-          // nothing to emit
-        }
+    override fun emit()
+      {
+        // nothing to emit
+      }
   }

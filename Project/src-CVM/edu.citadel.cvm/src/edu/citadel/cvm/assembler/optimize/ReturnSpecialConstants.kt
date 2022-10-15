@@ -1,6 +1,5 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.Token
 
@@ -8,7 +7,6 @@ import edu.citadel.cvm.assembler.ast.Instruction
 import edu.citadel.cvm.assembler.ast.InstructionOneArg
 import edu.citadel.cvm.assembler.ast.InstructionRET0
 import edu.citadel.cvm.assembler.ast.InstructionRET4
-
 
 /**
  * Replaces RET 0 with RET0 and RET 4 with RET4.

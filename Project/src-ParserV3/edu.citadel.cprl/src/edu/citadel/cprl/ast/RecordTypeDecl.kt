@@ -1,9 +1,7 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.cprl.RecordType
 import edu.citadel.cprl.Token
-
 
 /**
  * The abstract syntax tree node for a record type declaration.

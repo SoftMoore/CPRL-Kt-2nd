@@ -1,6 +1,5 @@
 package edu.citadel.cvm
 
-
 /**
  * The set of opcodes for the CPRL virtual machine
  */

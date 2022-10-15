@@ -1,8 +1,6 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.cprl.Token
-
 
 /**
  * An empty subprogram declaration passes constraint checks and emits no code.
@@ -17,12 +15,10 @@ object EmptySubprogramDecl : SubprogramDecl(Token())
         statements   = emptyList()
       }
 
-
     override fun checkConstraints()
       {
         // nothing to check
       }
-
 
     override fun emit()
       {

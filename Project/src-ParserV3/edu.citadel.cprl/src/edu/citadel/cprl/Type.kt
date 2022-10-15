@@ -1,8 +1,6 @@
 package edu.citadel.cprl
 
-
 import edu.citadel.cvm.Constants
-
 
 /**
  * This class encapsulates the language types for the programming language CPRL.
@@ -19,19 +17,15 @@ open class Type protected constructor(val typeName : String, var size : Int = 0)
     val isScalar : Boolean
         get() = this == Integer || this == Boolean || this == Char
 
-
     /**
      * Returns the name for this type.
      */
     override fun toString() : String = typeName
 
-
     override fun hashCode() : Int = typeName.hashCode()
-
 
     override fun equals(other : Any?) : Boolean =
         this === other || (other is Type && typeName == other.typeName)
-
 
     companion object
       {

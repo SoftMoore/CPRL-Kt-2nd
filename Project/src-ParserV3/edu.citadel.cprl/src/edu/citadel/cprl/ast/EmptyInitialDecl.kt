@@ -1,9 +1,7 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * An empty initial declaration passes constraint checks and emits no code.
@@ -12,14 +10,13 @@ import edu.citadel.cprl.Type
  */
 object EmptyInitialDecl : InitialDecl(Token(), Type.UNKNOWN)
   {
-      override fun checkConstraints()
-        {
-          // nothing to check
-        }
+    override fun checkConstraints()
+      {
+        // nothing to check
+      }
 
-
-      override fun emit()
-        {
-          // nothing to emit
-        }
+    override fun emit()
+      {
+        // nothing to emit
+      }
   }

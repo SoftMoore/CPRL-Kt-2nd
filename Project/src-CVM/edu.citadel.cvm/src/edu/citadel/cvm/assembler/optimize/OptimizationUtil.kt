@@ -1,10 +1,8 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 /*
  * Utility for shift-related optimizations.
  */
-
 
 /**
  * If n is a power of 2, returns log2(n) (i.e., returns the exponent);

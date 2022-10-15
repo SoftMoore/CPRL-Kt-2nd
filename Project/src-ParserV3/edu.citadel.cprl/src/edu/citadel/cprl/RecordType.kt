@@ -2,7 +2,6 @@ package edu.citadel.cprl
 
 import edu.citadel.cprl.ast.FieldDecl
 
-
 /**
  * This class encapsulates the language concept of a record type
  * in the programming language CPRL.
@@ -24,10 +23,9 @@ class RecordType(typeName : String, fieldDecls : List<FieldDecl>)
             fieldNameMap[fieldDecl.idToken.text] = fieldDecl
       }
 
-
-      /**
-       * Returns the field declaration associated with the identifier string.
-       * Returns null if the identifier string is not found.
-       */
+    /**
+     * Returns the field declaration associated with the identifier string.
+     * Returns null if the identifier string is not found.
+     */
     operator fun get(idStr: String): FieldDecl? = fieldNameMap[idStr]
   }

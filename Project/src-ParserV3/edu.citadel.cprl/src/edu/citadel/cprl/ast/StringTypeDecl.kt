@@ -6,7 +6,6 @@ import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
 import edu.citadel.cprl.StringType
 
-
 /**
  * The abstract syntax tree node for a string type declaration.
  *

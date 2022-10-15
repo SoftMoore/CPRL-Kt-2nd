@@ -1,10 +1,8 @@
 package edu.citadel.cvm.assembler.ast
 
-
 import edu.citadel.cvm.OpCode
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.Token
-
 
 /**
  * This class implements the abstract syntax tree for the assembly
@@ -17,7 +15,6 @@ class InstructionRET4(labels : MutableList<Token>, opCode : Token)
       {
         assertOpCode(Symbol.RET4)
       }
-
 
     override fun emit()
       {

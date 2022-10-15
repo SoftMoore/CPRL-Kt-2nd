@@ -1,11 +1,8 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
-
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.StringType
-
 
 /**
  * The abstract syntax tree node for a procedure call statement.
@@ -24,12 +21,10 @@ class ProcedureCallStmt(private val procId : Token, actualParams : List<Expressi
     // declaration of the procedure being called
     private lateinit var procDecl : ProcedureDecl   // nonstructural reference
 
-
     override fun checkConstraints()
       {
 // ...
       }
-
 
     override fun emit()
       {

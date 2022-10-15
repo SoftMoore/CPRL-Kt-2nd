@@ -1,8 +1,6 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 import edu.citadel.cvm.assembler.ast.Instruction
-
 
 /**
  * Perform peephole optimization on the list of instructions starting with

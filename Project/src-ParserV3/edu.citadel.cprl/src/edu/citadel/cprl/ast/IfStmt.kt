@@ -1,10 +1,7 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
-
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for an if statement.
@@ -23,7 +20,6 @@ class IfStmt(private val booleanExpr : Expression,
     // labels used during code generation
     private val L1 : String = getNewLabel()   // label of address at end of then statement
     private val L2 : String = getNewLabel()   // label of address at end of if statement
-
 
     override fun checkConstraints()
       {
@@ -44,7 +40,6 @@ class IfStmt(private val booleanExpr : Expression,
             errorHandler.reportError(e)
           }
       }
-
 
     override fun emit()
       {

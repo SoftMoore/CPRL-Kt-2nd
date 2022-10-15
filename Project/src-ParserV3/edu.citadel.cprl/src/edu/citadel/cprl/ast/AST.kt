@@ -1,6 +1,5 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.CodeGenException
 import edu.citadel.compiler.ConstraintException
 import edu.citadel.compiler.ErrorHandler
@@ -11,7 +10,6 @@ import edu.citadel.cprl.Type
 import edu.citadel.cprl.StringType
 
 import java.io.PrintWriter
-
 
 /**
  * Base class for all abstract syntax tree classes.
@@ -28,7 +26,6 @@ abstract class AST
        return "L$currentLabelNum"
      }
 
-
     /**
      * Creates/returns a new constraint exception with the specified
      * position and message.
@@ -36,19 +33,16 @@ abstract class AST
     protected fun error(errorPos : Position, errorMsg : String) : ConstraintException
         = ConstraintException(errorPos, errorMsg)
 
-
     /**
      * Creates/returns a new constraint exception with the specified message.
      */
     protected fun error(errorMsg : String) : ConstraintException
         = ConstraintException(errorMsg)
 
-
     /**
      * Check semantic/contextual constraints.
      */
     abstract fun checkConstraints()
-
 
     /**
      * Emit object code.
@@ -56,7 +50,6 @@ abstract class AST
      * @throws CodeGenException if the method is unable to generate object code.
      */
     abstract fun emit()
-
 
      /**
       * Returns true if the expression type is assignment compatible with
@@ -74,7 +67,6 @@ abstract class AST
             return false
       }
 
-
     /**
      * Emits the appropriate LOAD instruction based on the type.
      */
@@ -88,7 +80,6 @@ abstract class AST
             else -> emit("LOAD ${t.size}")
           }
       }
-
 
     /**
      * Emits the appropriate STORE instruction based on the type.
@@ -104,7 +95,6 @@ abstract class AST
           }
       }
 
-
     /**
      * Emit label for assembly instruction.  This instruction appends a colon
      * to the end of the label and writes out the result on a single line.
@@ -114,7 +104,6 @@ abstract class AST
         out.println("$label:")
       }
 
-
     /**
      * Emit string representation for an assembly instruction.
      */
@@ -122,7 +111,6 @@ abstract class AST
       {
         out.println(SPACES + instruction)
       }
-
 
     companion object
       {

@@ -1,10 +1,7 @@
 package edu.citadel.cvm.assembler.ast
 
-
 import edu.citadel.compiler.ConstraintException
-
 import edu.citadel.cvm.assembler.Token
-
 
 /**
  * This class serves as a base class for the abstract syntax
@@ -18,7 +15,6 @@ abstract class InstructionNoArgs(labels : MutableList<Token>, opCode : Token)
   {
     override val argSize : Int
         get() = 0
-
 
     override fun checkConstraints()
       {

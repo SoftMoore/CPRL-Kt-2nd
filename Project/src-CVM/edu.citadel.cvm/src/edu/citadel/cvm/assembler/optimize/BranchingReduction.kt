@@ -1,10 +1,8 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.Token
 import edu.citadel.cvm.assembler.ast.*
-
 
 /**
  * Improves branching instructions where a nonconditional branch is used
@@ -60,7 +58,6 @@ class BranchingReduction : Optimization
           }
       }
 
-
     /**
      * Combines the lists of labels into a single list.
      */
@@ -78,7 +75,6 @@ class BranchingReduction : Optimization
           }
       }
 
-
     /**
      * Returns true if the symbol is a conditional branch; that is,
      * if the symbol is one of BNZ, BZ, BG, BGE, BL, or BLE.
@@ -88,7 +84,6 @@ class BranchingReduction : Optimization
         return s == Symbol.BNZ  || s == Symbol.BZ  || s == Symbol.BG
             || s == Symbol.BGE  || s == Symbol.BL  || s == Symbol.BLE
       }
-
 
     /**
      * Returns dual branch conditional branch instruction with the specified
@@ -109,7 +104,6 @@ class BranchingReduction : Optimization
             else       -> throw IllegalArgumentException("Illegal branch instruction $s")
           }
       }
-
 
     /**
      * Returns true if the text of the second parameter label equals the

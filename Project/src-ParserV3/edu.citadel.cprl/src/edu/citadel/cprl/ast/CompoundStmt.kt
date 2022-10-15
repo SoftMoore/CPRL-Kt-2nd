@@ -1,6 +1,5 @@
 package edu.citadel.cprl.ast
 
-
 /**
  * The abstract syntax tree node for a compound statement.
  *
@@ -12,7 +11,6 @@ class CompoundStmt(val statements : List<Statement>) : Statement()
       {
 // ...
       }
-
 
     override fun emit()
       {

@@ -1,12 +1,10 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 
 import edu.citadel.cprl.Symbol
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for a logical expression.  A logical expression
@@ -23,7 +21,6 @@ class LogicalExpr(leftOperand : Expression, operator : Token, rightOperand : Exp
     private val L1 : String = getNewLabel()   // label at start of right operand
     private val L2 : String = getNewLabel()   // label at end of logical expression
 
-
     /**
      * Initialize the type of the expression to Boolean.
      */
@@ -33,7 +30,6 @@ class LogicalExpr(leftOperand : Expression, operator : Token, rightOperand : Exp
             { "LogicalExpression: operator is not a logical operator." }
         type = Type.Boolean
       }
-
 
     override fun checkConstraints()
       {
@@ -61,7 +57,6 @@ class LogicalExpr(leftOperand : Expression, operator : Token, rightOperand : Exp
             errorHandler.reportError(e)
           }
       }
-
 
     override fun emit()
       {

@@ -1,6 +1,5 @@
 package edu.citadel.cvm.assembler
 
-
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.FatalException
 import edu.citadel.compiler.Source
@@ -14,7 +13,6 @@ import kotlin.system.exitProcess
 
 private const val SUFFIX  = ".asm"
 private const val FAILURE = -1
-
 
 /**
  * Translates the assembly source files named in args to CVM machine
@@ -78,7 +76,6 @@ fun main(args : Array<String>)
       }
   }
 
-
 /**
  * This method is useful for debugging.
  *
@@ -92,12 +89,10 @@ private fun printInstructions(instructions : List<Instruction>)
     println()
   }
 
-
 private fun printProgressMessage(message : String)
   {
     println(message)
   }
-
 
 private fun printUsageAndExit()
   {
@@ -109,7 +104,6 @@ private fun printUsageAndExit()
     exitProcess(0)
   }
 
-
 private fun processOption(option: String)
   {
     if (option == "-opt:off")
@@ -119,7 +113,6 @@ private fun processOption(option: String)
     else
         printUsageAndExit()
   }
-
 
 /**
  * Assembler for the CPRL Virtual Machine.
@@ -132,7 +125,6 @@ class Assembler(private val sourceFile : File)
       {
         Instruction.initMaps()
       }
-
 
     /**
      * Assembles the source file.  If there are no errors in the source file,
@@ -211,7 +203,6 @@ class Assembler(private val sourceFile : File)
         else
             printProgressMessage("Assembly complete.")
       }
-
 
     private fun getTargetOutputStream(sourceFile : File): OutputStream
       {

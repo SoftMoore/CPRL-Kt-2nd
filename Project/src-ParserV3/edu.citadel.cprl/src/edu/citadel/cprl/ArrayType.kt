@@ -1,6 +1,5 @@
 package edu.citadel.cprl
 
-
 /**
  * This class encapsulates the language concept of an array type
  * in the programming language CPRL.

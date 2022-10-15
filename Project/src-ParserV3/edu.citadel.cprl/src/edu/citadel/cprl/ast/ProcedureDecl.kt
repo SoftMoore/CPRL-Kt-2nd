@@ -1,8 +1,6 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.cprl.Token
-
 
 /**
  * The abstract syntax tree node for a procedure declaration.

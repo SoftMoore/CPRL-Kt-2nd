@@ -1,10 +1,8 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.cprl.ScopeLevel
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for a parameter declaration.
@@ -20,7 +18,6 @@ class ParameterDecl(paramId : Token, type : Type, val isVarParam : Boolean)
 
     override val scopeLevel = ScopeLevel.LOCAL   // always LOCAL for a parameter
 
-
     /**
      * The size (number of bytes) associated with this parameter declaration.
      * The size of a parameter declaration is the number of bytes associated
@@ -29,7 +26,6 @@ class ParameterDecl(paramId : Token, type : Type, val isVarParam : Boolean)
      */
     override val size : Int
         get() = if (isVarParam) Type.Address.size else type.size
-
 
     override fun checkConstraints()
       {

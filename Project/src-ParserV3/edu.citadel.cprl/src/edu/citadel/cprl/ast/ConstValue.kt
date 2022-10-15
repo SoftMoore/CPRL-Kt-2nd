@@ -1,6 +1,5 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.CodeGenException
 import edu.citadel.compiler.ConstraintException
 
@@ -8,7 +7,6 @@ import edu.citadel.cprl.Symbol
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
 import edu.citadel.cprl.StringType
-
 
 /**
  * The abstract syntax tree node for a constant value expression, which is
@@ -26,7 +24,6 @@ class ConstValue : Expression
     // constant declaration containing the constant value
     private val decl : ConstDecl?   // nonstructural reference
 
-
     /**
      * Construct a constant value from a literal token.
      */
@@ -35,7 +32,6 @@ class ConstValue : Expression
         this.literal = literal
         this.decl = null
       }
-
 
     /**
      * Construct a constant value from a constant identifier
@@ -47,7 +43,6 @@ class ConstValue : Expression
         this.literal = decl.literal
         this.decl = decl
       }
-
 
     /**
      * An integer value for the declaration literal.  For an integer literal,
@@ -72,9 +67,7 @@ class ConstValue : Expression
                 return 0
           }
 
-
     override fun toString() : String = literal.text
-
 
     override fun checkConstraints()
       {
@@ -101,7 +94,6 @@ class ConstValue : Expression
             errorHandler.reportError(e)
           }
       }
-
 
     override fun emit()
       {

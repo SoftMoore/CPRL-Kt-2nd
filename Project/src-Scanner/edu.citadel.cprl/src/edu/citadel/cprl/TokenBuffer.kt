@@ -1,6 +1,5 @@
 package edu.citadel.cprl
 
-
 /**
  * Bounded circular buffer for tokens.
  *
@@ -10,7 +9,6 @@ class TokenBuffer(val capacity : Int)
   {
     private val buffer : Array<Token> = Array(capacity) { Token() }
     private var tokenIndex = 0   // circular index
-
 
     /**
      * Return the token at index i.  Does not remove the token.

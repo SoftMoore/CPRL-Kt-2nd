@@ -1,6 +1,5 @@
 package edu.citadel.cvm.assembler
 
-
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.Position
 import edu.citadel.compiler.ScannerException
@@ -9,7 +8,6 @@ import edu.citadel.compiler.Source
 import java.util.Locale
 
 import kotlin.system.exitProcess
-
 
 /**
  * Performs lexical analysis for CVM assembly language.
@@ -22,7 +20,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
 
     /** maps opcode names to opcode symbols  */
     private val opCodeMap: HashMap<String, Symbol> = HashMap(100)
-
 
     /**
      * Initialize scanner and advance to the first token.
@@ -40,7 +37,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         advance()           // advance to the first token
       }
 
-
     /**  The current token in the source file.  */
     lateinit var token : Token
         private set
@@ -57,7 +53,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
     val position : Position
         get() = token.position
 
-
     /**
      * Advance scanner to the next token.
      */
@@ -65,7 +60,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
       {
         token = nextToken()
       }
-
 
     /**
      * Advance until lookahead(1).symbol matches one of the symbols
@@ -76,7 +70,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         while (!symbols.contains(symbol) && symbol != Symbol.EOF)
             advance()
       }
-
 
     /**
      * Returns the next token in the source file.
@@ -173,7 +166,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         return Token(symbol, position, text)
       }
 
-
     /**
      * Clear the scan buffer (makes it empty).
      */
@@ -181,7 +173,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
       {
         scanBuffer.delete(0, scanBuffer.length)
       }
-
 
     /**
      * Scans characters in the source file for a valid identifier using the
@@ -208,7 +199,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         return scanBuffer.toString()
       }
 
-
     /**
      * Scans characters in the source file for a valid integer literal.  Assumes
      * that source.currentChar is the first character of the Integer literal.
@@ -233,7 +223,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         return scanBuffer.toString()
     }
 
-
     private fun skipComment()
       {
         // assumes that source.currentChar is the leading ';'
@@ -243,7 +232,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         skipToEndOfLine()
         source.advance()
       }
-
 
     /**
      * Scans characters in the source file for a String literal.
@@ -283,7 +271,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
 
         return scanBuffer.toString()
       }
-
 
     /**
      * Scans characters in the source file for a valid char literal.
@@ -340,7 +327,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         return scanBuffer.toString()
       }
 
-
     /**
      * Scans characters in the source file for an escaped character; i.e.,
      * a character preceded by a backslash.  This method handles escape
@@ -380,7 +366,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
           }
       }
 
-
     /**
      * Returns the symbol associated with an identifier
      * (Symbol.ADD, Symbol.AND, Symbol.identifier, etc.)
@@ -391,7 +376,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         return opCodeMap.getOrDefault(tempIdString, Symbol.identifier)
       }
 
-
     /**
      * Fast skip over white space.
      */
@@ -400,7 +384,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         while (Character.isWhitespace(source.currentChar.toChar()))
             source.advance()
       }
-
 
     /**
      * Advances over source characters to the end of the current line.
@@ -413,7 +396,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
             checkEOF()
           }
       }
-
 
     /**
      * Checks that the integer represents a graphic character in the Unicode
@@ -444,7 +426,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
           }
       }
 
-
     /**
      * Throws a ScannerException with the specified error message.
      */
@@ -453,7 +434,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
         return error(position, errorMsg)
       }
 
-
     /**
      * Throws a ScannerException with the specified position and  error message.
      */
@@ -461,7 +441,6 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
       {
         return ScannerException(errorPos, errorMsg)
       }
-
 
     /**
      * Used to check for EOF in the middle of scanning tokens that

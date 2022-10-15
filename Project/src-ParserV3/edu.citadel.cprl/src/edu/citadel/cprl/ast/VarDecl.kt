@@ -1,11 +1,9 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 import edu.citadel.cprl.ScopeLevel
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for a variable declaration.  Note that a
@@ -22,13 +20,11 @@ class VarDecl(identifiers  : List<Token>, varType : Type,
     // the list of single variable declarations for this variable declaration
     val singleVarDecls = ArrayList<SingleVarDecl>(identifiers.size)
 
-
     init
       {
         for (id in identifiers)
             singleVarDecls.add(SingleVarDecl(id, varType, initialValue, scopeLevel))
       }
-
 
     override fun checkConstraints()
       {
@@ -48,7 +44,6 @@ class VarDecl(identifiers  : List<Token>, varType : Type,
             errorHandler.reportError(e)
           }
       }
-
 
     override fun emit()
       {

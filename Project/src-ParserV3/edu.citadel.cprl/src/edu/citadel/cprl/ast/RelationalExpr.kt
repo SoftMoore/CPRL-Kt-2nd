@@ -1,13 +1,11 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.CodeGenException
 import edu.citadel.compiler.ConstraintException
 
 import edu.citadel.cprl.Symbol
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for a relational expression.  A relational
@@ -24,7 +22,6 @@ class RelationalExpr(leftOperand : Expression, operator : Token, rightOperand : 
     private val L1 : String = getNewLabel()   // label at start of right operand
     private val L2 : String = getNewLabel()   // label at end of the relational expression
 
-
     /**
      * Initialize the type of the expression to Boolean.
      */
@@ -36,12 +33,10 @@ class RelationalExpr(leftOperand : Expression, operator : Token, rightOperand : 
         type = Type.Boolean
       }
 
-
     override fun checkConstraints()
       {
 // ...
       }
-
 
     override fun emit()
       {
@@ -63,7 +58,6 @@ class RelationalExpr(leftOperand : Expression, operator : Token, rightOperand : 
         emitLabel(L2)
       }
 
-
     override fun emitBranch(condition : Boolean, label : String)
       {
         emitOperands()
@@ -80,7 +74,6 @@ class RelationalExpr(leftOperand : Expression, operator : Token, rightOperand : 
                                                             "Invalid relational operator.")
           }
       }
-
 
     private fun emitOperands()
       {

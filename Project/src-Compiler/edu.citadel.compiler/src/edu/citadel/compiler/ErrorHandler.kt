@@ -1,9 +1,7 @@
 package edu.citadel.compiler
 
-
 import java.io.PrintWriter
 import java.nio.charset.StandardCharsets
-
 
 /**
  * This class handles the reporting of error messages.
@@ -18,12 +16,10 @@ class ErrorHandler
     private var lastMessage   = ""   // remember last error message
     private var undeclaredIds = mutableSetOf<String>()
 
-
     /**
      * Returns true if errors have been reported by the error handler.
      */
     fun errorsExist() : Boolean = errorCount > 0
-
 
     /**
      * Reports the error.
@@ -45,18 +41,15 @@ class ErrorHandler
             throw FatalException("Max errors exceeded.")
       }
 
-
     /**
      * Reports the fatal error.
      */
     fun reportFatalError(e : FatalException) = err.println(e.message)
 
-
     /**
      * Prints the specified message and continues compilation.
      */
     fun printMessage(message : String) = err.println(message)
-
 
     /*
      * Checks for repeated error messages and error messages of

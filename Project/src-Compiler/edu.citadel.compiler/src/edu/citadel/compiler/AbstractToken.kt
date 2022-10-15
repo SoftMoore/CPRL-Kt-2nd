@@ -1,6 +1,5 @@
 package edu.citadel.compiler
 
-
 /**
  * This class encapsulates the properties of a language token.  A token
  * consists of a symbol (a.k.a., the token type), a position, and a string

@@ -1,9 +1,7 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 import edu.citadel.compiler.Position
-
 
 /**
  * The abstract syntax tree node for an assignment statement.
@@ -21,7 +19,6 @@ class AssignmentStmt(private val variable : Variable,
       {
 // ...
       }
-
 
     override fun emit()
       {

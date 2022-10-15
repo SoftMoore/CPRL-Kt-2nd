@@ -1,10 +1,7 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
-
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for an exit statement.  An exit statement has
@@ -24,7 +21,6 @@ class ExitStmt(private val whenExpr : Expression?,
       {
 // ...
       }
-
 
     override fun emit()
       {

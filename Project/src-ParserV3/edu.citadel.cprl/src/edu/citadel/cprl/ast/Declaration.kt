@@ -1,11 +1,9 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.Position
 
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * Base class for all CPRL declarations (constants, variables, procedures, etc.).
@@ -22,7 +20,6 @@ abstract class Declaration(val idToken : Token, var type : Type = Type.none) : A
      */
     val position : Position
         get() = idToken.position
-
 
     // Note: Many declarations do not require code generation.
     // A default implementation is provided for convenience.

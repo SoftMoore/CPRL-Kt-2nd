@@ -1,10 +1,8 @@
 package edu.citadel.cvm.assembler.optimize
 
-
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.ast.Instruction
 import edu.citadel.cvm.assembler.ast.InstructionOneArg
-
 
 /**
  * Using function composition in CPRL can generate 2 or more consecutive

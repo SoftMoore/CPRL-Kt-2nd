@@ -1,12 +1,10 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 
 import edu.citadel.cprl.Symbol
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for a not expression.  A not expression is a unary
@@ -27,12 +25,10 @@ class NotExpr(operator : Token, operand : Expression) : UnaryExpr(operator, oper
         type = Type.Boolean
       }
 
-
     override fun checkConstraints()
       {
 // ...
       }
-
 
     override fun emit()
       {

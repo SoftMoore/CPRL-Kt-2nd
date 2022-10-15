@@ -1,9 +1,7 @@
 package edu.citadel.cprl
 
-
 import edu.citadel.compiler.ParserException
 import edu.citadel.cprl.ast.Declaration
-
 
 /**
  * The identifier table (also known as a symbol table) is used to
@@ -29,13 +27,11 @@ class IdTable
         table.add(currentLevel, Scope(ScopeLevel.GLOBAL))
       }
 
-
     /**
      * The current scope level (computed property).
      */
     val scopeLevel : ScopeLevel
         get() = table[currentLevel].scopeLevel
-
 
     /**
      * Opens a new scope for identifiers.
@@ -46,7 +42,6 @@ class IdTable
         table.add(currentLevel, Scope(scopeLevel))
       }
 
-
     /**
      * Closes the outermost scope.
      */
@@ -55,7 +50,6 @@ class IdTable
         table.removeAt(currentLevel)
         --currentLevel
       }
-
 
     /**
      * Add a declaration to the current scope.
@@ -82,7 +76,6 @@ class IdTable
             throw ParserException(idToken.position, errorMsg)
           }
       }
-
 
     /**
      * Returns the declaration associated with the identifier name

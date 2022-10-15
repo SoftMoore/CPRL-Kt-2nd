@@ -1,9 +1,7 @@
 package edu.citadel.cprl
 
-
 import edu.citadel.compiler.AbstractToken
 import edu.citadel.compiler.Position
-
 
 /**
  * This class instantiates the generic class AbstractToken using CPRL symbols.

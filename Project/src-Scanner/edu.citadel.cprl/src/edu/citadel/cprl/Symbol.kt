@@ -1,6 +1,5 @@
 package edu.citadel.cprl
 
-
 /**
  * This class encapsulates the symbols (also known as token types)
  * of the programming language CPRL.
@@ -84,13 +83,11 @@ enum class Symbol(val label : String)
     EOF("End-of-File"),
     unknown("Unknown");
 
-
     /**
      * Returns true if this symbol is a CPRL reserved word.
      */
     fun isReservedWord() : Boolean
         = this in BooleanRW..writelnRW
-
 
     /**
      * Returns true if this symbol can start an initial declaration.
@@ -98,12 +95,10 @@ enum class Symbol(val label : String)
     fun isInitialDeclStarter() : Boolean
         = this == constRW || this == varRW || this == typeRW
 
-
     /**
      * Returns true if this symbol can start a subprogram declaration.
      */
     fun isSubprogramDeclStarter() : Boolean = this == procRW || this == funRW
-
 
     /**
      * Returns true if this symbol can start a statement.
@@ -114,14 +109,12 @@ enum class Symbol(val label : String)
           || this == readRW     || this == writeRW   || this == writelnRW
           || this == returnRW
 
-
     /**
      * Returns true if this symbol is a literal.
      */
     fun isLiteral() : Boolean
         =    this == intLiteral || this == charLiteral || this == stringLiteral
           || this == trueRW     || this == falseRW
-
 
     /**
      * Returns true if this symbol can start an expression.
@@ -130,24 +123,20 @@ enum class Symbol(val label : String)
         =    isLiteral()  || this == identifier || this == leftParen
           || this == plus || this == minus      || this == notRW
 
-
     /**
      * Returns true if this symbol can start a parameter declaration.
      */
     fun isParameterDeclStarter() : Boolean = this == identifier || this == varRW
-
 
     /**
      * Returns true if this symbol can start a variable selector.
      */
     fun isSelectorStarter() : Boolean = this == leftBracket || this == dot
 
-
     /**
      * Returns true if this symbol is a logical operator.
      */
     fun isLogicalOperator() : Boolean = this == andRW || this == orRW
-
 
     /**
      * Returns true if this symbol is a relational operator.
@@ -157,25 +146,21 @@ enum class Symbol(val label : String)
           || this == lessThan    || this == lessOrEqual
           || this == greaterThan || this == greaterOrEqual
 
-
     /**
      * Returns true if this symbol is a binary adding operator.
      */
     fun isAddingOperator() : Boolean = this == plus || this == minus
-
 
     /**
      * Returns true if this symbol is a unary operator.
      */
     fun isSignOperator() : Boolean = this == plus || this == minus
 
-
     /**
      * Returns true if this symbol is a multiplying operator.
      */
     fun isMultiplyingOperator() : Boolean
         = this == times || this == divide || this == modRW
-
 
     /**
      * Returns the label for this Symbol.

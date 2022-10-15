@@ -1,8 +1,6 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.cprl.Token
-
 
 /**
  * Base class for all binary expressions.  A binary expression is an expression

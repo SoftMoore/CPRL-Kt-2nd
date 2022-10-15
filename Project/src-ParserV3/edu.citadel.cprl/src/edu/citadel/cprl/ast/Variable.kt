@@ -1,6 +1,5 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 import edu.citadel.compiler.Position
 
@@ -9,7 +8,6 @@ import edu.citadel.cprl.ArrayType
 import edu.citadel.cprl.RecordType
 import edu.citadel.cprl.StringType
 import edu.citadel.cprl.ScopeLevel
-
 
 /**
  * The abstract syntax tree node for a variable, which is any named variable
@@ -27,7 +25,6 @@ open class Variable(val decl : VariableDecl,   // nonstructural reference
      */
     constructor(varExpr : VariableExpr)
         : this(varExpr.decl, varExpr.position, varExpr.selectorExprs)
-
 
     override fun checkConstraints()
       {
@@ -123,7 +120,6 @@ open class Variable(val decl : VariableDecl,   // nonstructural reference
             errorHandler.reportError(e)
           }
       }
-
 
     override fun emit()
       {

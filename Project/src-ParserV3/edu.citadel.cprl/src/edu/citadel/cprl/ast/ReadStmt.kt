@@ -1,11 +1,9 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
 
 import edu.citadel.cprl.Type
 import edu.citadel.cprl.StringType
-
 
 /**
  * The abstract syntax tree node for a read statement.
@@ -20,7 +18,6 @@ class ReadStmt(private val variable : Variable) : Statement()
         // input is limited to integers, characters, and strings
 // ...
       }
-
 
     override fun emit()
       {

@@ -1,10 +1,8 @@
 package edu.citadel.cvm.assembler.ast
 
-
 import edu.citadel.cvm.OpCode
 import edu.citadel.cvm.assembler.Symbol
 import edu.citadel.cvm.assembler.Token
-
 
 /**
  * This class implements the abstract syntax tree for the assembly
@@ -17,12 +15,10 @@ class InstructionSHL(labels : MutableList<Token>, opCode : Token, arg : Token)
     val argSize : Int
         get() = 1
 
-
     public override fun assertOpCode()
      {
         assertOpCode(Symbol.SHL)
       }
-
 
     public override fun checkArgType()
       {
@@ -38,7 +34,6 @@ class InstructionSHL(labels : MutableList<Token>, opCode : Token, arg : Token)
             throw error(errorPosition, errorMessage)
           }
       }
-
 
     override fun emit()
       {

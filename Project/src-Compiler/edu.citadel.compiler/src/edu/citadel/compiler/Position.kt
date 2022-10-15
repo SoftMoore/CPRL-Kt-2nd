@@ -1,6 +1,5 @@
 package edu.citadel.compiler
 
-
 /**
  * This class encapsulates the concept of a position in a source file, where
  * the position is characterized by an ordered pair of integers: a line number

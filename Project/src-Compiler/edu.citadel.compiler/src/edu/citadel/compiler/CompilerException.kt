@@ -1,6 +1,5 @@
 package edu.citadel.compiler
 
-
 /**
  * Superclass for all compiler exceptions.
  */
@@ -17,7 +16,6 @@ abstract class CompilerException : Exception
     constructor(errorType : String, position : Position, errorMsg : String)
         : super("*** $errorType error detected near $position:\n    $errorMsg")
 
-
     /**
      * Construct a compiler exception with information about the
      * compilation phase and error message, but not its position.
@@ -27,7 +25,6 @@ abstract class CompilerException : Exception
      */
     constructor(errorType : String, errorMsg : String)
         : super("*** $errorType error detected:\n    $errorMsg")
-
 
     /**
      * Construct a compiler exception with the specified error message.

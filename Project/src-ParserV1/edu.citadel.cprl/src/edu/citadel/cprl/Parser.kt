@@ -1,6 +1,5 @@
 package edu.citadel.cprl
 
-
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.FatalException
 import edu.citadel.compiler.InternalCompilerException
@@ -8,7 +7,6 @@ import edu.citadel.compiler.ParserException
 import edu.citadel.compiler.Position
 
 import java.util.EnumSet
-
 
 /**
  * This class uses recursive descent to perform syntax analysis of
@@ -42,7 +40,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `initialDecls = { initialDecl } .`
@@ -53,7 +50,6 @@ class Parser (private val scanner : Scanner,
             parseInitialDecl()
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `initialDecl = constDecl | varDecl | typeDecl .`
@@ -63,7 +59,6 @@ class Parser (private val scanner : Scanner,
 // ...   throw an internal error if the symbol is not one of constRW, varRW, or typeRW
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `constDecl = "const" constId ":=" literal ";" .`
@@ -72,7 +67,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -93,7 +87,6 @@ class Parser (private val scanner : Scanner,
             recover(emptySet)
           }
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -126,7 +119,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `identifiers = identifier { "," identifier } .`
@@ -158,7 +150,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `typeDecl = arrayTypeDecl | recordTypeDecl | stringTypeDecl .`
@@ -188,7 +179,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `arrayTypeDecl = "type" typeId "=" "array" "[" intConstValue "]"
@@ -198,7 +188,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -236,7 +225,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `fieldDecls = { fieldDecl } .`
@@ -245,7 +233,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -256,7 +243,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `stringTypeDecl = "type" typeId "=" "string" "[" intConstValue "]" ";" .`
@@ -265,7 +251,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -305,7 +290,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `subprogramDecls = { subprogramDecl } .`
@@ -315,7 +299,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `subprogramDecl = procedureDecl | functionDecl .`
@@ -324,7 +307,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -367,7 +349,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `functionDecl = "fun" funcId "(" [ formalParameters ] ")" ":" typeName
@@ -378,7 +359,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `formalParameters = parameterDecl { "," parameterDecl } .`
@@ -387,7 +367,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -398,7 +377,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `statements = { statement } .`
@@ -407,7 +385,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -457,7 +434,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `assignmentStmt = variable ":=" expression ";" .`
@@ -466,7 +442,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -477,7 +452,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `ifStmt = "if" booleanExpr "then" statement  [ "else" statement ] .`
@@ -486,7 +460,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -497,7 +470,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `exitStmt = "exit" [ "when" booleanExpr ] ";" .`
@@ -506,7 +478,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -517,7 +488,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `writeStmt = "write" expressions ";" .`
@@ -527,7 +497,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `expressions = expression { "," expression } .`
@@ -536,7 +505,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -560,7 +528,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rules:<br>
      * `procedureCallStmt = procId "(" [ actualParameters ] ")" ";" .<br>
@@ -571,7 +538,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `returnStmt = "return" [ expression ] ";" .`
@@ -580,7 +546,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -620,7 +585,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `indexExpr = "[" expression "]" .`
@@ -632,7 +596,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `fieldExpr = "." fieldId .`
@@ -643,7 +606,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -662,7 +624,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rules:<br>
      * `expression = relation { logicalOp relation } .<br>
@@ -678,7 +639,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rules:<br>
      * `relation = simpleExpr [ relationalOp simpleExpr ] .<br>
@@ -688,7 +648,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rules:<br>
@@ -701,7 +660,6 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     /**
      * Parse the following grammar rules:<br>
      * `term = factor { multiplyingOp factor } .<br>
@@ -711,7 +669,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -775,7 +732,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rule:<br>
      * `constValue = literal | constId .`
@@ -784,7 +740,6 @@ class Parser (private val scanner : Scanner,
       {
 // ...
       }
-
 
     /**
      * Parse the following grammar rule:<br>
@@ -803,7 +758,6 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Parse the following grammar rules:<br>
      * `functionCallExpr = funcId "(" [ actualParameters ] ")" .<br>
@@ -814,9 +768,7 @@ class Parser (private val scanner : Scanner,
 // ...
       }
 
-
     // Utility parsing methods
-
 
     /**
      * Check that the current scanner symbol is the expected symbol.  If it
@@ -834,13 +786,11 @@ class Parser (private val scanner : Scanner,
           }
       }
 
-
     /**
      * Advance the scanner.  This method represents an unconditional match
      * with the current scanner symbol.
      */
     private fun matchCurrentSymbol() = scanner.advance()
-
 
     /**
      * Advance the scanner until the current symbol is one
@@ -858,14 +808,12 @@ class Parser (private val scanner : Scanner,
     private fun error(errorMsg : String)
         = ParserException(scanner.position, errorMsg)
 
-
     /**
      * Create a parser exception with the specified error position
      * and error message.
      */
     private fun error(errorPos : Position, errorMsg : String)
         = ParserException(errorPos, errorMsg)
-
 
     /**
      * Create an internal compiler exception with the specified error

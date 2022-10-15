@@ -1,6 +1,5 @@
 package edu.citadel.compiler
 
-
 /**
  * Class for exceptions encountered during constraint analysis.
  */
@@ -15,7 +14,6 @@ class ConstraintException : CompilerException
      */
     constructor(position : Position, errorMsg : String)
         : super("Constraint", position, errorMsg)
-
 
     /**
      * Construct a constraint exception with the specified error message.

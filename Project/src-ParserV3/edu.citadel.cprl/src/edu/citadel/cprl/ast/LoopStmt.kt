@@ -1,10 +1,7 @@
 package edu.citadel.cprl.ast
 
-
 import edu.citadel.compiler.ConstraintException
-
 import edu.citadel.cprl.Type
-
 
 /**
  * The abstract syntax tree node for a loop statement.
@@ -18,18 +15,15 @@ class LoopStmt : Statement()
     var whileExpr : Expression? = null
     var statement : Statement = EmptyStatement
 
-
     /**
      * Returns the label for the end of the loop statement.
      */
     fun getExitLabel() : String = L2
 
-
     override fun checkConstraints()
       {
 // ...
       }
-
 
     override fun emit()
       {

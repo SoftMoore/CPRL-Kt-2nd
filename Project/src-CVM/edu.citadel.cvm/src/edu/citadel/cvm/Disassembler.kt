@@ -1,6 +1,5 @@
 package edu.citadel.cvm
 
-
 import edu.citadel.compiler.util.ByteUtil
 import edu.citadel.compiler.util.format
 
@@ -8,10 +7,8 @@ import java.io.*
 import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
 
-
 private const val SUFFIX = ".obj"
 private const val FIELD_WIDTH = 4
-
 
 /**
  * Translates CVM machine code into CVM assembly language
@@ -133,7 +130,6 @@ fun main(args : Array<String>)
       }
   }
 
-
 /**
  * Reads an integer argument from the stream.
  */
@@ -147,7 +143,6 @@ private fun readInt(iStream : InputStream) : Int
     return ByteUtil.bytesToInt(b0, b1, b2, b3)
   }
 
-
 /**
  * Reads a currentChar argument from the stream.
  */
@@ -159,7 +154,6 @@ private fun readChar(iStream : InputStream) : Char
     return ByteUtil.bytesToChar(b0, b1)
   }
 
-
 /**
  * Reads a byte argument from the stream.
  */
@@ -167,7 +161,6 @@ private fun readByte(iStream : InputStream) : Byte
   {
     return iStream.read().toByte()
   }
-
 
 /**
  * Unescapes characters.  For example, if the parameter c is a tab,
@@ -189,7 +182,6 @@ private fun getUnescapedChar(c : Char) : String
         else -> return c.toString()
       }
   }
-
 
 private fun printUsageMessageAndExit()
   {
