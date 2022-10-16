@@ -21,7 +21,7 @@ class InstructionLDCSTR(labels: MutableList<Token>, opCode: Token, arg : Token)
 
     // Note: We must return the size for both the integer arg and
     //       the string arg that will be generated in machine code
-    public override val argSize : Int
+    override val argSize : Int
         get() = Constants.BYTES_PER_INTEGER + Constants.BYTES_PER_CHAR*strLength
 
     public override fun assertOpCode()

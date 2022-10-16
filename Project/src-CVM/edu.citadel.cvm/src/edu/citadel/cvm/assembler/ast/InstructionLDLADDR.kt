@@ -12,7 +12,7 @@ import edu.citadel.cvm.assembler.Token
 class InstructionLDLADDR(labels : MutableList<Token>, opCode : Token, arg : Token)
     : InstructionOneArg(labels, opCode, arg)
   {
-    public override val argSize : Int
+    override val argSize : Int
         get() = Constants.BYTES_PER_INTEGER
 
     public override fun assertOpCode()

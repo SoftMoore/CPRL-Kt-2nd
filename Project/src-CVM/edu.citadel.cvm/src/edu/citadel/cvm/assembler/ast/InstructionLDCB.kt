@@ -11,7 +11,7 @@ import edu.citadel.cvm.assembler.Token
 class InstructionLDCB(labels : MutableList<Token>, opCode : Token, arg : Token)
     : InstructionOneArg(labels, opCode, arg)
   {
-    public override val argSize: Int
+    override val argSize: Int
         get() = 1
 
     public override fun assertOpCode()

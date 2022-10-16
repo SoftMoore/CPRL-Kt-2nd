@@ -12,7 +12,7 @@ import edu.citadel.cvm.assembler.Token
 class InstructionLDCCH(labels : MutableList<Token>, opCode : Token, arg : Token)
     : InstructionOneArg(labels, opCode, arg)
   {
-    public override val argSize : Int
+    override val argSize : Int
         get() = Constants.BYTES_PER_CHAR
 
     public override fun assertOpCode()
@@ -27,8 +27,8 @@ class InstructionLDCCH(labels : MutableList<Token>, opCode : Token, arg : Token)
 
     override fun emit()
       {
-        val arg = arg.text[1]
+        val argCH = arg.text[1]
         emit(OpCode.LDCCH)
-        emit(arg)
+        emit(argCH)
       }
   }
