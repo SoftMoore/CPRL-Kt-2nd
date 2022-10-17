@@ -135,7 +135,6 @@ class CVM (numOfBytes : Int)
     private fun printMemory()
       {
         var memAddr = 0
-        var strLength : Int
         var byte0: Byte
         var byte1: Byte
         var byte2: Byte
@@ -216,8 +215,7 @@ class CVM (numOfBytes : Int)
                     byte1 = memory[memAddr++]
                     byte2 = memory[memAddr++]
                     byte3 = memory[memAddr++]
-                    strLength = ByteUtil.bytesToInt(byte0, byte1, byte2, byte3)
-
+                    val strLength = ByteUtil.bytesToInt(byte0, byte1, byte2, byte3)
                     for (i in 0 until strLength)
                       {
                         byte0 = memory[memAddr++]
