@@ -1,6 +1,6 @@
 ## *Compiler Design Using Kotlin&trade;: An Object-Oriented Approach (Second Edition)*
 This repository contains handouts, PowerPoint slides, and Kotlin source files to accompany the book
-[*Compiler Design Using Kotlin&trade;: An Object-Oriented Approach (Second Edition)*](https://www.amazon.com/Introduction-Compiler-Design-Object-Oriented-Approach/dp/1734139167/)
+[*Compiler Design Using Kotlin&trade;: An Object-Oriented Approach (Second Edition)*](https://www.amazon.com/Introduction-Compiler-Design-Object-Oriented-Approach/dp/1734139161/)
 by John I. Moore, Jr.  The book covers implementation of a compiler for CPRL (Compiler PRoject Language),
 a programming language designed for teaching the basics of compiler construction.  CPRL includes
 variables, statements, expressions, arrays, records, and subprograms.  The target language for the
