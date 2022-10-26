@@ -6,10 +6,18 @@
     <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "../../../";</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -21,6 +29,7 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
@@ -42,136 +51,136 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl.ast/FieldExpr///PointingToDeclaration//769193423">
-  <div class="breadcrumbs"><a href="../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../index.html">edu.citadel.cprl.ast</a><span class="delimiter">/</span><a href="index.html">FieldExpr</a></div>
+<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl.ast/FieldExpr///PointingToDeclaration//1802671000">
+  <div class="breadcrumbs"><a href="../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../index.html">edu.citadel.cprl.ast</a><span class="delimiter">/</span><span class="current">FieldExpr</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Field</span><wbr></wbr><span><span>Expr</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">FieldExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>fieldId<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="../-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">The abstract syntax tree node for a field expression.  The value of a field expression is simply the value of the offset of the field within the record.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">FieldExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>fieldId<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="../-expression/index.html">Expression</a></div><p class="paragraph">The abstract syntax tree node for a field expression.  The value of a field expression is simply the value of the offset of the field within the record.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
     <div class="tabs-section-body">
       <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="1370069812%2FConstructors%2F769193423" anchor-label="FieldExpr" id="1370069812%2FConstructors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Constructors"><a data-name="1370069812%2FConstructors%2F1802671000" anchor-label="FieldExpr" id="1370069812%2FConstructors%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue TabbedContent">
             <div class=""><span class="inline-flex">
                 <div><a href="-field-expr.html"><span>Field</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1370069812%2FConstructors%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1370069812%2FConstructors%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-field-expr.html"><span class="token function">FieldExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fieldId<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Construct a field expression with its field name.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-field-expr.html"><span class="token function">FieldExpr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fieldId<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Construct a field expression with its field name.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-143809975%2FFunctions%2F769193423" anchor-label="checkConstraints" id="-143809975%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Functions"><a data-name="-143809975%2FFunctions%2F1802671000" anchor-label="checkConstraints" id="-143809975%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="check-constraints.html"><span>check</span><wbr></wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-143809975%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-143809975%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="check-constraints.html"><span class="token function">checkConstraints</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Check semantic/contextual constraints.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="check-constraints.html"><span class="token function">checkConstraints</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Check semantic/contextual constraints.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1540565724%2FFunctions%2F769193423" anchor-label="emit" id="-1540565724%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1540565724%2FFunctions%2F1802671000" anchor-label="emit" id="-1540565724%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="emit.html"><span><span>emit</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1540565724%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1540565724%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="emit.html"><span class="token function">emit</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Emit object code.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="emit.html"><span class="token function">emit</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Emit object code.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-6602271%2FFunctions%2F769193423" anchor-label="emitBranch" id="-6602271%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-6602271%2FFunctions%2F1802671000" anchor-label="emitBranch" id="-6602271%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../-expression/emit-branch.html"><span>emit</span><wbr></wbr><span><span>Branch</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-6602271%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-6602271%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-expression/emit-branch.html"><span class="token function">emitBranch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">label<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">For Boolean expressions, this method emits the appropriate branch opcode based on the condition.  For example, if the expression is a &quot;<&quot; relational expression and the condition is false, then the opcode &quot;BGE&quot; is emitted.  The method defined in this class works correctly for most Boolean expressions, but it should be overridden for relational expressions.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-expression/emit-branch.html"><span class="token function">emitBranch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">label<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">For Boolean expressions, this method emits the appropriate branch opcode based on the condition.  For example, if the expression is a &quot;<&quot; relational expression and the condition is false, then the opcode &quot;BGE&quot; is emitted.  The method defined in this class works correctly for most Boolean expressions, but it should be overridden for relational expressions.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="1220672991%2FProperties%2F769193423" anchor-label="fieldDecl" id="1220672991%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Properties"><a data-name="1220672991%2FProperties%2F1802671000" anchor-label="fieldDecl" id="1220672991%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="field-decl.html"><span>field</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1220672991%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1220672991%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="1220672991%2FProperties%2F769193423" anchor-label="fieldDecl" id="1220672991%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="field-decl.html">fieldDecl</a><span class="token operator">: </span><a href="../-field-decl/index.html">FieldDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="1220672991%2FProperties%2F1802671000" anchor-label="fieldDecl" id="1220672991%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="field-decl.html">fieldDecl</a><span class="token operator">: </span><a href="../-field-decl/index.html">FieldDecl</a></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1545858674%2FProperties%2F769193423" anchor-label="fieldId" id="-1545858674%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1545858674%2FProperties%2F1802671000" anchor-label="fieldId" id="-1545858674%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="field-id.html"><span>field</span><wbr></wbr><span><span>Id</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1545858674%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1545858674%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-1545858674%2FProperties%2F769193423" anchor-label="fieldId" id="-1545858674%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="field-id.html">fieldId</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-1545858674%2FProperties%2F1802671000" anchor-label="fieldId" id="-1545858674%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="field-id.html">fieldId</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-169467037%2FProperties%2F769193423" anchor-label="position" id="-169467037%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-169467037%2FProperties%2F1802671000" anchor-label="position" id="-169467037%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../-expression/position.html"><span><span>position</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-169467037%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-169467037%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-169467037%2FProperties%2F769193423" anchor-label="position" id="-169467037%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-expression/position.html">position</a><span class="token operator">: </span><a href="../../edu.citadel.compiler/-position/index.html">Position</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-169467037%2FProperties%2F1802671000" anchor-label="position" id="-169467037%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-expression/position.html">position</a><span class="token operator">: </span><a href="../../edu.citadel.compiler/-position/index.html">Position</a></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="927408626%2FProperties%2F769193423" anchor-label="type" id="927408626%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="927408626%2FProperties%2F1802671000" anchor-label="type" id="927408626%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../-expression/type.html"><span><span>type</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="927408626%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="927408626%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="927408626%2FProperties%2F769193423" anchor-label="type" id="927408626%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-expression/type.html">type</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-type/index.html">Type</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="927408626%2FProperties%2F1802671000" anchor-label="type" id="927408626%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-expression/type.html">type</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-type/index.html">Type</a></div></div></div>
               </div>
             </div>
           </div>

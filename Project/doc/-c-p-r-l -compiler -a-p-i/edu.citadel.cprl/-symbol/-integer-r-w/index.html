@@ -6,10 +6,18 @@
     <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "../../../../";</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
 <link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -21,6 +29,7 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
@@ -42,269 +51,269 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl/Symbol.IntegerRW///PointingToDeclaration/{&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;:{&quot;key&quot;:&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;}}/769193423">
-  <div class="breadcrumbs"><a href="../../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../../index.html">edu.citadel.cprl</a><span class="delimiter">/</span><a href="../index.html">Symbol</a><span class="delimiter">/</span><a href="index.html">IntegerRW</a></div>
+<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl/Symbol.IntegerRW///PointingToDeclaration/{&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;:{&quot;key&quot;:&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;}}/1802671000">
+  <div class="breadcrumbs"><a href="../../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../../index.html">edu.citadel.cprl</a><span class="delimiter">/</span><a href="../index.html">Symbol</a><span class="delimiter">/</span><span class="current">IntegerRW</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Integer</span><wbr></wbr><span><span>RW</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="index.html">IntegerRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="index.html">IntegerRW</a></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
     <div class="tabs-section-body">
       <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="1129621937%2FFunctions%2F769193423" anchor-label="isAddingOperator" id="1129621937%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Functions"><a data-name="1129621937%2FFunctions%2F1802671000" anchor-label="isAddingOperator" id="1129621937%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-adding-operator.html"><span>is</span><wbr></wbr><span>Adding</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1129621937%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1129621937%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-adding-operator.html"><span class="token function">isAddingOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a binary adding operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-adding-operator.html"><span class="token function">isAddingOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a binary adding operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-775063286%2FFunctions%2F769193423" anchor-label="isExprStarter" id="-775063286%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-775063286%2FFunctions%2F1802671000" anchor-label="isExprStarter" id="-775063286%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-expr-starter.html"><span>is</span><wbr></wbr><span>Expr</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-775063286%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-775063286%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-expr-starter.html"><span class="token function">isExprStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start an expression.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-expr-starter.html"><span class="token function">isExprStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start an expression.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="581281141%2FFunctions%2F769193423" anchor-label="isInitialDeclStarter" id="581281141%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="581281141%2FFunctions%2F1802671000" anchor-label="isInitialDeclStarter" id="581281141%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-initial-decl-starter.html"><span>is</span><wbr></wbr><span>Initial</span><wbr></wbr><span>Decl</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="581281141%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="581281141%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-initial-decl-starter.html"><span class="token function">isInitialDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start an initial declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-initial-decl-starter.html"><span class="token function">isInitialDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start an initial declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-31662507%2FFunctions%2F769193423" anchor-label="isLiteral" id="-31662507%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-31662507%2FFunctions%2F1802671000" anchor-label="isLiteral" id="-31662507%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-literal.html"><span>is</span><wbr></wbr><span><span>Literal</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-31662507%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-31662507%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-literal.html"><span class="token function">isLiteral</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a literal.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-literal.html"><span class="token function">isLiteral</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a literal.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="553137655%2FFunctions%2F769193423" anchor-label="isLogicalOperator" id="553137655%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="553137655%2FFunctions%2F1802671000" anchor-label="isLogicalOperator" id="553137655%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-logical-operator.html"><span>is</span><wbr></wbr><span>Logical</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="553137655%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="553137655%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-logical-operator.html"><span class="token function">isLogicalOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a logical operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-logical-operator.html"><span class="token function">isLogicalOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a logical operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1922642402%2FFunctions%2F769193423" anchor-label="isMultiplyingOperator" id="1922642402%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1922642402%2FFunctions%2F1802671000" anchor-label="isMultiplyingOperator" id="1922642402%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-multiplying-operator.html"><span>is</span><wbr></wbr><span>Multiplying</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1922642402%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1922642402%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-multiplying-operator.html"><span class="token function">isMultiplyingOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a multiplying operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-multiplying-operator.html"><span class="token function">isMultiplyingOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a multiplying operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1962936602%2FFunctions%2F769193423" anchor-label="isParameterDeclStarter" id="1962936602%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1962936602%2FFunctions%2F1802671000" anchor-label="isParameterDeclStarter" id="1962936602%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-parameter-decl-starter.html"><span>is</span><wbr></wbr><span>Parameter</span><wbr></wbr><span>Decl</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1962936602%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1962936602%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-parameter-decl-starter.html"><span class="token function">isParameterDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a parameter declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-parameter-decl-starter.html"><span class="token function">isParameterDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a parameter declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="544441963%2FFunctions%2F769193423" anchor-label="isRelationalOperator" id="544441963%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="544441963%2FFunctions%2F1802671000" anchor-label="isRelationalOperator" id="544441963%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-relational-operator.html"><span>is</span><wbr></wbr><span>Relational</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="544441963%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="544441963%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-relational-operator.html"><span class="token function">isRelationalOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a relational operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-relational-operator.html"><span class="token function">isRelationalOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a relational operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1947349412%2FFunctions%2F769193423" anchor-label="isReservedWord" id="1947349412%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1947349412%2FFunctions%2F1802671000" anchor-label="isReservedWord" id="1947349412%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-reserved-word.html"><span>is</span><wbr></wbr><span>Reserved</span><wbr></wbr><span><span>Word</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1947349412%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1947349412%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-reserved-word.html"><span class="token function">isReservedWord</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a CPRL reserved word.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-reserved-word.html"><span class="token function">isReservedWord</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a CPRL reserved word.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="277528436%2FFunctions%2F769193423" anchor-label="isSelectorStarter" id="277528436%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="277528436%2FFunctions%2F1802671000" anchor-label="isSelectorStarter" id="277528436%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-selector-starter.html"><span>is</span><wbr></wbr><span>Selector</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="277528436%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="277528436%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-selector-starter.html"><span class="token function">isSelectorStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a variable selector.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-selector-starter.html"><span class="token function">isSelectorStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a variable selector.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="262170965%2FFunctions%2F769193423" anchor-label="isSignOperator" id="262170965%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="262170965%2FFunctions%2F1802671000" anchor-label="isSignOperator" id="262170965%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-sign-operator.html"><span>is</span><wbr></wbr><span>Sign</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262170965%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262170965%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-sign-operator.html"><span class="token function">isSignOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a unary operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-sign-operator.html"><span class="token function">isSignOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a unary operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-701515043%2FFunctions%2F769193423" anchor-label="isStmtStarter" id="-701515043%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-701515043%2FFunctions%2F1802671000" anchor-label="isStmtStarter" id="-701515043%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-stmt-starter.html"><span>is</span><wbr></wbr><span>Stmt</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-701515043%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-701515043%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-stmt-starter.html"><span class="token function">isStmtStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-stmt-starter.html"><span class="token function">isStmtStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-330896029%2FFunctions%2F769193423" anchor-label="isSubprogramDeclStarter" id="-330896029%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-330896029%2FFunctions%2F1802671000" anchor-label="isSubprogramDeclStarter" id="-330896029%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../is-subprogram-decl-starter.html"><span>is</span><wbr></wbr><span>Subprogram</span><wbr></wbr><span>Decl</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-330896029%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-330896029%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-subprogram-decl-starter.html"><span class="token function">isSubprogramDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a subprogram declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../is-subprogram-decl-starter.html"><span class="token function">isSubprogramDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a subprogram declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1687759892%2FFunctions%2F769193423" anchor-label="toString" id="1687759892%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1687759892%2FFunctions%2F1802671000" anchor-label="toString" id="1687759892%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../to-string.html"><span>to</span><wbr></wbr><span><span>String</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1687759892%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1687759892%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns the label for this Symbol.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Returns the label for this Symbol.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-2085890842%2FProperties%2F769193423" anchor-label="label" id="-2085890842%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Properties"><a data-name="-2085890842%2FProperties%2F1802671000" anchor-label="label" id="-2085890842%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../label.html"><span><span>label</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2085890842%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2085890842%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-2085890842%2FProperties%2F769193423" anchor-label="label" id="-2085890842%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../label.html">label</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-2085890842%2FProperties%2F1802671000" anchor-label="label" id="-2085890842%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../label.html">label</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-372974862%2FProperties%2F769193423" anchor-label="name" id="-372974862%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-372974862%2FProperties%2F1802671000" anchor-label="name" id="-372974862%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="../../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-372974862%2FProperties%2F769193423"><span><span>name</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F769193423"></span>
+                <div><a href="../../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-372974862%2FProperties%2F1802671000"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-372974862%2FProperties%2F769193423" anchor-label="name" id="-372974862%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-372974862%2FProperties%2F769193423">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-372974862%2FProperties%2F1802671000" anchor-label="name" id="-372974862%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-372974862%2FProperties%2F1802671000">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-739389684%2FProperties%2F769193423" anchor-label="ordinal" id="-739389684%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-739389684%2FProperties%2F1802671000" anchor-label="ordinal" id="-739389684%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="../../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-739389684%2FProperties%2F769193423"><span><span>ordinal</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F769193423"></span>
+                <div><a href="../../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-739389684%2FProperties%2F1802671000"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-739389684%2FProperties%2F769193423" anchor-label="ordinal" id="-739389684%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-739389684%2FProperties%2F769193423">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-739389684%2FProperties%2F1802671000" anchor-label="ordinal" id="-739389684%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-739389684%2FProperties%2F1802671000">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
               </div>
             </div>
           </div>

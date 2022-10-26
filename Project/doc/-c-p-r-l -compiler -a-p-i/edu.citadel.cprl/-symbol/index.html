@@ -6,10 +6,18 @@
     <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "../../../";</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -21,6 +29,7 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
@@ -42,1216 +51,1246 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl/Symbol///PointingToDeclaration//769193423">
-  <div class="breadcrumbs"><a href="../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../index.html">edu.citadel.cprl</a><span class="delimiter">/</span><a href="index.html">Symbol</a></div>
+<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl/Symbol///PointingToDeclaration//1802671000">
+  <div class="breadcrumbs"><a href="../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../index.html">edu.citadel.cprl</a><span class="delimiter">/</span><span class="current">Symbol</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Symbol</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">Symbol</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Symbol</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This class encapsulates the symbols (also known as token types) of the programming language CPRL.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">Symbol</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Symbol</a><span class="token operator">&gt; </span></div><p class="paragraph">This class encapsulates the symbols (also known as token types) of the programming language CPRL.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Entries">Entries</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
     <div class="tabs-section-body">
       <h2 class="tabbedcontent">Entries</h2>
-      <div class="table" data-togglable="Entries"><a data-name="-1314982587%2FClasslikes%2F769193423" anchor-label="BooleanRW" id="-1314982587%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Entries"><a data-name="-1314982587%2FClasslikes%2F1802671000" anchor-label="BooleanRW" id="-1314982587%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-boolean-r-w/index.html">BooleanRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1314982587%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1314982587%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-boolean-r-w/index.html">BooleanRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="-boolean-r-w/index.html">BooleanRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-251291925%2FClasslikes%2F769193423" anchor-label="CharRW" id="-251291925%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-251291925%2FClasslikes%2F1802671000" anchor-label="CharRW" id="-251291925%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-char-r-w/index.html">CharRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-251291925%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-251291925%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-char-r-w/index.html">CharRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="-char-r-w/index.html">CharRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1097749925%2FClasslikes%2F769193423" anchor-label="IntegerRW" id="-1097749925%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1097749925%2FClasslikes%2F1802671000" anchor-label="IntegerRW" id="-1097749925%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-integer-r-w/index.html">IntegerRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1097749925%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1097749925%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-integer-r-w/index.html">IntegerRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="-integer-r-w/index.html">IntegerRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-894227180%2FClasslikes%2F769193423" anchor-label="andRW" id="-894227180%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-894227180%2FClasslikes%2F1802671000" anchor-label="andRW" id="-894227180%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="and-r-w/index.html">andRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-894227180%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-894227180%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="and-r-w/index.html">andRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="and-r-w/index.html">andRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-582120298%2FClasslikes%2F769193423" anchor-label="arrayRW" id="-582120298%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-582120298%2FClasslikes%2F1802671000" anchor-label="arrayRW" id="-582120298%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="array-r-w/index.html">arrayRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-582120298%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-582120298%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="array-r-w/index.html">arrayRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="array-r-w/index.html">arrayRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-417999947%2FClasslikes%2F769193423" anchor-label="classRW" id="-417999947%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-417999947%2FClasslikes%2F1802671000" anchor-label="classRW" id="-417999947%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="class-r-w/index.html">classRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-417999947%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-417999947%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="class-r-w/index.html">classRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="class-r-w/index.html">classRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="294498720%2FClasslikes%2F769193423" anchor-label="constRW" id="294498720%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="294498720%2FClasslikes%2F1802671000" anchor-label="constRW" id="294498720%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="const-r-w/index.html">constRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="294498720%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="294498720%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="const-r-w/index.html">constRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="const-r-w/index.html">constRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1372197714%2FClasslikes%2F769193423" anchor-label="elseRW" id="-1372197714%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1372197714%2FClasslikes%2F1802671000" anchor-label="elseRW" id="-1372197714%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="else-r-w/index.html">elseRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1372197714%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1372197714%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="else-r-w/index.html">elseRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="else-r-w/index.html">elseRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-739150730%2FClasslikes%2F769193423" anchor-label="enumRW" id="-739150730%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-739150730%2FClasslikes%2F1802671000" anchor-label="enumRW" id="-739150730%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="enum-r-w/index.html">enumRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739150730%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739150730%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="enum-r-w/index.html">enumRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="enum-r-w/index.html">enumRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="2052245651%2FClasslikes%2F769193423" anchor-label="exitRW" id="2052245651%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2052245651%2FClasslikes%2F1802671000" anchor-label="exitRW" id="2052245651%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="exit-r-w/index.html">exitRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2052245651%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2052245651%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="exit-r-w/index.html">exitRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="exit-r-w/index.html">exitRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-2116709536%2FClasslikes%2F769193423" anchor-label="falseRW" id="-2116709536%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2116709536%2FClasslikes%2F1802671000" anchor-label="falseRW" id="-2116709536%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="false-r-w/index.html">falseRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2116709536%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2116709536%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="false-r-w/index.html">falseRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="false-r-w/index.html">falseRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-2112741370%2FClasslikes%2F769193423" anchor-label="forRW" id="-2112741370%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2112741370%2FClasslikes%2F1802671000" anchor-label="forRW" id="-2112741370%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="for-r-w/index.html">forRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2112741370%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2112741370%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="for-r-w/index.html">forRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="for-r-w/index.html">forRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1808842940%2FClasslikes%2F769193423" anchor-label="funRW" id="1808842940%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1808842940%2FClasslikes%2F1802671000" anchor-label="funRW" id="1808842940%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="fun-r-w/index.html">funRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1808842940%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1808842940%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="fun-r-w/index.html">funRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="fun-r-w/index.html">funRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1752525934%2FClasslikes%2F769193423" anchor-label="ifRW" id="-1752525934%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1752525934%2FClasslikes%2F1802671000" anchor-label="ifRW" id="-1752525934%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="if-r-w/index.html">ifRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1752525934%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1752525934%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="if-r-w/index.html">ifRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="if-r-w/index.html">ifRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="846689817%2FClasslikes%2F769193423" anchor-label="loopRW" id="846689817%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="846689817%2FClasslikes%2F1802671000" anchor-label="loopRW" id="846689817%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="loop-r-w/index.html">loopRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="846689817%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="846689817%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="loop-r-w/index.html">loopRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="loop-r-w/index.html">loopRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1678398913%2FClasslikes%2F769193423" anchor-label="modRW" id="-1678398913%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1678398913%2FClasslikes%2F1802671000" anchor-label="modRW" id="-1678398913%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="mod-r-w/index.html">modRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1678398913%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1678398913%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="mod-r-w/index.html">modRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="mod-r-w/index.html">modRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-945316336%2FClasslikes%2F769193423" anchor-label="notRW" id="-945316336%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-945316336%2FClasslikes%2F1802671000" anchor-label="notRW" id="-945316336%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="not-r-w/index.html">notRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-945316336%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-945316336%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="not-r-w/index.html">notRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="not-r-w/index.html">notRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="272954444%2FClasslikes%2F769193423" anchor-label="ofRW" id="272954444%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="272954444%2FClasslikes%2F1802671000" anchor-label="ofRW" id="272954444%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="of-r-w/index.html">ofRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="272954444%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="272954444%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="of-r-w/index.html">ofRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="of-r-w/index.html">ofRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1120390056%2FClasslikes%2F769193423" anchor-label="orRW" id="-1120390056%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1120390056%2FClasslikes%2F1802671000" anchor-label="orRW" id="-1120390056%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="or-r-w/index.html">orRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1120390056%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1120390056%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="or-r-w/index.html">orRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="or-r-w/index.html">orRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1903781568%2FClasslikes%2F769193423" anchor-label="privateRW" id="1903781568%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1903781568%2FClasslikes%2F1802671000" anchor-label="privateRW" id="1903781568%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="private-r-w/index.html">privateRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1903781568%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1903781568%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="private-r-w/index.html">privateRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="private-r-w/index.html">privateRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1820577077%2FClasslikes%2F769193423" anchor-label="procRW" id="-1820577077%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1820577077%2FClasslikes%2F1802671000" anchor-label="procRW" id="-1820577077%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="proc-r-w/index.html">procRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1820577077%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1820577077%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="proc-r-w/index.html">procRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="proc-r-w/index.html">procRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1310917611%2FClasslikes%2F769193423" anchor-label="protectedRW" id="1310917611%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1310917611%2FClasslikes%2F1802671000" anchor-label="protectedRW" id="1310917611%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="protected-r-w/index.html">protectedRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1310917611%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1310917611%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="protected-r-w/index.html">protectedRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="protected-r-w/index.html">protectedRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-2049414434%2FClasslikes%2F769193423" anchor-label="publicRW" id="-2049414434%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2049414434%2FClasslikes%2F1802671000" anchor-label="publicRW" id="-2049414434%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="public-r-w/index.html">publicRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2049414434%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2049414434%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="public-r-w/index.html">publicRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="public-r-w/index.html">publicRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1104734475%2FClasslikes%2F769193423" anchor-label="readRW" id="1104734475%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1104734475%2FClasslikes%2F1802671000" anchor-label="readRW" id="1104734475%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="read-r-w/index.html">readRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1104734475%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1104734475%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="read-r-w/index.html">readRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="read-r-w/index.html">readRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1996366349%2FClasslikes%2F769193423" anchor-label="readlnRW" id="1996366349%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1996366349%2FClasslikes%2F1802671000" anchor-label="readlnRW" id="1996366349%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="readln-r-w/index.html">readlnRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1996366349%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1996366349%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="readln-r-w/index.html">readlnRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="readln-r-w/index.html">readlnRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1759159494%2FClasslikes%2F769193423" anchor-label="recordRW" id="1759159494%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1759159494%2FClasslikes%2F1802671000" anchor-label="recordRW" id="1759159494%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="record-r-w/index.html">recordRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1759159494%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1759159494%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="record-r-w/index.html">recordRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="record-r-w/index.html">recordRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="2134214053%2FClasslikes%2F769193423" anchor-label="returnRW" id="2134214053%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2134214053%2FClasslikes%2F1802671000" anchor-label="returnRW" id="2134214053%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="return-r-w/index.html">returnRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2134214053%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2134214053%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="return-r-w/index.html">returnRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="return-r-w/index.html">returnRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1737647994%2FClasslikes%2F769193423" anchor-label="stringRW" id="-1737647994%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1737647994%2FClasslikes%2F1802671000" anchor-label="stringRW" id="-1737647994%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="string-r-w/index.html">stringRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1737647994%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1737647994%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="string-r-w/index.html">stringRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="string-r-w/index.html">stringRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1481272722%2FClasslikes%2F769193423" anchor-label="thenRW" id="1481272722%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1481272722%2FClasslikes%2F1802671000" anchor-label="thenRW" id="1481272722%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="then-r-w/index.html">thenRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1481272722%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1481272722%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="then-r-w/index.html">thenRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="then-r-w/index.html">thenRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-165509885%2FClasslikes%2F769193423" anchor-label="trueRW" id="-165509885%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-165509885%2FClasslikes%2F1802671000" anchor-label="trueRW" id="-165509885%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="true-r-w/index.html">trueRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-165509885%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-165509885%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="true-r-w/index.html">trueRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="true-r-w/index.html">trueRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1612980561%2FClasslikes%2F769193423" anchor-label="typeRW" id="-1612980561%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1612980561%2FClasslikes%2F1802671000" anchor-label="typeRW" id="-1612980561%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="type-r-w/index.html">typeRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1612980561%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1612980561%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="type-r-w/index.html">typeRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="type-r-w/index.html">typeRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1687059044%2FClasslikes%2F769193423" anchor-label="varRW" id="1687059044%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1687059044%2FClasslikes%2F1802671000" anchor-label="varRW" id="1687059044%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="var-r-w/index.html">varRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1687059044%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1687059044%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="var-r-w/index.html">varRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="var-r-w/index.html">varRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1914501807%2FClasslikes%2F769193423" anchor-label="whenRW" id="1914501807%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1914501807%2FClasslikes%2F1802671000" anchor-label="whenRW" id="1914501807%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="when-r-w/index.html">whenRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1914501807%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1914501807%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="when-r-w/index.html">whenRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="when-r-w/index.html">whenRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1709611666%2FClasslikes%2F769193423" anchor-label="whileRW" id="-1709611666%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1709611666%2FClasslikes%2F1802671000" anchor-label="whileRW" id="-1709611666%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="while-r-w/index.html">whileRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1709611666%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1709611666%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="while-r-w/index.html">whileRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="while-r-w/index.html">whileRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1859841508%2FClasslikes%2F769193423" anchor-label="writeRW" id="-1859841508%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1859841508%2FClasslikes%2F1802671000" anchor-label="writeRW" id="-1859841508%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="write-r-w/index.html">writeRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1859841508%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1859841508%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="write-r-w/index.html">writeRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="write-r-w/index.html">writeRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="602163934%2FClasslikes%2F769193423" anchor-label="writelnRW" id="602163934%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="602163934%2FClasslikes%2F1802671000" anchor-label="writelnRW" id="602163934%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="writeln-r-w/index.html">writelnRW</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="602163934%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="602163934%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="writeln-r-w/index.html">writelnRW</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="writeln-r-w/index.html">writelnRW</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="777149194%2FClasslikes%2F769193423" anchor-label="plus" id="777149194%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="777149194%2FClasslikes%2F1802671000" anchor-label="plus" id="777149194%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="plus/index.html">plus</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="777149194%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="777149194%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="plus/index.html">plus</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="plus/index.html">plus</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1009082408%2FClasslikes%2F769193423" anchor-label="minus" id="1009082408%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1009082408%2FClasslikes%2F1802671000" anchor-label="minus" id="1009082408%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="minus/index.html">minus</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1009082408%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1009082408%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="minus/index.html">minus</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="minus/index.html">minus</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-40739714%2FClasslikes%2F769193423" anchor-label="times" id="-40739714%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-40739714%2FClasslikes%2F1802671000" anchor-label="times" id="-40739714%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="times/index.html">times</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-40739714%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-40739714%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="times/index.html">times</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="times/index.html">times</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="850271913%2FClasslikes%2F769193423" anchor-label="divide" id="850271913%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="850271913%2FClasslikes%2F1802671000" anchor-label="divide" id="850271913%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="divide/index.html">divide</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="850271913%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="850271913%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="divide/index.html">divide</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="divide/index.html">divide</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-963323025%2FClasslikes%2F769193423" anchor-label="equals" id="-963323025%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-963323025%2FClasslikes%2F1802671000" anchor-label="equals" id="-963323025%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="equals/index.html">equals</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-963323025%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-963323025%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="equals/index.html">equals</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="equals/index.html">equals</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-930423471%2FClasslikes%2F769193423" anchor-label="notEqual" id="-930423471%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-930423471%2FClasslikes%2F1802671000" anchor-label="notEqual" id="-930423471%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="not-equal/index.html">notEqual</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-930423471%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-930423471%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="not-equal/index.html">notEqual</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="not-equal/index.html">notEqual</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1458568778%2FClasslikes%2F769193423" anchor-label="lessThan" id="1458568778%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1458568778%2FClasslikes%2F1802671000" anchor-label="lessThan" id="1458568778%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="less-than/index.html">lessThan</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1458568778%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1458568778%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="less-than/index.html">lessThan</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="less-than/index.html">lessThan</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-2068568592%2FClasslikes%2F769193423" anchor-label="lessOrEqual" id="-2068568592%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2068568592%2FClasslikes%2F1802671000" anchor-label="lessOrEqual" id="-2068568592%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="less-or-equal/index.html">lessOrEqual</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2068568592%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2068568592%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="less-or-equal/index.html">lessOrEqual</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="less-or-equal/index.html">lessOrEqual</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1941973965%2FClasslikes%2F769193423" anchor-label="greaterThan" id="-1941973965%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1941973965%2FClasslikes%2F1802671000" anchor-label="greaterThan" id="-1941973965%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="greater-than/index.html">greaterThan</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1941973965%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1941973965%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="greater-than/index.html">greaterThan</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="greater-than/index.html">greaterThan</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="2051152743%2FClasslikes%2F769193423" anchor-label="greaterOrEqual" id="2051152743%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2051152743%2FClasslikes%2F1802671000" anchor-label="greaterOrEqual" id="2051152743%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="greater-or-equal/index.html">greaterOrEqual</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2051152743%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2051152743%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="greater-or-equal/index.html">greaterOrEqual</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="greater-or-equal/index.html">greaterOrEqual</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1857525601%2FClasslikes%2F769193423" anchor-label="assign" id="-1857525601%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1857525601%2FClasslikes%2F1802671000" anchor-label="assign" id="-1857525601%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="assign/index.html">assign</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1857525601%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1857525601%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="assign/index.html">assign</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="assign/index.html">assign</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1025549243%2FClasslikes%2F769193423" anchor-label="leftParen" id="1025549243%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1025549243%2FClasslikes%2F1802671000" anchor-label="leftParen" id="1025549243%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="left-paren/index.html">leftParen</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1025549243%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1025549243%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="left-paren/index.html">leftParen</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="left-paren/index.html">leftParen</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="290327998%2FClasslikes%2F769193423" anchor-label="rightParen" id="290327998%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="290327998%2FClasslikes%2F1802671000" anchor-label="rightParen" id="290327998%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="right-paren/index.html">rightParen</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="290327998%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="290327998%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="right-paren/index.html">rightParen</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="right-paren/index.html">rightParen</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="915141529%2FClasslikes%2F769193423" anchor-label="leftBracket" id="915141529%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="915141529%2FClasslikes%2F1802671000" anchor-label="leftBracket" id="915141529%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="left-bracket/index.html">leftBracket</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="915141529%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="915141529%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="left-bracket/index.html">leftBracket</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="left-bracket/index.html">leftBracket</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1257838372%2FClasslikes%2F769193423" anchor-label="rightBracket" id="-1257838372%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1257838372%2FClasslikes%2F1802671000" anchor-label="rightBracket" id="-1257838372%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="right-bracket/index.html">rightBracket</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1257838372%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1257838372%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="right-bracket/index.html">rightBracket</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="right-bracket/index.html">rightBracket</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-297829596%2FClasslikes%2F769193423" anchor-label="leftBrace" id="-297829596%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-297829596%2FClasslikes%2F1802671000" anchor-label="leftBrace" id="-297829596%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="left-brace/index.html">leftBrace</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-297829596%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-297829596%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="left-brace/index.html">leftBrace</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="left-brace/index.html">leftBrace</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1033050841%2FClasslikes%2F769193423" anchor-label="rightBrace" id="-1033050841%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1033050841%2FClasslikes%2F1802671000" anchor-label="rightBrace" id="-1033050841%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="right-brace/index.html">rightBrace</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1033050841%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1033050841%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="right-brace/index.html">rightBrace</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="right-brace/index.html">rightBrace</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-402313267%2FClasslikes%2F769193423" anchor-label="comma" id="-402313267%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-402313267%2FClasslikes%2F1802671000" anchor-label="comma" id="-402313267%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="comma/index.html">comma</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-402313267%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-402313267%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="comma/index.html">comma</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="comma/index.html">comma</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1189861673%2FClasslikes%2F769193423" anchor-label="colon" id="-1189861673%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1189861673%2FClasslikes%2F1802671000" anchor-label="colon" id="-1189861673%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="colon/index.html">colon</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1189861673%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1189861673%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="colon/index.html">colon</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="colon/index.html">colon</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1366808919%2FClasslikes%2F769193423" anchor-label="semicolon" id="-1366808919%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1366808919%2FClasslikes%2F1802671000" anchor-label="semicolon" id="-1366808919%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="semicolon/index.html">semicolon</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1366808919%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1366808919%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="semicolon/index.html">semicolon</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="semicolon/index.html">semicolon</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="2000619585%2FClasslikes%2F769193423" anchor-label="dot" id="2000619585%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2000619585%2FClasslikes%2F1802671000" anchor-label="dot" id="2000619585%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="dot/index.html">dot</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2000619585%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2000619585%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="dot/index.html">dot</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="dot/index.html">dot</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1485795248%2FClasslikes%2F769193423" anchor-label="intLiteral" id="1485795248%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1485795248%2FClasslikes%2F1802671000" anchor-label="intLiteral" id="1485795248%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="int-literal/index.html">intLiteral</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1485795248%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1485795248%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="int-literal/index.html">intLiteral</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="int-literal/index.html">intLiteral</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-750517391%2FClasslikes%2F769193423" anchor-label="charLiteral" id="-750517391%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-750517391%2FClasslikes%2F1802671000" anchor-label="charLiteral" id="-750517391%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="char-literal/index.html">charLiteral</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-750517391%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-750517391%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="char-literal/index.html">charLiteral</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="char-literal/index.html">charLiteral</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="130542230%2FClasslikes%2F769193423" anchor-label="stringLiteral" id="130542230%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="130542230%2FClasslikes%2F1802671000" anchor-label="stringLiteral" id="130542230%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="string-literal/index.html">stringLiteral</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="130542230%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="130542230%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="string-literal/index.html">stringLiteral</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="string-literal/index.html">stringLiteral</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1958015783%2FClasslikes%2F769193423" anchor-label="identifier" id="-1958015783%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1958015783%2FClasslikes%2F1802671000" anchor-label="identifier" id="-1958015783%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="identifier/index.html">identifier</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1958015783%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1958015783%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="identifier/index.html">identifier</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="identifier/index.html">identifier</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1685661844%2FClasslikes%2F769193423" anchor-label="EOF" id="1685661844%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1685661844%2FClasslikes%2F1802671000" anchor-label="EOF" id="1685661844%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-e-o-f/index.html">EOF</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1685661844%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1685661844%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-e-o-f/index.html">EOF</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="-e-o-f/index.html">EOF</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1990637954%2FClasslikes%2F769193423" anchor-label="unknown" id="1990637954%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1990637954%2FClasslikes%2F1802671000" anchor-label="unknown" id="1990637954%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="unknown/index.html">unknown</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1990637954%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1990637954%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="unknown/index.html">unknown</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><div class="block"><a href="unknown/index.html">unknown</a></div></div></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="1129621937%2FFunctions%2F769193423" anchor-label="isAddingOperator" id="1129621937%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Functions"><a data-name="1129621937%2FFunctions%2F1802671000" anchor-label="isAddingOperator" id="1129621937%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-adding-operator.html"><span>is</span><wbr></wbr><span>Adding</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1129621937%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1129621937%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-adding-operator.html"><span class="token function">isAddingOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a binary adding operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-adding-operator.html"><span class="token function">isAddingOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a binary adding operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-775063286%2FFunctions%2F769193423" anchor-label="isExprStarter" id="-775063286%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-775063286%2FFunctions%2F1802671000" anchor-label="isExprStarter" id="-775063286%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-expr-starter.html"><span>is</span><wbr></wbr><span>Expr</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-775063286%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-775063286%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-expr-starter.html"><span class="token function">isExprStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start an expression.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-expr-starter.html"><span class="token function">isExprStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start an expression.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="581281141%2FFunctions%2F769193423" anchor-label="isInitialDeclStarter" id="581281141%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="581281141%2FFunctions%2F1802671000" anchor-label="isInitialDeclStarter" id="581281141%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-initial-decl-starter.html"><span>is</span><wbr></wbr><span>Initial</span><wbr></wbr><span>Decl</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="581281141%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="581281141%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-initial-decl-starter.html"><span class="token function">isInitialDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start an initial declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-initial-decl-starter.html"><span class="token function">isInitialDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start an initial declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-31662507%2FFunctions%2F769193423" anchor-label="isLiteral" id="-31662507%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-31662507%2FFunctions%2F1802671000" anchor-label="isLiteral" id="-31662507%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-literal.html"><span>is</span><wbr></wbr><span><span>Literal</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-31662507%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-31662507%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-literal.html"><span class="token function">isLiteral</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a literal.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-literal.html"><span class="token function">isLiteral</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a literal.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="553137655%2FFunctions%2F769193423" anchor-label="isLogicalOperator" id="553137655%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="553137655%2FFunctions%2F1802671000" anchor-label="isLogicalOperator" id="553137655%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-logical-operator.html"><span>is</span><wbr></wbr><span>Logical</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="553137655%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="553137655%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-logical-operator.html"><span class="token function">isLogicalOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a logical operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-logical-operator.html"><span class="token function">isLogicalOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a logical operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1922642402%2FFunctions%2F769193423" anchor-label="isMultiplyingOperator" id="1922642402%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1922642402%2FFunctions%2F1802671000" anchor-label="isMultiplyingOperator" id="1922642402%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-multiplying-operator.html"><span>is</span><wbr></wbr><span>Multiplying</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1922642402%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1922642402%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-multiplying-operator.html"><span class="token function">isMultiplyingOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a multiplying operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-multiplying-operator.html"><span class="token function">isMultiplyingOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a multiplying operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1962936602%2FFunctions%2F769193423" anchor-label="isParameterDeclStarter" id="1962936602%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1962936602%2FFunctions%2F1802671000" anchor-label="isParameterDeclStarter" id="1962936602%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-parameter-decl-starter.html"><span>is</span><wbr></wbr><span>Parameter</span><wbr></wbr><span>Decl</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1962936602%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1962936602%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-parameter-decl-starter.html"><span class="token function">isParameterDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a parameter declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-parameter-decl-starter.html"><span class="token function">isParameterDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a parameter declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="544441963%2FFunctions%2F769193423" anchor-label="isRelationalOperator" id="544441963%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="544441963%2FFunctions%2F1802671000" anchor-label="isRelationalOperator" id="544441963%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-relational-operator.html"><span>is</span><wbr></wbr><span>Relational</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="544441963%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="544441963%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-relational-operator.html"><span class="token function">isRelationalOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a relational operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-relational-operator.html"><span class="token function">isRelationalOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a relational operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1947349412%2FFunctions%2F769193423" anchor-label="isReservedWord" id="1947349412%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1947349412%2FFunctions%2F1802671000" anchor-label="isReservedWord" id="1947349412%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-reserved-word.html"><span>is</span><wbr></wbr><span>Reserved</span><wbr></wbr><span><span>Word</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1947349412%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1947349412%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-reserved-word.html"><span class="token function">isReservedWord</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a CPRL reserved word.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-reserved-word.html"><span class="token function">isReservedWord</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a CPRL reserved word.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="277528436%2FFunctions%2F769193423" anchor-label="isSelectorStarter" id="277528436%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="277528436%2FFunctions%2F1802671000" anchor-label="isSelectorStarter" id="277528436%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-selector-starter.html"><span>is</span><wbr></wbr><span>Selector</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="277528436%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="277528436%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-selector-starter.html"><span class="token function">isSelectorStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a variable selector.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-selector-starter.html"><span class="token function">isSelectorStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a variable selector.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="262170965%2FFunctions%2F769193423" anchor-label="isSignOperator" id="262170965%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="262170965%2FFunctions%2F1802671000" anchor-label="isSignOperator" id="262170965%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-sign-operator.html"><span>is</span><wbr></wbr><span>Sign</span><wbr></wbr><span><span>Operator</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262170965%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262170965%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-sign-operator.html"><span class="token function">isSignOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol is a unary operator.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-sign-operator.html"><span class="token function">isSignOperator</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol is a unary operator.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-701515043%2FFunctions%2F769193423" anchor-label="isStmtStarter" id="-701515043%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-701515043%2FFunctions%2F1802671000" anchor-label="isStmtStarter" id="-701515043%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-stmt-starter.html"><span>is</span><wbr></wbr><span>Stmt</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-701515043%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-701515043%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-stmt-starter.html"><span class="token function">isStmtStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-stmt-starter.html"><span class="token function">isStmtStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-330896029%2FFunctions%2F769193423" anchor-label="isSubprogramDeclStarter" id="-330896029%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-330896029%2FFunctions%2F1802671000" anchor-label="isSubprogramDeclStarter" id="-330896029%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="is-subprogram-decl-starter.html"><span>is</span><wbr></wbr><span>Subprogram</span><wbr></wbr><span>Decl</span><wbr></wbr><span><span>Starter</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-330896029%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-330896029%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-subprogram-decl-starter.html"><span class="token function">isSubprogramDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a subprogram declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-subprogram-decl-starter.html"><span class="token function">isSubprogramDeclStarter</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns true if this symbol can start a subprogram declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1687759892%2FFunctions%2F769193423" anchor-label="toString" id="1687759892%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1687759892%2FFunctions%2F1802671000" anchor-label="toString" id="1687759892%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="to-string.html"><span>to</span><wbr></wbr><span><span>String</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1687759892%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1687759892%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns the label for this Symbol.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Returns the label for this Symbol.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1068190290%2FFunctions%2F1802671000" anchor-label="valueOf" id="1068190290%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="value-of.html"><span>value</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1068190290%2FFunctions%2F1802671000"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Symbol</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="960081630%2FFunctions%2F1802671000" anchor-label="values" id="960081630%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="960081630%2FFunctions%2F1802671000"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Symbol</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-2085890842%2FProperties%2F769193423" anchor-label="label" id="-2085890842%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Properties"><a data-name="-2085890842%2FProperties%2F1802671000" anchor-label="label" id="-2085890842%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="label.html"><span><span>label</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2085890842%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2085890842%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-2085890842%2FProperties%2F769193423" anchor-label="label" id="-2085890842%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="label.html">label</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-2085890842%2FProperties%2F1802671000" anchor-label="label" id="-2085890842%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="label.html">label</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-372974862%2FProperties%2F769193423" anchor-label="name" id="-372974862%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-372974862%2FProperties%2F1802671000" anchor-label="name" id="-372974862%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-372974862%2FProperties%2F769193423"><span><span>name</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F769193423"></span>
+                <div><a href="../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-372974862%2FProperties%2F1802671000"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-372974862%2FProperties%2F769193423" anchor-label="name" id="-372974862%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-372974862%2FProperties%2F769193423">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-372974862%2FProperties%2F1802671000" anchor-label="name" id="-372974862%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-372974862%2FProperties%2F1802671000">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-739389684%2FProperties%2F769193423" anchor-label="ordinal" id="-739389684%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-739389684%2FProperties%2F1802671000" anchor-label="ordinal" id="-739389684%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
-                <div><a href="../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-739389684%2FProperties%2F769193423"><span><span>ordinal</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F769193423"></span>
+                <div><a href="../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-739389684%2FProperties%2F1802671000"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-739389684%2FProperties%2F769193423" anchor-label="ordinal" id="-739389684%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-739389684%2FProperties%2F769193423">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-739389684%2FProperties%2F1802671000" anchor-label="ordinal" id="-739389684%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../edu.citadel.cvm.assembler/-symbol/-e-o-f/index.html#-739389684%2FProperties%2F1802671000">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
               </div>
             </div>
           </div>

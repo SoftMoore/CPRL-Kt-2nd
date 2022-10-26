@@ -6,10 +6,18 @@
     <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "../../";</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
 <link href="../../styles/style.css" rel="Stylesheet">
 <link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -21,6 +29,7 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
@@ -42,703 +51,703 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl.ast////PointingToDeclaration//769193423">
-  <div class="breadcrumbs"><a href="../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="index.html">edu.citadel.cprl.ast</a></div>
+<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl.ast////PointingToDeclaration//1802671000">
+  <div class="breadcrumbs"><a href="../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><span class="current">edu.citadel.cprl.ast</span></div>
   <div class="cover ">
-    <h1 class="cover"><span><span>Package</span></span> <span>edu.</span><wbr></wbr><span>citadel.</span><wbr></wbr><span>cprl.</span><wbr></wbr><span>ast</span></h1>
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
     <div class="tabs-section-body">
       <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="433951893%2FClasslikes%2F769193423" anchor-label="AddingExpr" id="433951893%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Types"><a data-name="433951893%2FClasslikes%2F1802671000" anchor-label="AddingExpr" id="433951893%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-adding-expr/index.html"><span>Adding</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="433951893%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="433951893%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-adding-expr/index.html">AddingExpr</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-binary-expr/index.html">BinaryExpr</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an adding expression.  An adding expression is a binary expression where the operator is an adding operator, &quot;+&quot; or &quot;-&quot;. A simple example would be &quot;x + 5&quot;.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-adding-expr/index.html">AddingExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-binary-expr/index.html">BinaryExpr</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an adding expression.  An adding expression is a binary expression where the operator is an adding operator, &quot;+&quot; or &quot;-&quot;. A simple example would be &quot;x + 5&quot;.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-2115261638%2FClasslikes%2F769193423" anchor-label="ArrayTypeDecl" id="-2115261638%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2115261638%2FClasslikes%2F1802671000" anchor-label="ArrayTypeDecl" id="-2115261638%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-array-type-decl/index.html"><span>Array</span><wbr></wbr><span>Type</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2115261638%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2115261638%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-array-type-decl/index.html">ArrayTypeDecl</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;typeId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;elementType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;numElements<span class="token operator">: </span><a href="-const-value/index.html">ConstValue</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an array type declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-array-type-decl/index.html">ArrayTypeDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">elementType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter ">numElements<span class="token operator">: </span><a href="-const-value/index.html">ConstValue</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an array type declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="896669046%2FClasslikes%2F769193423" anchor-label="AssignmentStmt" id="896669046%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="896669046%2FClasslikes%2F1802671000" anchor-label="AssignmentStmt" id="896669046%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-assignment-stmt/index.html"><span>Assignment</span><wbr></wbr><span><span>Stmt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="896669046%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="896669046%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-assignment-stmt/index.html">AssignmentStmt</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;variable<span class="token operator">: </span><a href="-variable/index.html">Variable</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;expr<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;assignPosition<span class="token operator">: </span><a href="../edu.citadel.compiler/-position/index.html">Position</a></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an assignment statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-assignment-stmt/index.html">AssignmentStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">variable<span class="token operator">: </span><a href="-variable/index.html">Variable</a><span class="token punctuation">, </span></span><span class="parameter ">expr<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter ">assignPosition<span class="token operator">: </span><a href="../edu.citadel.compiler/-position/index.html">Position</a></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an assignment statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-2145772459%2FClasslikes%2F769193423" anchor-label="AST" id="-2145772459%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2145772459%2FClasslikes%2F1802671000" anchor-label="AST" id="-2145772459%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-a-s-t/index.html"><span><span>AST</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2145772459%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2145772459%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-a-s-t/index.html">AST</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base class for all abstract syntax tree classes.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-a-s-t/index.html">AST</a></div><div class="brief "><p class="paragraph">Base class for all abstract syntax tree classes.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1157123019%2FClasslikes%2F769193423" anchor-label="BinaryExpr" id="-1157123019%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1157123019%2FClasslikes%2F1802671000" anchor-label="BinaryExpr" id="-1157123019%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-binary-expr/index.html"><span>Binary</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1157123019%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1157123019%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-binary-expr/index.html">BinaryExpr</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base class for all binary expressions.  A binary expression is an expression of the form &quot;expression operator expression&quot;.  The first expression is called the left operand, and the second expression is called the right operand.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-binary-expr/index.html">BinaryExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a></div><div class="brief "><p class="paragraph">Base class for all binary expressions.  A binary expression is an expression of the form &quot;expression operator expression&quot;.  The first expression is called the left operand, and the second expression is called the right operand.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="124032472%2FClasslikes%2F769193423" anchor-label="CompoundStmt" id="124032472%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="124032472%2FClasslikes%2F1802671000" anchor-label="CompoundStmt" id="124032472%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-compound-stmt/index.html"><span>Compound</span><wbr></wbr><span><span>Stmt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="124032472%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="124032472%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-compound-stmt/index.html">CompoundStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>statements<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-statement/index.html">Statement</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a compound statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-compound-stmt/index.html">CompoundStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>statements<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-statement/index.html">Statement</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a compound statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="374695434%2FClasslikes%2F769193423" anchor-label="ConstDecl" id="374695434%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="374695434%2FClasslikes%2F1802671000" anchor-label="ConstDecl" id="374695434%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-const-decl/index.html"><span>Const</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="374695434%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="374695434%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-const-decl/index.html">ConstDecl</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;identifier<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;constType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>literal<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a constant declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-const-decl/index.html">ConstDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">identifier<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">constType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>literal<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a constant declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="2008442109%2FClasslikes%2F769193423" anchor-label="ConstValue" id="2008442109%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2008442109%2FClasslikes%2F1802671000" anchor-label="ConstValue" id="2008442109%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-const-value/index.html"><span>Const</span><wbr></wbr><span><span>Value</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2008442109%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2008442109%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-const-value/index.html">ConstValue</a> : <a href="-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a constant value expression, which is either a literal or a declared constant identifier representing a literal.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-const-value/index.html">ConstValue</a> : <a href="-expression/index.html">Expression</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a constant value expression, which is either a literal or a declared constant identifier representing a literal.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="994352733%2FClasslikes%2F769193423" anchor-label="Declaration" id="994352733%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="994352733%2FClasslikes%2F1802671000" anchor-label="Declaration" id="994352733%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-declaration/index.html"><span><span>Declaration</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="994352733%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="994352733%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-declaration/index.html">Declaration</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>idToken<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>type<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token operator"> = </span>Type.none</span></span><span class="token punctuation">)</span> : <a href="-a-s-t/index.html">AST</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base class for all CPRL declarations (constants, variables, procedures, etc.).</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-declaration/index.html">Declaration</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>idToken<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>type<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token operator"> = </span>Type.none</span></span><span class="token punctuation">)</span> : <a href="-a-s-t/index.html">AST</a></div><div class="brief "><p class="paragraph">Base class for all CPRL declarations (constants, variables, procedures, etc.).</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1934857074%2FClasslikes%2F769193423" anchor-label="EmptyExpression" id="1934857074%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1934857074%2FClasslikes%2F1802671000" anchor-label="EmptyExpression" id="1934857074%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-empty-expression/index.html"><span>Empty</span><wbr></wbr><span><span>Expression</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1934857074%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1934857074%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-empty-expression/index.html">EmptyExpression</a> : <a href="-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An empty expression passes constraint checks and emits no code. It is returned from parsing statements as an alternative to returning null when parsing errors are encountered.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-empty-expression/index.html">EmptyExpression</a> : <a href="-expression/index.html">Expression</a></div><div class="brief "><p class="paragraph">An empty expression passes constraint checks and emits no code. It is returned from parsing statements as an alternative to returning null when parsing errors are encountered.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-836337110%2FClasslikes%2F769193423" anchor-label="EmptyInitialDecl" id="-836337110%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-836337110%2FClasslikes%2F1802671000" anchor-label="EmptyInitialDecl" id="-836337110%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-empty-initial-decl/index.html"><span>Empty</span><wbr></wbr><span>Initial</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-836337110%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-836337110%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-empty-initial-decl/index.html">EmptyInitialDecl</a> : <a href="-initial-decl/index.html">InitialDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An empty initial declaration passes constraint checks and emits no code. It is returned from parsing initial declarations as an alternative to returning null when parsing errors are encountered.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-empty-initial-decl/index.html">EmptyInitialDecl</a> : <a href="-initial-decl/index.html">InitialDecl</a></div><div class="brief "><p class="paragraph">An empty initial declaration passes constraint checks and emits no code. It is returned from parsing initial declarations as an alternative to returning null when parsing errors are encountered.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1328241751%2FClasslikes%2F769193423" anchor-label="EmptyStatement" id="-1328241751%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1328241751%2FClasslikes%2F1802671000" anchor-label="EmptyStatement" id="-1328241751%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-empty-statement/index.html"><span>Empty</span><wbr></wbr><span><span>Statement</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1328241751%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1328241751%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-empty-statement/index.html">EmptyStatement</a> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An empty statement passes constraint checks and emits no code. It is returned from parsing statements as an alternative to returning null when parsing errors are encountered.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-empty-statement/index.html">EmptyStatement</a> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">An empty statement passes constraint checks and emits no code. It is returned from parsing statements as an alternative to returning null when parsing errors are encountered.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-992715972%2FClasslikes%2F769193423" anchor-label="EmptySubprogramDecl" id="-992715972%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-992715972%2FClasslikes%2F1802671000" anchor-label="EmptySubprogramDecl" id="-992715972%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-empty-subprogram-decl/index.html"><span>Empty</span><wbr></wbr><span>Subprogram</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-992715972%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-992715972%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-empty-subprogram-decl/index.html">EmptySubprogramDecl</a> : <a href="-subprogram-decl/index.html">SubprogramDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An empty subprogram declaration passes constraint checks and emits no code. It is returned from parsing subprogram declarations as an alternative to returning null when parsing errors are encountered.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-empty-subprogram-decl/index.html">EmptySubprogramDecl</a> : <a href="-subprogram-decl/index.html">SubprogramDecl</a></div><div class="brief "><p class="paragraph">An empty subprogram declaration passes constraint checks and emits no code. It is returned from parsing subprogram declarations as an alternative to returning null when parsing errors are encountered.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-211854267%2FClasslikes%2F769193423" anchor-label="ExitStmt" id="-211854267%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-211854267%2FClasslikes%2F1802671000" anchor-label="ExitStmt" id="-211854267%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-exit-stmt/index.html"><span>Exit</span><wbr></wbr><span><span>Stmt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-211854267%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-211854267%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-exit-stmt/index.html">ExitStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">whenExpr<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">loopStmt<span class="token operator">: </span><a href="-loop-stmt/index.html">LoopStmt</a></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an exit statement.  An exit statement has an optional &quot;when&quot; expression (which should be null if there is no &quot;when&quot; expression) and a reference to the enclosing loop statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-exit-stmt/index.html">ExitStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">whenExpr<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">loopStmt<span class="token operator">: </span><a href="-loop-stmt/index.html">LoopStmt</a></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an exit statement.  An exit statement has an optional &quot;when&quot; expression (which should be null if there is no &quot;when&quot; expression) and a reference to the enclosing loop statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-2032584333%2FClasslikes%2F769193423" anchor-label="Expression" id="-2032584333%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2032584333%2FClasslikes%2F1802671000" anchor-label="Expression" id="-2032584333%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-expression/index.html"><span><span>Expression</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2032584333%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2032584333%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-expression/index.html">Expression</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>type<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>position<span class="token operator">: </span><a href="../edu.citadel.compiler/-position/index.html">Position</a></span></span><span class="token punctuation">)</span> : <a href="-a-s-t/index.html">AST</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base class for all CPRL expressions.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-expression/index.html">Expression</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>type<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>position<span class="token operator">: </span><a href="../edu.citadel.compiler/-position/index.html">Position</a></span></span><span class="token punctuation">)</span> : <a href="-a-s-t/index.html">AST</a></div><div class="brief "><p class="paragraph">Base class for all CPRL expressions.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1942738899%2FClasslikes%2F769193423" anchor-label="FieldDecl" id="1942738899%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1942738899%2FClasslikes%2F1802671000" anchor-label="FieldDecl" id="1942738899%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-field-decl/index.html"><span>Field</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1942738899%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1942738899%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-field-decl/index.html">FieldDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fieldId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>type<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a></span></span><span class="token punctuation">)</span> : <a href="-declaration/index.html">Declaration</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a field declaration. A field declaration has the form <code class="lang-kotlin">x : Integer;</code>. A record declaration can contain multiple field declarations.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-field-decl/index.html">FieldDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fieldId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>type<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a></span></span><span class="token punctuation">)</span> : <a href="-declaration/index.html">Declaration</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a field declaration. A field declaration has the form <code class="lang-kotlin">x : Integer;</code>. A record declaration can contain multiple field declarations.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1893012712%2FClasslikes%2F769193423" anchor-label="FieldExpr" id="1893012712%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1893012712%2FClasslikes%2F1802671000" anchor-label="FieldExpr" id="1893012712%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-field-expr/index.html"><span>Field</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1893012712%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1893012712%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-field-expr/index.html">FieldExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>fieldId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a field expression.  The value of a field expression is simply the value of the offset of the field within the record.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-field-expr/index.html">FieldExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>fieldId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a field expression.  The value of a field expression is simply the value of the offset of the field within the record.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1418476160%2FClasslikes%2F769193423" anchor-label="FunctionCallExpr" id="1418476160%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1418476160%2FClasslikes%2F1802671000" anchor-label="FunctionCallExpr" id="1418476160%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-function-call-expr/index.html"><span>Function</span><wbr></wbr><span>Call</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1418476160%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1418476160%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-function-call-expr/index.html">FunctionCallExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">funId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">actualParams<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-expression/index.html">Expression</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a function call expression.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-function-call-expr/index.html">FunctionCallExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">funId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">actualParams<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-expression/index.html">Expression</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a function call expression.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1563737047%2FClasslikes%2F769193423" anchor-label="FunctionDecl" id="-1563737047%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1563737047%2FClasslikes%2F1802671000" anchor-label="FunctionDecl" id="-1563737047%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-function-decl/index.html"><span>Function</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1563737047%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1563737047%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-function-decl/index.html">FunctionDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">funcId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-subprogram-decl/index.html">SubprogramDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a function declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-function-decl/index.html">FunctionDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">funcId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-subprogram-decl/index.html">SubprogramDecl</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a function declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1024890074%2FClasslikes%2F769193423" anchor-label="IfStmt" id="-1024890074%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1024890074%2FClasslikes%2F1802671000" anchor-label="IfStmt" id="-1024890074%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-if-stmt/index.html"><span>If</span><wbr></wbr><span><span>Stmt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1024890074%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1024890074%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-if-stmt/index.html">IfStmt</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;booleanExpr<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>thenStmt<span class="token operator">: </span><a href="-statement/index.html">Statement</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>elseStmt<span class="token operator">: </span><a href="-statement/index.html">Statement</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an if statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-if-stmt/index.html">IfStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">booleanExpr<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>thenStmt<span class="token operator">: </span><a href="-statement/index.html">Statement</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>elseStmt<span class="token operator">: </span><a href="-statement/index.html">Statement</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for an if statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="727030857%2FClasslikes%2F769193423" anchor-label="InitialDecl" id="727030857%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="727030857%2FClasslikes%2F1802671000" anchor-label="InitialDecl" id="727030857%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-initial-decl/index.html"><span>Initial</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="727030857%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="727030857%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-initial-decl/index.html">InitialDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">identifier<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">declType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a></span></span><span class="token punctuation">)</span> : <a href="-declaration/index.html">Declaration</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base class for all initial declarations.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-initial-decl/index.html">InitialDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">identifier<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">declType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a></span></span><span class="token punctuation">)</span> : <a href="-declaration/index.html">Declaration</a></div><div class="brief "><p class="paragraph">Base class for all initial declarations.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-665901383%2FClasslikes%2F769193423" anchor-label="LogicalExpr" id="-665901383%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-665901383%2FClasslikes%2F1802671000" anchor-label="LogicalExpr" id="-665901383%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-logical-expr/index.html"><span>Logical</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-665901383%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-665901383%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-logical-expr/index.html">LogicalExpr</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-binary-expr/index.html">BinaryExpr</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a logical expression.  A logical expression is a binary expression where the operator is either &quot;and&quot; or &quot;or&quot;.  A simple example would be &quot;(x > 5) and (y < 0)&quot;.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-logical-expr/index.html">LogicalExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-binary-expr/index.html">BinaryExpr</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a logical expression.  A logical expression is a binary expression where the operator is either &quot;and&quot; or &quot;or&quot;.  A simple example would be &quot;(x > 5) and (y < 0)&quot;.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="357909631%2FClasslikes%2F769193423" anchor-label="LoopStmt" id="357909631%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="357909631%2FClasslikes%2F1802671000" anchor-label="LoopStmt" id="357909631%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-loop-stmt/index.html"><span>Loop</span><wbr></wbr><span><span>Stmt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="357909631%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="357909631%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-loop-stmt/index.html">LoopStmt</a> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a loop statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-loop-stmt/index.html">LoopStmt</a> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a loop statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1535965348%2FClasslikes%2F769193423" anchor-label="MultiplyingExpr" id="1535965348%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1535965348%2FClasslikes%2F1802671000" anchor-label="MultiplyingExpr" id="1535965348%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-multiplying-expr/index.html"><span>Multiplying</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1535965348%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1535965348%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-multiplying-expr/index.html">MultiplyingExpr</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-binary-expr/index.html">BinaryExpr</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a multiplying expression.  A multiplying expression is a binary expression where the operator is a multiplying operator such as &quot;*&quot;, &quot;/&quot;, or &quot;mod&quot;.  A simple example would be &quot;5 mod x&quot;.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-multiplying-expr/index.html">MultiplyingExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-binary-expr/index.html">BinaryExpr</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a multiplying expression.  A multiplying expression is a binary expression where the operator is a multiplying operator such as &quot;*&quot;, &quot;/&quot;, or &quot;mod&quot;.  A simple example would be &quot;5 mod x&quot;.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1359818543%2FClasslikes%2F769193423" anchor-label="NegationExpr" id="-1359818543%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1359818543%2FClasslikes%2F1802671000" anchor-label="NegationExpr" id="-1359818543%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-negation-expr/index.html"><span>Negation</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1359818543%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1359818543%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-negation-expr/index.html">NegationExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-unary-expr/index.html">UnaryExpr</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a negation expression.  A negation expression is a unary expression where the operator is either &quot;-&quot; or &quot;+&quot;. A simple example would be &quot;-x&quot;.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-negation-expr/index.html">NegationExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-unary-expr/index.html">UnaryExpr</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a negation expression.  A negation expression is a unary expression where the operator is either &quot;-&quot; or &quot;+&quot;. A simple example would be &quot;-x&quot;.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-318544081%2FClasslikes%2F769193423" anchor-label="NotExpr" id="-318544081%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-318544081%2FClasslikes%2F1802671000" anchor-label="NotExpr" id="-318544081%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-not-expr/index.html"><span>Not</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-318544081%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-318544081%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-not-expr/index.html">NotExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-unary-expr/index.html">UnaryExpr</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a not expression.  A not expression is a unary expression of the form &quot;not expr&quot;.  A simple example would be &quot;not isEmpty()&quot;.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-not-expr/index.html">NotExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-unary-expr/index.html">UnaryExpr</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a not expression.  A not expression is a unary expression of the form &quot;not expr&quot;.  A simple example would be &quot;not isEmpty()&quot;.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-778199870%2FClasslikes%2F769193423" anchor-label="OutputStmt" id="-778199870%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-778199870%2FClasslikes%2F1802671000" anchor-label="OutputStmt" id="-778199870%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-output-stmt/index.html"><span>Output</span><wbr></wbr><span><span>Stmt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-778199870%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-778199870%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-output-stmt/index.html">OutputStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">expressions<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-expression/index.html">Expression</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">isWriteln<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This class implements both write and writeln statements.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-output-stmt/index.html">OutputStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">expressions<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-expression/index.html">Expression</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">isWriteln<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">This class implements both write and writeln statements.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-548998012%2FClasslikes%2F769193423" anchor-label="ParameterDecl" id="-548998012%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-548998012%2FClasslikes%2F1802671000" anchor-label="ParameterDecl" id="-548998012%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-parameter-decl/index.html"><span>Parameter</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-548998012%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-548998012%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-parameter-decl/index.html">ParameterDecl</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;paramId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">var </span>type<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>isVarParam<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span> : <a href="-declaration/index.html">Declaration</a>, <a href="-variable-decl/index.html">VariableDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a parameter declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-parameter-decl/index.html">ParameterDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">paramId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>type<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>isVarParam<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span> : <a href="-declaration/index.html">Declaration</a>, <a href="-variable-decl/index.html">VariableDecl</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a parameter declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1086433026%2FClasslikes%2F769193423" anchor-label="ProcedureCallStmt" id="-1086433026%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1086433026%2FClasslikes%2F1802671000" anchor-label="ProcedureCallStmt" id="-1086433026%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-procedure-call-stmt/index.html"><span>Procedure</span><wbr></wbr><span>Call</span><wbr></wbr><span><span>Stmt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1086433026%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1086433026%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-procedure-call-stmt/index.html">ProcedureCallStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">procId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">actualParams<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-expression/index.html">Expression</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a procedure call statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-procedure-call-stmt/index.html">ProcedureCallStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">procId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">actualParams<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-expression/index.html">Expression</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a procedure call statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-959992422%2FClasslikes%2F769193423" anchor-label="ProcedureDecl" id="-959992422%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-959992422%2FClasslikes%2F1802671000" anchor-label="ProcedureDecl" id="-959992422%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-procedure-decl/index.html"><span>Procedure</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-959992422%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-959992422%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-procedure-decl/index.html">ProcedureDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">procId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-subprogram-decl/index.html">SubprogramDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a procedure declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-procedure-decl/index.html">ProcedureDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">procId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-subprogram-decl/index.html">SubprogramDecl</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a procedure declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1418299501%2FClasslikes%2F769193423" anchor-label="Program" id="-1418299501%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1418299501%2FClasslikes%2F1802671000" anchor-label="Program" id="-1418299501%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-program/index.html"><span><span>Program</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1418299501%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1418299501%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-program/index.html">Program</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">initialDecls<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-initial-decl/index.html">InitialDecl</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">subprogramDecls<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-subprogram-decl/index.html">SubprogramDecl</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()</span></span><span class="token punctuation">)</span> : <a href="-a-s-t/index.html">AST</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a CPRL program.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-program/index.html">Program</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">initialDecls<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-initial-decl/index.html">InitialDecl</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">subprogramDecls<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-subprogram-decl/index.html">SubprogramDecl</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()</span></span><span class="token punctuation">)</span> : <a href="-a-s-t/index.html">AST</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a CPRL program.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1985073459%2FClasslikes%2F769193423" anchor-label="ReadStmt" id="-1985073459%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1985073459%2FClasslikes%2F1802671000" anchor-label="ReadStmt" id="-1985073459%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-read-stmt/index.html"><span>Read</span><wbr></wbr><span><span>Stmt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1985073459%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1985073459%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-read-stmt/index.html">ReadStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">variable<span class="token operator">: </span><a href="-variable/index.html">Variable</a></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a read statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-read-stmt/index.html">ReadStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">variable<span class="token operator">: </span><a href="-variable/index.html">Variable</a></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a read statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1754443574%2FClasslikes%2F769193423" anchor-label="RecordTypeDecl" id="1754443574%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1754443574%2FClasslikes%2F1802671000" anchor-label="RecordTypeDecl" id="1754443574%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-record-type-decl/index.html"><span>Record</span><wbr></wbr><span>Type</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1754443574%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1754443574%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-record-type-decl/index.html">RecordTypeDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fieldDecls<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-field-decl/index.html">FieldDecl</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a record type declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-record-type-decl/index.html">RecordTypeDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fieldDecls<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-field-decl/index.html">FieldDecl</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a record type declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-249518641%2FClasslikes%2F769193423" anchor-label="RelationalExpr" id="-249518641%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-249518641%2FClasslikes%2F1802671000" anchor-label="RelationalExpr" id="-249518641%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-relational-expr/index.html"><span>Relational</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-249518641%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-249518641%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-relational-expr/index.html">RelationalExpr</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-binary-expr/index.html">BinaryExpr</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a relational expression.  A relational expression is a binary expression where the operator is a relational operator such as &quot;<=&quot; or &quot;>&quot;.  A simple example would be &quot;x < 5&quot;.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-relational-expr/index.html">RelationalExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>leftOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>rightOperand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-binary-expr/index.html">BinaryExpr</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a relational expression.  A relational expression is a binary expression where the operator is a relational operator such as &quot;<=&quot; or &quot;>&quot;.  A simple example would be &quot;x < 5&quot;.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1705608461%2FClasslikes%2F769193423" anchor-label="ReturnStmt" id="-1705608461%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1705608461%2FClasslikes%2F1802671000" anchor-label="ReturnStmt" id="-1705608461%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-return-stmt/index.html"><span>Return</span><wbr></wbr><span><span>Stmt</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1705608461%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1705608461%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-return-stmt/index.html">ReturnStmt</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;subprogramDecl<span class="token operator">: </span><a href="-subprogram-decl/index.html">SubprogramDecl</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;returnExpr<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;returnPosition<span class="token operator">: </span><a href="../edu.citadel.compiler/-position/index.html">Position</a></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a return statement.  A return statement has a reference to the enclosing subprogram and an expression for the value being returned, which may be null.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-return-stmt/index.html">ReturnStmt</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subprogramDecl<span class="token operator">: </span><a href="-subprogram-decl/index.html">SubprogramDecl</a><span class="token punctuation">, </span></span><span class="parameter ">returnExpr<span class="token operator">: </span><a href="-expression/index.html">Expression</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">returnPosition<span class="token operator">: </span><a href="../edu.citadel.compiler/-position/index.html">Position</a></span></span><span class="token punctuation">)</span> : <a href="-statement/index.html">Statement</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a return statement.  A return statement has a reference to the enclosing subprogram and an expression for the value being returned, which may be null.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1305828818%2FClasslikes%2F769193423" anchor-label="SingleVarDecl" id="-1305828818%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1305828818%2FClasslikes%2F1802671000" anchor-label="SingleVarDecl" id="-1305828818%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-single-var-decl/index.html"><span>Single</span><wbr></wbr><span>Var</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1305828818%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1305828818%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-single-var-decl/index.html">SingleVarDecl</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;identifier<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;varType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;initialValue<span class="token operator">: </span><a href="-const-value/index.html">ConstValue</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>scopeLevel<span class="token operator">: </span><a href="../edu.citadel.cprl/-scope-level/index.html">ScopeLevel</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a>, <a href="-variable-decl/index.html">VariableDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a single variable declaration. A single variable declaration has the form <code class="lang-kotlin">var x : Integer;</code></p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-single-var-decl/index.html">SingleVarDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">identifier<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">varType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter ">initialValue<span class="token operator">: </span><a href="-const-value/index.html">ConstValue</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scopeLevel<span class="token operator">: </span><a href="../edu.citadel.cprl/-scope-level/index.html">ScopeLevel</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a>, <a href="-variable-decl/index.html">VariableDecl</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a single variable declaration. A single variable declaration has the form <code class="lang-kotlin">var x : Integer;</code></p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1594771064%2FClasslikes%2F769193423" anchor-label="Statement" id="-1594771064%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1594771064%2FClasslikes%2F1802671000" anchor-label="Statement" id="-1594771064%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-statement/index.html"><span><span>Statement</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1594771064%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1594771064%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-statement/index.html">Statement</a> : <a href="-a-s-t/index.html">AST</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base class for all CPRL statements.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-statement/index.html">Statement</a> : <a href="-a-s-t/index.html">AST</a></div><div class="brief "><p class="paragraph">Base class for all CPRL statements.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="1858155382%2FClasslikes%2F769193423" anchor-label="StringTypeDecl" id="1858155382%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1858155382%2FClasslikes%2F1802671000" anchor-label="StringTypeDecl" id="1858155382%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-string-type-decl/index.html"><span>String</span><wbr></wbr><span>Type</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1858155382%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1858155382%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-string-type-decl/index.html">StringTypeDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>capacity<span class="token operator">: </span><a href="-const-value/index.html">ConstValue</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a string type declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-string-type-decl/index.html">StringTypeDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>capacity<span class="token operator">: </span><a href="-const-value/index.html">ConstValue</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a string type declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1322968899%2FClasslikes%2F769193423" anchor-label="SubprogramDecl" id="-1322968899%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1322968899%2FClasslikes%2F1802671000" anchor-label="SubprogramDecl" id="-1322968899%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-subprogram-decl/index.html"><span>Subprogram</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1322968899%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1322968899%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-subprogram-decl/index.html">SubprogramDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subprogramId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-declaration/index.html">Declaration</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base class for CPRL procedures and functions.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-subprogram-decl/index.html">SubprogramDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subprogramId<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a></span></span><span class="token punctuation">)</span> : <a href="-declaration/index.html">Declaration</a></div><div class="brief "><p class="paragraph">Base class for CPRL procedures and functions.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-440007469%2FClasslikes%2F769193423" anchor-label="UnaryExpr" id="-440007469%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-440007469%2FClasslikes%2F1802671000" anchor-label="UnaryExpr" id="-440007469%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-unary-expr/index.html"><span>Unary</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-440007469%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-440007469%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-unary-expr/index.html">UnaryExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Base class for all unary expressions.  A unary expression is an expression of the form &quot;operator expression&quot;.  The expression following the operator is called the operand.  A simple example would be &quot;-x&quot;.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-unary-expr/index.html">UnaryExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>operator<span class="token operator">: </span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>operand<span class="token operator">: </span><a href="-expression/index.html">Expression</a></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a></div><div class="brief "><p class="paragraph">Base class for all unary expressions.  A unary expression is an expression of the form &quot;operator expression&quot;.  The expression following the operator is called the operand.  A simple example would be &quot;-x&quot;.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="191356486%2FClasslikes%2F769193423" anchor-label="VarDecl" id="191356486%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="191356486%2FClasslikes%2F1802671000" anchor-label="VarDecl" id="191356486%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-var-decl/index.html"><span>Var</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="191356486%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="191356486%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-var-decl/index.html">VarDecl</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;identifiers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;varType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>initialValue<span class="token operator">: </span><a href="-const-value/index.html">ConstValue</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;scopeLevel<span class="token operator">: </span><a href="../edu.citadel.cprl/-scope-level/index.html">ScopeLevel</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a variable declaration.  Note that a variable declaration is simply a container for a list of single variable declarations (SingleVarDecls).</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-var-decl/index.html">VarDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">identifiers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../edu.citadel.cprl/-token/index.html">Token</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">varType<span class="token operator">: </span><a href="../edu.citadel.cprl/-type/index.html">Type</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>initialValue<span class="token operator">: </span><a href="-const-value/index.html">ConstValue</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">scopeLevel<span class="token operator">: </span><a href="../edu.citadel.cprl/-scope-level/index.html">ScopeLevel</a></span></span><span class="token punctuation">)</span> : <a href="-initial-decl/index.html">InitialDecl</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a variable declaration.  Note that a variable declaration is simply a container for a list of single variable declarations (SingleVarDecls).</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-977284977%2FClasslikes%2F769193423" anchor-label="Variable" id="-977284977%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-977284977%2FClasslikes%2F1802671000" anchor-label="Variable" id="-977284977%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-variable/index.html"><span><span>Variable</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-977284977%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-977284977%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-variable/index.html">Variable</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>decl<span class="token operator">: </span><a href="-variable-decl/index.html">VariableDecl</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>position<span class="token operator">: </span><a href="../edu.citadel.compiler/-position/index.html">Position</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>selectorExprs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-expression/index.html">Expression</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a variable, which is any named variable that can appear on the left-hand side of an assignment statement.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-variable/index.html">Variable</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>decl<span class="token operator">: </span><a href="-variable-decl/index.html">VariableDecl</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>position<span class="token operator">: </span><a href="../edu.citadel.compiler/-position/index.html">Position</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>selectorExprs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-expression/index.html">Expression</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-expression/index.html">Expression</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a variable, which is any named variable that can appear on the left-hand side of an assignment statement.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="2102958085%2FClasslikes%2F769193423" anchor-label="VariableDecl" id="2102958085%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2102958085%2FClasslikes%2F1802671000" anchor-label="VariableDecl" id="2102958085%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-variable-decl/index.html"><span>Variable</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2102958085%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2102958085%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-variable-decl/index.html">VariableDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Interface for a variable declaration, which can be either a &quot;single&quot; variable declaration or a parameter declaration.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-variable-decl/index.html">VariableDecl</a></div><div class="brief "><p class="paragraph">Interface for a variable declaration, which can be either a &quot;single&quot; variable declaration or a parameter declaration.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="2053231898%2FClasslikes%2F769193423" anchor-label="VariableExpr" id="2053231898%2FClasslikes%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2053231898%2FClasslikes%2F1802671000" anchor-label="VariableExpr" id="2053231898%2FClasslikes%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-variable-expr/index.html"><span>Variable</span><wbr></wbr><span><span>Expr</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2053231898%2FClasslikes%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2053231898%2FClasslikes%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-variable-expr/index.html">VariableExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">variable<span class="token operator">: </span><a href="-variable/index.html">Variable</a></span></span><span class="token punctuation">)</span> : <a href="-variable/index.html">Variable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a variable expression.  A variable expression is similar to a variable except that it generates different code.  For example, consider an assignment of the form &quot;x := y&quot;.  The identifier &quot;x&quot; represents a variable, and the identifier &quot;y&quot; represents a variable expression.  Code generation for &quot;x&quot; would leave its address on the top of the stack, while code generation for &quot;y&quot; would leave its value on the top of the stack.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-variable-expr/index.html">VariableExpr</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">variable<span class="token operator">: </span><a href="-variable/index.html">Variable</a></span></span><span class="token punctuation">)</span> : <a href="-variable/index.html">Variable</a></div><div class="brief "><p class="paragraph">The abstract syntax tree node for a variable expression.  A variable expression is similar to a variable except that it generates different code.  For example, consider an assignment of the form &quot;x := y&quot;.  The identifier &quot;x&quot; represents a variable, and the identifier &quot;y&quot; represents a variable expression.  Code generation for &quot;x&quot; would leave its address on the top of the stack, while code generation for &quot;y&quot; would leave its value on the top of the stack.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="204718083%2FProperties%2F769193423" anchor-label="FALSE" id="204718083%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Properties"><a data-name="204718083%2FProperties%2F1802671000" anchor-label="FALSE" id="204718083%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-f-a-l-s-e.html"><span><span>FALSE</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="204718083%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="204718083%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="204718083%2FProperties%2F769193423" anchor-label="FALSE" id="204718083%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-a-l-s-e.html">FALSE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="204718083%2FProperties%2F1802671000" anchor-label="FALSE" id="204718083%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-f-a-l-s-e.html">FALSE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1506399002%2FProperties%2F769193423" anchor-label="TRUE" id="-1506399002%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1506399002%2FProperties%2F1802671000" anchor-label="TRUE" id="-1506399002%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="-t-r-u-e.html"><span><span>TRUE</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1506399002%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1506399002%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-1506399002%2FProperties%2F769193423" anchor-label="TRUE" id="-1506399002%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-t-r-u-e.html">TRUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-1506399002%2FProperties%2F1802671000" anchor-label="TRUE" id="-1506399002%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-t-r-u-e.html">TRUE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
               </div>
             </div>
           </div>

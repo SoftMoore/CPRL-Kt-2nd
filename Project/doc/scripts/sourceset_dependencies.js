@@ -1,1 +1,1 @@
-sourceset_dependencies='{":dokkaHtml/main":[]}'
+sourceset_dependencies='{"CPRL Compiler API/main":[]}'

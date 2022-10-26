@@ -6,10 +6,18 @@
     <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "../../../";</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -21,6 +29,7 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
@@ -42,125 +51,125 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl.ast/StringTypeDecl///PointingToDeclaration//769193423">
-  <div class="breadcrumbs"><a href="../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../index.html">edu.citadel.cprl.ast</a><span class="delimiter">/</span><a href="index.html">StringTypeDecl</a></div>
+<div class="main-content" id="content" pageIds="CPRL Compiler API::edu.citadel.cprl.ast/StringTypeDecl///PointingToDeclaration//1802671000">
+  <div class="breadcrumbs"><a href="../../../index.html">CPRL Compiler API</a><span class="delimiter">/</span><a href="../index.html">edu.citadel.cprl.ast</a><span class="delimiter">/</span><span class="current">StringTypeDecl</span></div>
   <div class="cover ">
     <h1 class="cover"><span>String</span><wbr></wbr><span>Type</span><wbr></wbr><span><span>Decl</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">StringTypeDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeId<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>capacity<span class="token operator">: </span><a href="../-const-value/index.html">ConstValue</a></span></span><span class="token punctuation">)</span> : <a href="../-initial-decl/index.html">InitialDecl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">The abstract syntax tree node for a string type declaration.</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">StringTypeDecl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeId<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>capacity<span class="token operator">: </span><a href="../-const-value/index.html">ConstValue</a></span></span><span class="token punctuation">)</span> : <a href="../-initial-decl/index.html">InitialDecl</a></div><p class="paragraph">The abstract syntax tree node for a string type declaration.</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Parameters</h2>
+      <h4 class="">Parameters</h4>
       <div data-togglable="Parameters">
-        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>type</span><wbr></wbr><span><span>Id</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the identifier token containing the string type name</p></div></div></div></div></div></div></div></div></div>
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><u><span>type</span><wbr></wbr><span><span>Id</span></span></u></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the identifier token containing the string type name</p></div></div></div></div></div></div></div></div></div>
       </div>
       <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="2088128964%2FConstructors%2F769193423" anchor-label="StringTypeDecl" id="2088128964%2FConstructors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Constructors"><a data-name="2088128964%2FConstructors%2F1802671000" anchor-label="StringTypeDecl" id="2088128964%2FConstructors%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue TabbedContent">
             <div class=""><span class="inline-flex">
                 <div><a href="-string-type-decl.html"><span>String</span><wbr></wbr><span>Type</span><wbr></wbr><span><span>Decl</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2088128964%2FConstructors%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2088128964%2FConstructors%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-string-type-decl.html"><span class="token function">StringTypeDecl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeId<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">capacity<span class="token operator">: </span><a href="../-const-value/index.html">ConstValue</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Construct a string type declaration with the specified type name and capacity.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-string-type-decl.html"><span class="token function">StringTypeDecl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">typeId<span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a><span class="token punctuation">, </span></span><span class="parameter ">capacity<span class="token operator">: </span><a href="../-const-value/index.html">ConstValue</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Construct a string type declaration with the specified type name and capacity.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="812429691%2FFunctions%2F769193423" anchor-label="checkConstraints" id="812429691%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Functions"><a data-name="812429691%2FFunctions%2F1802671000" anchor-label="checkConstraints" id="812429691%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="check-constraints.html"><span>check</span><wbr></wbr><span><span>Constraints</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="812429691%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="812429691%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="check-constraints.html"><span class="token function">checkConstraints</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Check semantic/contextual constraints.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="check-constraints.html"><span class="token function">checkConstraints</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Check semantic/contextual constraints.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1766724401%2FFunctions%2F769193423" anchor-label="emit" id="-1766724401%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1766724401%2FFunctions%2F1802671000" anchor-label="emit" id="-1766724401%2FFunctions%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../-declaration/emit.html"><span><span>emit</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1766724401%2FFunctions%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1766724401%2FFunctions%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../-declaration/emit.html"><span class="token function">emit</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Emit object code.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../-declaration/emit.html"><span class="token function">emit</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Emit object code.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-249973169%2FProperties%2F769193423" anchor-label="capacity" id="-249973169%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+      <div class="table" data-togglable="Properties"><a data-name="-249973169%2FProperties%2F1802671000" anchor-label="capacity" id="-249973169%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="capacity.html"><span><span>capacity</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-249973169%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-249973169%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-249973169%2FProperties%2F769193423" anchor-label="capacity" id="-249973169%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="capacity.html">capacity</a><span class="token operator">: </span><a href="../-const-value/index.html">ConstValue</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-249973169%2FProperties%2F769193423" anchor-label="capacity" id="-249973169%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><p class="paragraph">the maximum number of characters in the string</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-249973169%2FProperties%2F1802671000" anchor-label="capacity" id="-249973169%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="capacity.html">capacity</a><span class="token operator">: </span><a href="../-const-value/index.html">ConstValue</a></div><div class="brief "><a data-name="-249973169%2FProperties%2F1802671000" anchor-label="capacity" id="-249973169%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><p class="paragraph">the maximum number of characters in the string</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="2139667514%2FProperties%2F769193423" anchor-label="idToken" id="2139667514%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2139667514%2FProperties%2F1802671000" anchor-label="idToken" id="2139667514%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../-declaration/id-token.html"><span>id</span><wbr></wbr><span><span>Token</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2139667514%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2139667514%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="2139667514%2FProperties%2F769193423" anchor-label="idToken" id="2139667514%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-declaration/id-token.html">idToken</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="2139667514%2FProperties%2F1802671000" anchor-label="idToken" id="2139667514%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-declaration/id-token.html">idToken</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-token/index.html">Token</a></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="86812089%2FProperties%2F769193423" anchor-label="position" id="86812089%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="86812089%2FProperties%2F1802671000" anchor-label="position" id="86812089%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../-declaration/position.html"><span><span>position</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="86812089%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="86812089%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="86812089%2FProperties%2F769193423" anchor-label="position" id="86812089%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-declaration/position.html">position</a><span class="token operator">: </span><a href="../../edu.citadel.compiler/-position/index.html">Position</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="86812089%2FProperties%2F769193423" anchor-label="position" id="86812089%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><p class="paragraph">The position of this declaration, which is simply the position of the identifier token.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="86812089%2FProperties%2F1802671000" anchor-label="position" id="86812089%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-declaration/position.html">position</a><span class="token operator">: </span><a href="../../edu.citadel.compiler/-position/index.html">Position</a></div><div class="brief "><a data-name="86812089%2FProperties%2F1802671000" anchor-label="position" id="86812089%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><p class="paragraph">The position of this declaration, which is simply the position of the identifier token.</p></div></div></div>
               </div>
             </div>
           </div>
         </div>
-<a data-name="-1045938360%2FProperties%2F769193423" anchor-label="type" id="-1045938360%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-        <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1045938360%2FProperties%2F1802671000" anchor-label="type" id="-1045938360%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a>
+        <div class="table-row" data-filterable-current="CPRL Compiler API/main" data-filterable-set="CPRL Compiler API/main">
           <div class="main-subrow keyValue ">
             <div class=""><span class="inline-flex">
                 <div><a href="../-declaration/type.html"><span><span>type</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1045938360%2FProperties%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1045938360%2FProperties%2F1802671000"></span>
                   <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-1045938360%2FProperties%2F769193423" anchor-label="type" id="-1045938360%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-declaration/type.html">type</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-type/index.html">Type</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable="CPRL Compiler API/main"><a data-name="-1045938360%2FProperties%2F1802671000" anchor-label="type" id="-1045938360%2FProperties%2F1802671000" data-filterable-set="CPRL Compiler API/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-declaration/type.html">type</a><span class="token operator">: </span><a href="../../edu.citadel.cprl/-type/index.html">Type</a></div></div></div>
               </div>
             </div>
           </div>
