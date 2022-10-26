@@ -798,7 +798,7 @@ class Parser (private val scanner : Scanner,
      */
     private fun recover(followers : EnumSet<Symbol>)
       {
-        throw FatalException("Parsing terminated.")
+        throw FatalException(""No error recovery -- parsing terminated."")
       }
 
     /**
