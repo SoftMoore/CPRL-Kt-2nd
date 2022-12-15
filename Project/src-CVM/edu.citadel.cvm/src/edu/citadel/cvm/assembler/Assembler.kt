@@ -8,7 +8,6 @@ import edu.citadel.cvm.assembler.ast.AST
 import edu.citadel.cvm.assembler.ast.Instruction
 
 import java.io.*
-import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
 
 private const val SUFFIX  = ".asm"
@@ -137,7 +136,7 @@ class Assembler(private val sourceFile : File)
     fun assemble()
       {
         val errorHandler = ErrorHandler()
-        val reader  = FileReader(sourceFile, StandardCharsets.UTF_8)
+        val reader  = FileReader(sourceFile, Charsets.UTF_8)
         val source  = Source(reader)
         val scanner = Scanner(source, errorHandler)
         val parser  = Parser(scanner, errorHandler)

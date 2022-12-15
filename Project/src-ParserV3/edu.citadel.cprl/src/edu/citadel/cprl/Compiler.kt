@@ -9,7 +9,6 @@ import edu.citadel.cprl.ast.AST
 import edu.citadel.cprl.ast.Program
 
 import java.io.*
-import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
 
 private const val SUFFIX = ".cprl"
@@ -79,8 +78,6 @@ private fun printUsageAndExit()
 
 /**
  * Compiler for the CPRL programming language.
- *
- * @constructor Construct a compiler with the specified source file.
  */
 class Compiler
   {
@@ -96,7 +93,7 @@ class Compiler
     fun compile(sourceFile : File)
       {
         val errorHandler = ErrorHandler()
-        val reader  = BufferedReader(FileReader(sourceFile, StandardCharsets.UTF_8))
+        val reader  = BufferedReader(FileReader(sourceFile, Charsets.UTF_8))
         val source  = Source(reader)
         val scanner = Scanner(source, 4, errorHandler)   // 4 lookahead tokens
         val idTable = IdTable()
@@ -158,7 +155,7 @@ class Compiler
         try
           {
             val targetFile = File(sourceFile.parent, targetFileName)
-            return PrintWriter(FileWriter(targetFile, StandardCharsets.UTF_8), true)
+            return PrintWriter(FileWriter(targetFile, Charsets.UTF_8), true)
           }
         catch (e : IOException)
           {
