@@ -8,10 +8,9 @@ import edu.citadel.cprl.Token
 
 import java.io.FileReader
 import java.io.PrintStream
-import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
 
-val out = PrintStream(java.lang.System.out, true, StandardCharsets.UTF_8)
+val out = PrintStream(java.lang.System.out, true, Charsets.UTF_8)
 
 fun main(args : Array<String>)
   {
@@ -25,7 +24,7 @@ fun main(args : Array<String>)
 
         val fileName = args[0]
         val errorHandler = ErrorHandler()
-        val reader  = FileReader(fileName, StandardCharsets.UTF_8)
+        val reader  = FileReader(fileName, Charsets.UTF_8)
         val source  = Source(reader)
         val scanner = Scanner(source, 4, errorHandler)   // 4 lookahead tokens
         var token : Token

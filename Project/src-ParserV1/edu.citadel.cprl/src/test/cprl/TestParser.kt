@@ -11,7 +11,6 @@ import edu.citadel.cprl.Parser
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
-import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
 
 private const val SUFFIX = ".cprl"
@@ -51,7 +50,7 @@ fun main(args : Array<String>)
 
             printProgressMessage("Parsing $fileName...")
 
-            val reader  = BufferedReader(FileReader(sourceFile, StandardCharsets.UTF_8))
+            val reader  = BufferedReader(FileReader(sourceFile, Charsets.UTF_8))
             val source  = Source(reader)
             val scanner = Scanner(source, 4, errorHandler)   // 4 lookahead tokens
             val idTable = IdTable()

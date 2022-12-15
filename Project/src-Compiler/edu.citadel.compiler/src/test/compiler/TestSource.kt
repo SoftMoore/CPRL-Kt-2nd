@@ -5,7 +5,6 @@ import edu.citadel.compiler.Source
 
 import java.io.FileReader
 import java.io.PrintStream
-import java.nio.charset.StandardCharsets
 
 
 /*
@@ -16,9 +15,9 @@ fun main(args: Array<String>)
     try
       {
         val fileName   = args[0]
-        val fileReader = FileReader(fileName, StandardCharsets.UTF_8)
+        val fileReader = FileReader(fileName, Charsets.UTF_8)
         val source     = Source(fileReader)
-        val out        = PrintStream(System.out, true, StandardCharsets.UTF_8)
+        val out        = PrintStream(System.out, true, Charsets.UTF_8)
 
         while (source.currentChar != source.EOF)
           {
