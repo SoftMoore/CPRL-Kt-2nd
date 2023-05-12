@@ -134,8 +134,9 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
         var idMap = HashMap<String, Int>()
 
         /**
-         * Initialize maps.  These maps are shared with all instructions,but they
-         * must be re-initialized if the assembler is run on more than one file.
+         * Initialize maps.  These maps are shared with all instructions,
+         * but they must be re-initialized if the assembler is run on more
+         * than one file; e.g., via a command like assemble *.asm.
          */
         fun initMaps()
           {

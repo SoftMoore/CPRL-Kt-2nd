@@ -6,12 +6,15 @@ import edu.citadel.compiler.Source
 
 import edu.citadel.cvm.assembler.ast.AST
 import edu.citadel.cvm.assembler.ast.Instruction
+import edu.citadel.cvm.assembler.ast.Program
 
 import java.io.*
 import kotlin.system.exitProcess
 
 private const val SUFFIX  = ".asm"
 private const val FAILURE = -1
+private const val DEBUG   = false
+private var optimize = true
 
 /**
  * Translates the assembly source files named in args to CVM machine
@@ -31,15 +34,12 @@ fun main(args : Array<String>)
         startIndex = 1
       }
 
-    var fileName   : String
-    var sourceFile : File
-
     for (i in startIndex until args.size)
       {
         try
           {
-            fileName = args[i]
-            sourceFile = File(fileName)
+            var fileName = args[i]
+            var sourceFile = File(fileName)
 
             if (!sourceFile.isFile)
               {
@@ -97,8 +97,8 @@ private fun printUsageAndExit()
   {
     println("Usage: Assembler expecting [<option>] and one or more source files")
     println("where the option is omitted or is one of the following:")
-    println("-opt:off   Turns off all assembler optimizations")
-    println("-opt:on    Turns on all assembler optimizations (default)")
+    println("-opt:off  Turns off all assembler optimizations")
+    println("-opt:on   Turns on all assembler optimizations (default)")
     println()
     exitProcess(0)
   }
@@ -120,15 +120,10 @@ private fun processOption(option: String)
  */
 class Assembler(private val sourceFile : File)
   {
-    init
-      {
-        Instruction.initMaps()
-      }
-
     /**
-     * Assembles the source file.  If there are no errors in the source file,
-     * the object code is placed in a file with the same base file name as
-     * the source file but with a ".obj" suffix.
+     * Assembles the source file.  If there are no errors in the source
+     * file,  the object code is placed in a file with the same base file
+     * name as the source file but with a ".obj" suffix.
      *
      * @throws IOException if there are problems reading the source file
      *                     or writing to the target file.
@@ -141,49 +136,50 @@ class Assembler(private val sourceFile : File)
         val scanner = Scanner(source, errorHandler)
         val parser  = Parser(scanner, errorHandler)
         AST.errorHandler = errorHandler
+        Instruction.p()
 
         printProgressMessage("Starting assembly for ${sourceFile.name}")
 
         // parse source file
-        val prog = parser.parseProgram()
+        val program: Program = parser.parseProgram()
 
         if (DEBUG)
           {
             println("...program after parsing")
-            printInstructions(prog.getInstructions())
+            printInstructions(program.getInstructions())
           }
 
         // optimize
         if (!errorHandler.errorsExist() && optimize)
           {
             printProgressMessage("...performing optimizations")
-            prog.optimize()
+            program.optimize()
           }
 
         if (DEBUG)
           {
             println("...program after performing optimizations")
-            printInstructions(prog.getInstructions())
+            printInstructions(program.getInstructions())
           }
 
         // set addresses
         if (!errorHandler.errorsExist())
           {
             printProgressMessage("...setting memory addresses")
-            prog.setAddresses()
+            program.setAddresses()
           }
 
         // check constraints
         if (!errorHandler.errorsExist())
           {
             printProgressMessage("...checking constraints")
-            prog.checkConstraints()
+            program.checkConstraints()
           }
 
         if (DEBUG)
           {
             println("...program after checking constraints")
-            printInstructions(prog.getInstructions())
+            printInstructions(program.getInstructions())
           }
 
         // generate code
@@ -193,7 +189,7 @@ class Assembler(private val sourceFile : File)
             AST.outputStream = getTargetOutputStream(sourceFile)
 
             // no error recovery from errors detected during code generation
-            prog.emit()
+            program.emit()
           }
 
         if (errorHandler.errorsExist())
@@ -223,11 +219,5 @@ class Assembler(private val sourceFile : File)
             e.printStackTrace()
             exitProcess(FAILURE)
           }
-      }
-
-    companion object
-      {
-        private const val DEBUG = false
-        var optimize = true
       }
   }
