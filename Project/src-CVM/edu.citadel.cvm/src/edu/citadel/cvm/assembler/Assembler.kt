@@ -122,7 +122,7 @@ class Assembler(private val sourceFile : File)
   {
     /**
      * Assembles the source file.  If there are no errors in the source
-     * file,  the object code is placed in a file with the same base file
+     * file, the object code is placed in a file with the same base file
      * name as the source file but with a ".obj" suffix.
      *
      * @throws IOException if there are problems reading the source file
