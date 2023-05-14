@@ -1,7 +1,7 @@
 package edu.citadel.compiler.util
 
 /**
- * This class encapsulates several bit manipulation utility methods.
+ * This object encapsulates several bit manipulation utility methods.
  */
 object BitUtil
   {
@@ -13,7 +13,10 @@ object BitUtil
         var result = 0
 
         if (bits.length != 16)
-            throw  IllegalArgumentException("*** bad string length ***")
+          {
+            val errorMsg = "*** Bad string length: ${bits.length} ***\""
+            throw IllegalArgumentException(errorMsg)
+          }
 
         var mask = 1 shl 15
 
@@ -23,7 +26,10 @@ object BitUtil
             if (c == '1')
                 result = result or mask
             else if (c != '0')
-                throw IllegalArgumentException("*** non-binary character ***")
+              {
+                val errorMsg = "*** Non-binary character $c ***"
+                throw IllegalArgumentException(errorMsg)
+              }
 
             mask = mask.ushr(1)
           }
