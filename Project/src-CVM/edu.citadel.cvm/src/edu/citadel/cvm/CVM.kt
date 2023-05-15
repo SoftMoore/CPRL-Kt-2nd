@@ -1,7 +1,6 @@
 package edu.citadel.cvm
 
 import edu.citadel.compiler.util.ByteUtil
-import edu.citadel.compiler.util.format
 
 import java.io.*
 import java.nio.charset.StandardCharsets
@@ -26,9 +25,6 @@ private const val TRUE = 1.toByte()
 
 /** end of file  */
 private const val EOF = -1
-
-/** field width for printing memory addresses */
-private const val FIELD_WIDTH = 4
 
 /**
  * This method constructs a CPRL virtual machine, loads into memory the
@@ -148,7 +144,7 @@ class CVM (numOfBytes : Int)
             else
                 out.print("     ")
 
-            val memAddrStr = format(memAddr, FIELD_WIDTH)
+            val memAddrStr = String.format("%4s", memAddr)
 
             when (val opCode = memory[memAddr])
               {
@@ -243,7 +239,7 @@ class CVM (numOfBytes : Int)
                 else          -> out.print("     ")
               }
 
-            val memAddrStr = format(memAddr, FIELD_WIDTH)
+            val memAddrStr = String.format("%4s", memAddr)
             out.println("$memAddrStr:  ${memory[memAddr]}")
             ++memAddr
           }
