@@ -345,10 +345,10 @@ class Scanner(private val source : Source, k : Int,
     /**
      * Scans characters in the source file for an escaped character; i.e.,
      * a character preceded by a backslash.  This method checks escape
-     * characters \b, \t, \n, \f, \r, \", \', and \\.  If the character
-     * following a backslash is anything other than one of these characters,
-     * then an exception is thrown.  Note that the escaped character sequence
-     * is returned unmodified; i.e., \t returns "\t", not the tab character.
+     * characters \t, \n, \r, \", \', and \\.  If the character following
+     * a backslash is anything other than one of these characters, then an
+     * exception is thrown.  Note that the escaped character sequence is
+     * returned unmodified; i.e., \t returns "\t", not the tab character.
      * Assumes that source.currentChar is the escape character (\).
      *
      * @return the escaped character sequence unmodified.
@@ -370,10 +370,8 @@ class Scanner(private val source : Source, k : Int,
 
         when (c)
           {
-            'b'  -> return "\\b"    // backspace
             't'  -> return "\\t"    // tab
-            'n'  -> return "\\n"    // linefeed (a.k.a. newline)
-            'f'  -> return "\\f"    // form feed
+            'n'  -> return "\\n"    // newline
             'r'  -> return "\\r"    // carriage return
             '\"' -> return "\\\""   // double quote
             '\'' -> return "\\\'"   // single quote

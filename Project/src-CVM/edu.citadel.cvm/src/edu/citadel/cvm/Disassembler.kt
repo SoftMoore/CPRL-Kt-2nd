@@ -92,7 +92,7 @@ fun main(args : Array<String>)
                     out.print(" \'")
 
                     c = readChar(file)
-                    if (c == '\b' || c == '\t' || c == '\n' || c == '\r' || c == '\"' || c == '\'' || c == '\\')
+                    if (isEscapeChar(c))
                         out.print(getUnescapedChar(c))
                     else
                         out.print(c)
@@ -112,7 +112,7 @@ fun main(args : Array<String>)
                     for (i in 0 until strLength)
                       {
                         c = readChar(file)
-                        if (c == '\b' || c == '\t' || c == '\n' || c == '\r' || c == '\"' || c == '\'' || c == '\\')
+                        if (isEscapeChar(c))
                             out.print(getUnescapedChar(c))
                         else
                             out.print(c)
@@ -128,6 +128,36 @@ fun main(args : Array<String>)
           }
 
         out.close()
+      }
+  }
+
+/*
+ * Returns true if c is an escaped character.
+ */
+private fun isEscapeChar(c: Char): Boolean
+  {
+    return c == '\t' || c == '\n' || c == '\r'
+        || c == '\"' || c == '\'' || c == '\\'
+  }
+
+/**
+ * Unescapes characters.  For example, if the parameter c is a tab,
+ * this method will return "\\t"
+ *
+ * @return the string for an escaped character.
+ */
+private fun getUnescapedChar(c : Char) : String
+  {
+    when (c)
+      {
+        '\b' -> return "\\b"    // backspace
+        '\t' -> return "\\t"    // tab
+        '\n' -> return "\\n"    // linefeed (a.k.a. newline)
+        '\r' -> return "\\r"    // carriage return
+        '\"' -> return "\\\""   // double quote
+        '\'' -> return "\\\'"   // single quote
+        '\\' -> return "\\\\"   // backslash
+        else -> return c.toString()
       }
   }
 
@@ -161,27 +191,6 @@ private fun readChar(iStream : InputStream) : Char
 private fun readByte(iStream : InputStream) : Byte
   {
     return iStream.read().toByte()
-  }
-
-/**
- * Unescapes characters.  For example, if the parameter c is a tab,
- * this method will return "\\t"
- *
- * @return the string for an escaped character.
- */
-private fun getUnescapedChar(c : Char) : String
-  {
-    when (c)
-      {
-        '\b' -> return "\\b"    // backspace
-        '\t' -> return "\\t"    // tab
-        '\n' -> return "\\n"    // linefeed (a.k.a. newline)
-        '\r' -> return "\\r"    // carriage return
-        '\"' -> return "\\\""   // double quote
-        '\'' -> return "\\\'"   // single quote
-        '\\' -> return "\\\\"   // backslash
-        else -> return c.toString()
-      }
   }
 
 private fun printUsageMessageAndExit()
