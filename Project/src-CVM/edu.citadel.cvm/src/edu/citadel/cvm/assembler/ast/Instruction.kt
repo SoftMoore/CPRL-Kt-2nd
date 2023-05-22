@@ -79,8 +79,6 @@ abstract class Instruction(val labels : MutableList<Token>, val opCode : Token)
       }
 
     /**
-     * Calculates the displacement between the program counter and
-     * a label (computed as label's address - (address + size)).
      * Calculates the displacement between an instruction's address and
      * a label (computed as label's address - instruction's address).
      * This method is used by branching and call instructions.
