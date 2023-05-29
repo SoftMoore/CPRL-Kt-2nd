@@ -545,7 +545,6 @@ class Parser (private val scanner : Scanner,
      */
     private fun parseWriteStmt()
       {
-        try
 // ...
       }
 
