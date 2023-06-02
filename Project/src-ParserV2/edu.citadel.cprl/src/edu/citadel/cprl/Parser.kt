@@ -842,8 +842,8 @@ class Parser (private val scanner : Scanner,
             scanner.advance()
         else
           {
-            val errorMsg = ("Expecting \"" + expectedSymbol + "\" but found \""
-                    + scanner.token + "\" instead.")
+            val errorMsg = "Expecting \"$expectedSymbol\" but " +
+                           "found \"${scanner.token}\" instead."
             throw error(errorMsg)
           }
       }
