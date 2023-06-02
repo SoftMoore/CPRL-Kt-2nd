@@ -39,7 +39,7 @@ class Parser (private val scanner : Scanner,
     /** Symbols that can follow an initial declaration (computed property).
      *  Set is computed dynamically based on the scope level of IdTable. */
     private val initialDeclFollowers
-        get() :  EnumSet<Symbol>
+        get() : EnumSet<Symbol>
           {
             // An initial declaration can always be followed by another
             // initial declaration, regardless of the scope level of IdTable.
@@ -137,7 +137,7 @@ class Parser (private val scanner : Scanner,
         try
           {
             match(Symbol.varRW)
-            val identifiers: List<Token> = parseIdentifiers()
+            val identifiers : List<Token> = parseIdentifiers()
             match(Symbol.colon)
             parseTypeName()
 
@@ -151,7 +151,6 @@ class Parser (private val scanner : Scanner,
 
             for (identifier in identifiers)
                 idTable.add(identifier, IdType.variableId)
-
           }
         catch (e : ParserException)
           {
