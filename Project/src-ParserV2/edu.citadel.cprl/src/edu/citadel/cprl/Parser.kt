@@ -580,7 +580,7 @@ class Parser (private val scanner : Scanner,
       }
 
     /**
-     * Parse the following grammar rule:<br>
+     * Parse the following grammar rules:<br>
      * `procedureCallStmt = procId "(" [ actualParameters ] ")" ";" .
      *  actualParameters = expressions .`
      */
@@ -659,7 +659,7 @@ class Parser (private val scanner : Scanner,
       }
 
     /**
-     * Parse the following grammar rules:<br>
+     * Parse the following grammar rule:<br>
      * `variable = ( varId | paramId) { indexExpr | fieldExpr } .`
      */
     private fun parseVariable()
@@ -821,7 +821,7 @@ class Parser (private val scanner : Scanner,
       }
 
     /**
-     * Parse the following grammar rule:<br>
+     * Parse the following grammar rules:<br>
      * `functionCallExpr = funcId "(" [ actualParameters ] ")" .
      *  actualParameters = expressions .`
      */
