@@ -449,6 +449,7 @@ class Parser (private val scanner : Scanner,
                 // or use the lookahead symbol if not declared.
                 val idStr  = scanner.text
                 val idType = idTable[idStr]
+
                 if (idType != null)
                   {
                     if (idType == IdType.variableId)
