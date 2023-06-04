@@ -506,7 +506,7 @@ class Parser (private val scanner : Scanner,
             recover(subprogDeclFollowers)
             return EmptySubprogramDecl
           }
-    }
+      }
 
     /**
      * Parse the following grammar rule:<br>
@@ -528,6 +528,7 @@ class Parser (private val scanner : Scanner,
      * @return a list of formal parameter declarations.
      */
     private fun parseFormalParameters() : List<ParameterDecl>
+      {
 // ...
       }
 
