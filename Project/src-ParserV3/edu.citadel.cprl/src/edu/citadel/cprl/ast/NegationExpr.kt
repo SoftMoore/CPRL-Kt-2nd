@@ -17,13 +17,10 @@ import edu.citadel.cprl.Type
 class NegationExpr(operator : Token, operand : Expression)
     : UnaryExpr(operator, operand)
   {
-    /**
-     * Initialize the type of the expression to Integer.
-     */
     init
       {
         assert(operator.symbol == Symbol.minus) { "Operator is not \"-\" operator." }
-        type =Type.Integer
+        type = Type.Integer
       }
 
     override fun checkConstraints()
