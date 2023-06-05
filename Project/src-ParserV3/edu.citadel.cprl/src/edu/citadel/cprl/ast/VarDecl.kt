@@ -13,7 +13,7 @@ import edu.citadel.cprl.Type
  * @constructor Construct a variable declaration with its list of identifier
  *              tokens, type, initial value, and scope level.
  */
-class VarDecl(identifiers  : List<Token>, varType : Type,
+class VarDecl(identifiers : List<Token>, varType : Type,
               val initialValue : ConstValue?, scopeLevel : ScopeLevel)
     : InitialDecl(Token(), varType)
   {
@@ -39,7 +39,7 @@ class VarDecl(identifiers  : List<Token>, varType : Type,
                 throw error(initialValue.position, errorMsg)
               }
           }
-        catch (e: ConstraintException)
+        catch (e : ConstraintException)
           {
             errorHandler.reportError(e)
           }
