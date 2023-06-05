@@ -84,7 +84,7 @@ class FunctionCallExpr(private val funId : Token,
           }
         catch (e : ConstraintException)
           {
-          errorHandler.reportError(e)
+            errorHandler.reportError(e)
           }
       }
 
