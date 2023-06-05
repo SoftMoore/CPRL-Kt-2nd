@@ -24,11 +24,11 @@ class OutputStmt(private val expressions : List<Expression>,
 
                 if (expr.type != Type.Integer && expr.type != Type.Boolean
                     && expr.type != Type.Char && expr.type !is StringType)
-                {
-                  val errorMsg = ("Output supported only for integers, "
-                                + "characters, booleans, and strings.")
-                  throw error(expr.position, errorMsg)
-                }
+                  {
+                    val errorMsg = "Output supported only for integers, " +
+                                   "characters, booleans, and strings."
+                    throw error(expr.position, errorMsg)
+                  }
               }
           }
         catch (e : ConstraintException)
