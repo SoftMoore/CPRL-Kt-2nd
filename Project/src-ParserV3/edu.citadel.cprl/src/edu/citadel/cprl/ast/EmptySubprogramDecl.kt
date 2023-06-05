@@ -9,12 +9,6 @@ import edu.citadel.cprl.Token
  */
 object EmptySubprogramDecl : SubprogramDecl(Token())
   {
-    init
-      {
-        initialDecls = emptyList()
-        statements   = emptyList()
-      }
-
     override fun checkConstraints()
       {
         // nothing to check
