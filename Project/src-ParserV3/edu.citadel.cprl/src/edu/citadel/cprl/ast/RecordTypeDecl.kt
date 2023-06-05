@@ -14,7 +14,7 @@ import edu.citadel.cprl.Token
  */
 class RecordTypeDecl(typeId : Token, val fieldDecls : List<FieldDecl>)
     : InitialDecl(typeId, RecordType(typeId.text, fieldDecls))
-{
+  {
     override fun checkConstraints()
       {
 // ...   Don't forget to compute fieldDecl offsets.
