@@ -46,10 +46,10 @@ class ConstValue : Expression
 
     /**
      * An integer value for the declaration literal.  For an integer literal,
-     * this method simply returns its integer value.  For a char literal,
-     * this method returns the underlying integer value for the character.
-     * For a boolean literal, this method returns 0 for false and 1 for true.
-     * For any other literal, the method returns 0.
+     * this property simply returns its integer value.  For a char literal,
+     * this property returns the underlying integer value for the character.
+     * For a boolean literal, this property returns 0 for false and 1 for true.
+     * For any other literal, the property returns 0.
      */
     val literalIntValue : Int
         get()
