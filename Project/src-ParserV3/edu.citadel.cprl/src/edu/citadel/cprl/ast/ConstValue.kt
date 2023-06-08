@@ -67,8 +67,6 @@ class ConstValue : Expression
                 return 0
           }
 
-    override fun toString() : String = literal.text
-
     override fun checkConstraints()
       {
         try
