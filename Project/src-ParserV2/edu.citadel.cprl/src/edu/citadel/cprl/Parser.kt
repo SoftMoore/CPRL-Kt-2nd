@@ -38,8 +38,8 @@ class Parser (private val scanner : Scanner,
 
     /** Symbols that can follow an initial declaration (computed property).
      *  Set is computed dynamically based on the scope level of IdTable. */
-    private val initialDeclFollowers
-        get() : EnumSet<Symbol>
+    private val initialDeclFollowers : Set<Symbol>
+        get()
           {
             // An initial declaration can always be followed by another
             // initial declaration, regardless of the scope level of IdTable.
@@ -858,7 +858,7 @@ class Parser (private val scanner : Scanner,
      * Advance the scanner until the current symbol is one of the
      * symbols in the specified set of follows.
      */
-    private fun recover(followers : EnumSet<Symbol>) = scanner.advanceTo(followers)
+    private fun recover(followers : Set<Symbol>) = scanner.advanceTo(followers)
 
     /**
      * Create a parser exception with the specified error message and the
