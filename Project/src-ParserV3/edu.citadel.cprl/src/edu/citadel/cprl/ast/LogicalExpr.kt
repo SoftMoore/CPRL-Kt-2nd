@@ -26,9 +26,9 @@ class LogicalExpr(leftOperand : Expression, operator : Token, rightOperand : Exp
      */
     init
       {
-        assert(operator.symbol.isLogicalOperator())
-            { "LogicalExpression: operator is not a logical operator." }
         type = Type.Boolean
+        assert(operator.symbol.isLogicalOperator())
+          { "LogicalExpression: operator is not a logical operator." }
       }
 
     override fun checkConstraints()
@@ -86,14 +86,11 @@ class LogicalExpr(leftOperand : Expression, operator : Token, rightOperand : Exp
         // branch to code following the expression
         emit("BR $L2")
 
-        // L1:
         emitLabel(L1)
 
         // evaluate the right operand and leave result on
         // top of stack as value for compound expression
         rightOperand.emit()
-
-        // L2:
         emitLabel(L2)
       }
   }

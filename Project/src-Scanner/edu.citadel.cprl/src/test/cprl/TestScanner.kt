@@ -49,7 +49,7 @@ fun main(args : Array<String>)
       }
   }
 
-fun printToken(token : Token)
+private fun printToken(token : Token)
   {
     out.printf("line: %2d   char: %2d   token: ",
         token.position.lineNumber,

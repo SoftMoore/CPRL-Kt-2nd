@@ -5,7 +5,7 @@ package edu.citadel.cprl
  *
  * @constructor Construct buffer with the specified capacity.
  */
-class TokenBuffer(val capacity : Int)
+class TokenBuffer(private val capacity : Int)
   {
     private val buffer : Array<Token> = Array(capacity) { Token() }
     private var tokenIndex = 0   // circular index
@@ -13,7 +13,7 @@ class TokenBuffer(val capacity : Int)
     /**
      * Return the token at index i.  Does not remove the token.
      */
-    operator fun get(i : Int) : Token =  buffer[(tokenIndex + i) % capacity]
+    operator fun get(i : Int) : Token = buffer[(tokenIndex + i) % capacity]
 
     /**
      * Add a token to the buffer.  Overwrites if the buffer is full.

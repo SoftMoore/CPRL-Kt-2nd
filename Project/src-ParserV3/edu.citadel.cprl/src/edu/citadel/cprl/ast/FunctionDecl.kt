@@ -28,6 +28,7 @@ class FunctionDecl(funcId : Token) : SubprogramDecl(funcId)
                 firstParamAddr = firstParamDecl.relAddr
               }
 
+            // the location for the return value is above the first parameter
             return firstParamAddr - type.size
           }
 

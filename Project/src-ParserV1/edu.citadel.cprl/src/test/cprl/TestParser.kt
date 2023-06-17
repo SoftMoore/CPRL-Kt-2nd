@@ -39,12 +39,12 @@ fun main(args : Array<String>)
                     sourceFile = File(fileName2)
 
                     if (!sourceFile.isFile)
-                        throw FatalException("*** File $fileName2 not found ***")
+                        throw FatalException("File $fileName2 not found")
                   }
                 else
                   {
                     // don't try to append the suffix
-                    throw FatalException("*** File $fileName not found ***")
+                    throw FatalException("File $fileName not found")
                   }
               }
 

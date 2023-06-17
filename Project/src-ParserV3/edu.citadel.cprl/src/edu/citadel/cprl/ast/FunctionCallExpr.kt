@@ -51,7 +51,10 @@ class FunctionCallExpr(private val funId : Token,
 
             // check that numbers of parameters match
             if (actualParams.size != formalParams.size)
-                throw error(funId.position, "Incorrect number of actual parameters.")
+              {
+                val errorMsg = "Incorrect number of actual parameters."
+                throw error(funId.position, errorMsg)
+              }
 
             // call checkConstraints for each actual parameter
             for (expr in actualParams)
@@ -90,7 +93,7 @@ class FunctionCallExpr(private val funId : Token,
 
     override fun emit()
       {
-        // Allocate space on the stack for the return value.
+        // allocate space on the stack for the return value
         emit("ALLOC ${funDecl.type.size}")
 
         // emit code for actual parameters

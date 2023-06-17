@@ -15,9 +15,9 @@ import java.util.EnumSet
  * @constructor Construct a parser with the specified scanner,
  *              identifier table, and error handler.
  */
-class Parser (private val scanner : Scanner,
-              private val idTable : IdTable,
-              private val errorHandler: ErrorHandler)
+class Parser(private val scanner : Scanner,
+             private val idTable : IdTable,
+             private val errorHandler : ErrorHandler)
   {
     private val loopContext = LoopContext()
     private val subprogramContext = SubprogramContext()
@@ -61,8 +61,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `program = initialDecls subprogramDecls .`
      *
-     * @return the parsed program.  Returns a program with no initial
-     *         declarations and no statements if parsing fails.
+     * @return the parsed program.  Returns a program with an empty list of initial
+     *         declarations and an empty list of statements if parsing fails.
      */
     fun parseProgram() : Program
       {
@@ -268,8 +268,8 @@ class Parser (private val scanner : Scanner,
      * `arrayTypeDecl = "type" typeId "=" "array" "[" intConstValue "]"
      *                  "of" typeName ";" .`
      *
-     * @return the parsed array type declaration.  Returns an
-     *         empty initial declaration if parsing fails.
+     * @return the parsed array type declaration.  Returns
+     *         an empty initial declaration if parsing fails.
      */
     private fun parseArrayTypeDecl() : InitialDecl
       {
@@ -281,7 +281,6 @@ class Parser (private val scanner : Scanner,
                 val token = Token(Symbol.intLiteral, scanner.position, "0")
                 numElements = ConstValue(token)
               }
-
 // ...
       }
 
@@ -289,8 +288,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `recordTypeDecl = "type" typeId "=" "record" "{" fieldDecls "}" ";" .`
      *
-     * @return the parsed record type declaration.  Returns an
-     *         empty initial declaration if parsing fails.
+     * @return the parsed record type declaration.  Returns
+     *         an empty initial declaration if parsing fails.
      */
     private fun parseRecordTypeDecl() : InitialDecl
       {
@@ -355,8 +354,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `stringTypeDecl = "type" typeId "=" "string" "[" intConstValue "]" ";" .`
      *
-     * @return the parsed string type declaration.  Returns an
-     *         empty initial declaration if parsing fails.
+     * @return the parsed string type declaration.  Returns
+     *         an empty initial declaration if parsing fails.
      */
     private fun parseStringTypeDecl() : InitialDecl
       {
@@ -368,7 +367,6 @@ class Parser (private val scanner : Scanner,
                 val token = Token(Symbol.intLiteral, scanner.position, "0")
                 numElements = ConstValue(token)
               }
-
 // ...
       }
 
@@ -412,12 +410,16 @@ class Parser (private val scanner : Scanner,
                         if (decl is ArrayTypeDecl || decl is RecordTypeDecl || decl is StringTypeDecl)
                             type = decl.type
                         else
-                            throw error(typeId.position,
-                                        "Identifier \"$typeId\" is not a valid type name.")
+                          {
+                            val errorMsg = "Identifier \"$typeId\" is not a valid type name."
+                            throw error(typeId.position, errorMsg)
+                          }
                       }
                     else
-                        throw error(typeId.position,
-                                    "Identifier \"$typeId\" has not been declared.")
+                      {
+                        val errorMsg = "Identifier \"$typeId\" has not been declared."
+                        throw error(typeId.position, errorMsg)
+                      }
                   }
                 else -> throw error("Invalid type name.")
               }
@@ -619,7 +621,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `assignmentStmt = variable ":=" expression ";" .`
      *
-     * @return the parsed assignment statement.  Returns an empty statement if parsing fails.
+     * @return the parsed assignment statement.  Returns
+     *         an empty statement if parsing fails.
      */
     private fun parseAssignmentStmt() : Statement
       {
@@ -630,7 +633,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `compoundStmt = "{" statements "}" .`
      *
-     * @return the parsed compound statement.  Returns an empty statement if parsing fails.
+     * @return the parsed compound statement.  Returns
+     *         an empty statement if parsing fails.
      */
     private fun parseCompoundStmt() : Statement
       {
@@ -641,7 +645,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `ifStmt = "if" booleanExpr "then" statement  [ "else" statement ] .`
      *
-     * @return the parsed if statement.  Returns an empty statement if parsing fails.
+     * @return the parsed if statement.  Returns an
+     *         empty statement if parsing fails.
      */
     private fun parseIfStmt() : Statement
       {
@@ -652,7 +657,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `loopStmt = [ "while" booleanExpr ] "loop" statement .`
      *
-     * @return the parsed loop statement.  Returns an empty statement if parsing fails.
+     * @return the parsed loop statement.  Returns
+     *         an empty statement if parsing fails.
      */
     private fun parseLoopStmt() : Statement
       {
@@ -663,7 +669,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `exitStmt = "exit" [ "when" booleanExpr ] ";" .`
      *
-     * @return the parsed exit statement.  Returns an empty statement if parsing fails.
+     * @return the parsed exit statement.  Returns
+     *         an empty statement if parsing fails.
      */
     private fun parseExitStmt() : Statement
       {
@@ -674,7 +681,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `readStmt = "read" variable ";" .`
      *
-     * @return the parsed read statement.  Returns an empty statement if parsing fails.
+     * @return the parsed read statement.  Returns
+     *         an empty statement if parsing fails.
      */
     private fun parseReadStmt() : Statement
       {
@@ -685,7 +693,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `writeStmt = "write" expressions ";" .`
      *
-     * @return the parsed write statement.  Returns an empty statement if parsing fails.
+     * @return the parsed write statement.  Returns
+     *         an empty statement if parsing fails.
      */
     private fun parseWriteStmt() : Statement
       {
@@ -707,7 +716,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `writelnStmt = "writeln" [ expressions ] ";" .`
      *
-     * @return the parsed writeln statement.  Returns an empty statement if parsing fails.
+     * @return the parsed writeln statement.  Returns
+     *         an empty statement if parsing fails.
      */
     private fun parseWritelnStmt() : Statement
       {
@@ -737,8 +747,8 @@ class Parser (private val scanner : Scanner,
      * `procedureCallStmt = procId "(" [ actualParameters ] ")" ";" .<br>
      *  actualParameters = expressions .`
      *
-     * @return the parsed procedure call statement.  Returns an
-     *         empty statement if parsing fails.
+     * @return the parsed procedure call statement.  Returns
+     *         an empty statement if parsing fails.
      */
     private fun parseProcedureCallStmt() : Statement
       {
@@ -749,7 +759,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `returnStmt = "return" [ expression ] ";" .`
      *
-     * @return the parsed return statement.  Returns an empty statement if parsing fails.
+     * @return the parsed return statement.  Returns
+     *         an empty statement if parsing fails.
      */
     private fun parseReturnStmt() : Statement
       {
@@ -907,7 +918,8 @@ class Parser (private val scanner : Scanner,
      * `factor = "not" factor | constValue | variableExpr | functionCallExpr
      *         | "(" expression ")" .`
      *
-     * @return the parsed factor expression.  Returns an empty expression if parsing fails.
+     * @return the parsed factor expression. Returns
+     *         an empty expression if parsing fails.
      */
     private fun parseFactor() : Expression
       {
@@ -940,8 +952,8 @@ class Parser (private val scanner : Scanner,
                         is ConstDecl    -> expr = parseConstValue()
                         is VariableDecl -> expr = parseVariableExpr()
                         is FunctionDecl -> expr = parseFunctionCallExpr()
-                        else            -> throw error("Identifier \"$idStr\""
-                                                 + " is not valid as an expression.")
+                        else -> throw error("Identifier \"$idStr\""
+                                          + " is not valid as an expression.")
                       }
                   }
                 else
@@ -988,7 +1000,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `constValue = literal | constId .`
      *
-     * @return the parsed constant value.  Returns an empty expression if parsing fails.
+     * @return the parsed constant value.  Returns
+     *         an empty expression if parsing fails.
      */
     private fun parseConstValue() : Expression
       {
@@ -999,7 +1012,8 @@ class Parser (private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `variableExpr = variable .`
      *
-     * @return the parsed variable expression.  Returns an empty expression if parsing fails.
+     * @return the parsed variable expression.  Returns
+     *         an empty expression if parsing fails.
      */
     private fun parseVariableExpr() : Expression
       {
@@ -1021,8 +1035,8 @@ class Parser (private val scanner : Scanner,
      * `functionCallExpr = funId "(" [ actualParameters ] ")" .<br>
      *  actualParameters = expressions .`
      *
-     * @return the parsed function call expression.
-     *         Returns an empty expression if parsing fails.
+     * @return the parsed function call expression.  Returns
+     *         an empty expression if parsing fails.
      */
     private fun parseFunctionCallExpr() : Expression
       {
@@ -1048,8 +1062,8 @@ class Parser (private val scanner : Scanner,
       }
 
     /**
-     * Advance the scanner.  This method represents an unconditional match
-     * with the current scanner symbol.
+     * Advance the scanner.  This method represents an unconditional
+     * match with the current scanner symbol.
      */
     private fun matchCurrentSymbol() = scanner.advance()
 

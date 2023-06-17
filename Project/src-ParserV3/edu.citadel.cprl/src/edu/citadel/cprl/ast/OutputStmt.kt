@@ -1,6 +1,7 @@
 package edu.citadel.cprl.ast
 
 import edu.citadel.compiler.ConstraintException
+
 import edu.citadel.cprl.StringType
 import edu.citadel.cprl.Type
 

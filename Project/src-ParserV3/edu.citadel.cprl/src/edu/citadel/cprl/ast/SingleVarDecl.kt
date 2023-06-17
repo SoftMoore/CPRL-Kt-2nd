@@ -14,8 +14,9 @@ import edu.citadel.cprl.Type
  * @constructor Construct a single variable declaration with its identifier,
  *              type, initial value, and scope level.
  */
-class SingleVarDecl(identifier : Token, varType : Type, private val initialValue : ConstValue?,
-                    override val scopeLevel : ScopeLevel)
+class SingleVarDecl(identifier : Token, varType : Type,
+                    private  val initialValue : ConstValue?,
+                    override val scopeLevel   : ScopeLevel)
     : InitialDecl(identifier, varType), VariableDecl
   {
     override var relAddr = 0   // relative address for the variable

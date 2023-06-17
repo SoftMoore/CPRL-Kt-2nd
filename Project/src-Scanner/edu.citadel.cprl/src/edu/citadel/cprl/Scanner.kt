@@ -16,7 +16,7 @@ class Scanner(private val source : Source, k : Int,
               private val errorHandler : ErrorHandler)
   {
     // buffer to hold lookahead tokens
-    private val buffer = TokenBuffer(k)
+    private val tokenBuffer = TokenBuffer(k)
 
     // buffer to hold identifiers and literals
     private val scanBuffer = StringBuilder(100)
@@ -61,14 +61,14 @@ class Scanner(private val source : Source, k : Int,
      */
     fun lookahead(i : Int) : Token
       {
-        assert(i in 1..4) {"Range check for lookahead token index"}
-        return buffer[i - 1]
+        require(i in 1..4) { "Range check for lookahead token index" }
+        return tokenBuffer[i - 1]
       }
 
     /**
      * Advance the scanner one token.
      */
-    fun advance() = buffer.add(nextToken())
+    fun advance() = tokenBuffer.add(nextToken())
 
     /**
      * Advance until the current symbol matches the symbol specified
@@ -95,9 +95,9 @@ class Scanner(private val source : Source, k : Int,
      */
     private fun nextToken() : Token
       {
-        var symbol : Symbol
-        lateinit var position : Position
-        var text = ""
+        var symbol   : Symbol
+        var position = Position()
+        var text     = ""
 
         try
           {
@@ -128,46 +128,37 @@ class Scanner(private val source : Source, k : Int,
               {
                 when (source.currentChar.toChar())
                   {
-                    '+'  ->
-                      {
-                        symbol = Symbol.plus
-                        source.advance()
-                      }
-
+                    '+' ->  {
+                              symbol = Symbol.plus
+                              source.advance()
+                            }
 // ...
-
-                    '/'  ->
-                      {
-                        source.advance()
-                        if (source.currentChar.toChar() == '/')
-                          {
-                            skipComment()
-                            return nextToken()   // continue scanning for next token
-                          }
-                        else
-                            symbol = Symbol.divide
-                      }
-
+                    '/' ->  {
+                              source.advance()
+                              if (source.currentChar.toChar() == '/')
+                                {
+                                  skipComment()
+                                  return nextToken()   // continue scanning for next token
+                                }
+                              else
+                                  symbol = Symbol.divide
+                            }
 // ...
-
-                    '>'  ->
-                      {
-                        source.advance()
-                        if (source.currentChar.toChar() == '=')
-                          {
-                            symbol = Symbol.greaterOrEqual
-                            source.advance()
-                          }
-                        else
-                            symbol = Symbol.greaterThan
-                      }
-
+                    '<' ->  {
+                              source.advance()
+                              if (source.currentChar.toChar() == '=')
+                                {
+                                  symbol = Symbol.lessOrEqual
+                                  source.advance()
+                                }
+                              else
+                                  symbol = Symbol.lessThan
+                            }
 // ...
-
-                    else           // error:  invalid character
-                         ->
+                    else ->
                       {
-                        val errorMsg = ("Invalid character \'${source.currentChar.toChar()}\'")
+                        // error:  invalid character
+                        val errorMsg = "Invalid character \'${source.currentChar.toChar()}\'"
                         source.advance()
                         throw error(errorMsg)
                       }
@@ -199,20 +190,19 @@ class Scanner(private val source : Source, k : Int,
     private fun skipComment()
       {
         // assumes that source.currentChar is the second '/'
-        assert(source.currentChar.toChar() == '/')
-          { "Check for '/' as part of comment" }
-
-// ...
+        assert(source.currentChar.toChar() == '/') { "Check for '/' as part of comment" }
+        skipToEndOfLine()
+        source.advance()
       }
 
     /**
      * Clear the scan buffer (makes it empty).
      */
-    private fun clearScanBuffer() = scanBuffer.delete(0, scanBuffer.length)
+    private fun StringBuilder.clear() = delete(0, length)
 
     /**
      * Scans characters in the source file for a valid identifier using the
-     * lexical rule: identifier = letter { letter | digit } .
+     * lexical rule: identifier = letter ( letter | digit)* .
      *
      * @return the string of letters and digits for the identifier.
      */
@@ -220,8 +210,7 @@ class Scanner(private val source : Source, k : Int,
       {
         // assumes that source.currentChar is the first letter of the identifier
         assert(isLetter(source.currentChar.toChar()))
-            { "Check identifier start for letter at position ${source.charPosition}." }
-
+          { "Check identifier start for letter at position ${source.charPosition}." }
 // ...
       }
 
@@ -235,9 +224,9 @@ class Scanner(private val source : Source, k : Int,
       {
         // assumes that source.currentChar is the first digit of the integer literal
         assert(isDigit(source.currentChar.toChar()))
-            { "Check integer literal start for digit at position ${source.charPosition}." }
+          { "Check integer literal start for digit at position ${source.charPosition}." }
 
-        clearScanBuffer()
+        scanBuffer.clear()
 
         do
           {
@@ -262,8 +251,7 @@ class Scanner(private val source : Source, k : Int,
       {
         // assumes that source.currentChar is the opening double quote for the string literal
         assert(source.currentChar.toChar() == '\"')
-            { "Check for opening quote (\") at position ${source.charPosition}." }
-
+          { "Check for opening quote (\") at position ${source.charPosition}." }
 // ...
       }
 
@@ -283,7 +271,7 @@ class Scanner(private val source : Source, k : Int,
           { "Check for opening quote (\') at position ${source.charPosition}." }
 
         val errorMsg = "Invalid Char literal."
-        clearScanBuffer()
+        scanBuffer.clear()
 
         // append the opening single quote
         var c = source.currentChar.toChar()
@@ -294,26 +282,10 @@ class Scanner(private val source : Source, k : Int,
         c = source.currentChar.toChar()
 
         if (c == '\\')   // escaped character
+            scanBuffer.append(scanEscapedChar())
+        else if (c == '\'')
           {
-            try
-              {
-                scanBuffer.append(scanEscapedChar())
-              }
-            catch (e : ScannerException)
-              {
-                checkGraphicChar(source.currentChar)
-                c = source.currentChar.toChar()
-
-                if (c == '\'')   // assume bad escape similar to '\x'
-                  {
-                    source.advance()     // move past closing single quote
-                    throw e              // rethrow the exception
-                  }
-              }
-
-          }
-        else if (c == '\'')   // either '' (empty) or '''; both are invalid
-          {
+            // either '' (empty) or '''; both are invalid
             source.advance()
             c = source.currentChar.toChar()
 
@@ -331,9 +303,9 @@ class Scanner(private val source : Source, k : Int,
         c = source.currentChar.toChar()   // should be the closing single quote
         checkGraphicChar(c.code)
 
-        if (c == '\'')   // should be the closing single quote
+        if (c == '\'')
           {
-            scanBuffer.append(c)          // append the closing quote
+            scanBuffer.append(c)          // append closing quote
             source.advance()
           }
         else
@@ -357,7 +329,7 @@ class Scanner(private val source : Source, k : Int,
       {
         // assumes that source.currentChar is the backslash for the escaped char
         assert(source.currentChar.toChar() == '\\')
-            { "Check for escape character ('\\') at position ${source.charPosition}." }
+          { "Check for escape character ('\\') at position ${source.charPosition}." }
 
         // Need to save current position for error reporting.
         val backslashPosition = source.charPosition
@@ -366,7 +338,7 @@ class Scanner(private val source : Source, k : Int,
         checkGraphicChar(source.currentChar)
         val c = source.currentChar.toChar()
 
-        source.advance()  // leave source at second character following the backslash
+        source.advance()   // leave source at second character following backslash
 
         when (c)
           {
@@ -376,12 +348,13 @@ class Scanner(private val source : Source, k : Int,
             '\"' -> return "\\\""   // double quote
             '\'' -> return "\\\'"   // single quote
             '\\' -> return "\\\\"   // backslash
-            else -> {
-                      // report error but return the invalid character
-                      val ex = error(backslashPosition, "Illegal escape character.")
-                      errorHandler.reportError(ex)
-                      return "\\$c"
-                    }
+            else ->
+              {
+                // report error but return the invalid character
+                val ex = error(backslashPosition, "Illegal escape character.")
+                errorHandler.reportError(ex)
+                return "\\$c"
+              }
           }
       }
 
@@ -407,11 +380,11 @@ class Scanner(private val source : Source, k : Int,
       }
 
     /**
-     * Checks that the integer represents a graphic character in the Unicode
-     * Basic Multilingual Plane (BMP).
+     * Checks that the integer represents a graphic character in the
+     * Unicode Basic Multilingual Plane (BMP).
      *
-     * @throws ScannerException if the integer does not represent a BMP graphic
-     * character.
+     * @throws ScannerException if the integer does not represent a
+     *         BMP graphic character.
      */
     private fun checkGraphicChar(n : Int)
       {
@@ -431,20 +404,19 @@ class Scanner(private val source : Source, k : Int,
 
     /**
      * Returns true only if the specified character is a letter.<br>
-     * <code>'A'..'Z' + 'a'..'z' (r.e. char class: [A-Za-z])</code>
+     * `'A'..'Z' + 'a'..'z' (r.e. char class: [A-Za-z])`
      */
-    private fun isLetter(ch : Char) : Boolean
-        = (ch in 'a'..'z') || (ch in 'A' .. 'Z')
+    private fun isLetter(ch : Char) : Boolean = (ch in 'a'..'z') || (ch in 'A'..'Z')
 
     /**
      * Returns true only if the specified character is a digit.<br>
-     * <code>'0'..'9' (r.e. char class: [0-9])</code>
+     * `'0'..'9' (r.e. char class: [0-9])`
      */
     private fun isDigit(ch : Char) : Boolean = ch in '0'..'9'
 
     /**
      * Returns true only if the specified character is a letter or a digit.<br>
-     * <code>'A'..'Z' + 'a'..'z + '0'..'9' (r.e. char class: [A-Za-z0-9])</code>
+     * `'A'..'Z' + 'a'..'z + '0'..'9' (r.e. char class: [A-Za-z0-9])`
      */
     private fun isLetterOrDigit(ch : Char) : Boolean = isLetter(ch) || isDigit(ch)
 

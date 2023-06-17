@@ -27,10 +27,9 @@ class RelationalExpr(leftOperand : Expression, operator : Token, rightOperand : 
      */
     init
       {
-        assert(operator.symbol.isRelationalOperator())
-            { "Operator is not a relational operator." }
-
         type = Type.Boolean
+        assert(operator.symbol.isRelationalOperator())
+          { "Operator is not a relational operator." }
       }
 
     override fun checkConstraints()
@@ -41,20 +40,10 @@ class RelationalExpr(leftOperand : Expression, operator : Token, rightOperand : 
     override fun emit()
       {
         emitBranch(false, L1)
-
-        // emit true
-        emit("LDCB $TRUE")
-
-        // jump over code to emit false
-        emit("BR $L2")
-
-        // L1:
+        emit("LDCB $TRUE")    // push true back on the stack
+        emit("BR $L2")        // jump over code to emit false
         emitLabel(L1)
-
-        // emit false
-        emit("LDCB $FALSE")
-
-        // L2:
+        emit("LDCB $FALSE")   // push false onto the stack
         emitLabel(L2)
       }
 
@@ -70,8 +59,11 @@ class RelationalExpr(leftOperand : Expression, operator : Token, rightOperand : 
             Symbol.lessOrEqual    -> emit(if (condition) "BLE $label" else "BG $label")
             Symbol.greaterThan    -> emit(if (condition) "BG $label"  else "BLE $label")
             Symbol.greaterOrEqual -> emit(if (condition) "BGE $label" else "BL $label")
-            else                  -> throw CodeGenException(operator.position,
-                                                            "Invalid relational operator.")
+            else ->
+              {
+                val errorMsg = "Invalid relational operator."
+                throw CodeGenException(operator.position, errorMsg)
+              }
           }
       }
 

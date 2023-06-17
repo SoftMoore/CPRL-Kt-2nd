@@ -5,7 +5,7 @@ package edu.citadel.compiler
  * consists of a symbol (a.k.a., the token type), a position, and a string
  * that contains the text of the token.
  *
- * @constructor  Constructs a new token with the given symbol, position, and text.
+ * @constructor Constructs a new token with the given symbol, position, and text.
  */
 abstract class AbstractToken<Symbol : Enum<Symbol>>
     (val symbol : Symbol, val position : Position, text : String)

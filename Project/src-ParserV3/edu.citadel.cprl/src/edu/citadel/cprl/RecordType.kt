@@ -27,5 +27,5 @@ class RecordType(typeName : String, fieldDecls : List<FieldDecl>)
      * Returns the field declaration associated with the identifier string.
      * Returns null if the identifier string is not found.
      */
-    operator fun get(idStr: String): FieldDecl? = fieldNameMap[idStr]
+    operator fun get(idStr : String) : FieldDecl? = fieldNameMap[idStr]
   }

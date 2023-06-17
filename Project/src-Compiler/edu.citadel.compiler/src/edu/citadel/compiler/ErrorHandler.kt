@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets
  */
 class ErrorHandler
   {
-    /** Maximum number of errors to be reported. */
+    // Maximum number of errors to be reported.
     private val MAX_ERRORS = 15
 
     private val err = PrintWriter(System.err, true, StandardCharsets.UTF_8)
@@ -28,17 +28,14 @@ class ErrorHandler
      */
     fun reportError(e : CompilerException)
       {
-        if (errorCount <= MAX_ERRORS)
-          {
-            if (shouldPrint(e.message))
-              {
-                err.println(e.message)
-                ++errorCount
-                lastMessage = e.message ?: ""
-              }
-           }
-        else
+        if (errorCount > MAX_ERRORS)
             throw FatalException("Max errors exceeded.")
+        else if (shouldPrint(e.message))
+          {
+            err.println(e.message)
+            ++errorCount
+            lastMessage = e.message ?: ""
+          }
       }
 
     /**
@@ -53,10 +50,10 @@ class ErrorHandler
 
     /*
      * Checks for repeated error messages and error messages of
-     * the form "Identifier \"x\" has not been declared.".
+     * the form "Identifier \"x\" has not been declared."
      * Returns true if this error message should be printed.
      */
-    private fun shouldPrint(message: String?): Boolean
+    private fun shouldPrint(message : String?) : Boolean
       {
         if (message == null || message == lastMessage)
             return false

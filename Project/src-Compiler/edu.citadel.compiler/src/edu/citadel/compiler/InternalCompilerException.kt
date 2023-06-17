@@ -8,5 +8,5 @@ package edu.citadel.compiler
  * @constructor Construct an internal compiler exception with the specified
  *              position and error message.
  */
-class InternalCompilerException(position: Position, errorMsg: String)
+class InternalCompilerException(position : Position, errorMsg : String)
     : RuntimeException("*** Internal Compiler Error near $position:\n    $errorMsg")

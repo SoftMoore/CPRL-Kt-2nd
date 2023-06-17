@@ -20,10 +20,7 @@ class LoopContext
     /**
      * Called when starting to parse a loop statement.
      */
-    fun beginLoop(stmt : LoopStmt)
-      {
-        loopStack.push(stmt)
-      }
+    fun beginLoop(stmt : LoopStmt) = loopStack.push(stmt)
 
     /**
      * Called when finished parsing a loop statement.

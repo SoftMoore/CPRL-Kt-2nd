@@ -29,9 +29,15 @@ class Program(private val initialDecls    : List<InitialDecl>    = emptyList(),
             if (decl == null)
                 throw error("Program is missing procedure \"main()\".")
             else if (decl !is ProcedureDecl)
-                throw error(decl.position, "Identifier \"main\" was not declared as a procedure.")
+              {
+                val errorMsg = "Identifier \"main\" was not declared as a procedure."
+                throw error(decl.position, errorMsg)
+              }
             else if (decl.paramLength != 0)
-                throw error(decl.position, "Procedure \"main\" cannot have parameters.")
+              {
+                val errorMsg = "Procedure \"main\" cannot have parameters."
+                throw error(decl.position, errorMsg)
+              }
           }
         catch (e : ConstraintException)
           {
@@ -57,7 +63,7 @@ class Program(private val initialDecls    : List<InitialDecl>    = emptyList(),
                   {
                     singleVarDecl.relAddr = currentAddr
                     currentAddr = currentAddr + singleVarDecl.size
-                 }
+                  }
               }
           }
 

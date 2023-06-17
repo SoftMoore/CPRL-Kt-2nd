@@ -9,8 +9,8 @@ import edu.citadel.cprl.Type
 /**
  * The abstract syntax tree node for an array type declaration.
  *
- * @constructor Construct an array type declaration with its identifier, element
- * type, and number of elements.  Note that the index type is always Integer in CPRL.
+ * @constructor Construct an array type declaration with its identifier, element type, and
+ *              number of elements.  Note that the index type is always Integer in CPRL.
  *
  * @param typeId the token containing the identifier for the array
  * @param elementType the type of elements in the array

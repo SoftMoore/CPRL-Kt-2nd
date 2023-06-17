@@ -19,8 +19,8 @@ class NegationExpr(operator : Token, operand : Expression)
   {
     init
       {
-        assert(operator.symbol == Symbol.minus) { "Operator is not \"-\" operator." }
         type = Type.Integer
+        assert(operator.symbol == Symbol.minus) { "Operator is not \"-\" operator." }
       }
 
     override fun checkConstraints()

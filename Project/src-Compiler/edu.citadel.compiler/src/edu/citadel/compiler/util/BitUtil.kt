@@ -44,7 +44,6 @@ object BitUtil
     fun toBinaryString(n : Int, numBits : Int = Integer.SIZE) : String
       {
         val builder = StringBuilder()
-
         var mask = 1 shl numBits - 1
 
         for (count in 0 until numBits)
@@ -81,7 +80,6 @@ object BitUtil
      */
     fun toBinaryString(n : Byte, numBits : Int = Short.SIZE_BITS) : String
       {
-
         val builder = StringBuilder()
         val nInt = n.toInt()
         var mask = 1 shl (numBits - 1)
@@ -124,12 +122,9 @@ object BitUtil
       }
 
     /**
-     * Returns a hex string representation of the specified byte.
+     * Returns a hexadecimal string representation of the specified byte.
      */
-    fun toHexString(n : Byte) : String
-      {
-        return String.format("%02X", n)
-      }
+    fun toHexString(n : Byte) : String = String.format("%02X", n)
 
     /**
      * Returns the n least significant (rightmost) bits in the

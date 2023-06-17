@@ -19,9 +19,8 @@ class AddingExpr(leftOperand : Expression, operator : Token, rightOperand : Expr
   {
     init
       {
+        type = Type.Integer   // initialize type of the expression to Integer
         assert(operator.symbol.isAddingOperator()) { "Operator is not an adding operator." }
-        // Initialize the type of the expression to Integer.
-        type = Type.Integer
       }
 
     override fun checkConstraints()
@@ -48,7 +47,7 @@ class AddingExpr(leftOperand : Expression, operator : Token, rightOperand : Expr
           {
             errorHandler.reportError(e)
           }
-    }
+      }
 
     override fun emit()
       {

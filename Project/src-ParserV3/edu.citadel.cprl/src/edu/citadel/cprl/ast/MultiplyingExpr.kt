@@ -9,7 +9,7 @@ import edu.citadel.cprl.Type
 /**
  * The abstract syntax tree node for a multiplying expression.  A multiplying
  * expression is a binary expression where the operator is a multiplying operator
- * such as "*", "/", or "mod".  A simple example would be "5 mod x".
+ * such as "*", "/", or "mod".  A simple example would be "5*x".
  *
  * @constructor Construct a multiplying expression with the operator
  *              ("*", "/", or "mod") and the two operands.
@@ -22,9 +22,9 @@ class MultiplyingExpr(leftOperand : Expression, operator : Token, rightOperand :
      */
     init
       {
-        assert(operator.symbol.isMultiplyingOperator())
-            { "MultiplyingExpr: operator is not a multiplying operator." }
         type = Type.Integer
+        assert(operator.symbol.isMultiplyingOperator())
+          { "MultiplyingExpr : operator is not a multiplying operator." }
       }
 
     override fun checkConstraints()

@@ -10,14 +10,14 @@ import java.util.EnumSet
 
 /**
  * This class uses recursive descent to perform syntax analysis of
- * the CPRL source language and to generate an abstract syntax tree.
+ * the CPRL source language.
  *
  * @constructor Construct a parser with the specified scanner,
  *              identifier table, and error handler.
  */
-class Parser (private val scanner : Scanner,
-              private val idTable : IdTable,
-              private val errorHandler: ErrorHandler)
+class Parser(private val scanner : Scanner,
+             private val idTable : IdTable,
+             private val errorHandler : ErrorHandler)
   {
     private val emptySet = EnumSet.noneOf(Symbol::class.java)
 
@@ -97,7 +97,7 @@ class Parser (private val scanner : Scanner,
         try
           {
             match(Symbol.varRW)
-            val identifiers: List<Token> = parseIdentifiers()
+            val identifiers : List<Token> = parseIdentifiers()
             match(Symbol.colon)
             parseTypeName()
 
@@ -108,9 +108,9 @@ class Parser (private val scanner : Scanner,
               }
 
             match(Symbol.semicolon)
+
             for (identifier in identifiers)
                 idTable.add(identifier, IdType.variableId)
-
           }
         catch (e : ParserException)
           {
@@ -165,7 +165,7 @@ class Parser (private val scanner : Scanner,
                 Symbol.arrayRW  -> parseArrayTypeDecl()
                 Symbol.recordRW -> parseRecordTypeDecl()
                 Symbol.stringRW -> parseStringTypeDecl()
-                else            ->
+                else ->
                   {
                     val errorPos = scanner.lookahead(4).position
                     throw error(errorPos, "Invalid type declaration.")
@@ -260,28 +260,35 @@ class Parser (private val scanner : Scanner,
       {
         try
           {
-            if (scanner.symbol == Symbol.IntegerRW)
-                matchCurrentSymbol()
-            else if (scanner.symbol == Symbol.BooleanRW)
-                matchCurrentSymbol()
-            else if (scanner.symbol == Symbol.CharRW)
-                matchCurrentSymbol()
-            else if (scanner.symbol == Symbol.identifier)
+            when (scanner.symbol)
               {
-                val typeId = scanner.token
-                val type = idTable[typeId.text]
-
-                if (type != null)
+                Symbol.IntegerRW  -> matchCurrentSymbol()
+                Symbol.BooleanRW  -> matchCurrentSymbol()
+                Symbol.CharRW     -> matchCurrentSymbol()
+                Symbol.identifier ->
                   {
-                    if (type == IdType.arrayTypeId || type == IdType.recordTypeId || type == IdType.stringTypeId)
-                        matchCurrentSymbol()
+                    val typeId = scanner.token
+                    matchCurrentSymbol()
+                    val type = idTable[typeId.text]
+
+                    if (type != null)
+                      {
+                        if (type == IdType.arrayTypeId || type == IdType.recordTypeId || type == IdType.stringTypeId)
+                            ;   // empty statement for versions 1 and 2 of Parser
+                        else
+                          {
+                            val errorMsg = "Identifier \"$typeId\" is not a valid type name."
+                            throw error(typeId.position, errorMsg)
+                          }
+                      }
                     else
-                        throw error(typeId.position, "Identifier \"$typeId\" is not a valid type name.")
+                      {
+                        val errorMsg = "Identifier \"$typeId\" has not been declared."
+                        throw error(typeId.position, errorMsg)
+                      }
                   }
-                else
-                    throw error(typeId.position, "Identifier \"$typeId\" has not been declared.")
+                else -> throw error("Invalid type name.")
               }
-            else throw error("Invalid type name.")
           }
         catch (e : ParserException)
           {
@@ -693,7 +700,7 @@ class Parser (private val scanner : Scanner,
               {
                 // Handle identifiers based on how they are declared,
                 // or use the lookahead symbol if not declared.
-                val idStr = scanner.text
+                val idStr  = scanner.text
                 val idType = idTable[idStr]
 
                 if (idType != null)
@@ -704,7 +711,7 @@ class Parser (private val scanner : Scanner,
                         IdType.variableId -> parseVariableExpr()
                         IdType.functionId -> parseFunctionCallExpr()
                         else              -> throw error("Identifier \"$idStr\" " +
-                                                   "is not valid as an expression.")
+                                                         "is not valid as an expression.")
                       }
                   }
                 else
@@ -774,7 +781,7 @@ class Parser (private val scanner : Scanner,
      * Check that the current scanner symbol is the expected symbol.  If it
      * is, then advance the scanner.  Otherwise, throw a ParserException.
      */
-    private fun match(expectedSymbol: Symbol)
+    private fun match(expectedSymbol : Symbol)
       {
         if (scanner.symbol == expectedSymbol)
             scanner.advance()
@@ -798,15 +805,16 @@ class Parser (private val scanner : Scanner,
      */
     private fun recover(followers : EnumSet<Symbol>)
       {
-        throw FatalException(""No error recovery -- parsing terminated."")
+        // no error recovery for version 1 of the parser
+        throw FatalException("No error recovery -- parsing terminated.")
       }
 
     /**
      * Create a parser exception with the specified error message and
      * the current scanner position.
      */
-    private fun error(errorMsg : String)
-        = ParserException(scanner.position, errorMsg)
+    private fun error(errorMsg : String) : ParserException
+        = error(scanner.position, errorMsg)
 
     /**
      * Create a parser exception with the specified error position

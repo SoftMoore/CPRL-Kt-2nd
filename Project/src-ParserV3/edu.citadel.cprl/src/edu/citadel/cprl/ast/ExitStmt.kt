@@ -11,8 +11,7 @@ import edu.citadel.cprl.Type
  *              expression) and a reference to the enclosing loop statement.
  */
 class ExitStmt(private val whenExpr : Expression?,
-               private val loopStmt : LoopStmt   // nonstructural reference
-              )
+               private val loopStmt : LoopStmt)   // nonstructural reference
     : Statement()
   {
     override fun checkConstraints()

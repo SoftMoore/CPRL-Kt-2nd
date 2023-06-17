@@ -54,7 +54,7 @@ class IdTable
      * Add an identifier and its type to the current scope.
      *
      * @throws ParserException if the identifier already exists
-     *                         in the current scope.
+     *         in the current scope.
      */
     fun add(idToken : Token, idType : IdType)
       {
@@ -62,7 +62,7 @@ class IdTable
         assert(idToken.symbol == Symbol.identifier)
           { "IdTable.add(): The token in the declaration is not an identifier." }
 
-        val scope = table[currentLevel]
+        val scope   = table[currentLevel]
         val oldDecl = scope.put(idToken.text, idType)
 
         // check that the identifier has not been defined previously

@@ -86,8 +86,7 @@ enum class Symbol(val label : String)
     /**
      * Returns true if this symbol is a CPRL reserved word.
      */
-    fun isReservedWord() : Boolean
-        = this in BooleanRW..writelnRW
+    fun isReservedWord() : Boolean = this in BooleanRW..writelnRW
 
     /**
      * Returns true if this symbol can start an initial declaration.
@@ -104,24 +103,24 @@ enum class Symbol(val label : String)
      * Returns true if this symbol can start a statement.
      */
     fun isStmtStarter() : Boolean
-        =    this == identifier || this == leftBrace || this == ifRW
-          || this == loopRW     || this == whileRW   || this == exitRW
-          || this == readRW     || this == writeRW   || this == writelnRW
-          || this == returnRW
+        =  this == identifier || this == leftBrace || this == ifRW
+        || this == loopRW     || this == whileRW   || this == exitRW
+        || this == readRW     || this == writeRW   || this == writelnRW
+        || this == returnRW
 
     /**
      * Returns true if this symbol is a literal.
      */
     fun isLiteral() : Boolean
-        =    this == intLiteral || this == charLiteral || this == stringLiteral
-          || this == trueRW     || this == falseRW
+        =  this == intLiteral || this == charLiteral || this == stringLiteral
+        || this == trueRW     || this == falseRW
 
     /**
      * Returns true if this symbol can start an expression.
      */
     fun isExprStarter() : Boolean
-        =    isLiteral()  || this == identifier || this == leftParen
-          || this == plus || this == minus      || this == notRW
+        = isLiteral()   || this == identifier || this == leftParen
+        || this == plus || this == minus      || this == notRW
 
     /**
      * Returns true if this symbol can start a parameter declaration.
@@ -142,9 +141,9 @@ enum class Symbol(val label : String)
      * Returns true if this symbol is a relational operator.
      */
     fun isRelationalOperator() : Boolean
-        =    this == equals      || this == notEqual
-          || this == lessThan    || this == lessOrEqual
-          || this == greaterThan || this == greaterOrEqual
+        =  this == equals      || this == notEqual
+        || this == lessThan    || this == lessOrEqual
+        || this == greaterThan || this == greaterOrEqual
 
     /**
      * Returns true if this symbol is a binary adding operator.
@@ -152,7 +151,7 @@ enum class Symbol(val label : String)
     fun isAddingOperator() : Boolean = this == plus || this == minus
 
     /**
-     * Returns true if this symbol is a unary operator.
+     * Returns true if this symbol is a unary sign operator.
      */
     fun isSignOperator() : Boolean = this == plus || this == minus
 
@@ -162,8 +161,5 @@ enum class Symbol(val label : String)
     fun isMultiplyingOperator() : Boolean
         = this == times || this == divide || this == modRW
 
-    /**
-     * Returns the label for this Symbol.
-     */
     override fun toString() : String = label
   }

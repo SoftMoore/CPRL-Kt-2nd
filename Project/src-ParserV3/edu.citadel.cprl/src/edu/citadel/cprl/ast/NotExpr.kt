@@ -16,9 +16,9 @@ class NotExpr(operator : Token, operand : Expression) : UnaryExpr(operator, oper
   {
     init
       {
+        type = Type.Boolean
         assert(operator.symbol == Symbol.notRW)
           { "Operator is not the reserved word \"not\"." }
-        type = Type.Boolean
       }
 
     override fun checkConstraints()

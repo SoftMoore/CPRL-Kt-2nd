@@ -30,6 +30,6 @@ class ParameterDecl(paramId : Token, type : Type, val isVarParam : Boolean)
     override fun checkConstraints()
       {
         assert(type != Type.UNKNOWN && type != Type.none)
-            { "Invalid CPRL type in parameter declaration." }
+          { "Invalid CPRL type in parameter declaration." }
       }
   }

@@ -8,12 +8,12 @@ import edu.citadel.cprl.Type
  */
 class LoopStmt : Statement()
   {
+    var whileExpr : Expression? = null
+    var statement : Statement = EmptyStatement
+
     // labels used during code generation
     private val L1 : String = getNewLabel()   // label for start of loop
     private val L2 : String = getNewLabel()   // label for end of loop
-
-    var whileExpr : Expression? = null
-    var statement : Statement = EmptyStatement
 
     /**
      * Returns the label for the end of the loop statement.

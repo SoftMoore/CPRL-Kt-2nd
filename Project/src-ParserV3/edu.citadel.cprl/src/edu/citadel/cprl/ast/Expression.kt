@@ -26,14 +26,13 @@ abstract class Expression(var type : Type, val position : Position) : AST()
      * is emitted.  The method defined in this class works correctly for most
      * Boolean expressions, but it should be overridden for relational expressions.
      *
-     * @param condition  the condition that determines the branch to be emitted.
-     * @param label      the label for the branch destination.
+     * @param condition the condition that determines the branch to be emitted.
+     * @param label     the label for the branch destination.
      */
     open fun emitBranch(condition : Boolean, label : String)
       {
         // default behavior unless overridden; correct for constants and variable expressions
         assert(type == Type.Boolean) { "Expression type is not Boolean." }
-
         emit()  // leaves boolean expression value on top of stack
         emit(if (condition) "BNZ $label" else "BZ $label")
       }

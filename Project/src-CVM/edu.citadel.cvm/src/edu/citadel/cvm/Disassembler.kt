@@ -26,103 +26,77 @@ fun main(args : Array<String>)
         val baseName    = fileName.substring(0, suffixIndex)
 
         val outputFileName = "$baseName.dis.txt"
-        val fileWriter = FileWriter(outputFileName, StandardCharsets.UTF_8)
+        val fileWriter     = FileWriter(outputFileName, StandardCharsets.UTF_8)
         val out = PrintWriter(BufferedWriter(fileWriter), true)
 
         println("Disassembling $fileName to $outputFileName")
 
-        var inByte : Int
-        var opCodeAddr = 0
-        var strLength : Int
-
+        var opcodeAddr = 0   // first opcode is at address 0
         var c : Char
 
-        inByte = file.read()
+        var inByte : Int = file.read()
         while (inByte != -1)
           {
-            val opCode = inByte.toByte()
-            val opCodeAddrStr = String.format("%4s", opCodeAddr)
+            val opcode = Opcode.toOpcode(inByte)
+            val opcodeAddrStr = String.format("%4s", opcodeAddr)
 
-            when (opCode)
+            if (opcode == null)
+                System.err.println("*** Unknown opcode $inByte in file $fileName ***")
+            else if (opcode.isZeroOperandOpcode())
               {
-                // opcodes with zero operands
-                OpCode.ADD,     OpCode.DEC,     OpCode.DIV,
-                OpCode.GETCH,   OpCode.GETINT,  OpCode.HALT,
-                OpCode.LOADB,   OpCode.LOAD2B,  OpCode.LOADW,
-                OpCode.LOADSTR, OpCode.LDCB0,   OpCode.LDCB1,
-                OpCode.LDCINT0, OpCode.LDCINT1, OpCode.INC,
-                OpCode.MOD,     OpCode.MUL,     OpCode.NEG,
-                OpCode.NOT,     OpCode.PUTBYTE, OpCode.PUTCH,
-                OpCode.PUTINT,  OpCode.PUTEOL,  OpCode.RET0,
-                OpCode.RET4,    OpCode.STOREB,  OpCode.STORE2B,
-                OpCode.STOREW,  OpCode.STOREST, OpCode.SUB  ->
-                  {
-                    out.println("$opCodeAddrStr:  ${OpCode.toString(opCode)}")
-                    opCodeAddr = opCodeAddr + 1
-                  }
+                out.println("$opcodeAddrStr:  $opcode")
+                opcodeAddr = opcodeAddr + 1
+              }
+            else if (opcode.isByteOperandOpcode())
+              {
+                out.print("$opcodeAddrStr:  $opcode")
+                out.println(" " + readByte(file))
+                opcodeAddr = opcodeAddr + 2   // 1 byte for opcode plus
+                                              // 1 byte for shift amount
+              }
+            else if (opcode.isIntOperandOpcode())
+              {
+                out.print("$opcodeAddrStr:  $opcode")
+                out.println(" " + readInt(file))
+                opcodeAddr = opcodeAddr + 1 + Constants.BYTES_PER_INTEGER
+              }
+            else if (opcode == Opcode.LDCCH)
+              {
+                // special case LDCCH
+                out.print("$opcodeAddrStr:  $opcode")
+                out.print(" \'")
 
-                // opcodes with one byte operand
-                OpCode.SHL,
-                OpCode.SHR,
-                OpCode.LDCB  ->
-                  {
-                    out.print("$opCodeAddrStr:  ${OpCode.toString(opCode)}")
-                    out.println(" " + readByte(file))
-                    opCodeAddr = opCodeAddr + 2  // one byte for opcode and one byte for shift amount
-                  }
+                c = readChar(file)
+                if (isEscapeChar(c))
+                    out.print(getUnescapedChar(c))
+                else
+                    out.print(c)
 
-                // opcodes with one int operand
-                OpCode.ALLOC,   OpCode.BR,      OpCode.BE,
-                OpCode.BNE,     OpCode.BG,      OpCode.BGE,
-                OpCode.BL,      OpCode.BLE,     OpCode.BZ,
-                OpCode.BNZ,     OpCode.CALL,    OpCode.GETSTR,
-                OpCode.LOAD,    OpCode.LDCINT,  OpCode.LDLADDR,
-                OpCode.LDGADDR, OpCode.PROC,    OpCode.PROGRAM,
-                OpCode.PUTSTR,  OpCode.RET,     OpCode.STORE  ->
-                  {
-                    out.print("$opCodeAddrStr:  ${OpCode.toString(opCode)}")
-                    out.println(" " + readInt(file))
-                    opCodeAddr = opCodeAddr + 1 + Constants.BYTES_PER_INTEGER
-                  }
+                out.println("\'")
+                opcodeAddr = opcodeAddr + 1 + Constants.BYTES_PER_CHAR
+              }
+            else if (opcode == Opcode.LDCSTR)
+              {
+                // special case LDCSTR
+                out.print("$opcodeAddrStr:  $opcode")
 
-                // special case:  LDCCH
-                OpCode.LDCCH  ->
+                // now print the string
+                out.print("  \"")
+                val strLength : Int = readInt(file)
+                for (i in 0 until strLength)
                   {
-                    out.print("$opCodeAddrStr:  ${OpCode.toString(opCode)}")
-                    out.print(" \'")
-
                     c = readChar(file)
                     if (isEscapeChar(c))
                         out.print(getUnescapedChar(c))
                     else
                         out.print(c)
-
-                    out.println("\'")
-                    opCodeAddr = opCodeAddr + 1 + Constants.BYTES_PER_CHAR
                   }
-
-                // special case:  LDCSTR
-                OpCode.LDCSTR ->
-                  {
-                    out.print("$opCodeAddrStr:  ${OpCode.toString(opCode)}")
-
-                    // now print the string
-                    out.print("  \"")
-                    strLength = readInt(file)
-                    for (i in 0 until strLength)
-                      {
-                        c = readChar(file)
-                        if (isEscapeChar(c))
-                            out.print(getUnescapedChar(c))
-                        else
-                            out.print(c)
-                      }
-                    out.println("\"")
-                    opCodeAddr = (opCodeAddr + 1 + Constants.BYTES_PER_INTEGER
-                                + strLength*Constants.BYTES_PER_CHAR)
-                  }
-                else -> System.err.println("*** Unknown opCode in file $fileName ***")
+                out.println("\"")
+                opcodeAddr = (opcodeAddr + 1 + Constants.BYTES_PER_INTEGER
+                           + strLength*Constants.BYTES_PER_CHAR)
               }
+            else
+                System.err.println("*** Unknown opcode in file $fileName ***")
 
             inByte = file.read()
           }
@@ -134,7 +108,7 @@ fun main(args : Array<String>)
 /*
  * Returns true if c is an escaped character.
  */
-private fun isEscapeChar(c: Char): Boolean
+private fun isEscapeChar(c : Char) : Boolean
   {
     return c == '\t' || c == '\n' || c == '\r'
         || c == '\"' || c == '\'' || c == '\\'
@@ -148,16 +122,15 @@ private fun isEscapeChar(c: Char): Boolean
  */
 private fun getUnescapedChar(c : Char) : String
   {
-    when (c)
+    return when (c)
       {
-        '\b' -> return "\\b"    // backspace
-        '\t' -> return "\\t"    // tab
-        '\n' -> return "\\n"    // linefeed (a.k.a. newline)
-        '\r' -> return "\\r"    // carriage return
-        '\"' -> return "\\\""   // double quote
-        '\'' -> return "\\\'"   // single quote
-        '\\' -> return "\\\\"   // backslash
-        else -> return c.toString()
+        '\t' -> "\\t"    // tab
+        '\n' -> "\\n"    // newline
+        '\r' -> "\\r"    // carriage return
+        '\"' -> "\\\""   // double quote
+        '\'' -> "\\\'"   // single quote
+        '\\' -> "\\\\"   // backslash
+        else -> c.toString()
       }
   }
 
@@ -170,7 +143,6 @@ private fun readInt(iStream : InputStream) : Int
     val b1 = iStream.read().toByte()
     val b2 = iStream.read().toByte()
     val b3 = iStream.read().toByte()
-
     return ByteUtil.bytesToInt(b0, b1, b2, b3)
   }
 
@@ -181,17 +153,13 @@ private fun readChar(iStream : InputStream) : Char
   {
     val b0 = iStream.read().toByte()
     val b1 = iStream.read().toByte()
-
     return ByteUtil.bytesToChar(b0, b1)
   }
 
 /**
  * Reads a byte argument from the stream.
  */
-private fun readByte(iStream : InputStream) : Byte
-  {
-    return iStream.read().toByte()
-  }
+private fun readByte(iStream : InputStream) : Byte = iStream.read().toByte()
 
 private fun printUsageMessageAndExit()
   {

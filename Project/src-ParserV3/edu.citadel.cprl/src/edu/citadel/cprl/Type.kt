@@ -75,11 +75,12 @@ open class Type protected constructor(val typeName : String, var size : Int = 0)
           {
             when (literal.symbol)
               {
-                Symbol.intLiteral             -> return Integer
-                Symbol.charLiteral            -> return Char
-                Symbol.trueRW, Symbol.falseRW -> return Boolean
-                Symbol.stringLiteral          -> return StringType(capacityOf(literal.text))
-                else                          -> return UNKNOWN
+                Symbol.intLiteral    -> return Integer
+                Symbol.charLiteral   -> return Char
+                Symbol.trueRW,
+                Symbol.falseRW       -> return Boolean
+                Symbol.stringLiteral -> return StringType(capacityOf(literal.text))
+                else                 -> return UNKNOWN
               }
           }
       }

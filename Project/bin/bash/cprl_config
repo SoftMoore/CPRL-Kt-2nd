@@ -3,27 +3,30 @@
 #
 # Configuration settings for the CPRL compiler project.
 #
-# These settings assume an IntelliJ IDEA project with three separate modules named
-# edu.citadel.compiler, edu.citadel.cprl, and edu.citadel.cvm.  Class files are placed
-# in an "out\production" directory.  The project directory hierarchy is as follows:
+# These settings assume an IntelliJ IDEA project with four separate modules named
+# edu.citadel.assembler, edu.citadel.compiler, edu.citadel.cprl, and edu.citadel.cvm.
+# Class files are placed in the IDEA default "out\production" directory.  The
+# project directory hierarchy is as follows:
 #  PROJECT_HOME
+#     - edu.citadel.assembler
 #     - edu.citadel.compiler
 #     - edu.citadel.cprl
 #     - edu.citadel.cvm
 
 # set PROJECT_HOME to the directory for your IntelliJ projects
-PROJECT_HOME=/mnt/c/Compilers/Project
+PROJECT_HOME=/mnt/c/Compilers/CompilerProject
 
 # set CLASSES_HOME to the directory name used for compiled Java classes
 CLASSES_HOME=$PROJECT_HOME/out/production
 
+ASSEMBLER_HOME=$CLASSES_HOME/edu.citadel.assembler
 COMPILER_HOME=$CLASSES_HOME/edu.citadel.compiler
 CPRL_HOME=$CLASSES_HOME/edu.citadel.cprl
 CVM_HOME=$CLASSES_HOME/edu.citadel.cvm
 
 # set KT_LIB_HOME to the directory for the Kotlin jar files
-KT_LIB_HOME="/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2/plugins/Kotlin/kotlinc/lib"
+KT_LIB_HOME="/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2023.1.2/plugins/Kotlin/kotlinc/lib"
 
 
 # Add all project-related class directories to COMPILER_PROJECT_PATH.
-COMPILER_PROJECT_PATH=$COMPILER_HOME:$CPRL_HOME:$CVM_HOME:$KT_LIB_HOME/kotlin-stdlib.jar
+COMPILER_PROJECT_PATH=$ASSEMBLER_HOME:$COMPILER_HOME:$CPRL_HOME:$CVM_HOME:$KT_LIB_HOME/kotlin-stdlib.jar

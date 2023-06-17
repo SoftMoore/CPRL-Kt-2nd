@@ -7,29 +7,31 @@ import java.io.Reader
  * the position of each character in the source file.
  *
  * @constructor Initialize source with a reader.
+ * @param sourceReader the reader used to read characters from the source file.
  */
 class Source(private val sourceReader : Reader)
   {
-    /** A constant representing end of file. */
+    /**
+     * A constant representing end of file.
+     */
     val EOF = -1
 
     /**
-     * An integer representing the current character in the source file.
-     * This property has the value EOF (-1) if the end of file has been
-     * reached.
+     * An integer representing the current character in the source file. This
+     * property has the value EOF (-1) if the end of file has been reached.
      */
     var currentChar = 0
         private set
 
-    /** The source line number of the current character. */
+    // The source line number of the current character.
     private var lineNumber = 1
 
-    /** The offset of the current character within its line. */
+    // The offset of the current character within its line.
     private var charNumber = 0
 
     /**
-     * The position (line number, char number) of the current
-     * character in the source file.
+     * The position (line number, char number) of the current character
+     * in the source file.
      */
     val charPosition : Position
         get() = Position(lineNumber, charNumber)

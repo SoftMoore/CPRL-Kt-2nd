@@ -8,9 +8,8 @@ import edu.citadel.cprl.Type
 /**
  * Base class for all CPRL declarations (constants, variables, procedures, etc.).
  *
- * @constructor Construct a declaration with its identifier token and type.
- *              If not specified, the type is initialized to Type.none
- *              (e.g. for procedures).
+ * @constructor Construct a declaration with its identifier token and type.  If not
+ *              specified, the type is initialized to Type.none (e.g. for procedures).
  */
 abstract class Declaration(val idToken : Token, var type : Type = Type.none) : AST()
   {

@@ -39,6 +39,7 @@ open class Variable(val decl : VariableDecl,   // nonstructural reference
 
                 // Each selector expression must correspond to
                 // an array type, a record type, or a string type.
+
                 if (type is ArrayType)
                   {
                     // Applying the selector effectively changes the
@@ -62,6 +63,7 @@ open class Variable(val decl : VariableDecl,   // nonstructural reference
                     val recType   = type as RecordType
                     val fieldId   = expr.fieldId
                     val fieldDecl = recType[fieldId.text]
+
                     if (fieldDecl != null)
                       {
                         expr.fieldDecl = fieldDecl
@@ -76,8 +78,8 @@ open class Variable(val decl : VariableDecl,   // nonstructural reference
                   }
                 else if (type is StringType)
                   {
-                    // A string can have both a field expression for length (always
-                    // at offset 0) and an index expression for the characters.
+                    // Selector can be field expression .length (type Integer)
+                    // or an index expression for the characters (type Char).
 
                     if (expr is FieldExpr)
                       {
@@ -134,9 +136,8 @@ open class Variable(val decl : VariableDecl,   // nonstructural reference
         else
             emit("LDLADDR ${decl.relAddr}")
 
-        // For an array, record, or string, at this point the base address of the array
-        // record, or string is on the top of the stack.  We need to replace it by the
-        // sum: base address + offset
+        // For an array, record, or string, at this point the base address is on the
+        // top of the stack.  We need to replace it by the sum base address + offset
         var type = decl.type
 
         for (expr in selectorExprs)
@@ -181,14 +182,13 @@ open class Variable(val decl : VariableDecl,   // nonstructural reference
                     emit("LDCINT ${Type.Integer.size}")
                     emit("ADD")
 
-                    expr.emit()   // emit offset
+                    expr.emit()   // emit index expression
 
                     // multiply by size of type Char to get offset
                     emit("LDCINT ${Type.Char.size}")
                     emit("MUL")
 
-                    // add offset to the base address
-                    emit("ADD")
+                    emit("ADD")   // add offset to the base address
 
                     // Note: No code to perform bounds checking for the index to
                     // ensure that the index is >= 0 and < string capacity.

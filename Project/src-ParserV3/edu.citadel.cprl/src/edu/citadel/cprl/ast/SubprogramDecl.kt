@@ -19,7 +19,10 @@ abstract class SubprogramDecl(subprogramId : Token) : Declaration(subprogramId)
     /** The list of statements for this subprogram. */
     var statements : List<Statement> = emptyList()
 
-    /** The number of bytes required for all variables in the initial declarations. */
+    /**
+     * The number of bytes required for all variables in the initial declarations.
+     * Note: Value is set in method setRelativeAddresses().
+     */
     protected var varLength = 0
 
     /** The label associated with the first statement of the subprogram. */
@@ -66,8 +69,8 @@ abstract class SubprogramDecl(subprogramId : Token) : Declaration(subprogramId)
                 for (singleVarDecl in decl.singleVarDecls)
                   {
                     singleVarDecl.relAddr = currentAddr
-                    currentAddr  = currentAddr + singleVarDecl.size
-                 }
+                    currentAddr = currentAddr + singleVarDecl.size
+                  }
               }
           }
 

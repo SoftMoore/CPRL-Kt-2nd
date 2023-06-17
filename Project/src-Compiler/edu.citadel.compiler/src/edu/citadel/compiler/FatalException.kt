@@ -6,8 +6,7 @@ package edu.citadel.compiler
  * file should be abandoned.
  *
  * @constructor Construct a fatal exception with the specified error message.
- *
- * @param errorMsg  a brief message about the nature of the error.
+ * @param       errorMsg a brief message about the nature of the error.
  */
 class FatalException(errorMsg : String)
     : CompilerException("*** Fatal exception: $errorMsg")

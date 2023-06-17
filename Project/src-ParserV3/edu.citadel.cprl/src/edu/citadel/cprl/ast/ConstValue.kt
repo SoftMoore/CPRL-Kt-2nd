@@ -30,7 +30,7 @@ class ConstValue : Expression
     constructor(literal : Token) : super(Type.typeOf(literal), literal.position)
       {
         this.literal = literal
-        this.decl = null
+        this.decl    = null
       }
 
     /**
@@ -41,7 +41,7 @@ class ConstValue : Expression
         : super(decl.type, identifier.position)
       {
         this.literal = decl.literal
-        this.decl = decl
+        this.decl    = decl
       }
 
     /**
@@ -66,6 +66,8 @@ class ConstValue : Expression
             else
                 return 0
           }
+
+    override fun toString() : String = literal.text
 
     override fun checkConstraints()
       {
@@ -97,11 +99,11 @@ class ConstValue : Expression
       {
         when (type)
           {
-            Type.Integer  -> emit("LDCINT ${getLiteralIntValue()}")
-            Type.Boolean  -> emit("LDCB ${getLiteralIntValue()}")
+            Type.Integer  -> emit("LDCINT ${literalIntValue}")
+            Type.Boolean  -> emit("LDCB ${literalIntValue}")
             Type.Char     -> emit("LDCCH ${literal.text}")
             is StringType -> emit("LDCSTR ${literal.text}")
-            else          ->
+            else ->
               {
                 val errorMsg = "Invalid type for constant value."
                 throw CodeGenException(literal.position, errorMsg)

@@ -1,22 +1,20 @@
 package test.compiler
 
-
 import edu.citadel.compiler.util.ByteUtil
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
-
 
 /*
  * Test Object ByteUtil.
  */
 fun main()
   {
-    var n  : Int
+    var n  :  Int
     var n2 : Int
-    var c  : Char
+    var c  :  Char
     var c2 : Char
-    var bytes: ByteArray
+    var bytes : ByteArray
 
     val reader = BufferedReader(InputStreamReader(System.`in`))
 
@@ -39,7 +37,6 @@ fun main()
     while (n != 0)
 
     c = 'z'
-
     do
       {
         print("Enter a letter or a numeric value for c (z to stop):  ")

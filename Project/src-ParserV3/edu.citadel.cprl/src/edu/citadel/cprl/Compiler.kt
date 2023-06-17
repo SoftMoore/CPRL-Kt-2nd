@@ -17,7 +17,7 @@ private const val SUFFIX = ".cprl"
  * This function drives the compilation process.
  *
  * @param args must include the name of the CPRL source file, either the complete
- *        file name or the base file name with suffix ".cprl" omitted.
+ *             file name or the base file name with suffix ".cprl" omitted.
  */
 fun main(args : Array<String>)
   {
@@ -41,12 +41,12 @@ fun main(args : Array<String>)
                     sourceFile = File(fileName2)
 
                     if (!sourceFile.isFile)
-                        throw FatalException("*** File $fileName2 not found ***")
+                        throw FatalException("File \"$fileName2\" not found")
                   }
                 else
                   {
                     // don't try to append the suffix
-                    throw FatalException("*** File $fileName not found ***")
+                    throw FatalException("File \"$fileName\" not found")
                   }
               }
 
@@ -64,10 +64,7 @@ fun main(args : Array<String>)
       }
   }
 
-private fun printProgressMessage(message : String)
-  {
-    println(message)
-  }
+private fun printProgressMessage(message : String) = println(message)
 
 private fun printUsageAndExit()
   {
@@ -84,7 +81,7 @@ class Compiler
     /**
      * Compile the source file.  If there are no errors in the source file,
      * the object code is placed in a file with the same base file name as
-     * the source file but with a ".obj" suffix.
+     * the source file but with a ".asm" suffix.
      *
      * @throws IOException if there are problems reading the source file
      *                     or writing to the target file.
@@ -93,7 +90,8 @@ class Compiler
     fun compile(sourceFile : File)
       {
         val errorHandler = ErrorHandler()
-        val reader  = BufferedReader(FileReader(sourceFile, Charsets.UTF_8))
+        val fileReader   = FileReader(sourceFile, Charsets.UTF_8)
+        val reader  = BufferedReader(fileReader)
         val source  = Source(reader)
         val scanner = Scanner(source, 4, errorHandler)   // 4 lookahead tokens
         val idTable = IdTable()
@@ -155,7 +153,8 @@ class Compiler
         try
           {
             val targetFile = File(sourceFile.parent, targetFileName)
-            return PrintWriter(FileWriter(targetFile, Charsets.UTF_8), true)
+            val fileWriter = FileWriter(targetFile, Charsets.UTF_8)
+            return PrintWriter(fileWriter, true)
           }
         catch (e : IOException)
           {
