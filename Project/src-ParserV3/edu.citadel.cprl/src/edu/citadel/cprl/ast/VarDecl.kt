@@ -15,7 +15,7 @@ import edu.citadel.cprl.Type
  *              tokens, type, initial value, and scope level.
  */
 class VarDecl(identifiers : List<Token>, varType : Type,
-              val initialValue : ConstValue?, scopeLevel : ScopeLevel)
+              private val initialValue : ConstValue?, scopeLevel : ScopeLevel)
     : InitialDecl(Token(), varType)
   {
     // the list of single variable declarations for this variable declaration
