@@ -114,5 +114,15 @@ abstract class AST
 
         var idTable = IdTable()
         var errorHandler = ErrorHandler()
+
+        /**
+         * Initializes companion members that are shared with all instructions.
+         * The members must be re-initialized each time that the compiler is
+         * run on a different file; e.g., via a command like cprlc *.asm1.
+         */
+        fun initCompanionObject()
+          {
+            currentLabelNum = -1
+          }
       }
   }
