@@ -1,12 +1,12 @@
 package edu.citadel.cvm
 
 import edu.citadel.compiler.util.ByteUtil
-
 import java.io.*
 import java.nio.charset.StandardCharsets
 import kotlin.system.exitProcess
 
 private const val DEBUG = false
+private const val SUFFIX = ".obj"
 
 // exit return value for failure
 private const val FAILURE = -1
@@ -40,12 +40,30 @@ fun main(args : Array<String>)
         exitProcess(FAILURE)   // stop the VM with a nonzero status code
       }
 
-    val sourceFile = File(args[0])
+    var filename = args[0]
+    var sourceFile = File(filename)
 
     if (!sourceFile.isFile)
       {
-        System.err.println("*** File " + args[0] + " not found ***")
-        exitProcess(FAILURE)
+        // see if we can find the file by appending the suffix
+        val index = filename.lastIndexOf('.')
+        if (index < 0 || filename.substring(index) != SUFFIX)
+          {
+            filename += SUFFIX
+            sourceFile = File(filename)
+
+            if (!sourceFile.isFile)
+              {
+                System.err.println("*** File $filename not found ***")
+                exitProcess(FAILURE)
+              }
+          }
+        else
+          {
+            // don't try to append the suffix
+            System.err.println("*** File $filename not found ***")
+            exitProcess(FAILURE)
+          }
       }
 
     val codeFile = FileInputStream(sourceFile)
@@ -62,9 +80,6 @@ fun main(args : Array<String>)
  */
 class CVM(numOfBytes : Int)
   {
-    // the name of the object code file being executed
-    private lateinit var fileName : String
-
     // Reader for handling basic char I/O
     private val reader = InputStreamReader(System.`in`, StandardCharsets.UTF_8)
 
