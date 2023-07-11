@@ -134,8 +134,8 @@ abstract class Instruction(val labels : MutableList<Token>, val opcode : Token) 
          */
         fun initMaps()
           {
-            labelMap = mutableMapOf<String, Int>()
-            idMap    = mutableMapOf<String, Int>()
+            labelMap = mutableMapOf()
+            idMap    = mutableMapOf()
           }
       }
   }

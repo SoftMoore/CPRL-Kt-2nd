@@ -117,6 +117,11 @@ private fun processOption(option : String)
  */
 class Assembler(private val sourceFile : File)
   {
+    init
+      {
+        AST.initCompanionObject()
+      }
+
     /**
      * Assembles the source file.  If there are no errors in the source
      * file, the object code is placed in a file with the same base file
@@ -133,7 +138,6 @@ class Assembler(private val sourceFile : File)
         val scanner = Scanner(source, errorHandler)
         val parser  = Parser(scanner, errorHandler)
         AST.errorHandler = errorHandler
-        Instruction.initMaps()
 
         printProgressMessage("Starting assembly for ${sourceFile.name}")
 

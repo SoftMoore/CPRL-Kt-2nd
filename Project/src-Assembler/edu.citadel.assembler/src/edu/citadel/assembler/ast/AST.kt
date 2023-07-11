@@ -61,5 +61,15 @@ abstract class AST
          * The error handler to be used for code generation.
          */
         lateinit var errorHandler : ErrorHandler
+
+        /**
+         * Initializes static members that are shared with all instructions.
+         * The members must be re-initialized each time that the assembler is
+         * run on a different file; e.g., via a command like ipAssemble *.asm.
+         */
+        fun initCompanionObject()
+          {
+            Instruction.initMaps()
+          }
       }
   }
