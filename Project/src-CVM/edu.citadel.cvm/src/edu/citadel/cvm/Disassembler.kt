@@ -8,6 +8,9 @@ import kotlin.system.exitProcess
 
 private const val SUFFIX = ".obj"
 
+// exit return value for failure
+private const val FAILURE = -1
+
 /**
  * Translates CVM machine code into CVM assembly language
  * for each object code file named in args.
@@ -19,15 +22,20 @@ fun main(args : Array<String>)
 
     for (fileName in args)
       {
-        val file = FileInputStream(fileName)
-
         // get object code file name minus the suffix
         val suffixIndex = fileName.lastIndexOf(SUFFIX)
-        val baseName    = fileName.substring(0, suffixIndex)
+        if (suffixIndex < 0)
+          {
+            System.err.println("*** Invalid file name suffix: $fileName ***")
+            exitProcess(FAILURE)
+          }
 
+        val file = FileInputStream(fileName)
+
+        val baseName = fileName.substring(0, suffixIndex)
         val outputFileName = "$baseName.dis.txt"
-        val fileWriter     = FileWriter(outputFileName, StandardCharsets.UTF_8)
-        val out = PrintWriter(BufferedWriter(fileWriter), true)
+        val writer = FileWriter(outputFileName, StandardCharsets.UTF_8)
+        val out    = PrintWriter(BufferedWriter(writer), true)
 
         println("Disassembling $fileName to $outputFileName")
 
@@ -51,8 +59,7 @@ fun main(args : Array<String>)
               {
                 out.print("$opcodeAddrStr:  $opcode")
                 out.println(" " + readByte(file))
-                opcodeAddr = opcodeAddr + 2   // 1 byte for opcode plus
-                                              // 1 byte for shift amount
+                opcodeAddr = opcodeAddr + 2   // byte for opcode plus byte for operand
               }
             else if (opcode.isIntOperandOpcode())
               {
@@ -163,7 +170,7 @@ private fun readByte(iStream : InputStream) : Byte = iStream.read().toByte()
 
 private fun printUsageMessageAndExit()
   {
-    println("Usage: java edu.citadel.cvm.Disassembler filename")
+    println("Usage: Expecting one or more file names ending in \".obj\"")
     println()
     exitProcess(0)
   }
