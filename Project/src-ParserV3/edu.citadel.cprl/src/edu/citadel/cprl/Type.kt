@@ -52,7 +52,7 @@ open class Type protected constructor(val typeName : String, var size : Int = 0)
 
             // assume that the literal text was parsed correctly by the compiler
             var i = 1
-            while (i < literalText.length - 3)
+            while (i <= literalText.length - 3)
               {
                 if (literalText[i] == '\\')
                   {
