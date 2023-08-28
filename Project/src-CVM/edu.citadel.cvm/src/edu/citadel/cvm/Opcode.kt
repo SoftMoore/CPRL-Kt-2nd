@@ -5,7 +5,7 @@ package edu.citadel.cvm
  *
  * @constructor Construct an opcode with its machine instruction value.
  */
-enum class Opcode(value : Int)
+enum class Opcode(val value : Byte)
   {
     // halt opcode
     HALT(0),
@@ -85,8 +85,6 @@ enum class Opcode(value : Int)
     RET0(100),
     RET4(101);
 
-    private val value : Byte = value.toByte()
-
     /**
      * Returns true if this opcode has no operands.
      */
@@ -128,8 +126,6 @@ enum class Opcode(value : Int)
             else -> false
           }
       }
-
-    fun toByte() : Byte = value
 
     fun toInt() : Int = value.toInt()
 

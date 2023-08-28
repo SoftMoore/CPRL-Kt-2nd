@@ -15,13 +15,13 @@ private const val FAILURE = -1
 private const val K = 1024
 
 // default memory size for the virtual machine
-private const val DEFAULT_MEMORY_SIZE = 8*K
+private const val DEFAULT_MEMORY_SIZE = 16*K
 
 // virtual machine constant for false
-private const val FALSE = 0.toByte()
+private const val FALSE : Byte = 0
 
 // virtual machine constant for true
-private const val TRUE = 1.toByte()
+private const val TRUE : Byte = 1
 
 // end of file
 private const val EOF = -1
@@ -125,9 +125,10 @@ class CVM(numOfBytes : Int)
             sp = bp - 1
             codeFile.close()
         }
-        catch (e : IOException) {
-            error(e.toString())
-        }
+        catch (ex : IOException)
+          {
+            error(ex.toString())
+          }
     }
 
     /**
@@ -235,7 +236,7 @@ class CVM(numOfBytes : Int)
      */
     private fun pause() {
         out.println("Press enter to continue...")
-        readLine()
+        readlnOrNull()
     }
 
     /**
@@ -621,8 +622,7 @@ class CVM(numOfBytes : Int)
           }
         catch (ex : IOException)
           {
-            ex.printStackTrace()
-            error("Invalid input")
+            error(ex.toString())
           }
       }
 
@@ -634,10 +634,9 @@ class CVM(numOfBytes : Int)
             val n : Int = readln().toInt()
             putIntToAddr(n, destAddr)
           }
-        catch (e : Exception)
+        catch (ex : Exception)
           {
-          // e could be a NumberFormatException or a NullPointerException
-            error("Invalid input")
+            error(ex.toString())
           }
       }
 
@@ -657,10 +656,9 @@ class CVM(numOfBytes : Int)
                 destAddr = destAddr + Constants.BYTES_PER_CHAR
             }
           }
-        catch (e : Exception)
+        catch (ex : Exception)
           {
-            // e could be a NumberFormatException or a NullPointerException
-            error("Invalid input")
+            error(ex.toString())
           }
       }
 
