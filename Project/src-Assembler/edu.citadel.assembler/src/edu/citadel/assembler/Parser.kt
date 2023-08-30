@@ -113,7 +113,7 @@ class Parser(private val scanner : Scanner, private val errorHandler : ErrorHand
       }
 
     private fun makeInstruction(labels : MutableList<Token>, opcode : Token, arg : Token?)
-             : Instruction
+            : Instruction
       {
         checkArgs(opcode, arg)
 

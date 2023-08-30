@@ -43,12 +43,11 @@ class IfStmt(private val booleanExpr : Expression,
 
     override fun emit()
       {
-        // if the expression evaluates to false, branch to L1
+        // if expression evaluates to false, branch to L1
         booleanExpr.emitBranch(false, L1)
-
         thenStmt.emit()
 
-        // if there is an else part, branch to end of the if statement
+        // if there is an else part, branch to end of if statement
         elseStmt?.let { emit("BR $L2") }
 
         emitLabel(L1)

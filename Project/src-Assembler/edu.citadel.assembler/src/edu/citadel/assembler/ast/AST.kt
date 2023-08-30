@@ -65,7 +65,7 @@ abstract class AST
         /**
          * Initializes static members that are shared with all instructions.
          * The members must be re-initialized each time that the assembler is
-         * run on a different file; e.g., via a command like ipAssemble *.asm.
+         * run on a different file; e.g., via a command like assemble *.asm.
          */
         fun initCompanionObject()
           {

@@ -61,7 +61,7 @@ class Scanner(private val source : Source, k : Int,
      */
     fun lookahead(i : Int) : Token
       {
-        require(i in 1..4) { "Range check for lookahead token index" }
+        assert(i in 1..4) { "Range check for lookahead token index" }
         return tokenBuffer[i - 1]
       }
 

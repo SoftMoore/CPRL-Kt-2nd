@@ -10,7 +10,7 @@ import java.io.FileReader
 import java.io.PrintStream
 import kotlin.system.exitProcess
 
-val out = PrintStream(java.lang.System.out, true, Charsets.UTF_8)
+private val out = PrintStream(java.lang.System.out, true, Charsets.UTF_8)
 
 fun main(args : Array<String>)
   {

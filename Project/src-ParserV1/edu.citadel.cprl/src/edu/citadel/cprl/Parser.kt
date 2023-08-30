@@ -803,7 +803,7 @@ class Parser(private val scanner : Scanner,
      * Advance the scanner until the current symbol is one
      * of the symbols in the specified set of followers.
      */
-    private fun recover(followers : EnumSet<Symbol>)
+    private fun recover(followers : Set<Symbol>)
       {
         // no error recovery for version 1 of the parser
         throw FatalException("No error recovery -- parsing terminated.")
