@@ -21,17 +21,19 @@ class Program : AST()
       }
 
     /**
-     * Perform code transformations that improve performance.  This method
-     * is normally called after checkConstraints() and before emit();
+     * Perform code transformations that improve performance.  This method is normally
+     * called after parsing and before setAddresses(), checkConstraints() and emit().
      */
     fun optimize()
       {
+        val opts = Optimizations()
+
         // Note: Instructions.size can change during optimizations
         //       so a Kotlin for loop will not work here.
         var n = 0
         while (n < instructions.size)
           {
-            for (optimization in Optimizations.optimizations)
+            for (optimization in opts.optimizations)
                 optimization.optimize(instructions, n)
             ++n
           }

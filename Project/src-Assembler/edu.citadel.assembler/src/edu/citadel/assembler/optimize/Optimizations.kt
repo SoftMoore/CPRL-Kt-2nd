@@ -3,7 +3,7 @@ package edu.citadel.assembler.optimize
 /**
  * This object is used to retrieve the list of all optimizations.
  */
-object Optimizations
+class Optimizations
   {
     val optimizations = listOf(
             ConstFolding(),
