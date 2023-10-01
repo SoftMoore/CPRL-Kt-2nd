@@ -291,7 +291,6 @@ class CVM(numOfBytes : Int)
                 Opcode.LOADB   -> loadByte()
                 Opcode.LOAD2B  -> load2Bytes()
                 Opcode.LOADW   -> loadWord()
-                Opcode.LOADSTR -> loadString()
                 Opcode.MOD     -> modulo()
                 Opcode.MUL     -> multiply()
                 Opcode.NEG     -> negate()
@@ -312,7 +311,6 @@ class CVM(numOfBytes : Int)
                 Opcode.STOREB  -> storeByte()
                 Opcode.STORE2B -> store2Bytes()
                 Opcode.STOREW  -> storeWord()
-                Opcode.STOREST -> storeString()
                 Opcode.SUB     -> subtract()
                 else -> error("invalid machine instruction")
               }
@@ -759,30 +757,6 @@ class CVM(numOfBytes : Int)
         pushByte(b1)
       }
 
-    private fun loadString()
-      {
-        // loads (pushes) the string onto the stack in reverse order,
-        // so that the length is on the top of the stack
-        var address   = popInt()       // initialize to source address
-        val strLength = getIntAtAddr(address)
-
-        // update address to point to the first character in the string
-        address = address + Constants.BYTES_PER_INTEGER
-
-        // We need to push the characters and the string length in reverse order
-        val chars = CharArray(strLength)
-        for (i in 0 until strLength)
-          {
-            chars[i] = getCharAtAddr(address)
-            address = address + Constants.BYTES_PER_CHAR
-          }
-
-        for (i in strLength - 1 downTo 0)
-            pushChar(chars[i])
-
-        pushInt(strLength)
-      }
-
     /**
      * Loads a single word-size variable (four bytes) onto the stack.  The address
      * of the variable is obtained by popping it off the top of the stack.
@@ -940,26 +914,6 @@ class CVM(numOfBytes : Int)
         val destAddr = popInt()
         memory[destAddr + 0] = byte0
         memory[destAddr + 1] = byte1
-      }
-
-    private fun storeString()
-      {
-        val strLength = popInt()
-        val chars     = CharArray(strLength)
-        for (i in 0 until strLength)
-            chars[i] = popChar()
-
-        var address = popInt()   // initialize to destination address
-
-        // values were on the stack in reverse order
-        putIntToAddr(strLength, address)
-        address = address + Constants.BYTES_PER_INTEGER
-
-        for (i in 0 until strLength)
-          {
-            putCharToAddr(chars[i], address)
-            address = address + Constants.BYTES_PER_CHAR
-          }
       }
 
     private fun storeWord()

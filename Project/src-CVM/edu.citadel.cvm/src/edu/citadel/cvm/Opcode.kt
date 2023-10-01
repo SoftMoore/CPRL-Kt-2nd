@@ -15,7 +15,6 @@ enum class Opcode(val value : Byte)
     LOADB(10),
     LOAD2B(11),
     LOADW(12),
-    LOADSTR(13),
     LDCB(14),
     LDCCH(15),
     LDCINT(16),
@@ -34,7 +33,6 @@ enum class Opcode(val value : Byte)
     STOREB(31),
     STORE2B(32),
     STOREW(33),
-    STOREST(34),
 
     // compare/branch opcodes
     BR(40),
@@ -92,11 +90,10 @@ enum class Opcode(val value : Byte)
       {
         return when (this)
           {
-            ADD,     DEC,     DIV,     GETCH,   GETINT,  HALT,
-            LOADB,   LOAD2B,  LOADW,   LOADSTR, LDCB0,   LDCB1,
-            LDCINT0, LDCINT1, INC,     MOD,     MUL,     NEG,
-            NOT,     PUTBYTE, PUTCH,   PUTINT,  PUTEOL,  RET0,
-            RET4,    STOREB,  STORE2B, STOREW,  STOREST, SUB   -> true
+            ADD,     DEC,     DIV,     GETCH,   GETINT,  HALT,    LOADB,
+            LOAD2B,  LOADW,   LDCB0,   LDCB1,   LDCINT0, LDCINT1, INC,
+            MOD,     MUL,     NEG,     NOT,     PUTBYTE, PUTCH,   PUTINT,
+            PUTEOL,  RET0,    RET4,    STOREB,  STORE2B, STOREW,  SUB   -> true
             else -> false
           }
       }
