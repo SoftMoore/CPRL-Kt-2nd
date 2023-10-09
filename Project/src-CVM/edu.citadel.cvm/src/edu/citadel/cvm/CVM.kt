@@ -358,7 +358,9 @@ class CVM(numOfBytes : Int)
      */
     private fun pushByte(b : Byte)
       {
-        memory[++sp] = b
+        if (++sp >= memory.size)
+            error("*** Out of memory ***")
+        memory[sp] = b
       }
 
     /**
@@ -486,6 +488,8 @@ class CVM(numOfBytes : Int)
       {
         val numBytes = fetchInt()
         sp = sp + numBytes
+        if (sp >= memory.size)
+            error("*** Out of memory ***")
       }
 
     /**
