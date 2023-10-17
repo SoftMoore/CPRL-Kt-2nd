@@ -45,12 +45,14 @@ enum class Symbol(val numArgs : Int = 0)
     BZ(1),
     BNZ(1),
 
-    // shift opcodes
+    // type conversion opcodes
+    INT2BYTE(0),
+    BYTE2INT(0),
+
+    // logical not and shift opcode
+    NOT(0),
     SHL(1),
     SHR(1),
-
-    // logical not opcode
-    NOT(0),
 
     // arithmetic opcodes
     ADD(0),
