@@ -67,6 +67,17 @@ object ByteUtil
           or (b3.toInt()        and 0x000000FF))
 
     /**
+     * Converts a byte to an int.  The specified byte is the the low
+     * order (least significant) byte for the int and the three high
+     * order bytes are all zero.
+     */
+    fun byteToInt(b: Byte): Int
+      {
+        val zero = 0.toByte()
+        return bytesToInt(zero, zero, zero, b)
+      }
+
+    /**
      * Converts a Char to an array of 2 bytes.  The bytes in the return
      * array are ordered with the byte at index 0 as the high order byte
      * and the byte at index 1 as the low order byte.
@@ -105,5 +116,14 @@ object ByteUtil
         result[2] = (n.ushr(8)  and 0x000000FF).toByte()
         result[3] = (n.ushr(0)  and 0x000000FF).toByte()
         return result
+      }
+
+    /**
+     * Returns the low order (least significant) byte of the specified integer.
+     */
+    fun intToByte(n: Int): Byte
+      {
+        val bytes = intToBytes(n)
+        return bytes[3]
       }
   }

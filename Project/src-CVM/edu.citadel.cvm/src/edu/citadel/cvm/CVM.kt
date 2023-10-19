@@ -583,10 +583,8 @@ class CVM(numOfBytes : Int)
 
     private fun byteToInteger()
       {
-        val operand = popByte().toInt()
-
-        // mask out all but least significant byte
-        pushInt(operand and 0xFF)
+        val b = popByte()
+        pushInt(ByteUtil.byteToInt(b))
       }
 
     private fun call()
@@ -687,8 +685,8 @@ class CVM(numOfBytes : Int)
 
     private fun intToByte()
       {
-        val operand = popInt()
-        pushByte(operand.toByte())
+        val n = popInt()
+        pushByte(ByteUtil.intToByte(n))
       }
 
     /**
