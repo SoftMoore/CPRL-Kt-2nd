@@ -1,11 +1,11 @@
 @echo off
 
 rem
-rem Test a CPRL program for correct execution
+rem Test a CPRL program for correct execution.
 rem Assumes that commands cprlc and assemble have already run successfully.
 
 rem Command-line arguments are as follows:
-rem - %0 : the name of this batch file
+rem - %0 : the name of this file
 rem - %1 : the name of the CPRL object file to test
 
 echo Testing Program %1
