@@ -132,7 +132,7 @@ abstract class Instruction(val labels : MutableList<Token>, val opcode : Token) 
          * but they must be re-initialized if the assembler is run on more
          * than one file; e.g., via a command like assemble *.asm.
          */
-        fun initMaps()
+        fun resetMaps()
           {
             labelMap = mutableMapOf()
             idMap    = mutableMapOf()

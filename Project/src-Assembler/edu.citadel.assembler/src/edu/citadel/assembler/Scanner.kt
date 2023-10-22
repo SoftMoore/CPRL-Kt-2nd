@@ -1,9 +1,11 @@
 package edu.citadel.assembler
 
-import edu.citadel.compiler.ErrorHandler
-import edu.citadel.compiler.Position
-import edu.citadel.compiler.ScannerException
 import edu.citadel.compiler.Source
+import edu.citadel.compiler.Position
+import edu.citadel.compiler.ErrorHandler
+import edu.citadel.compiler.ScannerException
+
+import java.io.*
 
 import java.util.Locale
 
@@ -14,8 +16,9 @@ import kotlin.system.exitProcess
  *
  * @constructor Construct scanner with its associated source and error handler.
  */
-class Scanner(private val source : Source, private val errorHandler : ErrorHandler)
+class Scanner(sourceFile : File, private val errorHandler : ErrorHandler)
   {
+    private lateinit var source : Source
     private val scanBuffer : StringBuilder = StringBuilder(100)
 
     // maps opcode names to opcode symbols
@@ -23,6 +26,10 @@ class Scanner(private val source : Source, private val errorHandler : ErrorHandl
 
     init
       {
+        val fileReader = FileReader(sourceFile)
+        val reader = BufferedReader(fileReader)
+        source = Source(reader)
+
         // initialize opcodeMap with reserved word symbols
         val symbols = Symbol.values()
         for (symbol in symbols)

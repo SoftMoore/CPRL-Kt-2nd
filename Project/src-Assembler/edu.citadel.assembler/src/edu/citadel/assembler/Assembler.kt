@@ -2,7 +2,6 @@ package edu.citadel.assembler
 
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.FatalException
-import edu.citadel.compiler.Source
 
 import edu.citadel.assembler.ast.AST
 import edu.citadel.assembler.ast.Instruction
@@ -61,8 +60,8 @@ fun main(args : Array<String>)
                   }
               }
 
-            val assembler = Assembler(sourceFile)
-            assembler.assemble()
+            val assembler = Assembler()
+            assembler.assemble(sourceFile)
           }
         catch (e : FatalException)
           {
@@ -112,16 +111,9 @@ private fun processOption(option : String)
 
 /**
  * Assembler for the CPRL Virtual Machine.
- *
- * @constructor Construct an assembler with the specified source file.
  */
-class Assembler(private val sourceFile : File)
+class Assembler()
   {
-    init
-      {
-        AST.initCompanionObject()
-      }
-
     /**
      * Assembles the source file.  If there are no errors in the source
      * file, the object code is placed in a file with the same base file
@@ -130,16 +122,15 @@ class Assembler(private val sourceFile : File)
      * @throws IOException if there are problems reading the source file
      *                     or writing to the target file.
      */
-    fun assemble()
+    fun assemble(sourceFile : File)
       {
         val errorHandler = ErrorHandler()
-        val reader  = FileReader(sourceFile, Charsets.UTF_8)
-        val source  = Source(reader)
-        val scanner = Scanner(source, errorHandler)
+        val scanner = Scanner(sourceFile, errorHandler)
         val parser  = Parser(scanner, errorHandler)
-        AST.errorHandler = errorHandler
+        AST.reset(errorHandler)
 
         printProgressMessage("Starting assembly for ${sourceFile.name}")
+        printProgressMessage("...parsing")
 
         // parse source file
         val program : Program = parser.parseProgram()

@@ -10,7 +10,7 @@ import java.io.OutputStream
 
 
 /**
- * Base class for all abstract syntax trees
+ * Base class for all abstract syntax trees.
  */
 abstract class AST
   {
@@ -67,9 +67,10 @@ abstract class AST
          * The members must be re-initialized each time that the assembler is
          * run on a different file; e.g., via a command like assemble *.asm.
          */
-        fun initCompanionObject()
+        fun reset(errorHandler : ErrorHandler)
           {
-            Instruction.initMaps()
+            AST.errorHandler = errorHandler
+            Instruction.resetMaps()
           }
       }
   }
