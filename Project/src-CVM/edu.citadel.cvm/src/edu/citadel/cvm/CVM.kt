@@ -259,6 +259,10 @@ class CVM(numOfBytes : Int)
             when (Opcode.toOpcode(fetchByte()))
               {
                 Opcode.ADD      -> add()
+                Opcode.BITAND   -> bitAnd()
+                Opcode.BITOR    -> bitOr()
+                Opcode.BITXOR   -> bitXor()
+                Opcode.BITNOT   -> bitNot()
                 Opcode.ALLOC    -> allocate()
                 Opcode.BR       -> branch()
                 Opcode.BE       -> branchEqual()
@@ -492,6 +496,33 @@ class CVM(numOfBytes : Int)
         sp = sp + numBytes
         if (sp >= memory.size)
             error("*** Out of memory ***")
+      }
+
+    private fun bitAnd()
+      {
+        val operand2 = popInt()
+        val operand1 = popInt()
+        pushInt(operand1 and operand2)
+      }
+
+    private fun bitOr()
+      {
+        val operand2 = popInt()
+        val operand1 = popInt()
+        pushInt(operand1 or operand2)
+      }
+
+    private fun bitXor()
+      {
+        val operand2 = popInt()
+        val operand1 = popInt()
+        pushInt(operand1 xor operand2)
+      }
+
+    private fun bitNot()
+      {
+        val operand = popInt()
+        pushInt(operand.inv())
       }
 
     /**
@@ -885,23 +916,24 @@ class CVM(numOfBytes : Int)
 
     private fun shiftLeft()
       {
-        val operand = popInt()
+        val operand2 = popInt()
+        val operand1 = popInt()
 
-        // zero out left three bits of shiftAmount
-        val mask : Byte = 0x1F   // = 00011111 in binary
-        val shiftAmount = (fetchByte().toInt() and mask.toInt())
-        pushInt(operand shl shiftAmount)
+        // zero out all except rightmost 5 bits of shiftAmount
+        val shiftAmount = operand2 and 31
+
+        pushInt(operand1 shl shiftAmount)
       }
 
     private fun shiftRight()
       {
-        val operand = popInt()
+        val operand2 = popInt()
+        val operand1 = popInt()
 
-        // zero out left three bits of shiftAmount
-        val mask : Byte = 0x1F   // = 00011111 in binary
-        val shiftAmount = (fetchByte().toInt() and mask.toInt())
+        // zero out all except rightmost 5 bits of shiftAmount
+        val shiftAmount = operand2 and 31
 
-        pushInt(operand shr shiftAmount)
+        pushInt(operand1 shr shiftAmount)
       }
 
     private fun store()

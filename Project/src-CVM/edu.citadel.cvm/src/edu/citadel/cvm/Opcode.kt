@@ -11,10 +11,10 @@ enum class Opcode(val value : Byte)
     HALT(0),
 
     // load opcodes (move data from memory to top of stack)
-    LOAD(9),
-    LOADB(10),
-    LOAD2B(11),
-    LOADW(12),
+    LOAD(10),
+    LOADB(11),
+    LOAD2B(12),
+    LOADW(13),
     LDCB(14),
     LDCCH(15),
     LDCINT(16),
@@ -49,8 +49,12 @@ enum class Opcode(val value : Byte)
     INT2BYTE(50),
     BYTE2INT(51),
 
-    // logical not and shift opcodes
+    // logical NOT, bitwise, and shift opcodes
     NOT(60),
+    BITAND(61),
+    BITOR(62),
+    BITXOR(63),
+    BITNOT(64),
     SHL(65),
     SHR(66),
 
@@ -92,11 +96,12 @@ enum class Opcode(val value : Byte)
       {
         return when (this)
           {
-            ADD,      BYTE2INT, DEC,     DIV,     GETCH,   GETINT,  HALT,
-            INT2BYTE, LOADB,    LOAD2B,  LOADW,   LDCB0,   LDCB1,   LDCINT0,
-            LDCINT1,  INC,      MOD,     MUL,     NEG,     NOT,     PUTBYTE,
-            PUTCH,    PUTINT,   PUTEOL,  RET0,    RET4,    STOREB,  STORE2B,
-            STOREW,   SUB                                                -> true
+            ADD,      BITAND,  BITNOT, BITOR,   BITXOR, BYTE2INT,
+            DEC,      DIV,     GETCH,  GETINT,  HALT,   INC,
+            INT2BYTE, LOADB,   LOAD2B, LOADW,   LDCB0,  LDCB1,
+            LDCINT0,  LDCINT1, MOD,    MUL,     NEG,    NOT,
+            PUTBYTE,  PUTCH,   PUTINT, PUTEOL,  RET0,   RET4,
+            SHL,      SHR,     STOREB, STORE2B, STOREW, SUB   -> true
             else -> false
           }
       }
@@ -104,14 +109,7 @@ enum class Opcode(val value : Byte)
     /**
      * Returns true if this opcode has a byte operand.
      */
-    fun isByteOperandOpcode() : Boolean
-      {
-        return when (this)
-          {
-            SHL, SHR, LDCB -> true
-            else -> false
-          }
-      }
+    fun isByteOperandOpcode() : Boolean = this == LDCB
 
     /**
      * Returns true if this opcode has an int operand.

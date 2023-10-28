@@ -9,8 +9,6 @@ class Optimizations
             ConstFolding(),
             IncDec(),
             IncDec2(),
-            ShiftLeftRight(),
-            ShiftLeft(),
             BranchingReduction(),
             ConstNeg(),
             LoadSpecialConstants(),

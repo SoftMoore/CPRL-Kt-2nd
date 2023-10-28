@@ -58,7 +58,7 @@ fun main(args : Array<String>)
             else if (opcode.isByteOperandOpcode())
               {
                 out.print("$opcodeAddrStr:  $opcode")
-                out.println(" " + readByte(file))
+                out.println(" " + readByte(file).toUByte())
                 opcodeAddr = opcodeAddr + 2   // byte for opcode plus byte for operand
               }
             else if (opcode.isIntOperandOpcode())
