@@ -763,8 +763,24 @@ class Parser(private val scanner : Scanner,
                         IdType.constantId -> parseConstValue()
                         IdType.variableId -> parseVariableExpr()
                         IdType.functionId -> parseFunctionCallExpr()
-                        else -> throw error("Identifier \"$idStr\" " +
-                                            "is not valid as an expression.")
+                        else ->
+                          {
+                            var errorPos = scanner.position
+                            var errorMsg = "Identifier \"$idStr\" is not valid as an expression."
+
+                            // special handling when procedure call is used as a function call
+                            if (idType == IdType.procedureId)
+                              {
+                                scanner.advance()
+                                if (scanner.symbol == Symbol.leftParen)
+                                  {
+                                    scanner.advanceTo(Symbol.rightParen)
+                                    scanner.advance()   // advance past the right paren
+                                  }
+                              }
+
+                            throw error(errorPos, errorMsg)
+                          }
                       }
                   }
                 else
@@ -788,18 +804,6 @@ class Parser(private val scanner : Scanner,
         catch (e : ParserException)
           {
             errorHandler.reportError(e)
-
-            // special handling of identifier followed by left paren
-            if (scanner.symbol == Symbol.identifier)
-              {
-                scanner.advance()
-                if (scanner.symbol == Symbol.leftParen)
-                  {
-                    scanner.advanceTo(Symbol.rightParen)
-                    scanner.advance()   // advance past the right paren
-                  }
-              }
-
             recover(factorFollowers)
           }
       }
