@@ -12,7 +12,7 @@ object CharUtil
 
     /**
      * Returns true only if the specified character is a hex digit
-     * ('0'-'9', 'A'..'F', or 'a'..'f').
+     * ('0'..'9', 'A'..'F', or 'a'..'f').
      */
     fun isHexDigit(ch : Char) : Boolean
         = Character.isDigit(ch) || Character.toUpperCase(ch) in 'A'..'F'
