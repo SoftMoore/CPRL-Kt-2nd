@@ -122,11 +122,6 @@ object BitUtil
       }
 
     /**
-     * Returns a hexadecimal string representation of the specified byte.
-     */
-    fun toHexString(n : Byte) : String = String.format("%02X", n)
-
-    /**
      * Returns the n least significant (rightmost) bits in the
      * specified value as a signed (2s complement) integer.
      */
