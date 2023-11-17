@@ -18,7 +18,7 @@ import kotlin.system.exitProcess
  */
 class Scanner(sourceFile : File, private val errorHandler : ErrorHandler)
   {
-    private lateinit var source : Source
+    private var source : Source
     private val scanBuffer : StringBuilder = StringBuilder(100)
 
     // maps opcode names to opcode symbols
