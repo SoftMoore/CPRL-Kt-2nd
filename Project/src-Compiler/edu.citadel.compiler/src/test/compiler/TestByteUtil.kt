@@ -18,7 +18,6 @@ fun main()
 
     val reader = BufferedReader(InputStreamReader(System.`in`))
 
-    println("in TestByteUtil")
     do
       {
         print("Enter a value for integer n (0 to stop):  ")
