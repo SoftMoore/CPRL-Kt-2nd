@@ -10,13 +10,13 @@ package edu.citadel.assembler
 enum class Symbol(val numArgs : Int = 0)
   {
     // halt opcode
-    HALT(0),
+    HALT,
 
     // load/store opcodes
     LOAD(1),
-    LOADB(0),
-    LOAD2B(0),
-    LOADW(0),
+    LOADB,
+    LOAD2B,
+    LOADW,
     LDCB(1),
     LDCCH(1),
     LDCINT(1),
@@ -24,15 +24,15 @@ enum class Symbol(val numArgs : Int = 0)
     LDLADDR(1),
     LDGADDR(1),
 
-    LDCB0(0),
-    LDCB1(0),
-    LDCINT0(0),
-    LDCINT1(0),
+    LDCB0,
+    LDCB1,
+    LDCINT0,
+    LDCINT1,
 
     STORE(1),
-    STOREB(0),
-    STORE2B(0),
-    STOREW(0),
+    STOREB,
+    STORE2B,
+    STOREW,
 
     // branch opcodes
     BR(1),
@@ -46,36 +46,36 @@ enum class Symbol(val numArgs : Int = 0)
     BNZ(1),
 
     // type conversion opcodes
-    INT2BYTE(0),
-    BYTE2INT(0),
+    INT2BYTE,
+    BYTE2INT,
 
     // logical not, bitwise, and shift opcodes
-    NOT(0),
-    BITAND(0),
-    BITOR(0),
-    BITXOR(0),
-    BITNOT(0),
-    SHL(0),
-    SHR(0),
+    NOT,
+    BITAND,
+    BITOR,
+    BITXOR,
+    BITNOT,
+    SHL,
+    SHR,
 
     // arithmetic opcodes
-    ADD(0),
-    SUB(0),
-    MUL(0),
-    DIV(0),
-    MOD(0),
-    NEG(0),
-    INC(0),
-    DEC(0),
+    ADD,
+    SUB,
+    MUL,
+    DIV,
+    MOD,
+    NEG,
+    INC,
+    DEC,
 
     // I/O opcodes
-    GETCH(0),
-    GETINT(0),
+    GETCH,
+    GETINT,
     GETSTR(1),
-    PUTBYTE(0),
-    PUTCH(0),
-    PUTINT(0),
-    PUTEOL(0),
+    PUTBYTE,
+    PUTCH,
+    PUTINT,
+    PUTEOL,
     PUTSTR(1),
 
     // program/procedure opcodes
@@ -83,8 +83,8 @@ enum class Symbol(val numArgs : Int = 0)
     PROC(1),
     CALL(1),
     RET(1),
-    RET0(0),
-    RET4(0),
+    RET0,
+    RET4,
     ALLOC(1),
 
     // unknown symbol (first symbol that is not an opcode)
