@@ -525,9 +525,6 @@ class CVM(numOfBytes : Int)
         pushInt(operand.inv())
       }
 
-    /**
-     * Unconditional branch.
-     */
     private fun branch()
       {
         val displacement = fetchInt()
