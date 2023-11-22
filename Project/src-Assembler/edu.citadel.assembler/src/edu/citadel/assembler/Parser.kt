@@ -9,7 +9,7 @@ import java.util.EnumSet
 /**
  * This class uses recursive descent to perform syntax analysis of the source language.
  *
- * @constructor Construct a parser with the specified scanner.
+ * @constructor Construct a parser with the specified scanner and error handler.
  */
 class Parser(private val scanner : Scanner, private val errorHandler : ErrorHandler)
   {
@@ -21,7 +21,7 @@ class Parser(private val scanner : Scanner, private val errorHandler : ErrorHand
      */
     private fun makeInstructionFollowers() : Set<Symbol>
       {
-        val followers = ArrayList<Symbol>()
+        val followers = mutableSetOf<Symbol>()
 
         // add all opcodes
         for (symbol in Symbol.values())
@@ -34,7 +34,7 @@ class Parser(private val scanner : Scanner, private val errorHandler : ErrorHand
         followers.add(Symbol.labelId)
         followers.add(Symbol.EOF)
 
-        return followers.toSet()
+        return followers
       }
 
     // program = { instruction } .
