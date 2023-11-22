@@ -2,6 +2,8 @@ package edu.citadel.assembler
 
 import edu.citadel.compiler.ErrorHandler
 import edu.citadel.compiler.ParserException
+import edu.citadel.compiler.Position;
+
 import edu.citadel.assembler.ast.*
 
 import java.util.EnumSet
@@ -198,16 +200,16 @@ class Parser(private val scanner : Scanner, private val errorHandler : ErrorHand
 
     private fun checkArgs(opcode : Token, arg : Token?)
       {
-        val errorPosition = opcode.position
-        val symbol = opcode.symbol
-        val numArgs = symbol.numArgs
+        val symbol   = opcode.symbol
+        val numArgs  = symbol.numArgs
+        val errorPos = opcode.position
 
         if (numArgs == 0)
           {
             if (arg != null)
               {
                 val errorMsg = "No arguments allowed for this opcode."
-                throw ParserException(errorPosition, errorMsg)
+                throw error(errorPos, errorMsg)
               }
           }
         else if (numArgs == 1)
@@ -215,13 +217,13 @@ class Parser(private val scanner : Scanner, private val errorHandler : ErrorHand
             if (arg == null)
               {
                 val errorMsg = "One argument is required for this opcode."
-                throw ParserException(errorPosition, errorMsg)
+                throw error(errorPos, errorMsg)
               }
           }
         else
           {
             val errorMsg = "Invalid number of arguments for opcode $opcode."
-            throw ParserException(errorPosition, errorMsg)
+            throw error(errorPos, errorMsg)
           }
       }
 
@@ -237,9 +239,16 @@ class Parser(private val scanner : Scanner, private val errorHandler : ErrorHand
 
     private fun matchCurrentSymbol() = scanner.advance()
 
-    private fun error(message : String) : ParserException
-      {
-        val errorPos = scanner.position
-        return ParserException(errorPos, message)
-      }
+    /**
+     * Create a parser exception with the specified error message and the
+     * current scanner position.
+     */
+    private fun error(errorMsg : String) : ParserException
+        = ParserException(scanner.position, errorMsg)
+
+    /**
+     * Create a parser exception with the specified error position and message.
+     */
+    private fun error(errorPos: Position, errorMsg: String): ParserException
+        = ParserException(errorPos, errorMsg)
   }
