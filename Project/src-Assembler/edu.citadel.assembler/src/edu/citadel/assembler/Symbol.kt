@@ -100,6 +100,6 @@ enum class Symbol(val numArgs : Int = 0)
     // special scanning symbols
     EOF;
 
-    open val isOpcode : Boolean
+    val isOpcode : Boolean
         get() = this < UNKNOWN
   }
