@@ -765,8 +765,8 @@ class Parser(private val scanner : Scanner,
                         IdType.functionId -> parseFunctionCallExpr()
                         else ->
                           {
-                            var errorPos = scanner.position
-                            var errorMsg = "Identifier \"$idStr\" is not valid as an expression."
+                            val errorPos = scanner.position
+                            val errorMsg = "Identifier \"$idStr\" is not valid as an expression."
 
                             // special handling when procedure call is used as a function call
                             if (idType == IdType.procedureId)
