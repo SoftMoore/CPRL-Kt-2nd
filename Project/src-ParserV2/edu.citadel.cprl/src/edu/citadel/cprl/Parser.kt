@@ -609,7 +609,7 @@ class Parser(private val scanner : Scanner,
 
     /**
      * Parse the following grammar rule:<br>
-     * `variable = ( varId | paramId) { indexExpr | fieldExpr } .`
+     * `variable = ( varId | paramId ) { indexExpr | fieldExpr } .`
      * <br>
      * This method provides common logic for methods `parseVariable()` and
      * `parseVariableExpr()`.  The method does not handle any parser exceptions but
@@ -669,7 +669,7 @@ class Parser(private val scanner : Scanner,
 
     /**
      * Parse the following grammar rule:<br>
-     * `variable = ( varId | paramId) { indexExpr | fieldExpr } .`
+     * `variable = ( varId | paramId ) { indexExpr | fieldExpr } .`
      */
     private fun parseVariable()
       {

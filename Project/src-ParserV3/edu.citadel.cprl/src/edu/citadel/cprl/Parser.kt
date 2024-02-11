@@ -769,7 +769,7 @@ class Parser(private val scanner : Scanner,
 
     /**
      * Parse the following grammar rule:<br>
-     * `variable = ( varId | paramId) { indexExpr | fieldExpr } .<br>
+     * `variable = ( varId | paramId ) { indexExpr | fieldExpr } .<br>
      * <br>
      * This method provides common logic for methods `parseVariable()` and
      * `parseVariableExpr()`.  The method does not handle any parser exceptions but
@@ -837,7 +837,7 @@ class Parser(private val scanner : Scanner,
 
     /**
      * Parse the following grammar rule:<br>
-     * `variable = ( varId | paramId) { indexExpr | fieldExpr } .
+     * `variable = ( varId | paramId ) { indexExpr | fieldExpr } .
      *
      * @return the parsed variable.  Returns null if parsing fails.
      */
