@@ -427,11 +427,15 @@ class Parser(private val scanner : Scanner,
                 else
                   {
                     // make parsing decision using lookahead symbol
-// ...
+// ...   Big Hint: Read the book!
                   }
               }
             else if (symbol == Symbol.leftBrace)
                 parseCompoundStmt()
+            else if (symbol == Symbol.ifRW)
+                parseIfStmt();
+            else if (symbol == Symbol.loopRW || symbol == Symbol.whileRW)
+                parseLoopStmt();
 // ...
           }
         catch (e : ParserException)
