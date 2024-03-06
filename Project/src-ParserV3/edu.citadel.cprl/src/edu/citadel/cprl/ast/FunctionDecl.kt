@@ -34,15 +34,7 @@ class FunctionDecl(funcId : Token) : SubprogramDecl(funcId)
 
     override fun checkConstraints()
       {
-        try
-          {
-            super.checkConstraints()
-// ...
-          }
-        catch (e : ConstraintException)
-          {
-            errorHandler.reportError(e)
-          }
+// ...   call super.checkConstraints() before checking any additional constraints
       }
 
     /**
