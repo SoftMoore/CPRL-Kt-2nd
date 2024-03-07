@@ -6,7 +6,7 @@ import edu.citadel.cprl.StringType
 import edu.citadel.cprl.Type
 
 /**
- * This class implements both write and writeln statements.
+ * This class implements the abstract syntax tree for both write and writeln statements.
  *
  * @constructor Construct an output statement with the list of expressions
  *              and isWriteln flag.
