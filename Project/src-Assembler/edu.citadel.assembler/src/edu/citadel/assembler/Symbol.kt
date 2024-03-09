@@ -49,8 +49,10 @@ enum class Symbol(val numArgs : Int = 0)
     INT2BYTE,
     BYTE2INT,
 
-    // logical not, bitwise, and shift opcodes
+    // logical not opcode
     NOT,
+
+    // bitwise and shift opcodes
     BITAND,
     BITOR,
     BITXOR,

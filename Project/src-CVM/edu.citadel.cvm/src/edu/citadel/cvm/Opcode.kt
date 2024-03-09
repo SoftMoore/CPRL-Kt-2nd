@@ -49,8 +49,10 @@ enum class Opcode(val value : Byte)
     INT2BYTE(50),
     BYTE2INT(51),
 
-    // logical NOT, bitwise, and shift opcodes
+    // logical NOT opcode
     NOT(60),
+
+    // bitwise and shift opcodes
     BITAND(61),
     BITOR(62),
     BITXOR(63),
