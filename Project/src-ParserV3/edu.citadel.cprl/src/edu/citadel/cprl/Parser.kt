@@ -771,8 +771,10 @@ class Parser(private val scanner : Scanner,
       }
 
     /**
-     * Parse the following grammar rule:<br>
+     * Parse the following grammar rules:<br>
      * `variable = ( varId | paramId ) { indexExpr | fieldExpr } .<br>
+     *  indexExpr = "[" expression "]" .<br>
+     *  fieldExpr = "." fieldId .</code>`
      * <br>
      * This method provides common logic for methods `parseVariable()` and
      * `parseVariableExpr()`.  The method does not handle any parser exceptions but
@@ -806,36 +808,21 @@ class Parser(private val scanner : Scanner,
         while (scanner.symbol.isSelectorStarter())
           {
             if (scanner.symbol == Symbol.leftBracket)
-                selectorExprs.add(parseIndexExpr())
+              {
+                match(Symbol.leftBracket)
+                selectorExprs.add(parseExpression())
+                match(Symbol.rightBracket)
+              }
             else if (scanner.symbol == Symbol.dot)
-                selectorExprs.add(parseFieldExpr())
+              {
+                match(Symbol.dot)
+                val fieldId = scanner.token
+                match(Symbol.identifier)
+                selectorExprs.add(FieldExpr(fieldId))
+              }
           }
 
         return Variable(variableDecl, idToken.position, selectorExprs)
-      }
-
-    /**
-     * Parse the following grammar rule:<br>
-     * `indexExpr = "[" expression "]" .`
-     *
-     * @return the parsed index expression.
-     * @throws ParserException if parsing fails.
-     */
-    private fun parseIndexExpr() : Expression
-      {
-// ...
-      }
-
-    /**
-     * Parse the following grammar rule:<br>
-     * `fieldExpr = "." fieldId .`
-     *
-     * @return the parsed field expression.
-     * @throws ParserException if parsing fails.
-     */
-    private fun parseFieldExpr() : Expression
-      {
-// ...
       }
 
     /**
