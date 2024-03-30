@@ -645,14 +645,14 @@ class Parser(private val scanner : Scanner,
           {
             if (scanner.symbol == Symbol.leftBracket)
               {
-                match(Symbol.leftBracket);
-                parseExpression();
-                match(Symbol.rightBracket);
+                match(Symbol.leftBracket)
+                parseExpression()
+                match(Symbol.rightBracket)
               }
             else if (scanner.symbol == Symbol.dot)
               {
-                match(Symbol.dot);
-                match(Symbol.identifier);
+                match(Symbol.dot)
+                match(Symbol.identifier)
               }
           }
       }
