@@ -54,7 +54,7 @@ LogicalExpr.kt
 OutputStmt.kt
 ParameterDecl.kt
 * ProcedureCallStmt.kt
-* ProcedureDecl.kt
+  ProcedureDecl.kt
 Program.kt
 * ReadStmt.kt
 * RecordTypeDecl.kt

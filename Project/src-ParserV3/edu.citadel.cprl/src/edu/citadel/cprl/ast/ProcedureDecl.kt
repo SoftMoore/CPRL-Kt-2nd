@@ -13,6 +13,20 @@ class ProcedureDecl(procId : Token) : SubprogramDecl(procId)
 
     override fun emit()
       {
-// ...
+        setRelativeAddresses()
+
+        emitLabel(subprogramLabel)
+
+        // no need to emit PROC instruction if varLength == 0
+        if (varLength > 0)
+            emit("PROC $varLength")
+
+        for (decl in initialDecls)
+            decl.emit()
+
+        for (statement in statements)
+            statement.emit()
+
+        emit("RET $paramLength")
       }
   }
