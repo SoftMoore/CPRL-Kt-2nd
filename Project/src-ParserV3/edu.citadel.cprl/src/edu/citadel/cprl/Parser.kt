@@ -653,7 +653,7 @@ class Parser(private val scanner : Scanner,
      */
     private fun parseIfStmt() : Statement
       {
-// ...
+// ...   Hint: Use null for elseStmt if there is no else statement.
       }
 
     /**
@@ -677,7 +677,7 @@ class Parser(private val scanner : Scanner,
      */
     private fun parseExitStmt() : Statement
       {
-// ...
+// ...   Hint: Use null for whenExpr if there is no when expression.
       }
 
     /**
@@ -767,7 +767,7 @@ class Parser(private val scanner : Scanner,
      */
     private fun parseReturnStmt() : Statement
       {
-// ...
+// ...   Hint: Use null for returnExpr if there is no return expression.
       }
 
     /**
