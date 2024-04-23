@@ -277,14 +277,41 @@ class Parser(private val scanner : Scanner,
     private fun parseArrayTypeDecl() : InitialDecl
       {
 // ...
-            var numElements = parseConstValue()
-            if (numElements is EmptyExpression)
-              {
-                // create default value for numElements to prevent "not declared" errors
-                val token = Token(Symbol.intLiteral, scanner.position, "0")
-                numElements = ConstValue(token)
-              }
+            var numElements = parseIntConstValue()
 // ...
+      }
+
+    /**
+     * Wrapper for method parseConstValue() that always returns a valid integer constant.
+     *
+     * @return the parsed constant value.  Returns a default
+     *         integer constant value if parsing fails.
+     */
+    private fun parseIntConstValue() : Expression
+      {
+        // save current position for possible error reporting
+        val savePosition = scanner.position
+        var constValue   = parseConstValue()
+
+        // create a default value to be used when numElements is not a valid integer
+        val token = Token(Symbol.intLiteral, savePosition, "1")
+        val defaultConstValue = ConstValue(token)
+
+        if (constValue is EmptyExpression)
+            constValue = defaultConstValue // error has already been reported
+        else
+          {
+            val constValue2 = constValue as ConstValue
+            if (!constValue2.hasType(Type.Integer))
+              {
+                // report the error here but continue with the default value
+                val errorMsg = "Invalid integer constant."
+                errorHandler.reportError(error(savePosition, errorMsg))
+                constValue = defaultConstValue
+              }
+          }
+
+        return constValue
       }
 
     /**
@@ -363,13 +390,7 @@ class Parser(private val scanner : Scanner,
     private fun parseStringTypeDecl() : InitialDecl
       {
 // ...
-            var numElements = parseConstValue()
-            if (numElements is EmptyExpression)
-              {
-                // create a default value for numElements to prevent "not declared" errors
-                val token = Token(Symbol.intLiteral, scanner.position, "0")
-                numElements = ConstValue(token)
-              }
+            var numElements = parseIntConstValue()
 // ...
       }
 

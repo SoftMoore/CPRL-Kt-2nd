@@ -2,11 +2,10 @@ package edu.citadel.cprl.ast
 
 import edu.citadel.compiler.CodeGenException
 import edu.citadel.compiler.ConstraintException
-
+import edu.citadel.cprl.StringType
 import edu.citadel.cprl.Symbol
 import edu.citadel.cprl.Token
 import edu.citadel.cprl.Type
-import edu.citadel.cprl.StringType
 
 /**
  * The abstract syntax tree node for a constant value expression, which is
@@ -44,6 +43,28 @@ class ConstValue : Expression
         this.decl    = decl
       }
 
+    /*
+     * Returns true if this constant value has the specified type.
+     */
+    fun hasType(t : Type) : Boolean
+      {
+        if (t == Type.Integer && type == Type.Integer)
+          {
+            // We still need to check that the literal can be converted to an integer.
+            try
+              {
+                literal.text.toInt()
+                return true
+              }
+            catch (e: java.lang.NumberFormatException)
+              {
+                return false
+              }
+          }
+
+        return t === type
+      }
+
     /**
      * An integer value for the declaration literal.  For an integer literal,
      * this property simply returns its integer value.  For a char literal,
@@ -54,17 +75,17 @@ class ConstValue : Expression
     val literalIntValue : Int
         get()
           {
-            if (literal.symbol == Symbol.intLiteral)
-                return Integer.parseInt(literal.text)
-            else if (literal.symbol == Symbol.trueRW)
-                return 1
-            else if (literal.symbol == Symbol.charLiteral)
+            when (literal.symbol)
               {
-                val ch = literal.text[1]
-                return ch.code
+                Symbol.intLiteral  -> return Integer.parseInt(literal.text)
+                Symbol.trueRW      -> return 1
+                Symbol.charLiteral ->
+                  {
+                    val ch = literal.text[1]
+                    return ch.code
+                  }
+                else -> return 0
               }
-            else
-                return 0
           }
 
     override fun checkConstraints()
@@ -97,8 +118,8 @@ class ConstValue : Expression
       {
         when (type)
           {
-            Type.Integer  -> emit("LDCINT ${literalIntValue}")
-            Type.Boolean  -> emit("LDCB ${literalIntValue}")
+            Type.Integer  -> emit("LDCINT $literalIntValue")
+            Type.Boolean  -> emit("LDCB $literalIntValue")
             Type.Char     -> emit("LDCCH ${literal.text}")
             is StringType -> emit("LDCSTR ${literal.text}")
             else ->
