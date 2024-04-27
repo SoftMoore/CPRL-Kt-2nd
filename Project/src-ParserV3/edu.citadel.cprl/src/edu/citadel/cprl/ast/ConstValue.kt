@@ -50,7 +50,7 @@ class ConstValue : Expression
      * For a boolean literal, this property returns 0 for false and 1 for true.
      * For any other literal, the property returns 0.
      */
-    val literalIntValue : Int
+    val intValue : Int
         get()
           {
             when (literal.symbol)
@@ -107,8 +107,8 @@ class ConstValue : Expression
       {
         when (type)
           {
-            Type.Integer  -> emit("LDCINT $literalIntValue")
-            Type.Boolean  -> emit("LDCB $literalIntValue")
+            Type.Integer  -> emit("LDCINT $intValue")
+            Type.Boolean  -> emit("LDCB $intValue")
             Type.Char     -> emit("LDCCH ${literal.text}")
             is StringType -> emit("LDCSTR ${literal.text}")
             else ->

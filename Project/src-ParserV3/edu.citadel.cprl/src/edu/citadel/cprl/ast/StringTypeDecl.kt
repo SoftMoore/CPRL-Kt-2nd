@@ -16,7 +16,7 @@ import edu.citadel.cprl.StringType
  * @property capacity the maximum number of characters in the string
  */
 class StringTypeDecl(typeId : Token, val capacity : ConstValue)
-    : InitialDecl(typeId, StringType(typeId.text, capacity.literalIntValue))
+    : InitialDecl(typeId, StringType(typeId.text, capacity.intValue))
   {
     override fun checkConstraints()
       {

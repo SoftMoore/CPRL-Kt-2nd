@@ -17,7 +17,7 @@ import edu.citadel.cprl.Type
  * @property numElements the number of elements in the array
  */
 class ArrayTypeDecl(typeId : Token, elementType : Type, private val numElements : ConstValue)
-    : InitialDecl(typeId, ArrayType(typeId.text, numElements.literalIntValue, elementType))
+    : InitialDecl(typeId, ArrayType(typeId.text, numElements.intValue, elementType))
   {
     override fun checkConstraints()
       {
