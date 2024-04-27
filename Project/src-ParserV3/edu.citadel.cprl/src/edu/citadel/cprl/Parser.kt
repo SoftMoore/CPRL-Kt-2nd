@@ -276,42 +276,26 @@ class Parser(private val scanner : Scanner,
      */
     private fun parseArrayTypeDecl() : InitialDecl
       {
-// ...
-            var numElements = parseIntConstValue()
-// ...
-      }
-
-    /**
-     * Wrapper for method parseConstValue() that always returns a valid integer constant.
-     *
-     * @return the parsed constant value.  Returns a default
-     *         integer constant value if parsing fails.
-     */
-    private fun parseIntConstValue() : Expression
-      {
-        // save current position for possible error reporting
-        val savePosition = scanner.position
-        var constValue   = parseConstValue()
-
-        // create a default value to be used when numElements is not a valid integer
-        val token = Token(Symbol.intLiteral, savePosition, "1")
-        val defaultConstValue = ConstValue(token)
-
-        if (constValue is EmptyExpression)
-            constValue = defaultConstValue // error has already been reported
-        else
+        try
           {
-            val constValue2 = constValue as ConstValue
-            if (!constValue2.hasType(Type.Integer))
+// ...
+            var numElements = parseConstValue()
+// ...
+            if (numElements is EmptyExpression)
               {
-                // report the error here but continue with the default value
-                val errorMsg = "Invalid integer constant."
-                errorHandler.reportError(error(savePosition, errorMsg))
-                constValue = defaultConstValue
-              }
+                // Error has already been reported.  Create default value and continue.
+                val token = Token(Symbol.intLiteral, Position(), "1")
+                val defaultConstValue = ConstValue(token)
+                numElements = defaultConstValue
+            }
+// ...
           }
-
-        return constValue
+        catch (e : ParserException)
+          {
+            errorHandler.reportError(e)
+            recover(initialDeclFollowers)
+            return EmptyInitialDecl
+          }
       }
 
     /**
@@ -389,9 +373,26 @@ class Parser(private val scanner : Scanner,
      */
     private fun parseStringTypeDecl() : InitialDecl
       {
+        try
+          {
 // ...
-            var numElements = parseIntConstValue()
+            var numElements = parseConstValue()
 // ...
+            if (numElements is EmptyExpression)
+              {
+                // Error has already been reported.  Create default value and continue.
+                val token = Token(Symbol.intLiteral, Position(), "1")
+                val defaultConstValue = ConstValue(token)
+                numElements = defaultConstValue
+            }
+// ...
+          }
+        catch (e : ParserException)
+          {
+            errorHandler.reportError(e)
+            recover(initialDeclFollowers)
+            return EmptyInitialDecl
+          }
       }
 
     /**

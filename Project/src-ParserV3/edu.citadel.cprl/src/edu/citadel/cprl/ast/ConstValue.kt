@@ -43,28 +43,6 @@ class ConstValue : Expression
         this.decl    = decl
       }
 
-    /*
-     * Returns true if this constant value has the specified type.
-     */
-    fun hasType(t : Type) : Boolean
-      {
-        if (t == Type.Integer && type == Type.Integer)
-          {
-            // We still need to check that the literal can be converted to an integer.
-            try
-              {
-                literal.text.toInt()
-                return true
-              }
-            catch (e: java.lang.NumberFormatException)
-              {
-                return false
-              }
-          }
-
-        return t === type
-      }
-
     /**
      * An integer value for the declaration literal.  For an integer literal,
      * this property simply returns its integer value.  For a char literal,
@@ -77,7 +55,18 @@ class ConstValue : Expression
           {
             when (literal.symbol)
               {
-                Symbol.intLiteral  -> return Integer.parseInt(literal.text)
+                Symbol.intLiteral  ->
+                  {
+                    try
+                      {
+                        return literal.text.toInt()
+                      }
+                    catch (e : NumberFormatException)
+                      {
+                        // error will be reported in checkConstraints()
+                        return 1
+                      }
+                  }
                 Symbol.trueRW      -> return 1
                 Symbol.charLiteral ->
                   {
@@ -98,7 +87,7 @@ class ConstValue : Expression
               {
                 try
                   {
-                    Integer.parseInt(literal.text)
+                    literal.text.toInt()
                   }
                 catch (e : NumberFormatException)
                   {
