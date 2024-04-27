@@ -286,7 +286,7 @@ class Parser(private val scanner : Scanner,
                 // Error has already been reported.  Create default value and continue.
                 val token = Token(Symbol.intLiteral, Position(), "1")
                 numElements = ConstValue(token)
-            }
+              }
 // ...
           }
         catch (e : ParserException)
@@ -382,7 +382,7 @@ class Parser(private val scanner : Scanner,
                 // Error has already been reported.  Create default value and continue.
                 val token = Token(Symbol.intLiteral, Position(), "1")
                 numElements = ConstValue(token)
-            }
+              }
 // ...
           }
         catch (e : ParserException)
