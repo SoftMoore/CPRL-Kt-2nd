@@ -279,14 +279,7 @@ class Parser(private val scanner : Scanner,
         try
           {
 // ...
-            var numElements = parseConstValue()
-// ...
-            if (numElements is EmptyExpression)
-              {
-                // Error has already been reported.  Create default value and continue.
-                val token = Token(Symbol.intLiteral, Position(), "1")
-                numElements = ConstValue(token)
-              }
+            val numElements = parseIntConstValue()
 // ...
           }
         catch (e : ParserException)
@@ -375,14 +368,7 @@ class Parser(private val scanner : Scanner,
         try
           {
 // ...
-            var numElements = parseConstValue()
-// ...
-            if (numElements is EmptyExpression)
-              {
-                // Error has already been reported.  Create default value and continue.
-                val token = Token(Symbol.intLiteral, Position(), "1")
-                numElements = ConstValue(token)
-              }
+            val numElements = parseIntConstValue()
 // ...
           }
         catch (e : ParserException)
@@ -1060,6 +1046,24 @@ class Parser(private val scanner : Scanner,
       }
 
     // Utility parsing methods
+
+    /*
+     * Wrapper around method parseConstValue() that always
+     * returns a valid constant value.
+     */
+    private fun parseIntConstValue() : ConstValue
+      {
+        var intConstValue = parseConstValue()
+
+        if (intConstValue is EmptyExpression)
+          {
+            // Error has already been reported.  Create default value and continue.
+            val token = Token(Symbol.intLiteral, Position(), "1")
+            intConstValue = ConstValue(token)
+          }
+
+        return intConstValue as ConstValue
+      }
 
     /**
      * Check that the current lookahead symbol is the expected symbol.  If it
