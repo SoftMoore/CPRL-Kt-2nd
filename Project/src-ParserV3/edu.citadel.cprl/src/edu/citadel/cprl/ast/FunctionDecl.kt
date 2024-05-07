@@ -13,23 +13,15 @@ import edu.citadel.cprl.Token
 class FunctionDecl(funcId : Token) : SubprogramDecl(funcId)
   {
     /**
-     * The relative address of the function return value.</br>
-     * Note: Value is not valid unless addresses of all formal
-     * parameters have been set.
+     * The relative address of the function return value.
      */
     val relAddr : Int
         get()
           {
-            var firstParamAddr = 0
-
-            if (formalParams.isNotEmpty())
-              {
-                val firstParamDecl = formalParams[0]
-                firstParamAddr = firstParamDecl.relAddr
-              }
-
-            // the location for the return value is above the first parameter
-            return firstParamAddr - type.size
+            var relAddr = -type.size
+            for (decl in formalParams)
+                relAddr = relAddr - decl.size
+            return relAddr
           }
 
     override fun checkConstraints()
