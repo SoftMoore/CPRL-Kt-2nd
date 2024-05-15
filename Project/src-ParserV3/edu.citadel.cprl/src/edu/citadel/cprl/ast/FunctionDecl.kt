@@ -16,13 +16,7 @@ class FunctionDecl(funcId : Token) : SubprogramDecl(funcId)
      * The relative address of the function return value.
      */
     val relAddr : Int
-        get()
-          {
-            var relAddr = -type.size
-            for (decl in formalParams)
-                relAddr = relAddr - decl.size
-            return relAddr
-          }
+        get() = -type.size - paramLength
 
     override fun checkConstraints()
       {
