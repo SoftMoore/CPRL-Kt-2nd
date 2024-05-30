@@ -25,4 +25,11 @@ abstract class CompilerException : Exception
      */
     constructor(errorType : String, errorMsg : String)
         : super("*** $errorType error detected:\n    $errorMsg")
+
+    /**
+     * Construct a compiler exception with the specified error message.
+     *
+     * @param errorMsg a brief message about the nature of the error.
+     */
+    constructor(errorMsg : String) : super(errorMsg)
   }
