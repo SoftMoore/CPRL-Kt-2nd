@@ -25,7 +25,7 @@ CPRL_HOME=$CLASSES_HOME/edu.citadel.cprl
 CVM_HOME=$CLASSES_HOME/edu.citadel.cvm
 
 # set KT_LIB_HOME to the directory for the Kotlin jar files
-KT_LIB_HOME="/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2023.1.2/plugins/Kotlin/kotlinc/lib"
+KT_LIB_HOME="/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition/plugins/Kotlin/kotlinc/lib"
 
 
 # Add all project-related class directories to COMPILER_PROJECT_PATH.

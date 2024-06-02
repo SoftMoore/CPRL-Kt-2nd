@@ -1,7 +1,7 @@
 @echo off
 
 rem
-rem Run CPRL compiler on a single ".cprl" file
+rem Run CPRL compiler on one or more ".cprl" files.
 rem
 
 rem set config environment variables locally

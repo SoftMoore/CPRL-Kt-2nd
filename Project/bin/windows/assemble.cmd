@@ -1,7 +1,7 @@
 @echo off
 
 rem
-rem Run CPRL Assembler on a single ".asm" file
+rem Run CPRL Assembler on one or more ".asm" files.
 rem
 
 rem set config environment variables locally

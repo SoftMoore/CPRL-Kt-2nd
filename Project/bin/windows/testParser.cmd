@@ -1,7 +1,7 @@
 @echo off
 
 rem
-rem Run CPRL TestParser on a single ".cprl" file
+rem Run CPRL TestParser on one or more ".cprl" file.
 rem
 
 rem set config environment variables locally

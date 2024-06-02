@@ -1,7 +1,7 @@
 @echo off
 
 rem
-rem Run CVM disassembler on a single ".obj" file
+rem Run CVM disassembler on one or more ".obj" files.
 rem
 
 rem set config environment variables locally
