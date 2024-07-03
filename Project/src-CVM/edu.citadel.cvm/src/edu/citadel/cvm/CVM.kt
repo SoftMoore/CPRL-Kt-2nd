@@ -936,15 +936,12 @@ class CVM(numOfBytes : Int)
     private fun store()
       {
         val length = fetchInt()
-        val data = ByteArray(length)
+        val destAddr = getIntAtAddr(sp - length - 3)
 
         // pop bytes of data, storing in reverse order
         for (i in length - 1 downTo 0)
-            data[i] = popByte()
-
-        val destAddr = popInt()
-        for (i in 0 until length)
-            memory[destAddr + i] = data[i]
+            memory[destAddr + i] = popByte()
+        popByte()  // remove destAddr from stack
       }
 
     private fun storeByte()
