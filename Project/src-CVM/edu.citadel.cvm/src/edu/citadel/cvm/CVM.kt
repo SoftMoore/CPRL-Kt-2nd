@@ -888,27 +888,24 @@ class CVM(numOfBytes : Int)
 
     private fun returnInst()
       {
-        val bpSave = bp
         val paramLength = fetchInt()
-        sp = bpSave - paramLength - 1
-        bp = getIntAtAddr(bpSave)
-        pc = getIntAtAddr(bpSave + Constants.BYTES_PER_INTEGER)
+        pc = getIntAtAddr(bp + Constants.BYTES_PER_INTEGER)
+        sp = bp - paramLength - 1
+        bp = getIntAtAddr(bp)
       }
 
     private fun returnZero()
       {
-        val bpSave = bp
-        sp = bpSave - 1
-        bp = getIntAtAddr(bpSave)
-        pc = getIntAtAddr(bpSave + Constants.BYTES_PER_INTEGER)
+        pc = getIntAtAddr(bp + Constants.BYTES_PER_INTEGER)
+        sp = bp - 1
+        bp = getIntAtAddr(bp)
       }
 
     private fun returnFour()
       {
-        val bpSave = bp
-        sp = bpSave - 5
-        bp = getIntAtAddr(bpSave)
-        pc = getIntAtAddr(bpSave + Constants.BYTES_PER_INTEGER)
+        pc = getIntAtAddr(bp + Constants.BYTES_PER_INTEGER)
+        sp = bp - 5
+        bp = getIntAtAddr(bp)
       }
 
     private fun shiftLeft()
