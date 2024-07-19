@@ -15,5 +15,5 @@ object CharUtil
      * ('0'..'9', 'A'..'F', or 'a'..'f').
      */
     fun isHexDigit(ch : Char) : Boolean
-        = Character.isDigit(ch) || Character.toUpperCase(ch) in 'A'..'F'
+        = (ch in '0'..'9') || (ch in 'a'..'f') || (ch in 'A'..'F')
   }
