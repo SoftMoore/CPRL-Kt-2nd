@@ -60,31 +60,35 @@ class BranchingReduction : Optimization
 
     /**
      * Returns true if the symbol is a conditional branch; that is,
-     * if the symbol is one of BNZ, BZ, BG, BGE, BL, or BLE.
+     * if the symbol is one of BG, BGE, BL, BLE, BE, BNe, BZ, BNZ.
      */
     private fun isConditionalBranch(s : Symbol) : Boolean
       {
-        return s == Symbol.BNZ || s == Symbol.BZ || s == Symbol.BG
-            || s == Symbol.BGE || s == Symbol.BL || s == Symbol.BLE
+        return s == Symbol.BG || s == Symbol.BGE
+            || s == Symbol.BL || s == Symbol.BLE
+            || s == Symbol.BE || s == Symbol.BNE
+            || s == Symbol.BZ || s == Symbol.BNZ;
       }
 
     /**
-     * Returns dual branch conditional branch instruction with the specified
-     * instruction labels and label argument.  For example, if parameter s has
-     * the value Symbol.BG, then an instruction of type InstructionBLE is returned.
+     * Returns dual conditional branch instruction with the specified instruction
+     * labels and label argument.  For example, if parameter s has the value
+     * Symbol.BG, then an instruction of type InstructionBLE is returned.
      */
     private fun makeDualBranchInst(labels : MutableList<Token>, s : Symbol, labelArg : Token)
             : Instruction
       {
         return when (s)
           {
-            Symbol.BNZ -> InstructionBZ(labels, Token(Symbol.BZ), labelArg)
-            Symbol.BZ  -> InstructionBNZ(labels, Token(Symbol.BNZ), labelArg)
             Symbol.BG  -> InstructionBLE(labels, Token(Symbol.BLE), labelArg)
-            Symbol.BGE -> InstructionBL(labels, Token(Symbol.BL), labelArg)
+            Symbol.BGE -> InstructionBL(labels,  Token(Symbol.BL),  labelArg)
             Symbol.BL  -> InstructionBGE(labels, Token(Symbol.BGE), labelArg)
-            Symbol.BLE -> InstructionBG(labels, Token(Symbol.BG), labelArg)
-            else       -> throw IllegalArgumentException("Illegal branch instruction $s")
+            Symbol.BLE -> InstructionBG(labels,  Token(Symbol.BG),  labelArg)
+            Symbol.BE  -> InstructionBNE(labels, Token(Symbol.BNE), labelArg)
+            Symbol.BNE -> InstructionBE(labels,  Token(Symbol.BE),  labelArg)
+            Symbol.BZ  -> InstructionBNZ(labels, Token(Symbol.BNZ), labelArg)
+            Symbol.BNZ -> InstructionBZ(labels,  Token(Symbol.BZ),  labelArg)
+            else       -> throw IllegalArgumentException("Illegal conditional branch instruction $s")
           }
       }
 
