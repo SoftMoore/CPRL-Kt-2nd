@@ -60,14 +60,14 @@ class BranchingReduction : Optimization
 
     /**
      * Returns true if the symbol is a conditional branch; that is,
-     * if the symbol is one of BG, BGE, BL, BLE, BE, BNe, BZ, BNZ.
+     * if the symbol is one of BG, BGE, BL, BLE, BE, BNE, BZ, BNZ.
      */
     private fun isConditionalBranch(s : Symbol) : Boolean
       {
         return s == Symbol.BG || s == Symbol.BGE
             || s == Symbol.BL || s == Symbol.BLE
             || s == Symbol.BE || s == Symbol.BNE
-            || s == Symbol.BZ || s == Symbol.BNZ;
+            || s == Symbol.BZ || s == Symbol.BNZ
       }
 
     /**
