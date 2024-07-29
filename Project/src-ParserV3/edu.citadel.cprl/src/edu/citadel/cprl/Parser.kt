@@ -64,8 +64,9 @@ class Parser(private val scanner : Scanner,
      * Parse the following grammar rule:<br>
      * `program = initialDecls subprogramDecls .`
      *
-     * @return the parsed program.  Returns a program with an empty list of initial
-     *         declarations and an empty list of statements if parsing fails.
+     * @return the parsed program.  Returns a program with an empty list
+     *         of initial declarations and an empty list of subprogram
+     *         declarations if parsing fails.
      */
     fun parseProgram() : Program
       {
