@@ -397,7 +397,7 @@ class CVM(numOfBytes : Int)
     private fun fetchByte() : Byte = memory[pc++]
 
     /**
-     * Fetch the next instruction currentChar operand from memory.
+     * Fetch the next character operand from memory.
      */
     private fun fetchChar() : Char
       {
@@ -407,7 +407,7 @@ class CVM(numOfBytes : Int)
       }
 
     /**
-     * Fetch the next instruction int operand from memory.
+     * Fetch the next integer operand from memory.
      */
     private fun fetchInt() : Int
       {
