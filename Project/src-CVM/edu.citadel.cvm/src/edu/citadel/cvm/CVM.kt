@@ -1,11 +1,13 @@
 package edu.citadel.cvm
 
 import edu.citadel.compiler.util.ByteUtil
+
 import java.io.*
 import java.nio.charset.StandardCharsets
+
 import kotlin.system.exitProcess
 
-private const val DEBUG = false
+private const val DEBUG  = false
 private const val SUFFIX = ".obj"
 
 // exit return value for failure
@@ -41,18 +43,18 @@ fun main(args : Array<String>)
       }
 
     var filename = args[0]
-    var sourceFile = File(filename)
+    var file = File(filename)
 
-    if (!sourceFile.isFile)
+    if (!file.isFile)
       {
         // see if we can find the file by appending the suffix
         val index = filename.lastIndexOf('.')
         if (index < 0 || filename.substring(index) != SUFFIX)
           {
             filename += SUFFIX
-            sourceFile = File(filename)
+            file = File(filename)
 
-            if (!sourceFile.isFile)
+            if (!file.isFile)
               {
                 System.err.println("*** File $filename not found ***")
                 exitProcess(FAILURE)
@@ -66,7 +68,7 @@ fun main(args : Array<String>)
           }
       }
 
-    val codeFile = FileInputStream(sourceFile)
+    val codeFile = FileInputStream(file)
     val cvm = CVM(DEFAULT_MEMORY_SIZE)
     cvm.loadProgram(codeFile)
     cvm.run()
@@ -200,7 +202,7 @@ class CVM(numOfBytes : Int)
                 byte2 = memory[memAddr++]
                 byte3 = memory[memAddr++]
                 val strLength = ByteUtil.bytesToInt(byte0, byte1, byte2, byte3)
-                for (i in 0 until strLength)
+                repeat (strLength)
                   {
                     byte0 = memory[memAddr++]
                     byte1 = memory[memAddr++]
@@ -763,8 +765,7 @@ class CVM(numOfBytes : Int)
         pushInt(capacity)
 
         // fetch each character and push it onto the stack
-        for (i in 0 until capacity)
-            pushChar(fetchChar())
+        repeat (capacity) { pushChar(fetchChar()) }
       }
 
     private fun loadLocalAddress()
@@ -876,7 +877,7 @@ class CVM(numOfBytes : Int)
         val strLength = getIntAtAddr(addr)
         addr = addr + Constants.BYTES_PER_INTEGER
 
-        for (i in 0 until strLength)
+        repeat (strLength)
           {
             out.print(getCharAtAddr(addr))
             addr = addr + Constants.BYTES_PER_CHAR
