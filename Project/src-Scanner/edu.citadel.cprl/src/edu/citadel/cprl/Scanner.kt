@@ -27,8 +27,7 @@ class Scanner(private val source : Source, k : Int,
     init
       {
         // fill buffer with k tokens
-        for (i in 0 until k)
-            advance()
+        repeat (k) { advance() }
       }
 
     /**
@@ -184,16 +183,20 @@ class Scanner(private val source : Source, k : Int,
 // ...  Hint: Need an efficient search based on the text of the identifier (parameter idString)
       }
 
-    /**
-     * Skip over a comment.
-     */
-    private fun skipComment()
-      {
-        // assumes that source.currentChar is the second '/'
-        assert(source.currentChar.toChar() == '/') { "Check for '/' as part of comment" }
-        skipToEndOfLine()
-        source.advance()
-      }
+      /**
+       * Skip over a comment.
+       */
+      private fun skipComment()
+        {
+          // assumes that source.getChar() is the second '/'
+          assert(source.currentChar.toChar() == '/') { "Check for '/' as part of comment." }
+
+          while (source.currentChar.toChar() != '\n' && source.currentChar != source.EOF)
+              source.advance()
+
+          // continue scanning
+          source.advance()
+        }
 
     /**
      * Clear the scan buffer (makes it empty).
