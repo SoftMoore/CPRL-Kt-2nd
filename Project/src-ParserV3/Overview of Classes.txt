@@ -17,7 +17,6 @@ LoopContext.kt
 * Parser.kt
 * RecordType.kt
 Scope.kt
-ScopeLevel.kt
 * StringType.kt
 SubprogramContext.kt
 Type.kt
