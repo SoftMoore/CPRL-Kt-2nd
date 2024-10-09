@@ -1,9 +1,10 @@
 package edu.citadel.cprl
 
-import edu.citadel.compiler.ErrorHandler
-import edu.citadel.compiler.InternalCompilerException
-import edu.citadel.compiler.ParserException
 import edu.citadel.compiler.Position
+import edu.citadel.compiler.ErrorHandler
+import edu.citadel.compiler.ParserException
+import edu.citadel.compiler.InternalCompilerException
+
 import edu.citadel.cprl.ast.*
 
 import java.util.EnumSet
@@ -369,7 +370,7 @@ class Parser(private val scanner : Scanner,
         try
           {
 // ...
-            val numElements = parseIntConstValue()
+            val capacity = parseIntConstValue()
 // ...
           }
         catch (e : ParserException)
@@ -464,7 +465,7 @@ class Parser(private val scanner : Scanner,
      */
     private fun parseSubprogramDecl() : SubprogramDecl
       {
-// ...   throw an internal error if the symbol is not one of procedureRW or functionRW
+// ...   throw an internal error if the symbol is not one of procRW or funRW
       }
 
     /**
@@ -608,6 +609,8 @@ class Parser(private val scanner : Scanner,
               }
             else if (symbol == Symbol.leftBrace)
                 stmt = parseCompoundStmt()
+            else if (symbol == Symbol.ifRW)
+                stmt = parseIfStmt()
 // ...
           }
         catch (e : ParserException)

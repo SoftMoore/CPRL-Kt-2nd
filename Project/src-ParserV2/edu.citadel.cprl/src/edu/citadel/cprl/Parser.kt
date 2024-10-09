@@ -1,9 +1,9 @@
 package edu.citadel.cprl
 
-import edu.citadel.compiler.ErrorHandler
-import edu.citadel.compiler.InternalCompilerException
-import edu.citadel.compiler.ParserException
 import edu.citadel.compiler.Position
+import edu.citadel.compiler.ErrorHandler
+import edu.citadel.compiler.ParserException
+import edu.citadel.compiler.InternalCompilerException
 
 import java.util.EnumSet
 
@@ -359,7 +359,7 @@ class Parser(private val scanner : Scanner,
      */
     private fun parseSubprogramDecl()
       {
-// ...   throw an internal error if the symbol is not one of procedureRW or functionRW
+// ...   throw an internal error if the symbol is not one of procRW or funRW
       }
 
     /**
@@ -474,11 +474,13 @@ class Parser(private val scanner : Scanner,
                 else
                   {
                     // make parsing decision using lookahead symbol
-// ...
+// ...   Big Hint: Read the book!
                   }
               }
             else if (symbol == Symbol.leftBrace)
                 parseCompoundStmt()
+            else if (symbol == Symbol.ifRW)
+                parseIfStmt();
 // ...
           }
         catch (e : ParserException)
