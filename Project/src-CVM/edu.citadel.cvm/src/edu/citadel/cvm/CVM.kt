@@ -939,7 +939,7 @@ class CVM(numOfBytes : Int)
         // pop bytes of data, storing in reverse order
         for (i in length - 1 downTo 0)
             memory[destAddr + i] = popByte()
-        popByte()  // remove destAddr from stack
+        popInt()  // remove destAddr from stack
       }
 
     private fun storeByte()
