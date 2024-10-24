@@ -32,7 +32,8 @@ private const val EOF = -1
  * This method constructs a CPRL virtual machine, loads into memory the
  * byte code from the file specified by args[0], and runs the byte code.
  *
- * @throws FileNotFoundException if the file specified in args[0] can't be found.
+ * @throws FileNotFoundException Thrown if the file specified in args[0]
+ *                               can't be found.
  */
 fun main(args : Array<String>)
   {
@@ -78,7 +79,7 @@ fun main(args : Array<String>)
  * This class implements a virtual machine for the programming language CPRL.
  * It interprets instructions for a hypothetical CPRL computer.
  *
- * @param numOfBytes the number of bytes in memory of the virtual machine
+ * @param numOfBytes The number of bytes in memory of the virtual machine.
  */
 class CVM(numOfBytes : Int)
   {
@@ -109,7 +110,7 @@ class CVM(numOfBytes : Int)
     /**
      * Loads the program into memory.
      *
-     * @param codeFile the FileInputStream containing the object code
+     * @param codeFile The FileInputStream containing the object code.
      */
     fun loadProgram(codeFile : FileInputStream) {
         var address = 0
@@ -249,79 +250,86 @@ class CVM(numOfBytes : Int)
         running = true
         pc = 0
 
-        while (running)
+        try
           {
-            if (DEBUG)
+            while (running)
               {
-                printRegisters()
-                printMemory()
-                pause()
-              }
+                if (DEBUG)
+                  {
+                    printRegisters()
+                    printMemory()
+                    pause()
+                  }
 
-            when (Opcode.toOpcode(fetchByte()))
-              {
-                Opcode.ADD      -> add()
-                Opcode.BITAND   -> bitAnd()
-                Opcode.BITOR    -> bitOr()
-                Opcode.BITXOR   -> bitXor()
-                Opcode.BITNOT   -> bitNot()
-                Opcode.ALLOC    -> allocate()
-                Opcode.BR       -> branch()
-                Opcode.BE       -> branchEqual()
-                Opcode.BNE      -> branchNotEqual()
-                Opcode.BG       -> branchGreater()
-                Opcode.BGE      -> branchGreaterOrEqual()
-                Opcode.BL       -> branchLess()
-                Opcode.BLE      -> branchLessOrEqual()
-                Opcode.BZ       -> branchZero()
-                Opcode.BNZ      -> branchNonZero()
-                Opcode.BYTE2INT -> byteToInteger()
-                Opcode.CALL     -> call()
-                Opcode.DEC      -> decrement()
-                Opcode.DIV      -> divide()
-                Opcode.GETCH    -> getCh()
-                Opcode.GETINT   -> getInt()
-                Opcode.GETSTR   -> getString()
-                Opcode.HALT     -> halt()
-                Opcode.INC      -> increment()
-                Opcode.INT2BYTE -> intToByte()
-                Opcode.LDCB     -> loadConstByte()
-                Opcode.LDCB0    -> loadConstByteZero()
-                Opcode.LDCB1    -> loadConstByteOne()
-                Opcode.LDCCH    -> loadConstCh()
-                Opcode.LDCINT   -> loadConstInt()
-                Opcode.LDCINT0  -> loadConstIntZero()
-                Opcode.LDCINT1  -> loadConstIntOne()
-                Opcode.LDCSTR   -> loadConstStr()
-                Opcode.LDLADDR  -> loadLocalAddress()
-                Opcode.LDGADDR  -> loadGlobalAddress()
-                Opcode.LOAD     -> load()
-                Opcode.LOADB    -> loadByte()
-                Opcode.LOAD2B   -> load2Bytes()
-                Opcode.LOADW    -> loadWord()
-                Opcode.MOD      -> modulo()
-                Opcode.MUL      -> multiply()
-                Opcode.NEG      -> negate()
-                Opcode.NOT      -> not()
-                Opcode.PROC     -> procedure()
-                Opcode.PROGRAM  -> program()
-                Opcode.PUTBYTE  -> putByte()
-                Opcode.PUTCH    -> putChar()
-                Opcode.PUTEOL   -> putEOL()
-                Opcode.PUTINT   -> putInt()
-                Opcode.PUTSTR   -> putString()
-                Opcode.RET      -> returnInst()
-                Opcode.RET0     -> returnZero()
-                Opcode.RET4     -> returnFour()
-                Opcode.SHL      -> shiftLeft()
-                Opcode.SHR      -> shiftRight()
-                Opcode.STORE    -> store()
-                Opcode.STOREB   -> storeByte()
-                Opcode.STORE2B  -> store2Bytes()
-                Opcode.STOREW   -> storeWord()
-                Opcode.SUB      -> subtract()
-                else            -> error("invalid machine instruction")
+                when (Opcode.toOpcode(fetchByte()))
+                  {
+                    Opcode.ADD      -> add()
+                    Opcode.BITAND   -> bitAnd()
+                    Opcode.BITOR    -> bitOr()
+                    Opcode.BITXOR   -> bitXor()
+                    Opcode.BITNOT   -> bitNot()
+                    Opcode.ALLOC    -> allocate()
+                    Opcode.BR       -> branch()
+                    Opcode.BE       -> branchEqual()
+                    Opcode.BNE      -> branchNotEqual()
+                    Opcode.BG       -> branchGreater()
+                    Opcode.BGE      -> branchGreaterOrEqual()
+                    Opcode.BL       -> branchLess()
+                    Opcode.BLE      -> branchLessOrEqual()
+                    Opcode.BZ       -> branchZero()
+                    Opcode.BNZ      -> branchNonZero()
+                    Opcode.BYTE2INT -> byteToInteger()
+                    Opcode.CALL     -> call()
+                    Opcode.DEC      -> decrement()
+                    Opcode.DIV      -> divide()
+                    Opcode.GETCH    -> getCh()
+                    Opcode.GETINT   -> getInt()
+                    Opcode.GETSTR   -> getString()
+                    Opcode.HALT     -> halt()
+                    Opcode.INC      -> increment()
+                    Opcode.INT2BYTE -> intToByte()
+                    Opcode.LDCB     -> loadConstByte()
+                    Opcode.LDCB0    -> loadConstByteZero()
+                    Opcode.LDCB1    -> loadConstByteOne()
+                    Opcode.LDCCH    -> loadConstCh()
+                    Opcode.LDCINT   -> loadConstInt()
+                    Opcode.LDCINT0  -> loadConstIntZero()
+                    Opcode.LDCINT1  -> loadConstIntOne()
+                    Opcode.LDCSTR   -> loadConstStr()
+                    Opcode.LDLADDR  -> loadLocalAddress()
+                    Opcode.LDGADDR  -> loadGlobalAddress()
+                    Opcode.LOAD     -> load()
+                    Opcode.LOADB    -> loadByte()
+                    Opcode.LOAD2B   -> load2Bytes()
+                    Opcode.LOADW    -> loadWord()
+                    Opcode.MOD      -> modulo()
+                    Opcode.MUL      -> multiply()
+                    Opcode.NEG      -> negate()
+                    Opcode.NOT      -> not()
+                    Opcode.PROC     -> procedure()
+                    Opcode.PROGRAM  -> program()
+                    Opcode.PUTBYTE  -> putByte()
+                    Opcode.PUTCH    -> putChar()
+                    Opcode.PUTEOL   -> putEOL()
+                    Opcode.PUTINT   -> putInt()
+                    Opcode.PUTSTR   -> putString()
+                    Opcode.RET      -> returnInst()
+                    Opcode.RET0     -> returnZero()
+                    Opcode.RET4     -> returnFour()
+                    Opcode.SHL      -> shiftLeft()
+                    Opcode.SHR      -> shiftRight()
+                    Opcode.STORE    -> store()
+                    Opcode.STOREB   -> storeByte()
+                    Opcode.STORE2B  -> store2Bytes()
+                    Opcode.STOREW   -> storeWord()
+                    Opcode.SUB      -> subtract()
+                    else            -> error("invalid machine instruction")
+                  }
               }
+          }
+        catch (t : Throwable)
+          {
+            System.err.println("Virtual Machine Error: " + t.message)
           }
       }
 
@@ -478,7 +486,7 @@ class CVM(numOfBytes : Int)
      * Writes the word value to the specified memory address.
      * Does not alter pc, sp, or bp.
      */
-    private fun putWordToAddr(value : Int, address : Int) = putIntToAddr(value, address)
+    private fun putWordToAddr(word : Int, address : Int) = putIntToAddr(word, address)
 
     //----------------------------------------------------------------------
     // End: internal machine instructions that do NOT correspond to opcodes
@@ -691,6 +699,7 @@ class CVM(numOfBytes : Int)
 
             putIntToAddr(length, destAddr)
             destAddr = destAddr + Constants.BYTES_PER_INTEGER
+
             for (i in 0 until length) {
                 putCharToAddr(data[i], destAddr)
                 destAddr = destAddr + Constants.BYTES_PER_CHAR
@@ -780,10 +789,6 @@ class CVM(numOfBytes : Int)
         pushInt(sb + displacement)
       }
 
-    /**
-     * Loads a single byte onto the stack.  The address of the
-     * byte is obtained by popping it off the top of the stack.
-     */
     private fun loadByte()
       {
         val address = popInt()
@@ -791,10 +796,6 @@ class CVM(numOfBytes : Int)
         pushByte(b)
       }
 
-    /**
-     * Loads two bytes onto the stack.  The address of the first
-     * byte is obtained by popping it off the top of the stack.
-     */
     private fun load2Bytes()
       {
         val address = popInt()
@@ -804,10 +805,6 @@ class CVM(numOfBytes : Int)
         pushByte(b1)
       }
 
-    /**
-     * Loads a single word-size variable (four bytes) onto the stack.  The address
-     * of the variable is obtained by popping it off the top of the stack.
-     */
     private fun loadWord()
       {
         val address = popInt()
@@ -838,11 +835,7 @@ class CVM(numOfBytes : Int)
     private operator fun not()
       {
         val operand = popByte()
-
-        if (operand == FALSE)
-            pushByte(TRUE)
-        else
-            pushByte(FALSE)
+        pushByte(if (operand == FALSE) TRUE else FALSE)
       }
 
     private fun procedure() = allocate()
@@ -915,7 +908,7 @@ class CVM(numOfBytes : Int)
         val operand1 = popInt()
 
         // zero out all except rightmost 5 bits of shiftAmount
-        val shiftAmount = operand2 and 31
+        val shiftAmount = operand2 and 0b11111
 
         pushInt(operand1 shl shiftAmount)
       }
@@ -926,7 +919,7 @@ class CVM(numOfBytes : Int)
         val operand1 = popInt()
 
         // zero out all except rightmost 5 bits of shiftAmount
-        val shiftAmount = operand2 and 31
+        val shiftAmount = operand2 and 0b11111
 
         pushInt(operand1 shr shiftAmount)
       }
