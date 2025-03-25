@@ -20,9 +20,9 @@ class ParameterDecl(paramId : Token, type : Type, val isVarParam : Boolean)
 
     /**
      * The size (number of bytes) associated with this parameter declaration.
-     * The size of a parameter declaration is the number of bytes associated
-     * with its type, except for variable parameters, whose size is the number
-     * of bytes of a memory address.
+     * The size of a value parameter declaration is the number of bytes associated
+     * with its type.  For variable parameters, the size is the number of bytes
+     * needed for a memory address.
      */
     override val size : Int
         get() = if (isVarParam) Type.Address.size else type.size
@@ -31,5 +31,10 @@ class ParameterDecl(paramId : Token, type : Type, val isVarParam : Boolean)
       {
         assert(type != Type.UNKNOWN && type != Type.none)
           { "Invalid CPRL type in parameter declaration." }
+      }
+
+    override fun emit()
+      {
+        // nothing to emit for parameter declarations
       }
   }

@@ -13,7 +13,7 @@ import edu.citadel.cprl.Type
 class FieldDecl(fieldId : Token, type : Type) : Declaration(fieldId, type)
   {
     var offset = 0    // offset for this field within the record; initialized
-                      // to 0 but can be updated during constraint analysis
+                      // to 0 but updated when constructing the record type
 
     /**
      * The size (number of bytes) associated with this field declaration,
@@ -25,5 +25,10 @@ class FieldDecl(fieldId : Token, type : Type) : Declaration(fieldId, type)
       {
         assert(type != Type.UNKNOWN && type != Type.none && type != Type.Address)
           { "Invalid CPRL type in field declaration." }
+      }
+
+    override fun emit()
+      {
+        // nothing to emit for field declarations
       }
   }

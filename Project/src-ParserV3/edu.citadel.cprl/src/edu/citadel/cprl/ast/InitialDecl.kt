@@ -10,3 +10,12 @@ import edu.citadel.cprl.Type
  */
 abstract class InitialDecl(identifier : Token, declType : Type)
     : Declaration(identifier, declType)
+  {
+    // Note: Many initial declarations do not require code generation.
+    // A default implementation is provided for convenience.
+
+    override fun emit()
+      {
+        // nothing to emit for most initial declarations
+      }
+  }
